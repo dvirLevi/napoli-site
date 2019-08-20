@@ -2,13 +2,18 @@
   <div class="row">
     <div class="col">
       <div class="wrap-all-el d-flex">
-<div :class="{menusToolBar: !ifMenu}">
-        <div class="center-all wrap-items" >
-          <router-link class="items-menu" tag="div" :to="item.link" v-for="item in categories" :key="item.id"
-            router-link-active>{{item.name}}</router-link>
+        <div class="center-all">
+          <i class="fas fa-shopping-cart"></i>
         </div>
+        <div :class="{menusToolBar: !ifMenu}">
+          <div class="center-all wrap-items">
+            <router-link class="items-menu" tag="div" :to="item.link" v-for="item in categories" :key="item.id"
+              router-link-active>{{item.name}}</router-link>
+          </div>
         </div>
-        <Hamburger :ifMenu="ifMenu" @openClose="ifMenu = !ifMenu"/>
+        
+        <Hamburger :ifMenu="ifMenu" @openClose="ifMenu = !ifMenu" />
+        
         <img src="../assets/napoli_logo.jpg" alt="">
       </div>
     </div>
@@ -16,13 +21,12 @@
 </template>
 
 <script>
-
   import Hamburger from '@/components/Hamburger.vue'
 
   export default {
     name: 'ToolBar',
-    components:{
-Hamburger
+    components: {
+      Hamburger
     },
     props: {
 
@@ -73,23 +77,34 @@ Hamburger
   .wrap-items {
     width: -webkit-fill-available;
     font-size: 20px;
+        font-weight: 600;
   }
 
   .items-menu {
     margin: 19px 46px
   }
-.menusToolBar {
+
+  .menusToolBar {
     display: block;
     width: -webkit-fill-available;
   }
+.fa-shopping-cart {
+  font-size: 25px;
+  margin: 5px;
+  color: rgb(0, 0, 0);
+}
+ 
+
   @media (max-width: 767.98px) {
     .menusToolBar {
-    display: none;
-  }
-    
-      .wrap-all-el {
-   height: 100px;
-  }
+      display: none;
+    }
+
+    .wrap-all-el {
+      height: 100px;
+          padding: 20px 0px;
+    }
+
     .wrap-items {
       position: fixed;
       width: 58%;
@@ -100,11 +115,12 @@ Hamburger
       height: 100%;
       flex-direction: column;
     }
+
     .items-menu {
-    margin: 0;
-    padding:19px 46px;
-    width: 100%; 
-    border-bottom: solid rgb(0, 0, 0) 1px;
-  }
+      margin: 0;
+      padding: 19px 46px;
+      width: 100%;
+      border-bottom: solid rgb(0, 0, 0) 1px;
+    }
   }
 </style>
