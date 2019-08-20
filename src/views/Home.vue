@@ -12,22 +12,29 @@
         <div class="w-100 center-all wrap-video">
           <video id="Mp4Video-1528056696795"
             src="https://cdn.shopify.com/s/files/1/0011/6195/3290/files/pic_3.mp4?11956933201904785341" loop="" muted=""
-            playsinline="" autoplay=""></video>
+            playsinline="" autoplay="">gdfgdfgdfg</video>
         </div>
       </div>
     </div>
+    <OnNapoli/>
+    <ReelPizza/>
+    <TechnicalSpecifications/>
   </div>
 </template>
 
 <script>
   // @ is an alias to /src
-  // import HelloWorld from '@/components/HelloWorld.vue'
+  import OnNapoli from '@/components/OnNapoli.vue'
+  import ReelPizza from '@/components/ReelPizza.vue'
+  import TechnicalSpecifications from '@/components/TechnicalSpecifications.vue'
   import 'aos/dist/aos.css'
 
   export default {
     name: 'home',
     components: {
-      // HelloWorld
+      OnNapoli,
+      ReelPizza,
+      TechnicalSpecifications
     }
   }
 </script>
