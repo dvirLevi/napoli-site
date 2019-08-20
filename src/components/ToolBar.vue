@@ -11,9 +11,9 @@
               router-link-active>{{item.name}}</router-link>
           </div>
         </div>
-        
+
         <Hamburger :ifMenu="ifMenu" @openClose="ifMenu = !ifMenu" />
-        
+
         <img src="../assets/napoli_logo.jpg" alt="">
       </div>
     </div>
@@ -35,12 +35,12 @@
       return {
         ifMenu: false,
         categories: [{
-            name: "דף בית",
+            name: "דף הבית",
             link: "",
             id: 1
           },
           {
-            name: "פיצה",
+            name: "חוויה איטלקית",
             link: "",
             id: 2
           },
@@ -71,13 +71,14 @@
 
   img {
     position: absolute;
+    width: 110px;
     left: 0;
   }
 
   .wrap-items {
     width: -webkit-fill-available;
     font-size: 20px;
-        font-weight: 600;
+    font-weight: 600;
   }
 
   .items-menu {
@@ -88,12 +89,13 @@
     display: block;
     width: -webkit-fill-available;
   }
-.fa-shopping-cart {
-  font-size: 25px;
-  margin: 5px;
-  color: rgb(0, 0, 0);
-}
- 
+
+  .fa-shopping-cart {
+    font-size: 25px;
+    margin: 5px;
+    color: rgb(0, 0, 0);
+  }
+
 
   @media (max-width: 767.98px) {
     .menusToolBar {
@@ -102,10 +104,10 @@
 
     .wrap-all-el {
       height: 100px;
-          padding: 20px 0px;
+      padding: 20px 0px;
     }
 
-    .bac-menu{
+    .bac-menu {
       position: fixed;
       width: 100%;
       z-index: 2;
@@ -124,7 +126,7 @@
 
     .items-menu {
       margin: 0;
-      padding: 19px 46px;
+      padding: 19px 25px;
       width: 100%;
       border-bottom: solid rgb(0, 0, 0) 1px;
     }
