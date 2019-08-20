@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css?family=Rubik:400,500,700,900&display=swap&subset=hebrew');
+@import url('https://fonts.googleapis.com/css?family=Assistant:300,400,600,700,800&display=swap&subset=hebrew');
+
+html, body {
+    direction: rtl;
+    font-family: 'Rubik', sans-serif;
+    color: rgb(0, 0, 0);
+    text-align: right;
+  }
+  .center-all{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .center-all-between{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .router-link-exact-active {
+    /* color: #f98482;
+    font-weight: bold; */
+  }
