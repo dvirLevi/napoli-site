@@ -21,6 +21,9 @@
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+.contain {
+     display: none;
+    }
   @media (max-width: 767.98px) {
     .contain {
           display: flex;

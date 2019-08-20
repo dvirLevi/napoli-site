@@ -1,5 +1,5 @@
 <template>
-  <div class="row">
+  <div class="row row-sticky">
     <div class="col">
       <div class="wrap-all-el d-flex">
         <div class="center-all">
@@ -62,6 +62,12 @@
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+.row-sticky {
+      position: sticky;
+    top: 0;
+    z-index: 3;
+    background-color: #ffffff;
+}
   .wrap-all-el {
     padding: 20px 40px;
     max-width: 1100px;
@@ -85,10 +91,15 @@
     margin: 19px 46px
   }
 
-  .menusToolBar {
+  .bac-menu{
     display: block;
     width: -webkit-fill-available;
   }
+
+  /* .menusToolBar {
+    display: block;
+    width: -webkit-fill-available;
+  } */
 
   .fa-shopping-cart {
     font-size: 25px;
