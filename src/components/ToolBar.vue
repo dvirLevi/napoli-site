@@ -5,7 +5,7 @@
         <div class="center-all">
           <i class="fas fa-shopping-cart"></i>
         </div>
-        <div :class="{menusToolBar: !ifMenu}">
+        <div class="bac-menu" @click="ifMenu = !ifMenu" :class="{menusToolBar: !ifMenu}">
           <div class="center-all wrap-items">
             <router-link class="items-menu" tag="div" :to="item.link" v-for="item in categories" :key="item.id"
               router-link-active>{{item.name}}</router-link>
@@ -105,13 +105,19 @@
           padding: 20px 0px;
     }
 
-    .wrap-items {
+    .bac-menu{
       position: fixed;
-      width: 58%;
+      width: 100%;
       z-index: 2;
-      background: #ffffff;
+      background: #3333338c;
       right: 0;
       top: 0;
+      height: 100%;
+    }
+
+    .wrap-items {
+      width: 58%;
+      background: #ffffff;
       height: 100%;
       flex-direction: column;
     }
