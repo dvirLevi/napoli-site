@@ -1,5 +1,5 @@
 <template>
-  <div class="row mt-3 p-3 border-top">
+  <div class="row mt-5 p-3 border-top">
     <div class="col center-all">
       <div class="box-text text-center">
         <h2>על פיצה נאפוליטנית אמיתית</h2>
