@@ -35,6 +35,9 @@
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+.row {
+  background-color: #635d4740;
+}
   .left-side img {
     width: 50%;
   }

@@ -35,12 +35,14 @@
 <style scoped>
   .row {
     background-image: url(../assets/ass3.jpg);
-    background-size: cover;
+        background-size: cover;
+    background-position: center;
   }
 
   .box-text {
     width: 50%;
-    background-color: #ffffffe8;
+    background-color: #ffffff75;
+    font-weight: bold;
         padding: 64px;
     margin: 58px 0px;
   }

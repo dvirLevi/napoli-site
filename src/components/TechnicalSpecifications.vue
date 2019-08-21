@@ -1,5 +1,12 @@
 <template>
   <div class="row mt-3 p-3 border-top">
+    <div class="col border-strong">
+      <div class="row">
+
+     
+    <div class="col-12 center-all pt-5 pb-5 text-center">
+      <h3>מפרט טכני של תנור נאפולי</h3>
+    </div>
     <div class="col-md-5 center-all">
       <div class="row">
         <div class="col-md-6 text-center center-all">
@@ -43,14 +50,16 @@
     <div class="col-md-5 center-all">
       <div class="col-md-6 text-center center-all">
           <h3 class="w-100">הזנה:</h3>
-          <p class="w-100">גז – באמצעות מבער נאפולי </p>
-          <p class="w-100">פחמים </p>
+          <p class="w-100">גז | פחמים | עצים | שבבים</p>
+          <!-- <p class="w-100">פחמים </p>
           <p class="w-100">עצים</p>
-          <p class="w-100">שבבים</p>
+          <p class="w-100">שבבים</p> -->
         </div>
         <div class="col-md-6">
           <img class="w-100" src="../assets/ass4.jpg" alt="">
         </div>
+    </div>
+     </div>
     </div>
   </div>
 </template>
@@ -66,6 +75,9 @@
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+.border-strong {
+  border: solid rgb(0, 0, 0) 3px;
+}
   .box-text {
     width: 50%;
     background-color: #ffffffe8;
