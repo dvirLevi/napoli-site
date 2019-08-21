@@ -1,26 +1,34 @@
 <template>
-  <div class="row mt-3 p-3 border-top">
-    <div class="col-md-6 center-all">
-      <div class="block-text">
-        <h2>על תנור נאפולי</h2>
-        <p>תנור הפיצה נאפולי נולד משילוב של אהבה גדולה לפיצות גורמה ותכנון הנדסי קפדני.</p>
-        <p>הנאפולי מושלם לאפיית פיצות איטלקיות, בשרים, דגים ומאפים, והוא מיוצר מחומרי הגלם האיכותיים ביותר. </p>
-        <p>לתנור נאפולי היתרונות הגדולים ביותר בתחום:</p>
-        <ul>
-          <li>מתחמם לטמפרטורה של<span> 450° צלסיוס </span> במהירות שיא של <span>15 דקות בלבד</span></li>
-          <li>מוזן בחומרי בעירה מגוונים: גז, עץ, פחמים או שבבים</li>
-          <li>הודות לעיצוב המתקדם ולדפנות העבות והמבודדות, הנאפולי <span>חסכוני בגז</span>: כ-420 גרם בלבד לשעת בעירה
-          </li>
-          <li>אבן אפייה איכותית ברצפת התנור, לקבלת תחתית בצק פריכה ומענגת</li>
-          <li>קל ועמיד, מושלם לבית ולקמפינג</li>
-          <li>הרכבה עצמית קלה</li>
-        </ul>
-        <p>זה לא מפתיע שהנאפולי מוגדר כ- <span>Best seller</span> באתר אמזון, ונבחר ל- <span>Amazon choice</span>.</p>
-      </div>
+<div>
+  <div class="row mt-4 p-4 text-center">
+    <div class="col">
+      <h2 class="m-3">על Napoli Pizza Oven</h2>
+      <p>תנור הפיצה נאפולי | <span>Napoli Pizza Oven</span> נולד משילוב של אהבה גדולה לפיצות גורמה ותכנון הנדסי קפדני, והוא מיוצר מחומרי הגלם האיכותיים ביותר. </p>
+      <p>ה-<span>Napoli Pizza Oven</span> מושלם לאפיית פיצות איטלקיות באיכות של מסעדות שף, וכך גם להכנת בשרים, דגים ומאפים. </p>
+      <p>בתנור הפיצה נאפולי | <span>Napoli Pizza Oven</span> הפיצה נאפת במלואה ב-90 שניות בלבד. ממש כמו בנאפולי.</p>
+      <p>יאללה, להזמין את כל החברים לערב פיצות מפנק!</p>
     </div>
-    <div class="col-md-6 left-side">
+  </div>
+  <div class="row">
+    <div class="col-md-6 p-3 left-side">
       <img src="../assets/ass2.jpg" alt="">
     </div>
+    <div class="col-md-6 center-all">
+      <div class="block-text">
+        <p>ה- <span>Napoli Pizza Oven</span> מוביל בקטגוריה שלו עם מגוון יתרונות:</p>
+        <ul>
+          <li>מתחמם לטמפרטורה של 450° צלסיוס במהירות של <span>15 דקות</span> בלבד</li>
+          <li>מוזן בחומרי בעירה מגוונים: גז, עץ, פחמים או שבבים</li>
+          <li>כולל אבן אפייה איכותית, לקבלת תחתית בצק פריכה ומענגת</li>
+          <li>בעל עיצוב מתקדם ודפנות מבודדות</li>
+          <li>קל ועמיד, מושלם לבית ולקמפינג</li>
+          <li>הרכבה עצמית מהירה</li>
+        </ul>
+        <p>הנאפולי מוגדר כ-<span>Best seller</span> באתר אמזון ארה"ב, ונבחר ל-<span>Amazon choice</span>.</p>
+      </div>
+    </div>
+    
+  </div>
   </div>
 </template>
 
@@ -36,17 +44,28 @@
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 .row {
-  background-color: #635d4740;
+      background-color: #be6c422b;
 }
+ .left-side  {
+    text-align: left;
+  }
   .left-side img {
     width: 50%;
   }
   .block-text {
     width: 75%;
   }
-.block-text span {
+ span {
     font-weight: bold;
-    font-size: 18px
+    font-size: 25px;
+    
+  }
+  ul {
+     font-size: 25px;
+  }
+
+  p {
+    font-size: 24px;
   }
   @media (max-width: 767.98px) {
       .left-side img {
@@ -58,6 +77,18 @@
 .block-text span {
     font-weight: bold;
     font-size: 18px
+  }
+   span {
+    font-weight: bold;
+    font-size: 19px;
+    
+  }
+  ul {
+     font-size: 20px;
+  }
+
+  p {
+    font-size: 20px;
   }
   }
 
