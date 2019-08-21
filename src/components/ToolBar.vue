@@ -70,7 +70,7 @@
 }
   .wrap-all-el {
     padding: 20px 40px;
-    max-width: 1100px;
+    width: 66%;
     margin: 0 auto;
     position: relative;
   }
@@ -116,6 +116,7 @@
     .wrap-all-el {
       height: 100px;
       padding: 20px 0px;
+          width: 100%;
     }
 
     .bac-menu {
