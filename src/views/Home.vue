@@ -2,7 +2,7 @@
   <div>
     <div class="row">
       <div class="col">
-        <div class="w-100 center-all">
+        <div class="w-100 center-all mb-2">
           <img src="../assets/ass1.jpg" alt="">
         </div>
       </div>
