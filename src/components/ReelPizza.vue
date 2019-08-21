@@ -45,6 +45,7 @@
     font-weight: bold;
         padding: 64px;
     margin: 58px 0px;
+    font-size: 20px;
   }
 
   ul {
@@ -56,6 +57,7 @@
     width: 100%;
         padding: 10px;
     margin: 58px 0px;
+    font-size: 18px;
   }
   }
 </style>
