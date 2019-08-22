@@ -15,7 +15,7 @@
       </div>
     </div>
     <div class="col-md-6 p-3 left-side center-all">
-      <img data-aos="zoom-out" src="../assets/ass8.png" alt="">
+      <img data-aos="fade-up" src="../assets/ass8.png" alt="">
     </div>
   </div>
 </template>

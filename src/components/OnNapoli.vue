@@ -11,7 +11,7 @@
   </div>
   <div class="row">
     <div class="col-md-6 p-3 left-side">
-      <img data-aos="zoom-out" src="../assets/ass2.jpg" alt="">
+      <img data-aos="fade-up" src="../assets/ass2.jpg" alt="">
     </div>
     <div class="col-md-6 center-all">
       <div class="block-text">
