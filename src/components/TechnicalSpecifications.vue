@@ -1,5 +1,5 @@
 <template>
-  <div class="row mt-3 p-3 border-top" data-aos="fade-up">
+  <div class="row mt-3 p-3 border-top">
     <div class="col border-strong">
       <div class="row">
 
@@ -7,7 +7,7 @@
     <div class="col-12 center-all pt-5 pb-5 text-center">
       <h3>Napoli Pizza Oven – נתונים טכניים</h3>
     </div>
-    <div class="col-md-5 center-all">
+    <div class="col-md-5 center-all" data-aos="fade-up">
       <div class="row">
         <div class="col-md-6 text-center center-all">
           <h3 class="w-100">טמפרטורה:</h3>
@@ -19,7 +19,7 @@
         </div>
       </div>
     </div>
-    <div class="col-md-5 center-all">
+    <div class="col-md-5 center-all" data-aos="fade-up">
       <div class="col-md-6 text-center center-all">
           <h3 class="w-100">מידות חיצוניות:</h3>
           <p class="w-100">רוחב: 35.5 ס"מ</p>
@@ -37,7 +37,7 @@
     <div class="col-md-2 center-all">
       
     </div>
-    <div class="col-md-5 center-all">
+    <div class="col-md-5 center-all" data-aos="fade-up">
       <div class="col-md-6 text-center center-all">
           <h3 class="w-100">שטח אבן הצלייה:</h3>
           <p class="w-100">רוחב: 31.75 ס"מ</p>
@@ -48,7 +48,7 @@
           <img class="w-100" src="../assets/ass5.png" alt="">
         </div>
     </div>
-    <div class="col-md-5 center-all">
+    <div class="col-md-5 center-all" data-aos="fade-up">
       <div class="col-md-6 text-center center-all">
           <h3 class="w-100">הזנה:</h3>
           <p class="w-100">גז | פחמים | עצים | שבבים</p>
