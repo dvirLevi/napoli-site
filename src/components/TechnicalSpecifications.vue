@@ -1,5 +1,5 @@
 <template>
-  <div class="row mt-3 p-3 border-top">
+  <div class="row mt-3 p-3 border-top" data-aos="fade-up">
     <div class="col border-strong">
       <div class="row">
 

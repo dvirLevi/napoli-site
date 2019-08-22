@@ -37,7 +37,7 @@
 
   .box-text {
     width: 50%;
-    background-color: #ffffff75;
+    background-color: #ffffffbd;
     /* font-weight: bold; */
     padding: 64px;
     margin: 58px 0px;

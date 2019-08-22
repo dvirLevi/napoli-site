@@ -1,7 +1,7 @@
 <template>
 <div>
   <div class="row mt-4 p-4 text-center">
-    <div class="col">
+    <div class="col part-shulders">
       <h2 class="m-3">על Napoli Pizza Oven</h2>
       <p>תנור הפיצה נאפולי | <span>Napoli Pizza Oven</span> נולד משילוב של אהבה גדולה לפיצות גורמה ותכנון הנדסי קפדני, והוא מיוצר מחומרי הגלם האיכותיים ביותר. </p>
       <p>ה-<span>Napoli Pizza Oven</span> מושלם לאפיית פיצות איטלקיות באיכות של מסעדות שף, וכך גם להכנת בשרים, דגים ומאפים. </p>
@@ -11,7 +11,7 @@
   </div>
   <div class="row">
     <div class="col-md-6 p-3 left-side">
-      <img src="../assets/ass2.jpg" alt="">
+      <img data-aos="zoom-out" src="../assets/ass2.jpg" alt="">
     </div>
     <div class="col-md-6 center-all">
       <div class="block-text">
@@ -50,7 +50,7 @@
     text-align: left;
   }
   .left-side img {
-    width: 50%;
+        width: 500px;
   }
   .block-text {
     width: 75%;

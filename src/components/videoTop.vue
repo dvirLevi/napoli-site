@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="row mt-3 mb-3">
+    <div  data-aos="fade-up" class="row mt-3 mb-3">
       <div class="col">
         <div class="w-100 center-all wrap-video">
           <!-- <video id="Mp4Video-1528056696795"

@@ -6,7 +6,7 @@
       </div>
     </div>
     <div class="row">
-      <div class="col center-all">
+      <div class="col part-shulders center-all">
         <div class="block-text">
           <h2>אז למה Napoli Pizza Oven?</h2>
           <p>תנור הפיצה נאפולי | <span>Napoli Pizza Oven</span> הושק בקיקסטרטר ב-2017, וגייס את מלוא הסכום תוך 24 שעות
