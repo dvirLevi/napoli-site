@@ -11,8 +11,10 @@
   <videoTop/>
 
     <ReelPizza/>
+
     <TechnicalSpecifications/>
     <GasBurner/>
+    <FoodImages/>
     <SoWhy/>
     <!-- <videoBottom/> -->
   </div>
@@ -27,6 +29,7 @@
   import videoTop from '@/components/videoTop.vue'
   import GasBurner from '@/components/GasBurner.vue'
   import SoWhy from '@/components/SoWhy.vue'
+  import FoodImages from '@/components/FoodImages.vue'
   import 'aos/dist/aos.css'
 
   export default {
@@ -38,7 +41,8 @@
       // videoBottom,
       videoTop,
       GasBurner,
-      SoWhy
+      SoWhy,
+      FoodImages
     }
   }
 </script>

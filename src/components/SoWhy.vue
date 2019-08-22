@@ -1,11 +1,11 @@
 <template>
   <div>
-    <div class="row mt-5 text-center border-row-top">
+    <!-- <div class="row mt-5 text-center border-row-top">
       <div class="col p-3 left-side">
         <img src="../assets/ass9.jpg" alt="">
       </div>
-    </div>
-    <div class="row">
+    </div> -->
+    <div class="row mt-5">
       <div class="col part-shulders center-all">
         <div class="block-text">
           <h2>אז למה Napoli Pizza Oven?</h2>
@@ -33,9 +33,7 @@
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-  .border-row-top {
-    border-top: solid black 2px;
-  }
+ 
 
   .left-side img {
     width: 25%;

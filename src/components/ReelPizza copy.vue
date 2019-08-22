@@ -30,7 +30,7 @@
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
   .row {
-    background-image: url(../assets/ass9.jpg);
+    background-image: url(../assets/ass3.jpg);
     background-size: cover;
     background-position: center;
   }
