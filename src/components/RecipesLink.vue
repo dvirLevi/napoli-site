@@ -37,9 +37,10 @@ height: 696px;
   padding: 30px;
 }
 .content-text h2{
-  font-size: 40px;
-  color: black;
-  font-weight: bold;
+      font-size: 43px;
+    color: white;
+    font-weight: bold;
+    text-shadow: 1px 1px 7px black;
 }
 
   @media (max-width: 767.98px) {
