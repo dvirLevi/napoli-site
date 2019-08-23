@@ -33,7 +33,7 @@
     padding-left: 0;
  }
   .wrap-video {
-    height: 672px;
+   height: 560px;
     overflow: hidden;
   }
 

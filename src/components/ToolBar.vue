@@ -2,7 +2,7 @@
   <div class="row row-sticky">
     <div class="col">
       <div class="wrap-all-el d-flex">
-        <div class="center-all">
+        <div class="center-all icon-cart">
           <i class="fas fa-shopping-cart"></i>
         </div>
         <div class="bac-menu" @click="ifMenu = !ifMenu" :class="{menusToolBar: !ifMenu}">
@@ -69,10 +69,19 @@
     background-color: #ffffff;
 }
   .wrap-all-el {
-    padding: 20px 40px;
-    width: 66%;
-    margin: 0 auto;
+          
+    width: 71%;
+    /* margin: 0 auto; */
     position: relative;
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  .icon-cart {
+    position: absolute;
+    height: 100%;
+    cursor: pointer;
   }
 
   img {
@@ -105,6 +114,8 @@
     font-size: 25px;
     margin: 5px;
     color: rgb(0, 0, 0);
+      
+
   }
 
 
@@ -114,8 +125,8 @@
     }
 
     .wrap-all-el {
-      height: 100px;
-      padding: 20px 0px;
+      height: 60px;
+      /* padding: 20px 0px; */
           width: 100%;
     }
 
@@ -142,5 +153,8 @@
       width: 100%;
       border-bottom: solid rgb(0, 0, 0) 1px;
     }
+  .icon-cart {
+    position: static;
+  }
   }
 </style>

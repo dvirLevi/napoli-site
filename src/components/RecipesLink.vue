@@ -1,0 +1,56 @@
+<template>
+  <div class="row p-3 border-top">
+    <div class="col flex-bottom">
+   <div class="content-text">
+<h2>הכינו לכם פיצת שף משובחת עם התוספות האהובות עליכם</h2>
+<ButtonLink text="למתכונים לחצו כאן" link="/"/>
+   </div>
+    </div>
+  </div>
+</template>
+
+<script>
+  export default {
+    name: 'RecipesLink',
+    props: {
+
+    }
+  }
+</script>
+
+<!-- Add "scoped" attribute to limit CSS to this component only -->
+<style scoped>
+  .row {
+    background-image: url(../assets/ass3.jpg);
+    background-size: cover;
+    background-position: center;
+height: 696px;
+  }
+
+.flex-bottom {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+}
+.content-text {
+  width: 50%;
+  padding: 30px;
+}
+.content-text h2{
+  font-size: 40px;
+  color: black;
+  font-weight: bold;
+}
+
+  @media (max-width: 767.98px) {
+    .box-text {
+      width: 100%;
+      padding: 10px;
+      margin: 58px 0px;
+      font-size: 20px;
+    }
+    .content-text {
+  width: 100%;
+}
+  }
+</style>

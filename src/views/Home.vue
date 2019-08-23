@@ -9,7 +9,7 @@
     </div>
     <OnNapoli/>
   <videoTop/>
-
+<RecipesLink/>
     <ReelPizza/>
 
     <TechnicalSpecifications/>
@@ -30,6 +30,7 @@
   import GasBurner from '@/components/GasBurner.vue'
   import SoWhy from '@/components/SoWhy.vue'
   import FoodImages from '@/components/FoodImages.vue'
+  import RecipesLink from '@/components/RecipesLink.vue'
   import 'aos/dist/aos.css'
 
   export default {
@@ -42,7 +43,8 @@
       videoTop,
       GasBurner,
       SoWhy,
-      FoodImages
+      FoodImages,
+      RecipesLink
     }
   }
 </script>

@@ -1,7 +1,7 @@
 <template>
   <div class="row mt-5">
 
-    <div class="col-md-6 center-all">
+    <div class="col-md-6 center-all pb-3">
       <div class="block-text">
         <h2>על מבער Napoli Pizza Oven</h2>
         <p>ה-<span>Napoli Pizza Oven</span> מוזן בבסיסו באמצעות פחמים, עצים או שבבים.</p>
@@ -12,6 +12,7 @@
           בעירה.</p>
         <p>לחיצה אחת על מצת המבער, והתנור לוהט. </p>
         <p><span>מומלץ!</span></p>
+        <ButtonLink text="תוכלו לרכוש אותו כאן" link="/"/>
       </div>
     </div>
     <div class="col-md-6 p-3 left-side center-all">
