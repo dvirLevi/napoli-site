@@ -48,6 +48,7 @@
   }
 
   .left-side {
+    /* text-align: left; */
     text-align: left;
   }
 
