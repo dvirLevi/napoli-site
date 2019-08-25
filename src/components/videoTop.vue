@@ -46,7 +46,7 @@
  
 
   .wrap-video {
-    height: 252px;
+    height: 273px;
     overflow: hidden;
   }
 
