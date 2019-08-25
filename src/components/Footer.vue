@@ -9,7 +9,7 @@
 
     <!-- </div> -->
     <div class="col-md-5 center-all">
-      <img class="w-50" src="../assets/ass13.png" alt="">
+      <img class="w-25" src="../assets/ass13.png" alt="">
     </div>
 
     <div class="col-md-2 center-all p-4">
