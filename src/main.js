@@ -7,9 +7,11 @@ import AOS from 'aos'
 import 'aos/dist/aos.css'
 import "../style/fontawesome/css/all.css"
 import ButtonLink from '@/components/ButtonLink.vue'
+import Modal from '@/components/Modal.vue'
 
 Vue.config.productionTip = false
 Vue.component('ButtonLink', ButtonLink)
+Vue.component('Modal', Modal)
 
 new Vue({
   created () {
@@ -18,5 +20,6 @@ new Vue({
   router,
   store,
   ButtonLink,
+  Modal,
   render: h => h(App)
 }).$mount('#app')

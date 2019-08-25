@@ -2,22 +2,23 @@
   <div class="row row-sticky">
     <div class="col">
       <div class="wrap-all-el d-flex">
-        <div class="center-all icon-cart">
+        <div class="center-all icon-cart position-relative">
           <i class="fas fa-shopping-cart"></i>
+          <div class="point-green" v-if="inCart.length"></div>
         </div>
         <div class="bac-menu" @click="ifMenu = !ifMenu" :class="{menusToolBar: !ifMenu}">
           <div class="center-all wrap-items">
             <router-link class="items-menu" tag="div" :to="item.link" v-for="item in categories" :key="item.id"
               router-link-active>{{item.name}}</router-link>
-              <div class="mobile w-100">
+            <div class="mobile w-100">
               <div class="w-100 center-all h2 mt-3 ">
-            <div class="w-50 text-center">
-              <i class="fab fa-instagram"></i>
-            </div>
-            <div class="w-50 text-center">
-              <i class="fab fa-facebook-f"></i>
-            </div>
-            </div>
+                <div class="w-50 text-center">
+                  <i class="fab fa-instagram"></i>
+                </div>
+                <div class="w-50 text-center">
+                  <i class="fab fa-facebook-f"></i>
+                </div>
+              </div>
             </div>
           </div>
 
@@ -51,6 +52,9 @@
     computed: {
       categories() {
         return this.$store.state.categories
+      },
+       inCart() {
+        return this.$store.getters.inCart
       }
     }
   }
@@ -94,7 +98,8 @@
   }
 
   .items-menu {
-    margin: 19px 46px
+    margin: 19px 46px;
+    cursor: pointer;
   }
 
   .bac-menu {
@@ -113,6 +118,16 @@
     color: rgb(0, 0, 0);
 
 
+  }
+
+  .point-green {
+    width: 10px;
+    height: 10px;
+    top: 2px;
+    right: 7px;
+    position: absolute;
+    border-radius: 100px;
+    background-color: #ff9743;
   }
 
 
@@ -154,5 +169,14 @@
     .icon-cart {
       position: static;
     }
+     .point-green {
+    width: 10px;
+    height: 10px;
+    top: 16px;
+    right: 7px;
+    position: absolute;
+    border-radius: 100px;
+    background-color: #ff9743;
+  }
   }
 </style>
