@@ -28,33 +28,33 @@ export default new Vuex.Store({
     ],
     products: [{
         name: "תנור פיצה נאפולי",
-        img: require("@/assets/ass2.jpg"),
+        img: require("@/assets/ass6.png"),
         description: "אחלה תנור",
         price: 300,
         amount: 0,
         id: "1"
       },
       {
-        name: "תנור פיצה נאפולי",
-        img: require("@/assets/ass2.jpg"),
+        name: "מבער גז נאפולי",
+        img: require("@/assets/ass8.png"),
         description: "אחלה תנור",
-        price: 300,
+        price: 100,
         amount: 0,
         id: "2"
       },
       {
-        name: "תנור פיצה נאפולי",
-        img: require("@/assets/ass2.jpg"),
+        name: "כיסוי חוץ לתנור נאפולי",
+        img: require("@/assets/ass14.jpg"),
         description: "אחלה תנור",
-        price: 300,
+        price: 50,
         amount: 0,
         id: "3"
       },
       {
-        name: "תנור פיצה נאפולי",
-        img: require("@/assets/ass2.jpg"),
+        name: "מרדה לתנור נאפולי",
+        img: require("@/assets/ass15.jpg"),
         description: "אחלה תנור",
-        price: 300,
+        price: 80,
         amount: 0,
         id: "4"
       },
