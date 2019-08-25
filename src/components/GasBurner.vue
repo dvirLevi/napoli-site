@@ -1,6 +1,8 @@
 <template>
   <div class="row mt-5">
-
+<div class="col-md-6 p-3 left-side center-all">
+      <img data-aos="fade-up" src="../assets/ass4.jpg" alt="">
+    </div>
     <div class="col-md-6 center-all pb-3">
       <div class="block-text">
         <h2>מבער פחמים</h2>
@@ -9,9 +11,7 @@
         <!-- <ButtonLink text="תוכלו לרכוש אותו כאן" link="/" /> -->
       </div>
     </div>
-    <div class="col-md-6 p-3 left-side center-all">
-      <img data-aos="fade-up" src="../assets/ass4.jpg" alt="">
-    </div>
+    
     <div class="col-md-6 center-all pb-3">
       <div class="block-text">
         <h2>מבער גז</h2>
