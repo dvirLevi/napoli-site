@@ -1,25 +1,11 @@
 <template>
   <div class="row mt-3">
-    <div class="col-md-6 p-3 left-side center-all border-left">
+     <div class="col-md-6 p-3 left-side center-all border-left">
       <div class="row">
         <div class="col center-all">
-        <img data-aos="fade-up" src="../assets/ass8.png" alt="">
+        <img data-aos="fade-up" src="../assets/ass4.jpg" alt="">
         </div>
       </div>
-      <div class="row center-all">
-        <div class="col center-all">
-          <div class="block-text">
-        <h2>מבער גז</h2>
-        <p>מבער הגז של <span>Napoli Pizza Oven</span> מספק אש חזקה, יציבה ונקייה, והוא חסכוני ביותר: כ-420 גרם בלבד לשעת
-          בעירה. עוצמת הלהבות ניתנת לשליטה מדויקת. לחיצה אחת על מצת המבער, והתנור לוהט. מבער הגז ניתן לרכישה בנפרד.
-          <span>מומלץ!</span></p>
-        <ButtonLink text="לרכישת המבער" link="/" />
-      </div>
-        </div>
-      </div>
-    </div>
-     <div class="col-md-6 p-3 left-side center-all ">
-      
       <div class="row center-all">
         <div class="col center-all">
         <div class="block-text">
@@ -32,12 +18,28 @@
         </div>
         </div>
       </div>
+      
+    </div>
+    <div class="col-md-6 p-3 left-side center-all ">
+      
+      <div class="row center-all">
+        <div class="col center-all">
+          <div class="block-text">
+        <h2>מבער גז</h2>
+        <p>מבער הגז של <span>Napoli Pizza Oven</span> מספק אש חזקה, יציבה ונקייה, והוא חסכוני ביותר: כ-420 גרם בלבד לשעת
+          בעירה. עוצמת הלהבות ניתנת לשליטה מדויקת. לחיצה אחת על מצת המבער, והתנור לוהט. מבער הגז ניתן לרכישה בנפרד.
+          <span>מומלץ!</span></p>
+        <ButtonLink text="לרכישת המבער" link="/" />
+      </div>
+        </div>
+      </div>
       <div class="row">
         <div class="col center-all">
-        <img data-aos="fade-up" src="../assets/ass4.jpg" alt="">
+        <img data-aos="fade-up" src="../assets/ass8.png" alt="">
         </div>
       </div>
     </div>
+    
     <!-- <div class="col-md-6 center-all pb-3">
 
     </div>
