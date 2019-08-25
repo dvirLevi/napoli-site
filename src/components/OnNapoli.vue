@@ -10,10 +10,10 @@
       </div>
     </div>
     <div class="row">
-      <div class="col-md-6 p-3 left-side">
-        <img data-aos="fade-up" src="../assets/ass2.jpg" alt="">
+      <div class="col-md-6  left-side">
+        <img data-aos="fade-up" src="../assets/ass9.jpg" alt="">
       </div>
-      <div class="col-md-6 center-all">
+      <div class="col-md-6 center-all p-3">
         <div class="block-text">
           <p>ה- <span>Napoli Pizza Oven</span> מוביל בקטגוריה שלו עם מגוון יתרונות:</p>
           <ul>
@@ -43,7 +43,7 @@
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-  .row {
+  .col-md-6 {
     background-color: #be6c420a;
   }
 

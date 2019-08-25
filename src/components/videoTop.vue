@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="row mt-3 mb-3">
+    <div class="row mt-5">
       <div class="col">
         <div class="w-100 center-all wrap-video">
           <!-- <video id="Mp4Video-1528056696795"
@@ -33,7 +33,7 @@
     padding-left: 0;
  }
   .wrap-video {
-   height: 560px;
+   height: 712px;
     overflow: hidden;
   }
 

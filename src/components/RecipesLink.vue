@@ -1,5 +1,5 @@
 <template>
-  <div class="row p-3 border-top">
+  <div class="row p-3 mt-5">
     <div class="col flex-bottom">
    <div class="content-text">
 <h2>הכינו לכם פיצת שף משובחת עם התוספות האהובות עליכם</h2>

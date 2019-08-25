@@ -12,7 +12,7 @@
 <RecipesLink/>
     <ReelPizza/>
 
-    <TechnicalSpecifications/>
+    <!-- <TechnicalSpecifications/> -->
     <GasBurner/>
     <FoodImages/>
     <SoWhy/>
@@ -24,7 +24,7 @@
   // @ is an alias to /src
   import OnNapoli from '@/components/OnNapoli.vue'
   import ReelPizza from '@/components/ReelPizza.vue'
-  import TechnicalSpecifications from '@/components/TechnicalSpecifications.vue'
+  // import TechnicalSpecifications from '@/components/TechnicalSpecifications.vue'
   // import videoBottom from '@/components/videoBottom.vue'
   import videoTop from '@/components/videoTop.vue'
   import GasBurner from '@/components/GasBurner.vue'
@@ -38,7 +38,7 @@
     components: {
       OnNapoli,
       ReelPizza,
-      TechnicalSpecifications,
+      // TechnicalSpecifications,
       // videoBottom,
       videoTop,
       GasBurner,
