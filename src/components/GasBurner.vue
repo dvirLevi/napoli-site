@@ -1,11 +1,7 @@
 <template>
   <div class="row mt-3">
      <div class="col-md-6 p-3 left-side center-all border-left">
-      <div class="row">
-        <div class="col center-all">
-        <img data-aos="fade-up" src="../assets/ass4.jpg" alt="">
-        </div>
-      </div>
+      
       <div class="row center-all">
         <div class="col center-all">
         <div class="block-text">
@@ -18,10 +14,19 @@
         </div>
         </div>
       </div>
+      <div class="row">
+        <div class="col center-all">
+        <img data-aos="fade-up" src="../assets/ass4.jpg" alt="">
+        </div>
+      </div>
       
     </div>
     <div class="col-md-6 p-3 left-side center-all ">
-      
+       <div class="row">
+        <div class="col center-all">
+        <img data-aos="fade-up" src="../assets/ass8.png" alt="">
+        </div>
+      </div>
       <div class="row center-all">
         <div class="col center-all">
           <div class="block-text">
@@ -33,11 +38,7 @@
       </div>
         </div>
       </div>
-      <div class="row">
-        <div class="col center-all">
-        <img data-aos="fade-up" src="../assets/ass8.png" alt="">
-        </div>
-      </div>
+     
     </div>
     
     <!-- <div class="col-md-6 center-all pb-3">
