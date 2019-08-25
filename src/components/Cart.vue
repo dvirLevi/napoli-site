@@ -4,25 +4,32 @@
       <div class="w-100">
         <span @click="openCart" class="h1 close-m">&times;</span>
       </div>
-      <div class="row center-all">
+      <div class="row center-all" v-if="products.length">
         <div class="col-md-12" v-for="product in products" :key="product.id">
-      <div class="row mt-3 center-all">
-        <div class="col-md-6 ">
-          <img class="w-100" :src="product.img" alt="">
-        </div>
-        <div class="col-md-6 ">
-          <p>מוצר: {{product.name}}</p>
-          <p>מחיר: {{product.price}} ₪</p>
-          <!-- <div class="center-all"> -->
-            <p>כמות: {{product.amount}}</p>
-            <p>סה"כ: {{product.amount * product.price}} ₪</p>
-          <!-- </div> -->
-          <div class="center-all">
-            <!-- <button @click="openCart"  link="" >לחץ כאן למעבר לעגלת קניות</button> -->
+          <div class="row mt-3 center-all">
+            <div class="col-md-6 ">
+              <img class="w-100" :src="product.img" alt="">
+            </div>
+            <div class="col-md-6 ">
+              <p>מוצר: {{product.name}}</p>
+              <p>מחיר: {{product.price}} ₪</p>
+              <!-- <div class="center-all"> -->
+              <p>כמות: {{product.amount}}</p>
+              <p>סה"כ: {{product.amount * product.price}} ₪</p>
+              <!-- </div> -->
+              <div class="center-all">
+                <!-- <button @click="openCart"  link="" >לחץ כאן למעבר לעגלת קניות</button> -->
+              </div>
+            </div>
           </div>
         </div>
       </div>
-    </div>
+      <div v-else>
+        <div class="row">
+          <div class="col-12 center-all">
+            <p>אין מוצרים בעגלה..</p>
+          </div>
+        </div>
       </div>
     </Modal>
   </div>
