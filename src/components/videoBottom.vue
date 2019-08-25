@@ -37,11 +37,11 @@
   @media (max-width: 767.98px) {
     /* .wrap-video {
       height: 209px;
-    }
+    } */
 
     video {
       width: 100%;
-      margin-top: -104px;
-    } */
+      /* margin-top: -104px; */
+    }
   }
 </style>
