@@ -1,10 +1,10 @@
 <template>
-  <div class="row p-3 mt-5">
+  <div class="row p-3">
     <div class="col flex-bottom">
-   <div class="content-text">
-<h2>הכינו לכם פיצת שף משובחת עם התוספות האהובות עליכם</h2>
-<ButtonLink text="למתכונים לחצו כאן" link="/"/>
-   </div>
+      <div class="content-text">
+        <h2>הכינו לכם פיצת שף משובחת עם התוספות האהובות עליכם</h2>
+        <ButtonLink text="למתכונים לחצו כאן" link="/" />
+      </div>
     </div>
   </div>
 </template>
@@ -24,24 +24,26 @@
     background-image: url(../assets/ass3.jpg);
     background-size: cover;
     background-position: center;
-height: 696px;
+    height: 696px;
   }
 
-.flex-bottom {
-  display: flex;
-  align-items: flex-end;
-  justify-content: flex-start;
-}
-.content-text {
-  width: 50%;
-  padding: 30px;
-}
-.content-text h2{
-      font-size: 43px;
+  .flex-bottom {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+  }
+
+  .content-text {
+    width: 50%;
+    padding: 30px;
+  }
+
+  .content-text h2 {
+    font-size: 43px;
     color: white;
     font-weight: bold;
     text-shadow: 1px 1px 7px black;
-}
+  }
 
   @media (max-width: 767.98px) {
     .box-text {
@@ -50,8 +52,9 @@ height: 696px;
       margin: 58px 0px;
       font-size: 20px;
     }
+
     .content-text {
-  width: 100%;
-}
+      width: 100%;
+    }
   }
 </style>

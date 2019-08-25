@@ -9,7 +9,18 @@
           <div class="center-all wrap-items">
             <router-link class="items-menu" tag="div" :to="item.link" v-for="item in categories" :key="item.id"
               router-link-active>{{item.name}}</router-link>
+              <div class="mobile w-100">
+              <div class="w-100 center-all h2 mt-3 ">
+            <div class="w-50 text-center">
+              <i class="fab fa-instagram"></i>
+            </div>
+            <div class="w-50 text-center">
+              <i class="fab fa-facebook-f"></i>
+            </div>
+            </div>
+            </div>
           </div>
+
         </div>
 
         <Hamburger :ifMenu="ifMenu" @openClose="ifMenu = !ifMenu" />
@@ -34,27 +45,12 @@
     data() {
       return {
         ifMenu: false,
-        categories: [{
-            name: "דף הבית",
-            link: "",
-            id: 1
-          },
-          {
-            name: "חוויה איטלקית",
-            link: "",
-            id: 2
-          },
-          {
-            name: "חנות",
-            link: "",
-            id: 3
-          },
-          {
-            name: "צור קשר",
-            link: "",
-            id: 4
-          },
-        ]
+
+      }
+    },
+    computed: {
+      categories() {
+        return this.$store.state.categories
       }
     }
   }
@@ -62,14 +58,15 @@
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-.row-sticky {
-      position: sticky;
+  .row-sticky {
+    position: sticky;
     top: 0;
     z-index: 3;
     background-color: #ffffff;
-}
+  }
+
   .wrap-all-el {
-          
+
     width: 71%;
     /* margin: 0 auto; */
     position: relative;
@@ -100,7 +97,7 @@
     margin: 19px 46px
   }
 
-  .bac-menu{
+  .bac-menu {
     display: block;
     width: -webkit-fill-available;
   }
@@ -114,7 +111,7 @@
     font-size: 25px;
     margin: 5px;
     color: rgb(0, 0, 0);
-      
+
 
   }
 
@@ -127,7 +124,7 @@
     .wrap-all-el {
       height: 60px;
       /* padding: 20px 0px; */
-          width: 100%;
+      width: 100%;
     }
 
     .bac-menu {
@@ -153,8 +150,9 @@
       width: 100%;
       border-bottom: solid rgb(0, 0, 0) 1px;
     }
-  .icon-cart {
-    position: static;
-  }
+
+    .icon-cart {
+      position: static;
+    }
   }
 </style>
