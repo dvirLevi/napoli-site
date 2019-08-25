@@ -46,6 +46,20 @@
   }
 
   @media (max-width: 767.98px) {
+    .row {
+      /* background-image: url(../img/ass3.b7124460.jpg); */
+      background-size: 224%;
+      background-repeat: no-repeat;
+      background-position: 50%;
+      height: 414px;
+    }
+
+    .content-text h2 {
+    font-size: 25px;
+  
+  }
+
+
     .box-text {
       width: 100%;
       padding: 10px;

@@ -9,7 +9,7 @@
     <ButtonLink text="לרכישת התנור" link="/"/>
         </div>
       </div>
- <div class="col-md-6 left-side">
+ <div class="col-md-6 left-side p-0">
         <img data-aos="fade-up" src="../assets/ass2.jpg" alt="">
       </div>
     </div>

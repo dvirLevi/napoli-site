@@ -1,5 +1,5 @@
 <template>
-  <div class="row mt-3 p-3">
+  <div class="row mt-5 p-3">
     <div class="col-md-5 center-all">
       <!-- <div class="w-50 text-center"> -->
       <!-- <h2 class="h5 w-100">תפריט:</h2> -->

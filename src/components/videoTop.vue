@@ -46,12 +46,13 @@
  
 
   .wrap-video {
-    height: 154px;
+    height: 238px;
+    overflow: hidden;
   }
 
   video {
-    width: 100%;
-            margin-top: -44px;
+    width: 137%;
+            margin-top: 0px;
   }
    }
 </style>

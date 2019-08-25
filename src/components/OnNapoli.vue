@@ -10,7 +10,7 @@
       </div>
     </div>
     <div class="row">
-      <div class="col-md-6  left-side">
+      <div class="col-md-6  left-side p-0">
         <img data-aos="fade-up" src="../assets/ass9.jpg" alt="">
       </div>
       <div class="col-md-6 center-all p-3">

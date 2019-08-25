@@ -9,13 +9,13 @@
       <div class="col part-shulders center-all">
         <div class="block-text">
           <h2>אז למה Napoli Pizza Oven?</h2>
-          <p>תנור הפיצה נאפולי | <span>Napoli Pizza Oven</span> הושק בקיקסטרטר ב-2017, וגייס את מלוא הסכום תוך 24 שעות
-            בלבד.</p>
-          <p>תוך חודשים אחדים ה-<span>Napoli Pizza Oven</span> כבש גם את אמזון ארה"ב, הוכרז כ- <span>Best seller</span>
-            וכ- <span>Amazon choice</span>, עד שכל התנורים אזלו מהמלאי למשך שבועות ארוכים.</p>
-          <p>תנור הפיצה נאפולי | <span>Napoli Pizza Oven</span> מתלהט לחום מדהים של +500°, ויחד עם אבן האפייה המיוחדת
-            שלו הוא מציע חוויה איטלקית אמיתית. רק 90 שניות, ויש לכם פיצה גורמה.</p>
-          <p>לבית, לקמפינג, לערבי משפחה וחברים – ה-<span>Napoli Pizza Oven</span> שלכם יהיה במרכז העניינים.</p>
+          <p>תנור הפיצה נאפולי | Napoli Pizza Oven הושק בקיקסטרטר ב-2017, וגייס את מלוא הסכום תוך 24 שעות בלבד. תוך
+            חודשים אחדים ה-<span>Napoli Pizza Oven</span> כבש גם את אמזון ארה"ב, הוכרז כ-<span>Best seller</span>
+            וכ-<span>Amazon choice</span>, עד שכל התנורים
+            אזלו מהמלאי למשך שבועות ארוכים. </p>
+          <p>הנאפולי מתלהט לחום מדהים של +500°C, ויחד עם אבן האפייה המיוחדת שלו הוא מציע חוויה איטלקית אמיתית. רק 90
+            שניות, ויש לכם פיצה גורמה. לבית, לקמפינג, לערבי משפחה וחברים – ה-<span>Napoli Pizza Oven</span> שלכם יהיה במרכז העניינים.
+          </p>
         </div>
       </div>
     </div>
@@ -33,8 +33,6 @@
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
- 
-
   .left-side img {
     width: 25%;
   }

@@ -16,7 +16,7 @@
     <GasBurner/>
     <FoodImages/>
     <SoWhy/>
-    <!-- <videoBottom/> -->
+    <videoBottom/>
   </div>
 </template>
 
@@ -25,7 +25,7 @@
   import OnNapoli from '@/components/OnNapoli.vue'
   import ReelPizza from '@/components/ReelPizza.vue'
   // import TechnicalSpecifications from '@/components/TechnicalSpecifications.vue'
-  // import videoBottom from '@/components/videoBottom.vue'
+  import videoBottom from '@/components/videoBottom.vue'
   import videoTop from '@/components/videoTop.vue'
   import GasBurner from '@/components/GasBurner.vue'
   import SoWhy from '@/components/SoWhy.vue'
@@ -39,7 +39,7 @@
       OnNapoli,
       ReelPizza,
       // TechnicalSpecifications,
-      // videoBottom,
+      videoBottom,
       videoTop,
       GasBurner,
       SoWhy,
