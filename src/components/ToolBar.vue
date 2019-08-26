@@ -2,7 +2,7 @@
   <div class="row row-sticky">
     <div class="col">
       <div class="wrap-all-el d-flex">
-        <div class="center-all icon-cart position-relative">
+        <div @click="openCart" class="center-all icon-cart position-relative">
           <i class="fas fa-shopping-cart"></i>
           <div class="point-green" v-if="inCart.length"></div>
         </div>
@@ -55,6 +55,11 @@
       },
        inCart() {
         return this.$store.getters.inCart
+      }
+    },
+    methods:{
+        openCart(){
+        this.$store.commit('showCart')
       }
     }
   }

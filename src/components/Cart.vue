@@ -4,13 +4,13 @@
       <div class="w-100">
         <span @click="openCart" class="h1 close-m">&times;</span>
       </div>
-      <div class="row center-all" v-if="products.length">
-        <div class="col-md-12" v-for="product in products" :key="product.id">
-          <div class="row mt-3 center-all">
-            <div class="col-md-6 ">
+      <div class="row center-all m-1" v-if="products.length">
+        <div class="col-md-12 box-product mt-2" v-for="product in products" :key="product.id">
+          <div class="row center-all">
+            <div class="col-6 ">
               <img class="w-100" :src="product.img" alt="">
             </div>
-            <div class="col-md-6 ">
+            <div class="col-6 ">
               <p>מוצר: {{product.name}}</p>
               <p>מחיר: {{product.price}} ₪</p>
               <!-- <div class="center-all"> -->
@@ -63,6 +63,17 @@
 <style scoped>
   .close-m {
     cursor: pointer;
+  }
+
+  .box-product {
+    box-shadow: 1px 1px 3px #c1c1c1;
+    /* margin: 12px; */
+    padding: 5px;
+  }
+
+  .box-product p {
+    font-size: 10px;
+    margin: 0px;
   }
 
   @media (max-width: 767.98px) {}

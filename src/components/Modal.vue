@@ -2,7 +2,7 @@
   <div id="myModal" class="modal">
 
   <!-- Modal content -->
-  <div class="modal-con">
+  <div class="modal-con center-all">
     <slot></slot>
   </div>
 

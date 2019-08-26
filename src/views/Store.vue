@@ -1,6 +1,7 @@
 <template>
   <div class="row mt-5">
-    <div class="col-md-6" v-for="product in products" :key="product.id">
+    <div class="col-md-6 box-all" v-for="product in products" :key="product.id">
+      <div class="box-product">
       <div class="row mt-3">
         <div class="col-md-6 ">
           <img class="w-100" :src="product.img" alt="">
@@ -28,6 +29,7 @@
           </div>
         </div>
       </div>
+    </div>
     </div>
   </div>
 </template>
@@ -82,6 +84,16 @@ button {
   color: #ffffff;
   padding: 10px;
   outline: none;
+  margin: 7px;
 }
+.box-all {
+  padding: 0px;
+}
+.box-product {
+box-shadow: 1px 1px 3px #c1c1c1;
+    margin: 15px;
+    padding: 17px;
+}
+    
   @media (max-width: 767.98px) {}
 </style>
