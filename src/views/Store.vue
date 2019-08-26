@@ -25,8 +25,10 @@
             <p>סה"כ: {{product.amount * product.price}} ₪</p>
           </div> -->
             <div class="center-all mb-5  mt-5">
-              <button @click="addToCart(product)" link=""><span v-if="product.amount == 0">הוסף לעגלת הקניות</span> <span
-                  v-if="product.amount > 0">נוסף לעגלת הקניות</span></button>
+              <button @click="addToCart(product)" link="">
+                הוסף לעגלת הקניות
+                </button>
+                <!-- <span v-if="product.amount > 0">נוסף לעגלת הקניות</span></button> -->
             </div>
           </div>
         </div>

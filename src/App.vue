@@ -1,8 +1,10 @@
 <template>
-  <div id="app" class="container-fluid">
+  <div id="app" class="container-fluid" >
     <!-- <Cart/> -->
    <ToolBar/>
+   <div @click="closeCart">
     <router-view/>
+    </div>
     <Footer/>
   </div>
 </template>
@@ -21,6 +23,11 @@
       Footer,
       // Cart
     },
+      methods: {
+      closeCart() {
+        this.$store.commit('allTimeCloseCart')
+      }
+    }
   
   }
 </script>

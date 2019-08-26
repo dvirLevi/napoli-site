@@ -80,6 +80,9 @@ export default new Vuex.Store({
     },
     allTimeShowCart(state) {
       state.ifCart = true
+    },
+    allTimeCloseCart(state) {
+      state.ifCart = false
     }
   },
   actions: {

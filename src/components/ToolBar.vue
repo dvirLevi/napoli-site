@@ -2,10 +2,12 @@
   <div class="row row-sticky">
     <div class="col">
       <div class="wrap-all-el d-flex">
-        <div  class="center-all icon-cart position-relative">
+        <div  class="center-all icon-cart">
+          <div class="position-relative">
           <i @click.self="openCart" class="fas fa-shopping-cart"></i>
           <div class="point-green" v-if="inCart.length"></div>
           <Cart/>
+          </div>
         </div>
         <div class="bac-menu" @click="ifMenu = !ifMenu" :class="{menusToolBar: !ifMenu}">
           <div class="center-all wrap-items">
@@ -182,7 +184,7 @@
     .point-green {
       width: 10px;
       height: 10px;
-      top: 16px;
+      /* top: 0px; */
       right: 7px;
       position: absolute;
       border-radius: 100px;
