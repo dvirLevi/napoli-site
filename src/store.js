@@ -30,15 +30,17 @@ export default new Vuex.Store({
         name: "תנור פיצה נאפולי",
         img: require("@/assets/ass6.png"),
         description: "אחלה תנור",
-        price: 300,
+        addCart: false,
+        price: 1650,
         amount: 0,
         id: "1"
       },
       {
         name: "מבער גז נאפולי",
-        img: require("@/assets/ass8.png"),
+        img: require("@/assets/ass16.png"),
         description: "אחלה תנור",
-        price: 100,
+        addCart: false,
+        price: 350,
         amount: 0,
         id: "2"
       },
@@ -46,7 +48,8 @@ export default new Vuex.Store({
         name: "כיסוי חוץ לתנור נאפולי",
         img: require("@/assets/ass14.jpg"),
         description: "אחלה תנור",
-        price: 50,
+        addCart: false,
+        price: 150,
         amount: 0,
         id: "3"
       },
@@ -54,7 +57,8 @@ export default new Vuex.Store({
         name: "מרדה לתנור נאפולי",
         img: require("@/assets/ass15.jpg"),
         description: "אחלה תנור",
-        price: 80,
+        addCart: false,
+        price: 220,
         amount: 0,
         id: "4"
       },
@@ -73,6 +77,9 @@ export default new Vuex.Store({
   mutations: {
     showCart(state) {
       state.ifCart = !state.ifCart
+    },
+    allTimeShowCart(state) {
+      state.ifCart = true
     }
   },
   actions: {

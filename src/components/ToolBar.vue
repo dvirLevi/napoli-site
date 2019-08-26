@@ -2,9 +2,10 @@
   <div class="row row-sticky">
     <div class="col">
       <div class="wrap-all-el d-flex">
-        <div @click="openCart" class="center-all icon-cart position-relative">
-          <i class="fas fa-shopping-cart"></i>
+        <div  class="center-all icon-cart position-relative">
+          <i @click.self="openCart" class="fas fa-shopping-cart"></i>
           <div class="point-green" v-if="inCart.length"></div>
+          <Cart/>
         </div>
         <div class="bac-menu" @click="ifMenu = !ifMenu" :class="{menusToolBar: !ifMenu}">
           <div class="center-all wrap-items">
@@ -25,8 +26,9 @@
         </div>
 
         <Hamburger :ifMenu="ifMenu" @openClose="ifMenu = !ifMenu" />
-
-        <img src="../assets/napoli_logo.jpg" alt="">
+        <router-link class="" tag="div" to="/">
+          <img src="../assets/napoli_logo.jpg" alt="">
+        </router-link>
       </div>
     </div>
   </div>
@@ -34,11 +36,13 @@
 
 <script>
   import Hamburger from '@/components/Hamburger.vue'
+  import Cart from '@/components/Cart.vue'
 
   export default {
     name: 'ToolBar',
     components: {
-      Hamburger
+      Hamburger,
+      Cart
     },
     props: {
 
@@ -53,12 +57,12 @@
       categories() {
         return this.$store.state.categories
       },
-       inCart() {
+      inCart() {
         return this.$store.getters.inCart
       }
     },
-    methods:{
-        openCart(){
+    methods: {
+      openCart() {
         this.$store.commit('showCart')
       }
     }
@@ -174,14 +178,15 @@
     .icon-cart {
       position: static;
     }
-     .point-green {
-    width: 10px;
-    height: 10px;
-    top: 16px;
-    right: 7px;
-    position: absolute;
-    border-radius: 100px;
-    background-color: #ff9743;
-  }
+
+    .point-green {
+      width: 10px;
+      height: 10px;
+      top: 16px;
+      right: 7px;
+      position: absolute;
+      border-radius: 100px;
+      background-color: #ff9743;
+    }
   }
 </style>
