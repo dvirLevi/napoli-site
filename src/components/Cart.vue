@@ -4,6 +4,9 @@
       <div class="w-100">
         <span @click="openCart" class="h1 close-m">&times;</span>
       </div>
+      <!-- <div class="w-100 center-all">
+        <h4>סיכום רכישה ותשלום:</h4>
+      </div> -->
       <div class="row center-all m-1" v-if="products.length">
         <div class="col-md-12 box-product mt-2" v-for="product in products" :key="product.id">
           <div class="row center-all">

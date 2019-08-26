@@ -10,7 +10,7 @@
           <h3>מוצר: {{product.name}}</h3>
           <p>מחיר: {{product.price}} ₪</p>
           <div class="w-100 center-all">
-            <p class="w-100 m-0 text-center">הוסף מוצר לעגלת הקניות!</p>
+            <!-- <p class="w-100 m-0 text-center">הוסף מוצר לעגלת הקניות!</p> -->
             <div @click="addPrice(product)" class="m-4 p-2 h3 border-left butt-oper">
               +
             </div>
@@ -24,8 +24,8 @@
           <div class="center-all">
             <p>סה"כ: {{product.amount * product.price}} ₪</p>
           </div>
-          <div class="center-all">
-            <button @click="openCart"  link="" >לחץ כאן למעבר לעגלת קניות</button>
+          <div class="center-all mb-3  mt-4">
+            <button @click="openCart"  link="" >הוסף לעגלת הקניות</button>
           </div>
         </div>
       </div>
@@ -84,7 +84,7 @@ button {
   color: #ffffff;
   padding: 10px;
   outline: none;
-  margin: 7px;
+  /* margin: 7px; */
 }
 .box-all {
   padding: 0px;
