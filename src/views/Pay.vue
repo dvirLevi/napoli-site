@@ -78,12 +78,14 @@
                 <P>סה"כ למוצר: {{product.amount * product.price}}</P>
               </div>
               <h5>סה"כ לתשלום: {{Payable}} ₪</h5>
+              <ButtonLink text="להמשך קנייה" link="/store" />
+
             </div>
           </div>
           <div class="col-md-6 p-5">
             <div class="w-100 center-all">
               <h4>פרטי הלקוח</h4>
-              <div class="w-100" v-for="product in products" :key="product.id">
+              <div class="w-100">
                 <P>שם: {{clientDatdlis.name}}</P>
                 <P>טלפון: {{clientDatdlis.tel}}</P>
                 <P>מייל: {{clientDatdlis.mail}}</P>
@@ -93,10 +95,10 @@
                 <P>מיקוד: {{clientDatdlis.mikod}}</P>
                 <P>הערות: {{clientDatdlis.note}}</P>
               </div>
+              <ButtonLink @customEvent="payment = !payment" text="לעריכת פרטים אישיים" link="" />
+
             </div>
           </div>
-          <ButtonLink text="להמשך קנייה" link="/store" />
-          <ButtonLink @customEvent="payment = !payment" text="לעריכת פרטים אישיים" link="" />
         </div>
       </div>
       <div class="col-md-6">

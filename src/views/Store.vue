@@ -11,7 +11,7 @@
             <p>{{product.price}} ₪</p>
             <p class="more">פרטים נוספים>></p>
           
-            <div class="center-all mb-5  mt-5">
+            <div class="center-all mb-3  mt-3">
              
               <ButtonLink @customEvent="addToCart(product)" text="הוסף לעגלת הקניות" link="/store" />
               

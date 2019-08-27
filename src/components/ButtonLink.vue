@@ -24,15 +24,12 @@ button {
   padding: 10px;
   outline: none;
   margin: 5px;
+  margin-top: 20px;
+  font-weight: 400;
 }
 
 button:hover {
-  border: none;
   background-color: #8c8c8c;
-  color: #ffffff;
-  padding: 10px;
-  outline: none;
-  margin: 5px;
 }
 
 
