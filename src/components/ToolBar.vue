@@ -139,6 +139,7 @@
     position: absolute;
     border-radius: 100px;
     background-color: #ff9743;
+   pointer-events: none;
   }
 
 

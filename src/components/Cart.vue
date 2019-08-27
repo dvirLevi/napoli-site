@@ -2,10 +2,10 @@
   <div class="cart" v-if="ifCart">
     <div class="arrow-up"></div>
     <!-- <Modal> -->
-      <!-- <div class="w-100 pr-3"> -->
-        <!-- <span @click.stop="openCart" class="h1 close-m">&times;</span> -->
-      <!-- </div> -->
-      <div class="w-100 over-scroll">
+    <!-- <div class="w-100 pr-3"> -->
+    <!-- <span @click.stop="openCart" class="h1 close-m">&times;</span> -->
+    <!-- </div> -->
+    <div class="w-100 over-scroll">
       <div class="w-100 center-all">
         <h5 class="m-0">עגלת קניות</h5>
       </div>
@@ -17,21 +17,21 @@
             </div>
             <div class="col-9 text-center ">
               <p>{{product.name}}</p>
-            <div class="w-100 center-all">
-            <p>{{product.price}} ₪</p>
+              <div class="w-100 center-all">
+                <p>{{product.price}} ₪</p>
 
-            <!-- <p class="w-100 m-0 text-center">הוסף מוצר לעגלת הקניות!</p> -->
-            <div @click="product.amount++" class=" border-left butt-oper">
-              +
-            </div>
-            <div>
-              {{product.amount}}
-            </div>
-            <div @click="product.amount--" class=" border-right butt-oper">
-              -
-            </div>
+                <!-- <p class="w-100 m-0 text-center">הוסף מוצר לעגלת הקניות!</p> -->
+                <div @click="product.amount++" class=" border-left butt-oper">
+                  +
+                </div>
+                <div>
+                  {{product.amount}}
+                </div>
+                <div @click="product.amount--" class=" border-right butt-oper">
+                  -
+                </div>
 
-          </div>
+              </div>
             </div>
           </div>
         </div>
@@ -44,16 +44,16 @@
         </div>
       </div>
       <div class="center-all">
-            <p>סה"כ: {{Payable}} ₪</p>
-          </div>
+        <p>סה"כ: {{Payable}} ₪</p>
+      </div>
       <div class="center-all ">
-        <ButtonLink @customEvent="openCart" text="לחנות" link="/store" />
+        <ButtonLink @customEvent="openCart" text="להמשך קנייה" link="/store" />
         <ButtonLink text=" לתשלום" link="" v-if="products.length" />
       </div>
-      
-      
-    <!-- </Modal> -->
-  </div>
+
+
+      <!-- </Modal> -->
+    </div>
   </div>
 </template>
 
@@ -75,8 +75,8 @@
       },
       Payable() {
         let Payable = 0;
-        for(let x in this.$store.getters.inCart){
-Payable += this.$store.getters.inCart[x].amount * this.$store.getters.inCart[x].price;
+        for (let x in this.$store.getters.inCart) {
+          Payable += this.$store.getters.inCart[x].amount * this.$store.getters.inCart[x].price;
         }
         return Payable
       }
@@ -91,15 +91,16 @@ Payable += this.$store.getters.inCart[x].amount * this.$store.getters.inCart[x].
 </script>
 
 <style scoped>
-.cart {
-  
-     position: absolute;
+  .cart {
+
+    position: absolute;
     width: 360px;
     z-index: 5;
     top: 61px;
     right: 0;
-    background-color: #fcf9f8;
-}
+    background-color: #ead7d7;
+  }
+
   /* .close-m {
     position: absolute;
     cursor: pointer;
@@ -116,6 +117,7 @@ Payable += this.$store.getters.inCart[x].amount * this.$store.getters.inCart[x].
     font-size: 15px;
     margin: 0px;
   }
+
   .butt-oper {
     margin: 8px;
     padding: 7px 13px;
@@ -129,27 +131,32 @@ Payable += this.$store.getters.inCart[x].amount * this.$store.getters.inCart[x].
     height: 0px;
     border-left: 15px solid transparent;
     border-right: 15px solid transparent;
-    border-bottom: 24px solid #fcf9f8;
-}
-.over-scroll {
-  /* overflow: auto; */
+    border-bottom: 24px solid #ead7d7;
+  }
+
+  h5 {
+    font-weight: 100;
+  }
+
+  .over-scroll {
+    /* overflow: auto; */
     padding: 10px;
-/* max-height: 600px */
-}
+    /* max-height: 600px */
+  }
 
   @media (max-width: 767.98px) {
     .cart {
-       width: 289px;
-       right: 6px;
-}
+      width: 289px;
+      right: 6px;
+    }
 
-  .arrow-up {
-    top: -17px;
-    right: 0px;
-    border-left: 10px solid transparent;
-    border-right: 10px solid transparent;
-    border-bottom: 20px solid #fcf9f8;
-}
+    .arrow-up {
+      top: -19px;
+      right: 0px;
+      border-left: 10px solid transparent;
+      border-right: 10px solid transparent;
+      border-bottom: 20px solid #ead7d7;
+    }
 
   }
 </style>

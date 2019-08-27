@@ -1,5 +1,5 @@
 <template>
-    <div class="" @click="$emit('customEvent')">
+    <div class="" @click.stop="$emit('customEvent')">
           <router-link class="" tag="button" :to="link" >{{text}}</router-link>
     </div>
 </template>
@@ -20,6 +20,15 @@ text: String,
 button {
   border: none;
   background-color: black;
+  color: #ffffff;
+  padding: 10px;
+  outline: none;
+  margin: 5px;
+}
+
+button:hover {
+  border: none;
+  background-color: #8c8c8c;
   color: #ffffff;
   padding: 10px;
   outline: none;
