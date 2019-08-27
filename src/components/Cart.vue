@@ -98,7 +98,7 @@
     z-index: 5;
     top: 61px;
     right: 0;
-    background-color: #ead7d7;
+    background-color: #f7e3e3;
   }
 
   /* .close-m {
@@ -131,7 +131,7 @@
     height: 0px;
     border-left: 15px solid transparent;
     border-right: 15px solid transparent;
-    border-bottom: 24px solid #ead7d7;
+    border-bottom: 24px solid #f7e3e3;
   }
 
   h5 {
@@ -155,7 +155,7 @@
       right: 0px;
       border-left: 10px solid transparent;
       border-right: 10px solid transparent;
-      border-bottom: 20px solid #ead7d7;
+      border-bottom: 20px solid #f7e3e3;
     }
 
   }

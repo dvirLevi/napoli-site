@@ -1,11 +1,11 @@
 <template>
-  <div id="app" class="container-fluid" >
+  <div id="app" class="container-fluid">
     <!-- <Cart/> -->
-   <ToolBar/>
-   <div @click="closeCart">
-    <router-view/>
+    <ToolBar />
+    <div @click="closeCart">
+      <router-view />
+      <Footer />
     </div>
-    <Footer/>
   </div>
 </template>
 
@@ -14,7 +14,7 @@
   import ToolBar from '@/components/ToolBar.vue'
   import Footer from '@/components/Footer.vue'
   // import Cart from '@/components/Cart.vue'
-  
+
 
   export default {
     name: 'App',
@@ -23,17 +23,15 @@
       Footer,
       // Cart
     },
-      methods: {
+    methods: {
       closeCart() {
         this.$store.commit('allTimeCloseCart')
       }
     }
-  
+
   }
 </script>
 
 <style>
-#app {
- 
-}
+  #app {}
 </style>
