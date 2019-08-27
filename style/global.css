@@ -21,8 +21,8 @@ html, body {
   }
 
   .router-link-exact-active {
-    /* color: #f98482;
-    font-weight: bold; */
+    color: #a5a5a5;
+    font-weight: bold;
   }
 
   .part-shulders {

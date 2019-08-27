@@ -1,11 +1,11 @@
 <template>
-  <div id="app" class="container-fluid">
+  <div id="app" class="container-fluid" @click="closeCart">
     <!-- <Cart/> -->
     <ToolBar />
-    <div @click="closeCart">
+    <!-- <div @click="closeCart"> -->
       <router-view />
       <Footer />
-    </div>
+    <!-- </div> -->
   </div>
 </template>
 

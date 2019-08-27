@@ -7,8 +7,8 @@
             <img class="w-100" :src="product.img" alt="">
           </div>
           <div class="col-md-6 ">
-            <h3>מוצר: {{product.name}}</h3>
-            <p>מחיר: {{product.price}} ₪</p>
+            <h3>{{product.name}}</h3>
+            <p>{{product.price}} ₪</p>
             <p class="more">פרטים נוספים>></p>
           
             <div class="center-all mb-5  mt-5">

@@ -4,7 +4,7 @@
       <div class="wrap-all-el d-flex">
         <div  class="center-all icon-cart">
           <div class="position-relative">
-          <i @click.self="openCart" class="fas fa-shopping-cart"></i>
+          <i @click.stop="openCart" class="fas fa-shopping-cart"></i>
           <div class="point-green" v-if="inCart.length"></div>
           <Cart/>
           </div>
@@ -111,7 +111,9 @@
   .items-menu {
     margin: 19px 46px;
     cursor: pointer;
+    font-weight: 400;
   }
+  
 
   .bac-menu {
     display: block;

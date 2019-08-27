@@ -1,10 +1,6 @@
 <template>
-  <div class="cart" v-if="ifCart">
+  <div class="cart" v-if="ifCart" v-show="payRoutCloseCart">
     <div class="arrow-up"></div>
-    <!-- <Modal> -->
-    <!-- <div class="w-100 pr-3"> -->
-    <!-- <span @click.stop="openCart" class="h1 close-m">&times;</span> -->
-    <!-- </div> -->
     <div class="w-100 over-scroll">
       <div class="w-100 center-all">
         <h5 class="m-0">עגלת קניות</h5>
@@ -19,18 +15,15 @@
               <p>{{product.name}}</p>
               <div class="w-100 center-all">
                 <p>{{product.price}} ₪</p>
-
-                <!-- <p class="w-100 m-0 text-center">הוסף מוצר לעגלת הקניות!</p> -->
-                <div @click="product.amount++" class=" border-left butt-oper">
+                <div @click.stop="product.amount++" class=" border-left butt-oper">
                   +
                 </div>
                 <div>
                   {{product.amount}}
                 </div>
-                <div @click="product.amount--" class=" border-right butt-oper">
+                <div @click.stop="product.amount--" class=" border-right butt-oper">
                   -
                 </div>
-
               </div>
             </div>
           </div>
@@ -48,11 +41,8 @@
       </div>
       <div class="center-all ">
         <ButtonLink @customEvent="openCart" text="להמשך קנייה" link="/store" />
-        <ButtonLink text=" לתשלום" link="/pay" v-if="products.length" />
+        <ButtonLink @customEvent="openCart" text="לתשלום מאובטח" link="/pay" v-if="products.length" />
       </div>
-
-
-      <!-- </Modal> -->
     </div>
   </div>
 </template>
@@ -79,7 +69,13 @@
           Payable += this.$store.getters.inCart[x].amount * this.$store.getters.inCart[x].price;
         }
         return Payable
-      }
+      },
+      payRoutCloseCart() {
+        if(this.$route.name == "pay"){
+          return false
+        }
+        return true
+      },
     },
     methods: {
       openCart() {
@@ -98,7 +94,7 @@
     z-index: 5;
     top: 61px;
     right: 0;
-    background-color: #f7e3e3;
+    background-color: #e0e0e0;
   }
 
   /* .close-m {
@@ -120,7 +116,7 @@
 
   .butt-oper {
     margin: 8px;
-    padding: 7px 13px;
+    padding: 0px 13px;
   }
 
   .arrow-up {
@@ -131,7 +127,7 @@
     height: 0px;
     border-left: 15px solid transparent;
     border-right: 15px solid transparent;
-    border-bottom: 24px solid #f7e3e3;
+    border-bottom: 24px solid #e0e0e0;
   }
 
   h5 {
@@ -155,7 +151,7 @@
       right: 0px;
       border-left: 10px solid transparent;
       border-right: 10px solid transparent;
-      border-bottom: 20px solid #f7e3e3;
+      border-bottom: 20px solid #e0e0e0;
     }
 
   }

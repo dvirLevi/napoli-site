@@ -12,7 +12,7 @@ export default new Vuex.Store({
       },
       {
         name: "חוויה איטלקית",
-        link: "",
+        link: "/asd",
         id: 2
       },
       {
@@ -22,7 +22,7 @@ export default new Vuex.Store({
       },
       {
         name: "צור קשר",
-        link: "",
+        link: "/aasd",
         id: 4
       },
     ],
