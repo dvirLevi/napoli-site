@@ -10,27 +10,11 @@
             <h3>מוצר: {{product.name}}</h3>
             <p>מחיר: {{product.price}} ₪</p>
             <p class="more">פרטים נוספים>></p>
-            <!-- <div class="w-100 center-all">
-            <p class="w-100 m-0 text-center">הוסף מוצר לעגלת הקניות!</p>
-            <div @click="addPrice(product)" class="m-4 p-2 h3 border-left butt-oper">
-              +
-            </div>
-            <div>
-              {{product.amount}}
-            </div>
-            <div @click="minusPrice(product)" class="m-4 p-2 h3 border-right butt-oper">
-              -
-            </div>
-          </div>
-          <div class="center-all">
-            <p>סה"כ: {{product.amount * product.price}} ₪</p>
-          </div> -->
+          
             <div class="center-all mb-5  mt-5">
-              <!-- <button @click.stop="addToCart(product)" link="">
-                הוסף לעגלת הקניות
-                </button> -->
+             
               <ButtonLink @customEvent="addToCart(product)" text="הוסף לעגלת הקניות" link="/store" />
-              <!-- <span v-if="product.amount > 0">נוסף לעגלת הקניות</span></button> -->
+              
             </div>
           </div>
         </div>

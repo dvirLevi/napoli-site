@@ -48,7 +48,7 @@
       </div>
       <div class="center-all ">
         <ButtonLink @customEvent="openCart" text="להמשך קנייה" link="/store" />
-        <ButtonLink text=" לתשלום" link="" v-if="products.length" />
+        <ButtonLink text=" לתשלום" link="/pay" v-if="products.length" />
       </div>
 
 
