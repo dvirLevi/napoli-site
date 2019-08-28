@@ -8,7 +8,7 @@
     <div class="row mt-5">
       <div class="col part-shulders center-all">
         <div class="block-text">
-          <h2>אז למה Napoli Pizza Oven?</h2>
+          <TitleAndBorderC>אז למה Napoli Pizza Oven?</TitleAndBorderC>
           <p>תנור הפיצה נאפולי | <span>Napoli Pizza Oven</span> הושק בקיקסטרטר ב-2017, וגייס את מלוא הסכום תוך 24 שעות בלבד. תוך
             חודשים אחדים ה-<span>Napoli Pizza Oven</span> כבש גם את אמזון ארה"ב, הוכרז כ-<span>Best seller</span>
             וכ-<span>Amazon choice</span>, עד שכל התנורים

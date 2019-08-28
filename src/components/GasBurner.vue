@@ -5,7 +5,8 @@
       <div class="row center-all">
         <div class="col center-all">
           <div class="block-text">
-            <h2>מבער פחמים</h2>
+            <!-- <h2>מבער פחמים</h2> -->
+            <TitleAndBorderR>מבער פחמים</TitleAndBorderR>
             <p>ה-<span>Napoli Pizza Oven</span> מגיע עם תא נירוסטה מעוצב, גדול וייחודי להבערת פחמים, עצים או שבבים. התא
               נפרד
               מחלל האפייה
@@ -28,7 +29,8 @@
         </div>
         <div class="col-md-12 center-all">
           <div class="block-text">
-            <h2>מבער גז</h2>
+            <!-- <h2>מבער גז</h2> -->
+             <TitleAndBorderR>מבער גז</TitleAndBorderR>
             <p>מבער הגז של <span>Napoli Pizza Oven</span> מספק אש חזקה, יציבה ונקייה, והוא חסכוני ביותר: כ-420 גרם בלבד
               לשעת
               בעירה. עוצמת הלהבות ניתנת לשליטה מדויקת. לחיצה אחת על מצת המבער, והתנור לוהט. מבער הגז ניתן לרכישה בנפרד.

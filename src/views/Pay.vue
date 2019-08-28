@@ -4,7 +4,7 @@
       <!-- <template v-show="!payment"> -->
       <div class="col-md-6 mt-3">
         <div class="center-all">
-          <h2>מוצרים בסל</h2>
+          <TitleAndBorderC>מוצרים בסל</TitleAndBorderC>
           <div class="w-100 center-all mt-5">
             <div class=" w-100 product-in-cart" v-for="product in products" :key="product.id">
               <div class="box-product">
@@ -28,7 +28,8 @@
       <div class="col-md-6 mt-3">
         <div class="w-100 center-all">
           <form @submit.prevent="nextToPay" class=" center-all">
-            <h2>פרטים אישיים</h2>
+          <TitleAndBorderC>פרטים אישיים</TitleAndBorderC>
+
             <div class="w-100 center-all mt-5">
               <input type="text" placeholder="*שם מלא" v-model="clientDatdlis.name" required>
             </div>

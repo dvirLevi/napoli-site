@@ -77,7 +77,7 @@
   h2 {
     display: inline-block;
     position: relative;
-    padding: 13px;
+    padding: 20px;
     border: solid #000000 2px;
         border-top: 0px;
   }

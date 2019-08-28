@@ -9,6 +9,7 @@ import "../style/fontawesome/css/all.css"
 import ButtonLink from '@/components/ButtonLink.vue'
 import Modal from '@/components/Modal.vue'
 import TitleAndBorderR from '@/components/TitleAndBorderR.vue'
+import TitleAndBorderC from '@/components/TitleAndBorderC.vue'
 import vSelect from 'vue-select'
 import 'vue-select/dist/vue-select.css';
 
@@ -18,6 +19,7 @@ Vue.component('ButtonLink', ButtonLink)
 Vue.component('Modal', Modal)
 Vue.component('v-select', vSelect)
 Vue.component('TitleAndBorderR', TitleAndBorderR)
+Vue.component('TitleAndBorderC', TitleAndBorderC)
 
 new Vue({
   created () {

@@ -18,7 +18,8 @@
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
   h2 {
-    display: inline-block;
+    display: flex;
+    justify-content: center;
     position: relative;
     padding: 13px;
     /* border: solid #000000 2px;
@@ -38,7 +39,7 @@
     h2::after {
     content: '';
     border-top: 2px solid #000000;
-    right: 0;
+    /* right: 25%; */
     bottom: 0;
     width: 100px;
     height: 1px;

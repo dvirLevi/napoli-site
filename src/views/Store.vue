@@ -1,5 +1,5 @@
 <template>
-  <div class="row mt-5 row-all">
+  <div class="row mt-3 row-all">
     <div class="col-md-6 box-all" v-for="product in products" :key="product.id">
       <div class="box-product">
         <div class="row mt-3">

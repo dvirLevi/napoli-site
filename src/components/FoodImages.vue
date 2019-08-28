@@ -8,7 +8,7 @@
 </div>
 <div class="row">
   <div class="col">
-    <h2>פיצה נאפוליטנית אמיתית</h2>
+    <TitleAndBorderR>פיצה נאפוליטנית אמיתית</TitleAndBorderR>
     <p>קמח טוב, רוטב עגבניות עשיר, בזיליקום טרי ומוצרלה. הכינו לחברים פיצת גורמה משגעת, בדיוק כמו באיטליה</p>
   </div>
 </div>
@@ -21,7 +21,7 @@
 </div>
 <div class="row">
   <div class="col">
-    <h2>סטייק מושלם</h2>
+    <TitleAndBorderR>סטייק מושלם</TitleAndBorderR>    
     <p>בחום האדיר של ה-Napoli Pizza Oven תוכלו לצלות את הנתח האהוב עליכם באיכות מדהימה. לא לשכוח בירה קרה בצד</p>
   </div>
 </div>
@@ -34,7 +34,7 @@
 </div>
 <div class="row">
   <div class="col">
-    <h2>ירקות גורמה</h2>
+    <TitleAndBorderR>ירקות גורמה</TitleAndBorderR>
     <p>עם קצת שמן זית ותבלינים, הכינו את לקט הירקות האהוב עליכם ב-Napoli Pizza Oven</p>
   </div>
 </div>
