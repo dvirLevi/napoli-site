@@ -33,7 +33,8 @@
               <input type="text" placeholder="*שם מלא" v-model="clientDatdlis.name" required>
             </div>
             <div class="w-100 center-all">
-              <input type="tel" placeholder="*טלפון" minlength="9" v-model="clientDatdlis.tel" required>
+              <input type="tel" placeholder="*טלפון" pattern="[0-9]+" minlength="9" maxlength="11"
+                v-model="clientDatdlis.tel" required>
             </div>
             <div class="w-100 center-all">
               <input type="email" placeholder='*דוא"ל' v-model="clientDatdlis.mail" required>
@@ -48,7 +49,8 @@
               <input type="text" placeholder="*מספר בית" v-model="clientDatdlis.namHome" required>
             </div>
             <div class="w-100 center-all">
-              <input type="text" placeholder="*מיקוד" minlength="5" v-model="clientDatdlis.mikod" required>
+              <input type="text" placeholder="*מיקוד" pattern="[0-9]+" minlength="5" v-model="clientDatdlis.mikod"
+                required>
             </div>
             <div class="w-100 center-all">
               <textarea id="" rows="5" placeholder="הערות" v-model="clientDatdlis.note"></textarea>
@@ -57,7 +59,7 @@
               <input type="checkbox" required>קראת והסכמתי לתקנון השימוש
             </div>
             <div class="w-100 center-all mt-3">
-            <ButtonLink text="להמשך קנייה" link="/store" />
+              <ButtonLink text="להמשך קנייה" link="/store" />
 
               <button type="submit">המשך לתשלום מאובטח</button>
             </div>
@@ -109,7 +111,15 @@
           </div>
         </div>
       </div>
-      <div class="col-md-6">
+      <div class="col-md-6 pay">
+        <div class="center-all w-100">
+          <h4 class="w-100 text-center">תשלומים</h4>
+          <div class="center-all select-num-payment">
+            <v-select class="w-100"  dir="rtl"
+            :options="['1 ', '2', '3']" v-model="numPay" placeholder=""></v-select>
+            <p class="w-100">מס' תשלומים: {{numPay}} כל תשלום {{namPayAmount}} ₪</p>
+          </div>
+        </div>
         <div class="center-all w-100">
           <iframe class="mt-5" :src="iframeUrl" height="570" :width="ifWidth"></iframe>
         </div>
@@ -129,6 +139,7 @@
     data() {
       return {
         payment: false,
+        numPay: 1
       }
     },
     methods: {
@@ -157,9 +168,12 @@
       products() {
         return this.$store.getters.inCart
       },
-       clientDatdlis() {
+      clientDatdlis() {
         return this.$store.state.clientDatdlis
       },
+      namPayAmount(){
+        return this.Payable / this.numPay
+      }
     }
   }
 </script>
@@ -190,23 +204,29 @@
     border: solid black 2px;
   }
 
+  .pay input {
+    width: 357px;
+    border: none;
+    border-bottom: solid #9E9E9E 1px;
+  }
+
   form {
     width: 100%;
   }
 
   button {
     border: none;
-  background-color: black;
-  color: #ffffff;
-  padding: 10px;
-  outline: none;
-  margin: 5px;
-  margin-top: 20px;
-  font-weight: 400;
+    background-color: black;
+    color: #ffffff;
+    padding: 10px;
+    outline: none;
+    margin: 5px;
+    margin-top: 20px;
+    font-weight: 400;
   }
 
   button:hover {
-     background-color: #8c8c8c;
+    background-color: #8c8c8c;
   }
 
   .stap-one p {
@@ -217,8 +237,12 @@
     border-bottom: solid #dee2e6 1px;
   }
 
-   .product-in-cart:last-child {
+  .product-in-cart:last-child {
     border-bottom: none;
+  }
+
+  .select-num-payment {
+    width: 50%;
   }
 
   @media (max-width: 767.98px) {
@@ -229,5 +253,8 @@
     textarea {
       width: 90%;
     }
+    .select-num-payment {
+    width: 100%;
+  }
   }
 </style>

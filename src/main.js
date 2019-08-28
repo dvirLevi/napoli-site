@@ -8,10 +8,14 @@ import 'aos/dist/aos.css'
 import "../style/fontawesome/css/all.css"
 import ButtonLink from '@/components/ButtonLink.vue'
 import Modal from '@/components/Modal.vue'
+import vSelect from 'vue-select'
+import 'vue-select/dist/vue-select.css';
+
 
 Vue.config.productionTip = false
 Vue.component('ButtonLink', ButtonLink)
 Vue.component('Modal', Modal)
+Vue.component('v-select', vSelect)
 
 new Vue({
   created () {
