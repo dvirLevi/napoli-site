@@ -65,6 +65,16 @@ export default new Vuex.Store({
 
     ],
     ifCart: false,
+    clientDatdlis: {
+      name: "",
+      tel: "",
+      mail: "",
+      city: "",
+      address: "",
+      namHome: "",
+      mikod: "",
+      note: ""
+    },
   },
   getters: {
     inCart: state => {

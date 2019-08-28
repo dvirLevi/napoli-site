@@ -2,11 +2,11 @@
   <div class="row row-sticky">
     <div class="col">
       <div class="wrap-all-el d-flex">
-        <div  class="center-all icon-cart">
+        <div class="center-all icon-cart">
           <div class="position-relative">
-          <i @click.stop="openCart" class="fas fa-shopping-cart"></i>
-          <div class="point-green" v-if="inCart.length"></div>
-          <Cart/>
+            <i @click.stop="openCart" class="fas fa-shopping-cart"></i>
+            <div class="point-green" v-if="inCart.length"></div>
+            <Cart />
           </div>
         </div>
         <div class="bac-menu" @click="ifMenu = !ifMenu" :class="{menusToolBar: !ifMenu}">
@@ -90,6 +90,10 @@
     margin-bottom: 20px;
   }
 
+  i:hover {
+    color: #8c8c8c;
+  }
+
   .icon-cart {
     position: absolute;
     height: 100%;
@@ -113,7 +117,7 @@
     cursor: pointer;
     font-weight: 400;
   }
-  
+
 
   .bac-menu {
     display: block;
@@ -141,7 +145,7 @@
     position: absolute;
     border-radius: 100px;
     background-color: #ff9743;
-   pointer-events: none;
+    pointer-events: none;
   }
 
 

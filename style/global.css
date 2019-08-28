@@ -20,6 +20,10 @@ html, body {
     flex-wrap: wrap;
   }
 
+  .h-100 {
+    height: 100%;
+  }
+
   .router-link-exact-active {
     color: #a5a5a5;
     font-weight: bold;

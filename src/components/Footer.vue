@@ -58,6 +58,12 @@
    color: #ffffff
   }
 
+  .items-menu {
+    font-weight: 400;
+    /* margin: 19px 46px; */
+    cursor: pointer;
+  }
+
 
   @media (max-width: 767.98px) {}
 </style>

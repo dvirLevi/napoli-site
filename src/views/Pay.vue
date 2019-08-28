@@ -1,14 +1,14 @@
 <template>
   <div>
-    <div class="row mt-5 part-shulders" v-show="!payment">
+    <div class="row mt-5 part-shulders stap-one" v-if="!payment">
       <!-- <template v-show="!payment"> -->
       <div class="col-md-6 mt-3">
         <div class="center-all">
           <h2>מוצרים בסל</h2>
           <div class="w-100 center-all mt-5">
-            <div class=" w-100" v-for="product in products" :key="product.id">
+            <div class=" w-100 product-in-cart" v-for="product in products" :key="product.id">
               <div class="box-product">
-                <div class="row mt-3">
+                <div class="row mb-3 mt-3">
                   <div class="col-md-6 center-all">
                     <img class="w-25" :src="product.img" alt="">
                   </div>
@@ -21,7 +21,7 @@
                 </div>
               </div>
             </div>
-            <ButtonLink text="להמשך קנייה" link="/store" />
+            <!-- <ButtonLink text="להמשך קנייה" link="/store" /> -->
           </div>
         </div>
       </div>
@@ -57,6 +57,8 @@
               <input type="checkbox" required>קראת והסכמתי לתקנון השימוש
             </div>
             <div class="w-100 center-all mt-3">
+            <ButtonLink text="להמשך קנייה" link="/store" />
+
               <button type="submit">המשך לתשלום מאובטח</button>
             </div>
           </form>
@@ -64,10 +66,10 @@
       </div>
     </div>
     <!-- </template> -->
-    <div class="row mt-5 part-shulders" v-show="payment">
+    <div class="row mt-5 part-shulders" v-if="payment">
       <!-- <template v-show="payment"> -->
       <div class="col-md-6">
-        <div class="row">
+        <div class="row border-bottom">
           <div class="col-md-6 p-5">
             <div class="w-100 center-all">
               <h4>פרטי ההזמנה</h4>
@@ -78,7 +80,6 @@
                 <P>סה"כ למוצר: {{product.amount * product.price}}</P>
               </div>
               <h5>סה"כ לתשלום: {{Payable}} ₪</h5>
-              <ButtonLink text="להמשך קנייה" link="/store" />
 
             </div>
           </div>
@@ -95,8 +96,15 @@
                 <P>מיקוד: {{clientDatdlis.mikod}}</P>
                 <P>הערות: {{clientDatdlis.note}}</P>
               </div>
-              <ButtonLink @customEvent="payment = !payment" text="לעריכת פרטים אישיים" link="" />
 
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <div class="center-all w-100">
+              <ButtonLink text="להמשך קנייה" link="/store" />
+              <ButtonLink @customEvent="payment = !payment" text="לעריכת פרטים אישיים" link="" />
             </div>
           </div>
         </div>
@@ -121,16 +129,6 @@
     data() {
       return {
         payment: false,
-        clientDatdlis: {
-          name: "",
-          tel: "",
-          mail: "",
-          city: "",
-          address: "",
-          namHome: "",
-          mikod: "",
-          note: ""
-        },
       }
     },
     methods: {
@@ -158,6 +156,9 @@
       },
       products() {
         return this.$store.getters.inCart
+      },
+       clientDatdlis() {
+        return this.$store.state.clientDatdlis
       },
     }
   }
@@ -195,24 +196,29 @@
 
   button {
     border: none;
-    background-color: black;
-    color: #ffffff;
-    padding: 10px;
-    outline: none;
-    margin: 5px;
+  background-color: black;
+  color: #ffffff;
+  padding: 10px;
+  outline: none;
+  margin: 5px;
+  margin-top: 20px;
+  font-weight: 400;
   }
 
   button:hover {
-    border: none;
-    background-color: #8c8c8c;
-    color: #ffffff;
-    padding: 10px;
-    outline: none;
-    margin: 5px;
+     background-color: #8c8c8c;
   }
 
-  p {
+  .stap-one p {
     margin: 0;
+  }
+
+  .product-in-cart {
+    border-bottom: solid #dee2e6 1px;
+  }
+
+   .product-in-cart:last-child {
+    border-bottom: none;
   }
 
   @media (max-width: 767.98px) {
