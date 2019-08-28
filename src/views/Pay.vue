@@ -138,7 +138,7 @@
     components: {},
     data() {
       return {
-        payment: true,
+        payment: false,
         numPay: 1,  
       }
     },
