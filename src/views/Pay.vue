@@ -81,8 +81,9 @@
                 <P>כמות: {{product.amount}}</P>
                 <P>סה"כ למוצר: {{product.amount * product.price}}</P>
               </div>
-              <h5>סה"כ לתשלום: {{Payable}} ₪</h5>
-
+              <div class="w-100">
+                <h5>סה"כ לתשלום: {{Payable}} ₪</h5>
+              </div>
             </div>
           </div>
           <div class="col-md-6 p-5">
@@ -115,8 +116,7 @@
         <div class="center-all w-100">
           <h4 class="w-100 text-center">תשלומים</h4>
           <div class="center-all select-num-payment">
-            <v-select class="w-100"  dir="rtl"
-            :options="['1 ', '2', '3']" v-model="numPay" placeholder=""></v-select>
+            <v-select class="w-100" :clearable="false" dir="rtl" :options="['1 ', '2', '3']" v-model="numPay"></v-select>
             <p class="w-100">מס' תשלומים: {{numPay}} כל תשלום {{namPayAmount}} ₪</p>
           </div>
         </div>
@@ -138,8 +138,8 @@
     components: {},
     data() {
       return {
-        payment: false,
-        numPay: 1
+        payment: true,
+        numPay: 1,  
       }
     },
     methods: {
@@ -156,7 +156,7 @@
         return 300
       },
       iframeUrl() {
-        return `https://direct.tranzila.com/sabresltd/iframenew.php?sum=${this.Payable}&currency=1&cred_type=1&lang=il&contact=${this.clientDatdlis.name}&phone=${this.clientDatdlis.tel}&email=${this.clientDatdlis.mail}&city=${this.clientDatdlis.city}&address=${this.clientDatdlis.address + this.clientDatdlis.namHome + this.clientDatdlis.mikod}&pdesc=${this.clientDatdlis.note}`
+        return `https://direct.tranzila.com/sabresltd/iframenew.php?sum=${this.Payable}&currency=1&cred_type=${this.ifCredit}&npay=${this.numPay - 1}&spay=${this.namPayAmount}&fpay=${this.namPayAmount}&lang=il&contact=${this.clientDatdlis.name}&phone=${this.clientDatdlis.tel}&email=${this.clientDatdlis.mail}&city=${this.clientDatdlis.city}&address=${this.clientDatdlis.address + this.clientDatdlis.namHome + this.clientDatdlis.mikod}&pdesc=${this.clientDatdlis.note}`
       },
       Payable() {
         let Payable = 0;
@@ -171,9 +171,15 @@
       clientDatdlis() {
         return this.$store.state.clientDatdlis
       },
-      namPayAmount(){
+      namPayAmount() {
         return this.Payable / this.numPay
-      }
+      },
+      ifCredit() {
+        if (this.numPay == 1) {
+          return 1
+        }
+        return 8
+      },
     }
   }
 </script>
@@ -253,8 +259,9 @@
     textarea {
       width: 90%;
     }
+
     .select-num-payment {
-    width: 100%;
-  }
+      width: 100%;
+    }
   }
 </style>
