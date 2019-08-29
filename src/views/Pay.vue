@@ -1,76 +1,7 @@
 <template>
   <div>
-    <div class="row mt-5 part-shulders stap-one" v-if="!payment">
-      <!-- <template v-show="!payment"> -->
-      <div class="col-md-6 mt-3">
-        <div class="center-all">
-          <TitleAndBorderC>מוצרים בסל</TitleAndBorderC>
-          <div class="w-100 center-all mt-5">
-            <div class=" w-100 product-in-cart" v-for="product in products" :key="product.id">
-              <div class="box-product">
-                <div class="row mb-3 mt-3">
-                  <div class="col-md-6 center-all">
-                    <img class="w-25" :src="product.img" alt="">
-                  </div>
-                  <div class="col-md-6 ">
-                    <h5>{{product.name}}</h5>
-                    <p>{{product.price}} ₪</p>
-                    <p>כמות: {{product.amount}}</p>
-                    <p>סה"כ: {{product.price * product.amount}}</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- <ButtonLink text="להמשך קנייה" link="/store" /> -->
-          </div>
-        </div>
-      </div>
-      <div class="col-md-6 mt-3">
-        <div class="w-100 center-all">
-          <form @submit.prevent="nextToPay" class=" center-all">
-          <TitleAndBorderC>פרטים אישיים</TitleAndBorderC>
 
-            <div class="w-100 center-all mt-5">
-              <input type="text" placeholder="*שם מלא" v-model="clientDatdlis.name" required>
-            </div>
-            <div class="w-100 center-all">
-              <input type="tel" placeholder="*טלפון" pattern="[0-9]+" minlength="9" maxlength="11"
-                v-model="clientDatdlis.tel" required>
-            </div>
-            <div class="w-100 center-all">
-              <input type="email" placeholder='*דוא"ל' v-model="clientDatdlis.mail" required>
-            </div>
-            <div class="w-100 center-all">
-              <input type="text" placeholder="*עיר" v-model="clientDatdlis.city" required>
-            </div>
-            <div class="w-100 center-all">
-              <input type="text" placeholder="*רחוב" v-model="clientDatdlis.address" required>
-            </div>
-            <div class="w-100 center-all">
-              <input type="text" placeholder="*מספר בית" v-model="clientDatdlis.namHome" required>
-            </div>
-            <div class="w-100 center-all">
-              <input type="text" placeholder="*מיקוד" pattern="[0-9]+" minlength="5" v-model="clientDatdlis.mikod"
-                required>
-            </div>
-            <div class="w-100 center-all">
-              <textarea id="" rows="5" placeholder="הערות" v-model="clientDatdlis.note"></textarea>
-            </div>
-            <div class="w-100 center-all mt-3">
-              <input type="checkbox" required>קראת והסכמתי לתקנון השימוש
-            </div>
-            <div class="w-100 center-all mt-3">
-              <ButtonLink text="להמשך קנייה" link="/store" />
-
-              <button type="submit">המשך לתשלום מאובטח</button>
-            </div>
-          </form>
-        </div>
-      </div>
-    </div>
-    <!-- </template> -->
-    <div class="row mt-5 part-shulders" v-if="payment">
-      <!-- <template v-show="payment"> -->
+    <div class="row mt-5 part-shulders">
       <div class="col-md-6">
         <div class="row border-bottom">
           <div class="col-md-6 p-5">
@@ -108,7 +39,7 @@
           <div class="col">
             <div class="center-all w-100">
               <ButtonLink text="להמשך קנייה" link="/store" />
-              <ButtonLink @customEvent="payment = !payment" text="לעריכת פרטים אישיים" link="" />
+              <ButtonLink link="/befor-pay" text="לעריכת פרטים אישיים" />
             </div>
           </div>
         </div>
@@ -117,8 +48,11 @@
         <div class="center-all w-100">
           <h4 class="w-100 text-center">תשלומים</h4>
           <div class="center-all select-num-payment">
-            <v-select class="w-100" :clearable="false" dir="rtl" :options="['1 ', '2', '3']" v-model="numPay"></v-select>
-            <p class="w-100">מס' תשלומים: {{numPay}} כל תשלום {{namPayAmount}} ₪</p>
+            <v-select class="w-100" :clearable="false" dir="rtl" :options="['1 ', '2', '3']" v-model="numPay">
+            </v-select>
+            <p class="w-100" v-if="ifCredit == 8">תשלום ראשון: {{firstPayAmount}} ₪</p>
+            <p class="w-100" v-if="ifCredit == 8">שאר התשלומים: {{namPayAmount}} ₪</p>
+            <p class="w-100">סה"כ: {{Payable}} ₪</p>
           </div>
         </div>
         <div class="center-all w-100">
@@ -139,8 +73,13 @@
     components: {},
     data() {
       return {
-        payment: false,
-        numPay: 1,  
+        // payment: false,
+        numPay: 1,
+      }
+    },
+    created() {
+      if (!this.$store.state.nextPayment) {
+        this.$router.push('befor-pay')
       }
     },
     methods: {
@@ -157,7 +96,10 @@
         return 300
       },
       iframeUrl() {
-        return `https://direct.tranzila.com/sabresltd/iframenew.php?sum=${this.Payable}&currency=1&cred_type=${this.ifCredit}&npay=${this.numPay - 1}&spay=${this.namPayAmount}&fpay=${this.namPayAmount}&lang=il&contact=${this.clientDatdlis.name}&phone=${this.clientDatdlis.tel}&email=${this.clientDatdlis.mail}&city=${this.clientDatdlis.city}&address=${this.clientDatdlis.address + this.clientDatdlis.namHome + this.clientDatdlis.mikod}&pdesc=${this.clientDatdlis.note}`
+        if (this.ifCredit == 8) {
+          return `https://direct.tranzila.com/sabresltd/iframenew.php?sum=${this.Payable}&currency=1&cred_type=${this.ifCredit}&npay=${this.numPay - 1}&spay=${this.namPayAmount}&fpay=${this.firstPayAmount}&lang=il&contact=${this.clientDatdlis.name}&phone=${this.clientDatdlis.tel}&email=${this.clientDatdlis.mail}&city=${this.clientDatdlis.city}&address=${this.clientDatdlis.address + this.clientDatdlis.namHome + this.clientDatdlis.mikod}&pdesc=${this.clientDatdlis.note}`
+        }
+        return `https://direct.tranzila.com/sabresltd/iframenew.php?sum=${this.Payable}&currency=1&cred_type=${this.ifCredit}&lang=il&contact=${this.clientDatdlis.name}&phone=${this.clientDatdlis.tel}&email=${this.clientDatdlis.mail}&city=${this.clientDatdlis.city}&address=${this.clientDatdlis.address + this.clientDatdlis.namHome + this.clientDatdlis.mikod}&pdesc=${this.clientDatdlis.note}`
       },
       Payable() {
         let Payable = 0;
@@ -172,8 +114,16 @@
       clientDatdlis() {
         return this.$store.state.clientDatdlis
       },
+        //תשלום ראשון
+      firstPayAmount() {
+        let x  = this.namPayAmount * this.numPay;
+        let y = this.Payable - x;
+        return  this.namPayAmount + y
+      },
+      //שאר תשלומים
       namPayAmount() {
-        return this.Payable / this.numPay
+        let nam = this.Payable / this.numPay;
+        return  Math.floor(nam)
       },
       ifCredit() {
         if (this.numPay == 1) {

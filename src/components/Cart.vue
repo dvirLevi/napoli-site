@@ -41,7 +41,7 @@
       </div>
       <div class="center-all ">
         <ButtonLink @customEvent="openCart" text="להמשך קנייה" link="/store" />
-        <ButtonLink @customEvent="openCart" text="לתשלום מאובטח" link="/pay" v-if="products.length" />
+        <ButtonLink @customEvent="openCart" text="לתשלום מאובטח" link="/befor-pay" v-if="products.length" />
       </div>
     </div>
   </div>
@@ -94,7 +94,7 @@
     z-index: 5;
     top: 61px;
     right: 0;
-    background-color: #f1ede8;
+    background-color: #f1f1f1;
   }
 
   /* .close-m {
@@ -127,7 +127,7 @@
     height: 0px;
     border-left: 15px solid transparent;
     border-right: 15px solid transparent;
-    border-bottom: 24px solid #f1ede8;
+    border-bottom: 24px solid #f1f1f1;
     /* border-bottom: 24px solid #e0e0e0; */
   }
 
@@ -152,7 +152,7 @@
       right: 0px;
       border-left: 10px solid transparent;
       border-right: 10px solid transparent;
-      border-bottom: 20px solid #f1ede8;
+      border-bottom: 20px solid #f1f1f1;
     }
 
   }

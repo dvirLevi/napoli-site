@@ -1,8 +1,10 @@
 import Vue from 'vue'
 import Router from 'vue-router'
+// import store from './store'
 import Home from './views/Home.vue'
 import Store from './views/Store.vue'
 import Pay from './views/Pay.vue'
+import BeforPay from './views/BeforPay.vue'
 Vue.use(Router)
 
 export default new Router({
@@ -23,10 +25,22 @@ export default new Router({
       component: Store
     },
     {
-      path: '/pay',
-      name: 'pay',
-      component: Pay
+      path: '/befor-pay',
+      name: 'BeforPay',
+      component: BeforPay
     },
+    {
+      path: '/pay',
+      // redirect: { name: 'BeforPay' },
+      // redirect: to => {
+      //   // the function receives the target route as the argument
+      //   // return redirect path/location here.
+      // },
+      name: 'pay',
+      component: Pay,
+      
+    },
+    
  
   ]
 })

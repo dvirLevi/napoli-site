@@ -13,7 +13,6 @@ import TitleAndBorderC from '@/components/TitleAndBorderC.vue'
 import vSelect from 'vue-select'
 import 'vue-select/dist/vue-select.css';
 
-
 Vue.config.productionTip = false
 Vue.component('ButtonLink', ButtonLink)
 Vue.component('Modal', Modal)
@@ -21,13 +20,15 @@ Vue.component('v-select', vSelect)
 Vue.component('TitleAndBorderR', TitleAndBorderR)
 Vue.component('TitleAndBorderC', TitleAndBorderC)
 
+// Vue.use(Swal);
+
 new Vue({
   created () {
     AOS.init()
   },
   router,
   store,
-  ButtonLink,
-  Modal,
+  // ButtonLink,
+  // Modal,
   render: h => h(App)
 }).$mount('#app')

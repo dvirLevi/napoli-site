@@ -75,6 +75,7 @@ export default new Vuex.Store({
       mikod: "",
       note: ""
     },
+    nextPayment: false,
   },
   getters: {
     inCart: state => {
@@ -93,6 +94,9 @@ export default new Vuex.Store({
     },
     allTimeCloseCart(state) {
       state.ifCart = false
+    },
+    nextPayment(state){
+      state.nextPayment = true
     }
   },
   actions: {
