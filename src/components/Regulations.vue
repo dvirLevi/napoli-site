@@ -127,6 +127,11 @@
     width: 70%;
   }
 
+  h5 {
+     text-decoration: underline;
+     margin-top: 10px;
+  }
+
   @media (max-width: 767.98px) {
     .box-all {
     width: 100%;

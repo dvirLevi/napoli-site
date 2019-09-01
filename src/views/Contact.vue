@@ -39,7 +39,7 @@
       <div class="w-100 border-top mt-5">
         <p>ב.ל סברס שיווק בע"מ</p>
         <p>ח.פ. 516069135</p>
-        <p><i class="fas fa-phone-alt"></i> <a href="tel:0526070675"> 0526070675</a> </p>
+        <p><i class="fas fa-phone-alt"></i> <a class="text-decoration-none" href="tel:0526070675"> 0526070675</a> </p>
         <p> 
           <i class="fab fa-instagram h1"></i>
           <i class="fab fa-facebook-f mr-5 h1"></i>
