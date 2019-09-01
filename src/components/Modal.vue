@@ -1,8 +1,8 @@
 <template>
-  <div id="myModal" class="modal">
+  <div id="myModal" class="modal" @click.stop="$emit('customEvent')">
 
   <!-- Modal content -->
-  <div class="modal-con center-all">
+  <div class="modal-con center-all" >
     <slot></slot>
   </div>
 
@@ -17,6 +17,9 @@
     name: 'Modal',
     components: {
     
+    },
+    props:{
+     
     }
   }
 </script>
@@ -43,19 +46,16 @@
 .modal-con {
   background-color: #fefefe;
   margin: auto;
-  padding: 15px;
+  padding: 30px;
   border: 1px solid #888;
-  width:430px;
+  width:60%;
 }
 
 
    @media (max-width: 767.98px) {
  
 .modal-con {
-  background-color: #fefefe;
-  margin: auto;
   padding: 15px;
-  border: 1px solid #888;
   width:90%;
 }
 

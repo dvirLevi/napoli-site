@@ -30,6 +30,7 @@ export default new Vuex.Store({
         name: "תנור פיצה נאפולי",
         img: require("@/assets/ass6.png"),
         description: "אחלה תנור",
+        specifications:"<li>אורך מהיג קיגןן</li><li>רוחב זגץסכ דגכד דגכ</li>",
         addCart: false,
         price: 1650,
         amount: 0,

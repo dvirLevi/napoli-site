@@ -44,7 +44,7 @@
           </div>
         </div>
       </div>
-      <div class="col-md-6 pay">
+      <div class="col-md-6 pay mt-3">
         <div class="center-all w-100">
           <h4 class="w-100 text-center">תשלומים</h4>
           <div class="center-all select-num-payment">

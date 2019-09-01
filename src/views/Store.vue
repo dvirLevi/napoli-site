@@ -1,37 +1,18 @@
 <template>
   <div class="row mt-3 row-all">
-    <div class="col-md-6 box-all" v-for="product in products" :key="product.id">
-      <div class="box-product">
-        <div class="row mt-3">
-          <div class="col-md-6 center-all">
-            <img class="w-100" :src="product.img" alt="">
-          </div>
-          <div class="col-md-6 ">
-            <h3>{{product.name}}</h3>
-            <p>{{product.price}} ₪</p>
-            <p class="more">פרטים נוספים>></p>
-          
-            <div class="center-all mb-3  mt-3">
-             
-              <ButtonLink @customEvent="addToCart(product)" text="הוסף לעגלת הקניות" link="/store" />
-              
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+      <Product v-for="product in products" :product="product" :key="product.id"/>
   </div>
 </template>
 
 <script>
   // @ is an alias to /src
-  // import OnNapoli from '@/components/OnNapoli.vue'
+  import Product from '@/components/Product.vue'
 
 
   export default {
     name: 'Store',
     components: {
-
+Product
     },
     data() {
       return {
@@ -39,18 +20,8 @@
       }
     },
     methods: {
-      // addPrice(product) {
-      //   product.amount++
-      // },
-      // minusPrice(product) {
-      //   if (product.amount > 0) {
-      //     product.amount--
-      //   }
-      // },
-      addToCart(product) {
-        product.amount++
-        this.$store.commit('allTimeShowCart')
-      }
+   
+   
     },
     computed: {
       products() {

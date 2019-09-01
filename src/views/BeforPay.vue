@@ -54,8 +54,12 @@
               <textarea id="" rows="5" placeholder="הערות" v-model="clientDatdlis.note"></textarea>
             </div>
             <div class="w-100 center-all mt-3">
-              <input type="checkbox" required>קראת והסכמתי לתקנון השימוש
+              <input type="checkbox" required>
+              <p>קראתי והסכמתי <span @click="showModal = !showModal">לתקנון השימוש</span></p>
             </div>
+            <Modal v-if="showModal" @customEvent="showModal = !showModal">
+          <Regulations/>
+            </Modal>
             <div class="w-100 center-all mt-3">
               <ButtonLink text="להמשך קנייה" link="/store" />
               <button type="submit">המשך לתשלום מאובטח</button>
@@ -69,17 +73,18 @@
 
 <script>
   // @ is an alias to /src
-  // import OnNapoli from '@/components/OnNapoli.vue'
-import Swal from 'sweetalert2'
+  import Regulations from '@/components/Regulations.vue'
+  import Swal from 'sweetalert2'
 
 
   export default {
     name: 'BeforPay',
-    components: {},
+    components: {
+      Regulations
+    },
     data() {
       return {
-        // payment: false,
-        // numPay: 1,  
+        showModal: false,
       }
     },
     methods: {
@@ -110,10 +115,6 @@ import Swal from 'sweetalert2'
 </script>
 
 <style scoped>
-  iframe {
-    border: none;
-  }
-
   input {
     width: 80%;
     margin: 8px;
@@ -174,6 +175,11 @@ import Swal from 'sweetalert2'
 
   .select-num-payment {
     width: 50%;
+  }
+
+  span {
+    color: red;
+    cursor: pointer;
   }
 
   @media (max-width: 767.98px) {
