@@ -2,12 +2,14 @@
   <div class="col-md-6 box-all">
     <Modal v-if="showModal" @customEvent="showModal = !showModal">
       <div class="m-3 p-3">
+        <h3>{{product.name}}</h3>
+
       <div class="row mt-3">
         <div class="col-md-6 center-all">
           <img class="w-100" :src="product.img" alt="">
         </div>
         <div class="col-md-6 ">
-          <p>{{product.description}}</p>
+          <p v-html="product.description"></p>
           <ul v-html="product.specifications">
           </ul>    
         </div>
@@ -70,6 +72,10 @@
 
   p {
     font-size: 20px;
+  }
+
+  ul span {
+font-weight: bold;
   }
 
   .more {

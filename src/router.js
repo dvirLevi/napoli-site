@@ -5,6 +5,7 @@ import Home from './views/Home.vue'
 import Store from './views/Store.vue'
 import Pay from './views/Pay.vue'
 import BeforPay from './views/BeforPay.vue'
+import Contact from './views/Contact.vue'
 Vue.use(Router)
 
 export default new Router({
@@ -28,6 +29,11 @@ export default new Router({
       path: '/befor-pay',
       name: 'BeforPay',
       component: BeforPay
+    },
+    {
+      path: '/contact',
+      name: 'contact',
+      component: Contact
     },
     {
       path: '/pay',

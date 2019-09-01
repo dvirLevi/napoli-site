@@ -45,7 +45,8 @@
       SoWhy,
       FoodImages,
       RecipesLink
-    }
+    },
+
   }
 </script>
 
