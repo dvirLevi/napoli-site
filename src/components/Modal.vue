@@ -56,7 +56,7 @@
  
 .modal-con {
   padding: 15px;
-  width:90%;
+  width:77%;
 }
 
    }

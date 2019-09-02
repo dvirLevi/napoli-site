@@ -104,10 +104,11 @@
     position: absolute;
     width: 110px;
     left: 0;
+    cursor: pointer;
   }
 
   .wrap-items {
-    width: -webkit-fill-available;
+    /* width: -webkit-fill-available; */
     font-size: 20px;
     font-weight: 600;
   }
@@ -117,6 +118,8 @@
     cursor: pointer;
     font-weight: 400;
   }
+
+
 
 
   .bac-menu {
@@ -148,6 +151,13 @@
     pointer-events: none;
   }
 
+  @media (max-width: 1199.98px) {
+    .items-menu {
+      margin: 19px 7px;
+      font-size: 17px;
+    }
+
+  }
 
   @media (max-width: 767.98px) {
     .menusToolBar {
@@ -182,6 +192,7 @@
       padding: 19px 25px;
       width: 100%;
       border-bottom: solid rgb(0, 0, 0) 1px;
+      font-size: 21px;
     }
 
     .icon-cart {

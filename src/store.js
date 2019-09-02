@@ -32,7 +32,7 @@ export default new Vuex.Store({
         name: "תנור פיצה נאפולי",
         img: require("@/assets/ass6.png"),
         description: `מושלם לאפיית פיצות גורמה, פוקצ'ות, בשרים, ירקות ודגים.
-        מוגדר כ-<span class="font-weight-bold">BEST SELLER</span> באתר אמזון ארה"ב, ונבחר ל-</span> תוך <span class="font-weight-bold">AMAZON CHOICE</span>.
+        מוגדר כ-<span class="font-weight-bold">BEST SELLER</span> באתר אמזון ארה"ב, ונבחר ל-</span> <span class="font-weight-bold">AMAZON CHOICE</span>.
         עשוי מחומרים איכותיים ובעל עיצוב מושלם. 
         לערבי משפחה, לאירוח חברים, או סתם לארוחה זוגית מהנה.
         תתפנקו!

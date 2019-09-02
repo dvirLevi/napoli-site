@@ -32,7 +32,7 @@
       <div v-else>
         <div class="row pt-5">
           <div class="col-12 center-all font-weight-bold">
-            <p>אין מוצרים בעגלה..</p>
+            <p>אין מוצרים בעגלה</p>
           </div>
         </div>
       </div>

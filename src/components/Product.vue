@@ -1,20 +1,20 @@
 <template>
   <div class="col-md-6 box-all">
     <Modal v-if="showModal" @customEvent="showModal = !showModal">
-      <div class="m-3 p-3">
-        <h3>{{product.name}}</h3>
+      <div class="">
+        <h3 class="w-100 text-center">{{product.name}}</h3>
 
-      <div class="row mt-3">
-        <div class="col-md-6 center-all">
-          <img class="w-100" :src="product.img" alt="">
-        </div>
-        <div class="col-md-6 ">
-          <p v-html="product.description"></p>
-          <ul v-html="product.specifications">
-          </ul>    
+        <div class="row mt-3">
+          <div class="col-md-12 center-all">
+            <img class="w-50" :src="product.img" alt="">
+          </div>
+          <div class="col-md-12 ">
+            <p v-html="product.description"></p>
+            <ul v-html="product.specifications">
+            </ul>
+          </div>
         </div>
       </div>
-    </div>
     </Modal>
     <div class="box-product">
       <div class="row mt-3">
@@ -75,7 +75,7 @@
   }
 
   ul span {
-font-weight: bold;
+    font-weight: bold;
   }
 
   .more {
@@ -109,6 +109,9 @@ font-weight: bold;
   @media (max-width: 767.98px) {
     .row-all {
       padding: 0% 0%;
+    }
+    ul {
+      padding-right: 25px;
     }
   }
 </style>
