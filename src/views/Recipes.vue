@@ -6,7 +6,7 @@
       </div>
     </div>
     <div class="row  part-shulders">
-      <div class="col pt-3 pb-3">
+      <div class="col part-shulders">
         <p class="font-weight-bold">מי שטעם פיצה נאפוליטנית אמיתית, כבר יודע. מי שלא – הגיע הזמן להכיר!</p>
         <p>הפיצה המופלאה הזו, שמקורה בעיר נאפולי באיטליה, עשויה מבצק עשיר ואוורירי, רוטב עגבניות איטלקיות וגבינת מוצרלה
           אמיתית. היא מוכנסת לתנור לוהט ונאפית במהירות הבזק, דקה וחצי בלבד והיא בחוץ. איך תכינו את הנאפוליטנית שלכם?
@@ -29,8 +29,77 @@
       </div>
     </div>
     <videoTop />
-    <div class="row pt-3 pb-3">
-      <div class="col-md-3">
+    <div class="row row-box p-3 center-all">
+      <div class="col-md-6 bg-notebook">
+        <div class="row">
+          <div class="col-12">
+            <TitleAndBorderR>ועכשיו, למתכון מומלץ (מתאים ל-8-6 פיצות אישיות):</TitleAndBorderR>
+          </div>
+          <div class="col-md-6">
+            <p class="underline mt-3">לבצק:</p>
+            <p>1 ק"ג קמח "00" איטלקי</p>
+            <p>550 גרם בדיוק של מים <span>קרים מאוד</span></p>
+            <p>חצי כפית שמרים</p>
+            <p>כף ורבע מלח</p>
+            <p>כף סוכר</p>
+            <p>מעט שמן זית</p>
+            <p class="underline mt-3">לרוטב:</p>
+            <p>פחית עגבניות איטלקיות משומרות</p>
+            <p>שן שום קלופה</p>
+            <p>חצי כפית מלח </p>
+            <p>חצי כפית סוכר</p>
+            <p>שתי כפות שמן זית</p>
+            <p class="underline mt-3">גבינה ותוספות:</p>
+            <p>750 גרם גבינת מוצרלה</p>
+            <p>עלי בזיליקום</p>
+            <p>בצל סגול, בצל ירוק, פטריות, פלפל צ'ילי – תתפרעו!</p>
+          </div>
+          <div class="col-md-6">
+            <p class="underline mt-3">דרך ההכנה:</p>
+            <p>בצק:</p>
+            <ul>
+              <li>
+                מכניסים לקערת המיקסר את הקמח, השמרים, הסוכר וכף אחת של מלח.
+              </li>
+              <li>
+                מתחילים ללוש במהירות נמוכה, ומוסיפים בהדרגה שני שליש מכמות המים.
+              </li>
+              <li>לשים במהירות נמוכה 2-3 דקות.</li>
+              <li>מוסיפים רבע כף מלח, מעט שמן זית לפי העין והרגש, ובהדרגה את שליש המים הנותר.</li>
+              <li>לשים במהירות נמוכה עוד 10 דקות. </li>
+              <li>מעבירים את כדור הבצק לקערה משומנת בשמן זית, משמנים מעט גם מלמעלה כדי שלא יתייבש, וסוגרים בניילון נצמד.
+              </li>
+              <li>מכניסים למקרר ל-24 שעות לפחות.</li>
+            </ul>
+            <p>רוטב:</p>
+            <ul>
+              <li>מכניסים את כל החומרים למעבד מזון או לבלנדר, וכותשים היטב.</li>
+            </ul>
+            <p>פיצה:</p>
+            <ul>
+              <li>
+                מוציאים את הבצק מהמקרר שעה לפחות לפני ההכנה, כדי שהבצק יגיע לטמפרטורת החדר.
+              </li>
+              <li>חותכים את כדור הבצק לשישה או לשמונה כדורי בצק, ושומרים עליהם מכוסים בקערה או בקופסה ייעודית.</li>
+              <li>
+                נוטלים כדור אחד, מקמחים אותו היטב מכל צדדיו, ומרדדים אותו בעזרת הידיים (שומרים על שולי הבצק מעובים
+                יחסית).
+              </li>
+              <li>מורחים את הרוטב על הבצק בתנועה סיבובית.</li>
+              <li>קורעים חתיכות מוצרלה ומפזרים על הרוטב במרווחים.</li>
+              <li>מוסיפים מעט תוספות לפי הרגש (להשתדל לא להכביד מדי על הבצק), ומזלפים קצת שמן זית מלמעלה.</li>
+              <li>מכניסים לתנור נאפולי שחומם מראש במשך 15 דקות.</li>
+              <li>במהלך האפייה יש להחליף את כיוון הפיצה, כדי שלא תישרף בצד הסמוך לאש.</li>
+              <li>מוציאים את הפיצה וממתינים שתי דקות.</li>
+            </ul>
+          </div>
+          <div class="col-12">
+            <h4 class="mt-3 w-100 text-center">בתיאבון!</h4>
+            <h3 class=" w-100 text-center">למתכונים נוספים – חפשו אותנו בפייסבוק <i class="fab fa-facebook-f h3 mt-3"></i></h3>
+          </div>
+        </div>
+      </div>
+      <!-- <div class="col-md-3">
 
       </div>
       <div class="col-md-9 row-bg">
@@ -101,7 +170,7 @@
             <h3>למתכונים נוספים – חפשו אותנו בפייסבוק <i class="fab fa-facebook-f h3 mt-3"></i></h3>
           </div>
         </div>
-      </div>
+      </div> -->
     </div>
   </div>
 
@@ -169,48 +238,69 @@
     color: #6b4c3c;
   }
 
-  .row-bg {
-    background-image: url(../assets/ass17.jpg);
+  .row-box {
+    background-image: url(../assets/ass3.jpg);
+    background-size: cover;
+    background-position: center;
+    /* height: 696px; */
+  }
+
+  .bg-notebook {
+    /* background-image: url(../assets/ass17.jpg); */
+    /* background-size: 42%; */
+    /* background-position: center; */
+    /* padding-right: 80px; */
+    position: relative;
+    z-index: 2;
+  }
+
+  .bg-notebook::after {
     background-size: 42%;
     background-position: center;
-    padding-right: 80px;
+    content: "";
+    background-image: url(../assets/ass17.jpg);
+    opacity: 0.8;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;
   }
 
-  .row-bg p {
+  .bg-notebook p {
     font-size: 18px !important;
   }
 
-  .row-bg p span {
+  .bg-notebook p span {
     font-size: 18px !important;
   }
 
-  .row-bg ul {
+  .bg-notebook ul {
     font-size: 18px !important;
   }
 
-  .col-md-3 {
+  /* .col-md-3 {
     background-image: url(../assets/ass3.jpg);
     background-size: cover;
     background-position: center;
     min-height: 300px;
-  }
+  } */
 
 
   @media (max-width: 767.98px) {
     .row-img {
       height: 100px;
-      overflow: hidden;
     }
-
-    .row-modals h3 {
-      font-size: 25px
+    .row-box {
+      /* background-image: url(../img/ass3.b7124460.jpg); */
+      background-image: url(../assets/ass3.jpg);
+    background-size: cover;
+    /* background-position: center; */
+      /* background-size: 224%; */
+      background-repeat: no-repeat;
+      background-position: 70%;
+      /* height: 414px; */
     }
-
-    .row-bg {
-      background-size: contain;
-      padding-right: 15px;
-    }
-
-
   }
 </style>
