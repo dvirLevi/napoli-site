@@ -83,14 +83,6 @@
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-  .row {
-    /* background-color: #635d4740; */
-  }
-
-  .left-side {
-    /* text-align: left; */
-  }
-
   .left-side img {
     width: 80%;
   }
@@ -98,21 +90,7 @@
   .block-text {
     width: 75%;
   }
-
-  span {
-    font-weight: bold;
-    font-size: 25px;
-
-  }
-
-  ul {
-    font-size: 25px;
-  }
-
-  p {
-    font-size: 24px;
-  }
-
+  
   .row-gas {
     flex-direction: column;
   }
@@ -131,19 +109,6 @@
       font-size: 18px
     }
 
-    span {
-      font-weight: bold;
-      font-size: 19px;
-
-    }
-
-    ul {
-      font-size: 20px;
-    }
-
-    p {
-      font-size: 20px;
-    }
     .row-gas {
     flex-direction: column-reverse;
   }

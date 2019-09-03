@@ -158,15 +158,8 @@
     background-color: #8c8c8c;
   }
 
-  span {
-    font-weight: bold;
-    font-size: 25px;
-
-  }
-
   p {
     width: 100%;
-    font-size: 24px;
     text-align: right;
   }
 

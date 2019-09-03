@@ -3,7 +3,7 @@
     <div class="col flex-bottom">
       <div class="content-text">
         <h2>הכינו לכם פיצת שף משובחת עם התוספות האהובות עליכם</h2>
-        <ButtonLink text="למתכונים לחצו כאן" link="/" />
+        <ButtonLink text="למתכונים לחצו כאן" link="/recipes" />
       </div>
     </div>
   </div>

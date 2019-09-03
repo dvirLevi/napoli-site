@@ -102,7 +102,7 @@
 
   .box-product {
     box-shadow: 1px 1px 3px #c1c1c1;
-    margin: 15px;
+    margin: 15px !important;
     padding: 17px;
   }
 

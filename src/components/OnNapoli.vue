@@ -60,20 +60,6 @@
     width: 75%;
   }
 
-  span {
-    font-weight: bold;
-    font-size: 25px;
-
-  }
-
-  ul {
-    font-size: 25px;
-  }
-
-  p {
-    font-size: 24px;
-  }
-
   h2 {
     display: inline-block;
     position: relative;

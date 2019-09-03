@@ -47,20 +47,6 @@
     width: 75%;
   }
 
-  span {
-    font-weight: bold;
-    font-size: 25px;
-
-  }
-
-  ul {
-    font-size: 25px;
-  }
-
-  p {
-    font-size: 24px;
-  }
-
   @media (max-width: 767.98px) {
     .left-side img {
       width: 100%;
@@ -75,18 +61,5 @@
       font-size: 18px
     }
 
-    span {
-      font-weight: bold;
-      font-size: 19px;
-
-    }
-
-    ul {
-      font-size: 20px;
-    }
-
-    p {
-      font-size: 20px;
-    }
   }
 </style>
