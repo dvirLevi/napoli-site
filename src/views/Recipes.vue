@@ -24,7 +24,7 @@
       </div>
     </div>
     <div class="row  part-shulders row-modals ">
-      <div class="col pt-3 pb-3 ">
+      <div class="col pt-3 pb-3 part-shulders ">
         <RecipesModal v-for="row in rows" :key="row.id" :row="row" />
       </div>
     </div>
