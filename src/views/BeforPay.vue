@@ -53,7 +53,7 @@
             <div class="w-100 center-all">
               <textarea id="" rows="5" placeholder="הערות" v-model="clientDatdlis.note"></textarea>
             </div>
-            <div class="w-100 center-all mt-3">
+            <div class="w-100 center-all mt-3 confirm">
               <input type="checkbox" required>
               <p>קראתי והסכמתי <span @click="showModal = !showModal">לתקנון השימוש</span></p>
             </div>
@@ -177,9 +177,11 @@
     width: 50%;
   }
 
-  span {
-    color: red;
+  .confirm span {
+    color: #ff3d00;
     cursor: pointer;
+    font-size: 22px !important;
+    font-weight: 500 !important;
   }
 
   @media (max-width: 767.98px) {
@@ -194,5 +196,8 @@
     .select-num-payment {
       width: 100%;
     }
+    .confirm span {
+    font-size: 20px !important;
+  }
   }
 </style>
