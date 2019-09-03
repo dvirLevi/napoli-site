@@ -56,7 +56,7 @@
           </div>
         </div>
         <div class="center-all w-100">
-          <iframe class="mt-5" :src="iframeUrl" height="570" :width="ifWidth"></iframe>
+          <iframe class="mt-5" :src="iframeUrl" height="650" :width="ifWidth"></iframe>
         </div>
       </div>
     </div>
