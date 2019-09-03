@@ -32,16 +32,16 @@ export default new Vuex.Store({
         name: "תנור פיצה נאפולי",
         img: require("@/assets/ass6.png"),
         description: `מושלם לאפיית פיצות גורמה, פוקצ'ות, בשרים, ירקות ודגים.
-        מוגדר כ-<span class="font-weight-bold">BEST SELLER</span> באתר אמזון ארה"ב, ונבחר ל-</span> <span class="font-weight-bold">AMAZON CHOICE</span>.
+        מוגדר כ-<span>BEST SELLER</span> באתר אמזון ארה"ב, ונבחר ל-</span> <>AMAZON CHOICE</span>.
         עשוי מחומרים איכותיים ובעל עיצוב מושלם. 
         לערבי משפחה, לאירוח חברים, או סתם לארוחה זוגית מהנה.
         תתפנקו!
         `,
-        specifications: `<li>מתלהט לטמפרטורה של<span class="font-weight-bold"> 450 מעלות </span> תוך <span class="font-weight-bold">כ-15 דקות בלבד</span></li><li>תא בעירה נפרד להזנה באמצעות פחמים, עצים או שבבים</li><li>קל לניקוי ולהרכבה</li><li>עשוי נירוסטה</li><li>מצופה בשכבת מגן מבודדת</li><li>כולל אבן אפייה מיוחדת </li><li>אינו כולל מבער גז – מומלץ לרכישה בנפרד!</li><li><span class="font-weight-bold">מידות חיצוניות:</span><br>
+        specifications: `<li>מתלהט לטמפרטורה של<span> 450 מעלות </span> תוך <span >כ-15 דקות בלבד</span></li><li>תא בעירה נפרד להזנה באמצעות פחמים, עצים או שבבים</li><li>קל לניקוי ולהרכבה</li><li>עשוי נירוסטה</li><li>מצופה בשכבת מגן מבודדת</li><li>כולל אבן אפייה מיוחדת </li><li>אינו כולל מבער גז – מומלץ לרכישה בנפרד!</li><li><span class="font-weight-bold">מידות חיצוניות:</span><br>
         רוחב: 35.5 ס"מ<br>
         אורך: 54.5 ס"מ<br>
         גובה: 31.5 ס"מ<br>
-        </li><li><span class="font-weight-bold">משקל:</span><br> 12.5 ק"ג</li><li><span class="font-weight-bold">שטח אבן האפייה:</span><br>רוחב: 31.75 ס"מ <br>עומק: 34.29 ס"מ </li>`,
+        </li><li><span>משקל:</span><br> 12.5 ק"ג</li><li><span>שטח אבן האפייה:</span><br>רוחב: 31.75 ס"מ <br>עומק: 34.29 ס"מ </li>`,
         addCart: false,
         price: 1650,
         amount: 0,

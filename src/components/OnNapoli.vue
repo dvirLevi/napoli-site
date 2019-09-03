@@ -97,24 +97,5 @@
     .block-text {
       width: 100%;
     }
-
-    .block-text span {
-      font-weight: bold;
-      font-size: 18px
-    }
-
-    span {
-      font-weight: bold;
-      font-size: 19px;
-
-    }
-
-    ul {
-      font-size: 20px;
-    }
-
-    p {
-      font-size: 20px;
-    }
   }
 </style>

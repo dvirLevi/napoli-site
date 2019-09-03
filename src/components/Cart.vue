@@ -110,7 +110,7 @@
   }
 
   .box-product p {
-    font-size: 15px;
+    font-size: 15px !important;
     margin: 0px;
   }
 
