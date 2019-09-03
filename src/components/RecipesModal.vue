@@ -1,7 +1,7 @@
 <template>
   <div>
         <div>
-       <h3 class="mt-3" @click="showModal = !showModal">{{row.text}}</h3>
+       <p class="mt-3" @click="showModal = !showModal">{{row.text}}</p>
        <Modal @customEvent="showModal = !showModal" v-if="showModal" >
         <p v-html="row.modal"></p>
        </Modal>

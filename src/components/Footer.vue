@@ -20,7 +20,7 @@
         <i class="fab fa-facebook-f"></i>
       </div>
     </div>
-    <div class="col-md-12 center-all mt-5">
+    <div class="col-md-12 center-all mt-5 app-life">
       <p class="m-0">נבנה ופותח ב<a href="https://apps-life.netlify.com/#/">AppsLife</a></p>
     </div>
   </div>
@@ -53,15 +53,20 @@
   }
 
   a {
-   text-decoration: none;
-   /* color: #fdb7b7; */
-   color: #ffffff
+    text-decoration: none;
+    /* color: #fdb7b7; */
+    color: #ffffff
   }
 
   .items-menu {
     font-weight: 400;
     /* margin: 19px 46px; */
     cursor: pointer;
+  }
+
+  .app-life p {
+    font-size: 18px !important;
+    font-weight: 200;
   }
 
 

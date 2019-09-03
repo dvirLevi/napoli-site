@@ -45,14 +45,17 @@ html, body {
   }
 
   p {
-    font-size: 21px !important;
+    font-size: 22px !important;
   }
   p span{
-    font-size: 22px !important;
+    font-size: 23px !important;
   }
 
   ul {
-    font-size: 21px !important;
+    font-size: 22px !important;
+}
+ul span{
+  font-size: 23px !important;
 }
 
   @media (max-width: 767.98px) {
@@ -65,5 +68,18 @@ html, body {
     .part-shulders {
       padding: 0 15px !important;
     }
+    p {
+      font-size: 20px !important;
+    }
+    p span{
+      font-size: 21px !important;
+    }
+  
+    ul {
+      font-size: 20px !important;
+  }
+  ul span{
+    font-size: 21px !important;
+}
     
   }
