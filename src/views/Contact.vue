@@ -29,7 +29,10 @@
           <div class="w-100 center-all">
             <textarea id="" rows="5" placeholder="*סיבת הפנייה" v-model="clientDatdlis.note" required></textarea>
           </div>
-
+          <div class="w-100 center-all mt-3 confirm">
+            <input type="checkbox" required>
+            <span>לקבלת מתכונים, טיפים ומבצעים לדוא"ל</span>
+          </div>
 
           <div class="w-100 center-all">
             <button type="submit">שלח טופס</button>
@@ -40,7 +43,7 @@
         <p>ב.ל סברס שיווק בע"מ</p>
         <p>ח.פ. 516069135</p>
         <p><i class="fas fa-mobile-alt"></i> <a class="text-decoration-none" href="tel:0526070675"> 0526070675</a> </p>
-        <p> 
+        <p>
           <i class="fab fa-instagram h1"></i>
           <i class="fab fa-facebook-f mr-5 h1"></i>
         </p>
@@ -163,6 +166,10 @@
     text-align: right;
   }
 
+  .confirm span{
+font-size: 18px;
+  }
+
 
   @media (max-width: 767.98px) {
     input {
@@ -176,8 +183,12 @@
     .select-num-payment {
       width: 100%;
     }
+
     form {
-    width: 100%;
+      width: 100%;
+    }
+     .confirm span{
+font-size: 14px;
   }
   }
 </style>
