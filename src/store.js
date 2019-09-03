@@ -74,7 +74,7 @@ export default new Vuex.Store({
         description: "",
         specifications:`<li>מותאמת במיוחד למידות התנור</li><li>כוללת חרירים ייעודיים לעודפי הקמח ולאוורור תחתית הפיצה</li>`,
         addCart: false,
-        price: 150,
+        price: 5,
         amount: 0,
         id: "4"
       },
@@ -92,6 +92,7 @@ export default new Vuex.Store({
       note: ""
     },
     nextPayment: false,
+    messenger: true
   },
   getters: {
     inCart: state => {
@@ -99,7 +100,17 @@ export default new Vuex.Store({
         return value.amount > 0
       })
       return inCart
-    }
+    },
+    priceMessenger: state => {
+      if(state.messenger){
+        return 40
+      }
+      return 0
+    },
+    messenger: state => {
+        return state.messenger
+    },
+
   },
   mutations: {
     showCart(state) {
@@ -113,6 +124,9 @@ export default new Vuex.Store({
     },
     nextPayment(state) {
       state.nextPayment = true
+    },
+    ifMessenger(state) {
+      state.messenger = !state.messenger
     }
   },
   actions: {

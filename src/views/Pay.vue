@@ -14,7 +14,8 @@
                 <P>סה"כ למוצר: {{product.amount * product.price}}</P>
               </div>
               <div class="w-100">
-                <h5>סה"כ לתשלום: {{Payable}} ₪</h5>
+                <p class="w-100" v-if="messenger">משלוח עד הבית 40 ₪</p>
+                <h5>סה"כ לתשלום <span v-if="messenger">כולל משלוח</span>: {{allPayable}} ₪</h5>
               </div>
             </div>
           </div>
@@ -52,7 +53,7 @@
             </v-select>
             <p class="w-100" v-if="ifCredit == 8">תשלום ראשון: {{firstPayAmount}} ₪</p>
             <p class="w-100" v-if="ifCredit == 8">שאר התשלומים: {{namPayAmount}} ₪</p>
-            <p class="w-100">סה"כ: {{Payable}} ₪</p>
+            <p class="w-100">סה"כ: {{allPayable}} ₪</p>
           </div>
         </div>
         <div class="center-all w-100">
@@ -97,9 +98,9 @@
       },
       iframeUrl() {
         if (this.ifCredit == 8) {
-          return `https://direct.tranzila.com/sabresltd/iframenew.php?sum=${this.Payable}&currency=1&cred_type=${this.ifCredit}&npay=${this.numPay - 1}&spay=${this.namPayAmount}&fpay=${this.firstPayAmount}&lang=il&contact=${this.clientDatdlis.name}&phone=${this.clientDatdlis.tel}&email=${this.clientDatdlis.mail}&city=${this.clientDatdlis.city}&address=${this.clientDatdlis.address + this.clientDatdlis.namHome + this.clientDatdlis.mikod}&pdesc=${this.clientDatdlis.note}`
+          return `https://direct.tranzila.com/sabresltd/iframenew.php?sum=${this.allPayable}&currency=1&cred_type=${this.ifCredit}&npay=${this.numPay - 1}&spay=${this.namPayAmount}&fpay=${this.firstPayAmount}&lang=il&contact=${this.clientDatdlis.name}&phone=${this.clientDatdlis.tel}&email=${this.clientDatdlis.mail}&city=${this.clientDatdlis.city}&address=${this.clientDatdlis.address + this.clientDatdlis.namHome + this.clientDatdlis.mikod}&pdesc=${this.clientDatdlis.note + ' משלוח: ' + this.messenger + ' מוצרים: ' + this.nameProducts}`
         }
-        return `https://direct.tranzila.com/sabresltd/iframenew.php?sum=${this.Payable}&currency=1&cred_type=${this.ifCredit}&lang=il&contact=${this.clientDatdlis.name}&phone=${this.clientDatdlis.tel}&email=${this.clientDatdlis.mail}&city=${this.clientDatdlis.city}&address=${this.clientDatdlis.address + this.clientDatdlis.namHome + this.clientDatdlis.mikod}&pdesc=${this.clientDatdlis.note}`
+        return `https://direct.tranzila.com/sabresltd/iframenew.php?sum=${this.allPayable}&currency=1&cred_type=${this.ifCredit}&lang=il&contact=${this.clientDatdlis.name}&phone=${this.clientDatdlis.tel}&email=${this.clientDatdlis.mail}&city=${this.clientDatdlis.city}&address=${this.clientDatdlis.address + this.clientDatdlis.namHome + this.clientDatdlis.mikod}&pdesc=${this.clientDatdlis.note + ' משלוח: ' + this.messenger + ' מוצרים: ' + this.nameProducts}`
       },
       Payable() {
         let Payable = 0;
@@ -108,8 +109,21 @@
         }
         return Payable
       },
+       priceMessenger() {
+        return this.$store.getters.priceMessenger
+      },
+      allPayable() {
+        return this.Payable + this.priceMessenger
+      },
       products() {
         return this.$store.getters.inCart
+      },
+       nameProducts() {
+         let name = "";
+         for(let x in this.products){
+           name += this.products[x].name +" "+ this.products[x].amount + 'כ ';
+         }
+        return name
       },
       clientDatdlis() {
         return this.$store.state.clientDatdlis
@@ -117,12 +131,12 @@
         //תשלום ראשון
       firstPayAmount() {
         let x  = this.namPayAmount * this.numPay;
-        let y = this.Payable - x;
+        let y = this.allPayable - x;
         return  this.namPayAmount + y
       },
       //שאר תשלומים
       namPayAmount() {
-        let nam = this.Payable / this.numPay;
+        let nam = this.allPayable / this.numPay;
         return  Math.floor(nam)
       },
       ifCredit() {
@@ -130,6 +144,9 @@
           return 1
         }
         return 8
+      },
+      messenger() {
+        return this.$store.state.messenger
       },
     }
   }

@@ -15,12 +15,31 @@
                     <h5>{{product.name}}</h5>
                     <p>{{product.price}} ₪</p>
                     <p>כמות: {{product.amount}}</p>
-                    <p>סה"כ: {{product.price * product.amount}}</p>
+                    <!-- <p>סה"כ: {{product.price * product.amount}}</p> -->
                   </div>
                 </div>
               </div>
             </div>
           </div>
+          <template v-if="products.length">
+          <div class="w-100 center-all border-top p-4">
+            <p class="w-100">סה"כ: {{Payable}} ₪</p>
+            <template v-if="messenger">
+            <p class="w-100">משלוח עד הבית 40 ₪</p>
+            <p class="w-100">סה"כ כולל משלוח : {{Payable + priceMessenger}} ₪</p>
+            </template>
+          </div>
+          <div class="w-100 center-all border-top">
+             <div class="w-100 center-all mt-3 confirm">
+              <input type="checkbox" :checked="!messenger" @click="ifMessenger" required>
+              <p>איסוף עצמי</p>
+            </div>
+            <p class="w-100 text-center">כתובת לאיסוף: רחוב שמריהו לוין 13, ירושלים. בתיאום מראש. </p>
+          </div>
+          </template>
+          <template v-else>
+            <h4>אין מוצרים בעגלה</h4>
+          </template>
         </div>
       </div>
       <div class="col-md-6 mt-3">
@@ -100,17 +119,33 @@
             timer: 1500
           })
         }
+      },
+       ifMessenger() {
+        this.$store.commit('ifMessenger')
       }
-
     },
     computed: {
       products() {
         return this.$store.getters.inCart
       },
+      priceMessenger() {
+        return this.$store.getters.priceMessenger
+      },
+      messenger() {
+        return this.$store.state.messenger
+      },
       clientDatdlis() {
         return this.$store.state.clientDatdlis
       },
-    }
+      Payable() {
+        let Payable = 0;
+        for (let x in this.$store.getters.inCart) {
+          Payable += this.$store.getters.inCart[x].amount * this.$store.getters.inCart[x].price;
+        }
+        return Payable
+      },
+    },
+   
   }
 </script>
 

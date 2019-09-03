@@ -2,9 +2,9 @@
   <div>
     <div>
       <p class="mt-3" @click="showModal = !showModal">{{row.text}}</p>
-      <Modal @customEvent="showModal = !showModal" v-if="showModal">
+      <div class="w-100 bg-white p-3 mb-3" @customEvent="showModal = !showModal" v-if="showModal">
         <p v-html="row.modal"></p>
-      </Modal>
+      </div>
     </div>
   </div>
 
