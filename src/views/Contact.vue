@@ -89,7 +89,7 @@
           await Swal.fire({
             type: 'success',
             title: 'יופי',
-            text: 'המייל ההודעה נשלחה בהצלחה!',
+            text: 'ההודעה נשלחה בהצלחה!',
             timer: 1500
           });
           this.clientDatdlis = {};
