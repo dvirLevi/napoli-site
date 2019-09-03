@@ -40,6 +40,10 @@ html, body {
     display: none;
   }
 
+  .underline {
+    text-decoration: underline;
+  }
+
   @media (max-width: 767.98px) {
     .desktop {
       display: none;

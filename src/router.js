@@ -6,6 +6,7 @@ import Store from './views/Store.vue'
 import Pay from './views/Pay.vue'
 import BeforPay from './views/BeforPay.vue'
 import Contact from './views/Contact.vue'
+import Recipes from './views/Recipes.vue'
 Vue.use(Router)
 
 export default new Router({
@@ -34,6 +35,11 @@ export default new Router({
       path: '/contact',
       name: 'contact',
       component: Contact
+    },
+    {
+      path: '/recipes',
+      name: 'recipes',
+      component: Recipes
     },
     {
       path: '/pay',

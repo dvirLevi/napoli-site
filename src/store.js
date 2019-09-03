@@ -14,7 +14,7 @@ export default new Vuex.Store({
       },
       {
         name: "חוויה איטלקית",
-        link: "/asd",
+        link: "/recipes",
         id: 2
       },
       {

@@ -27,7 +27,7 @@
             <input type="email" placeholder='*דוא"ל' v-model="clientDatdlis.mail" required>
           </div>
           <div class="w-100 center-all">
-            <textarea id="" rows="5" placeholder="סיבת הפנייה" v-model="clientDatdlis.note" required></textarea>
+            <textarea id="" rows="5" placeholder="*סיבת הפנייה" v-model="clientDatdlis.note" required></textarea>
           </div>
 
 
