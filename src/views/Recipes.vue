@@ -302,5 +302,8 @@
       background-position: 70%;
       /* height: 414px; */
     }
+     .bg-notebook::after {
+    background-size: 85%;
+  }
   }
 </style>
