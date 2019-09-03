@@ -1,7 +1,7 @@
 <template>
   <div>
 
-    <div class="row mt-5 part-shulders">
+    <div class="row mt-5 part-shulders pay">
       <div class="col-md-6">
         <div class="row border-bottom">
           <div class="col-md-6 p-5">
@@ -161,10 +161,8 @@
     border: solid black 2px;
   }
 
-  .pay input {
-    width: 357px;
-    border: none;
-    border-bottom: solid #9E9E9E 1px;
+  .pay p {
+    font-size: 18px !important;
   }
 
   form {
@@ -184,10 +182,6 @@
 
   button:hover {
     background-color: #8c8c8c;
-  }
-
-  .stap-one p {
-    margin: 0;
   }
 
   .product-in-cart {

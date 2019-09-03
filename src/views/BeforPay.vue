@@ -163,6 +163,11 @@
 
   .stap-one p {
     margin: 0;
+    font-size: 18px !important;
+  }
+
+  .stap-one p span{
+    font-size: 18px !important;
   }
 
   .product-in-cart {

@@ -60,6 +60,10 @@ ul span{
   font-weight: bold;
 }
 
+.v-select ul {
+  font-size: 18px !important;
+}
+
   @media (max-width: 767.98px) {
     .desktop {
       display: none;
