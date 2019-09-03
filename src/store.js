@@ -43,7 +43,7 @@ export default new Vuex.Store({
         גובה: 31.5 ס"מ<br>
         </li><li><span>משקל:</span><br> 12.5 ק"ג</li><li><span>שטח אבן האפייה:</span><br>רוחב: 31.75 ס"מ <br>עומק: 34.29 ס"מ </li>`,
         addCart: false,
-        price: 1200,
+        price: 1450,
         amount: 0,
         id: "1"
       },
@@ -74,7 +74,7 @@ export default new Vuex.Store({
         description: "",
         specifications:`<li>מותאמת במיוחד למידות התנור</li><li>כוללת חרירים ייעודיים לעודפי הקמח ולאוורור תחתית הפיצה</li>`,
         addCart: false,
-        price: 5,
+        price: 150,
         amount: 0,
         id: "4"
       },
