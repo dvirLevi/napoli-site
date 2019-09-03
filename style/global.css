@@ -49,6 +49,7 @@ html, body {
   }
   p span{
     font-size: 23px !important;
+    font-weight: bold;
   }
 
   ul {
