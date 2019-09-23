@@ -12,7 +12,7 @@
           אמיתית. היא מוכנסת לתנור לוהט ונאפית במהירות הבזק, דקה וחצי בלבד והיא בחוץ. איך תכינו את הנאפוליטנית שלכם?
           קודם כל, אתם חייבים תנור שמתלהט ל-400°C לפחות, תנור בחום נמוך מזה, יפגום באיכות הפיצה ובטעמה. הנאפולי שלנו
           מגיע לחום גבוה מ-500°C, אז אתם מסודרים...</p>
-      
+
         <p>עכשיו אתם זקוקים רק לשלושה חומרי גלם יסודיים, שנמצאים <span>בכל סופר שכונתי</span>:</p>
         <ul>
           <li>קמח "00" איטלקי לפיצה.</li>
@@ -27,9 +27,9 @@
       </div>
     </div>
     <videoTop />
-    <div class="row row-box p-3 center-all">
+    <div class="row row-box p-3 center-all" >
       <div class="col-md-6 bg-notebook">
-        <div class="row">
+        <div class="row" ref="divPrint">
           <div class="col-12">
             <TitleAndBorderR>ועכשיו, למתכון מומלץ (מתאים ל-8-6 פיצות אישיות):</TitleAndBorderR>
           </div>
@@ -38,7 +38,7 @@
             <p class="underline mt-3">חומרי גלם:</p>
             <p>1 ק"ג קמח "00" איטלקי</p>
             <p>550 גרם בדיוק של מים <span>קרים מאוד</span></p>
-            <p>חצי כפית שמרים</p>
+            <p>חצי כפית שמרים יבשים</p>
             <p>כף ורבע מלח</p>
             <p>כף סוכר</p>
             <p>מעט שמן זית</p>
@@ -63,7 +63,7 @@
               <li>
                 מתחילים ללוש במהירות נמוכה, ומוסיפים בהדרגה שני שליש מכמות המים.
               </li>
-              <li>לשים במהירות נמוכה 2-3 דקות.</li>
+              <li>לשים במהירות נמוכה 3-2 דקות.</li>
               <li>מוסיפים רבע כף מלח, מעט שמן זית לפי העין והרגש, ובהדרגה את שליש המים הנותר.</li>
               <li>לשים במהירות נמוכה עוד 10 דקות. </li>
               <li>מעבירים את כדור הבצק לקערה משומנת בשמן זית, משמנים מעט גם מלמעלה כדי שלא יתייבש, וסוגרים בניילון נצמד.
@@ -94,9 +94,11 @@
           </div>
           <div class="col-12">
             <h4 class="mt-3 w-100 text-center">בתיאבון!</h4>
-            <h3 class=" w-100 text-center">למתכונים נוספים – חפשו אותנו בפייסבוק <i class="fab fa-facebook-f h3 mt-3"></i></h3>
+            <h3 class=" w-100 text-center">למתכונים נוספים – חפשו אותנו בפייסבוק <i
+                class="fab fa-facebook-f h3 mt-3"></i></h3>
           </div>
         </div>
+         <ButtonLink @customEvent="print"  link="/recipes" text="להדפסת המתכון" />
       </div>
     </div>
   </div>
@@ -140,7 +142,13 @@
     },
 
     methods: {
-
+      print() {
+        let printContents = this.$refs.divPrint.innerHTML;
+        let originalContents = document.body.innerHTML;
+        document.body.innerHTML = printContents;
+        window.print();
+        document.body.innerHTML = originalContents;
+      }
 
     },
     computed: {
@@ -216,22 +224,24 @@
     .row-img {
       height: 100px;
     }
+
     .row-box {
       /* background-image: url(../img/ass3.b7124460.jpg); */
       background-image: url(../assets/ass3.jpg);
-    background-size: cover;
-    /* background-position: center; */
+      background-size: cover;
+      /* background-position: center; */
       /* background-size: 224%; */
       background-repeat: no-repeat;
       background-position: 70%;
       /* height: 414px; */
     }
-     .bg-notebook::after {
-    background-size: 85%;
-  }
 
-  .part-shulders-n {
-    padding: 0 0 !important;
-  }
+    .bg-notebook::after {
+      background-size: 85%;
+    }
+
+    .part-shulders-n {
+      padding: 0 0 !important;
+    }
   }
 </style>

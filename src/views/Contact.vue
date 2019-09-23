@@ -30,7 +30,7 @@
             <textarea id="" rows="5" placeholder="*סיבת הפנייה" v-model="clientDatdlis.note" required></textarea>
           </div>
           <div class="w-100 center-all mt-3 confirm">
-            <input type="checkbox" required>
+            <input type="checkbox" :checked="ifConfirm" @click="ifConfirm = !ifConfirm">
             <span>לקבלת מתכונים, טיפים ומבצעים לדוא"ל</span>
           </div>
 
@@ -63,6 +63,7 @@
     components: {},
     data() {
       return {
+        ifConfirm: true,
         clientDatdlis: {
 
         }
@@ -86,6 +87,7 @@
       טלפון: ${this.clientDatdlis.tel} <br>
       מייל: ${this.clientDatdlis.mail} <br>
       הערות: ${this.clientDatdlis.note} <br>
+      אישור קבלת מיילים: ${this.ifConfirm} <br>
      </p>`,
             }
           })

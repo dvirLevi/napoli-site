@@ -7,16 +7,21 @@
         </div>
       </div>
     </div>
-    <OnNapoli/>
-  <videoTop/>
-<RecipesLink/>
-    <ReelPizza/>
+    <OnNapoli />
+    <videoTop />
+
+    <!-- <videoMidle/> -->
+    <RecipesLink />
+    <ReelPizza />
 
     <!-- <TechnicalSpecifications/> -->
-    <GasBurner/>
-    <FoodImages/>
-    <SoWhy/>
-    <videoBottom/>
+    <GasBurner />
+
+    <FoodImages />
+    <SoWhy />
+   
+    <videoBottom srcVideo="https://res.cloudinary.com/dpdl5lxxb/video/upload/v1569249177/napoli_ybtqff.mp4"/>
+    <videoBottom srcVideo=" https://res.cloudinary.com/dpdl5lxxb/video/upload/v1569263055/Napoli-Pizza_urm29r.mp4"/>
   </div>
 </template>
 
@@ -31,6 +36,7 @@
   import SoWhy from '@/components/SoWhy.vue'
   import FoodImages from '@/components/FoodImages.vue'
   import RecipesLink from '@/components/RecipesLink.vue'
+  // import videoMidle from '@/components/videoMidle.vue'
   import 'aos/dist/aos.css'
 
   export default {
@@ -44,7 +50,8 @@
       GasBurner,
       SoWhy,
       FoodImages,
-      RecipesLink
+      RecipesLink,
+      // videoMidle
     },
 
   }
@@ -52,7 +59,7 @@
 
 <style scoped>
   img {
-        width: 68%;
+    width: 68%;
   }
 
   .wrap-video {
@@ -61,22 +68,22 @@
   }
 
   video {
-       width: 68%;
-       margin-top: -188.3px;
+    width: 68%;
+    margin-top: -188.3px;
   }
 
-   @media (max-width: 767.98px) {
-       img {
-    width: 100%;
-  }
+  @media (max-width: 767.98px) {
+    img {
+      width: 100%;
+    }
 
-  .wrap-video {
-    height: 105px;
-  }
+    .wrap-video {
+      height: 105px;
+    }
 
-  video {
-    width: 100%;
-            margin-top: -44px;
+    video {
+      width: 100%;
+      margin-top: -44px;
+    }
   }
-   }
 </style>

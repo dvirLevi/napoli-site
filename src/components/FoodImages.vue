@@ -22,7 +22,7 @@
 <div class="row">
   <div class="col">
     <TitleAndBorderR>סטייק מושלם</TitleAndBorderR>    
-    <p>בחום האדיר של ה-<span>Napoli Pizza Oven</span> תוכלו לצלות את הנתח האהוב עליכם באיכות מדהימה. לא לשכוח בירה קרה בצד</p>
+    <p>בחום האדיר של תנור הנאפולי תוכלו לצלות את הנתח האהוב עליכם באיכות מדהימה. לא לשכוח בירה קרה בצד</p>
   </div>
 </div>
     </div>
@@ -35,7 +35,7 @@
 <div class="row">
   <div class="col">
     <TitleAndBorderR>ירקות גורמה</TitleAndBorderR>
-    <p>עם קצת שמן זית ותבלינים, הכינו את לקט הירקות האהוב עליכם ב-<span>Napoli Pizza Oven</span></p>
+    <p>עם קצת שמן זית ותבלינים, הכינו את לקט הירקות האהוב עליכם בתנור הנאפולי</p>
   </div>
 </div>
     </div>

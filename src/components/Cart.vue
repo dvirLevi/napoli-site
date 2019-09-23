@@ -40,7 +40,8 @@
         <p>סה"כ: {{Payable}} ₪</p>
       </div>
       <div class="center-all ">
-        <ButtonLink @customEvent="openCart" text="להמשך קנייה" link="/store" />
+        <ButtonLink v-if="products.length" @customEvent="openCart" text="להמשך קנייה" link="/store" />
+        <ButtonLink v-else @customEvent="openCart" text="לחנות" link="/store" />
         <ButtonLink @customEvent="openCart" text="לתשלום מאובטח" link="/befor-pay" v-if="products.length" />
       </div>
     </div>
