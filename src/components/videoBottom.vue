@@ -5,7 +5,8 @@
         <div class="center-all wrap-video">
           <video @play="addVol" type="video/mp4" ref="videoVol" :src="srcVideo" loop="" playsinline=""
             autoplay=""></video>
-          <i @click="addVol" class="fas fa-volume-up"></i>
+          <i @click="addVol" v-if="!toogleVal" class="fas fa-volume-up"></i>
+          <i @click="addVol" v-else class="fas fa-volume-mute"></i>
         </div>
       </div>
     </div>
