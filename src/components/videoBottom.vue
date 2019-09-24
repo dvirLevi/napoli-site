@@ -2,12 +2,12 @@
   <div>
     <div class="row" :style="{backgroundColor: BColor}">
       <div class="col center-all">
-        <div class="center-all wrap-video">
+        <div class="center-all wrap-video" :class="[width]">
           <!-- <video type="video/mp4" ref="videoVol" :src="srcVideo" playsinline=""
              controls></video> -->
           <video type="video/mp4" ref="videoVol" :src="srcVideo" loop="" playsinline="" autoplay=""></video>
-          <i @click="addVol" v-if="!toogleVal" class="fas fa-volume-up"></i>
-          <i @click="addVol" v-else class="fas fa-volume-mute"></i>
+          <i @click="addVol" v-if="!toogleVal" class="fas fa-volume-mute"></i>
+          <i @click="addVol" v-else class="fas fa-volume-up"></i>
         </div>
       </div>
     </div>
@@ -21,7 +21,8 @@
     name: 'videoBottom',
     props: {
       srcVideo: String,
-      BColor: String
+      BColor: String,
+      width: String,
     },
     components: {},
     data() {
@@ -55,6 +56,14 @@
 } */
   .wrap-video {
     position: relative;
+    /* width: 100%; */
+  }
+
+  .width-video-50 {
+    width: 50%;
+  }
+
+  .width-video-100 {
     width: 100%;
   }
 
@@ -73,8 +82,12 @@
   }
 
   @media (max-width: 767.98px) {
-    .wrap-video {
+    .width-video-100 {
       width: 100%;
+    }
+
+    .width-video-50 {
+      width: 50%;
     }
   }
 </style>

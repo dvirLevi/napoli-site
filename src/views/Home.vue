@@ -16,7 +16,7 @@
     <videoTop />
     <FoodImages />
     <SoWhy />
-    <videoBottom srcVideo=" https://res.cloudinary.com/dpdl5lxxb/video/upload/v1569263055/Napoli-Pizza_urm29r.mp4"/>
+    <videoBottom width="width-video-50" srcVideo=" https://res.cloudinary.com/dpdl5lxxb/video/upload/v1569263055/Napoli-Pizza_urm29r.mp4"/>
   </div>
 </template>
 

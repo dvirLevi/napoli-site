@@ -24,7 +24,7 @@
         </div>
       </div>
       <div class="col-md-6">
-        <videoBottom BColor="#ffffff"
+        <videoBottom width="width-video-100" BColor="#ffffff"
           srcVideo="https://res.cloudinary.com/dpdl5lxxb/video/upload/v1569249177/napoli_ybtqff.mp4" />
       </div>
     </div>
