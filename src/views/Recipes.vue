@@ -26,10 +26,9 @@
         <RecipesModal v-for="row in rows" :key="row.id" :row="row" />
       </div>
     </div>
-    <videoBottom BColor="#f5e6c680" srcVideo="https://res.cloudinary.com/dpdl5lxxb/video/upload/v1569249177/napoli_ybtqff.mp4"/>
 
     <!-- <videoTop /> -->
-    <div class="row row-box p-3 center-all" >
+    <div class="row row-box p-3 center-all mb-5" >
       <div class="col-md-6 bg-notebook">
         <div class="row" ref="divPrint">
           <div class="col-12">
@@ -103,6 +102,7 @@
          <ButtonLink @customEvent="print"  link="/recipes" text="להדפסת המתכון" />
       </div>
     </div>
+    <videoBottom BColor="#ffffff" srcVideo="https://res.cloudinary.com/dpdl5lxxb/video/upload/v1569249177/napoli_ybtqff.mp4"/>
   </div>
 
 </template>
@@ -110,7 +110,7 @@
 <script>
   // @ is an alias to /src
   import RecipesModal from '@/components/RecipesModal.vue'
-  import videoTop from '@/components/videoTop.vue'
+  // import videoTop from '@/components/videoTop.vue'
   import videoBottom from '@/components/videoBottom.vue'
 
 
@@ -118,7 +118,7 @@
     name: 'Recipes',
     components: {
       RecipesModal,
-      videoTop,
+      // videoTop,
       videoBottom
     },
     data() {

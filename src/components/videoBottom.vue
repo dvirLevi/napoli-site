@@ -5,8 +5,7 @@
         <div class="center-all wrap-video">
           <!-- <video type="video/mp4" ref="videoVol" :src="srcVideo" playsinline=""
              controls></video> -->
-            <video @play="addVol" type="video/mp4" ref="videoVol" :src="srcVideo" loop="" playsinline=""
-            autoplay=""></video>
+          <video type="video/mp4" ref="videoVol" :src="srcVideo" loop="" playsinline="" autoplay=""></video>
           <i @click="addVol" v-if="!toogleVal" class="fas fa-volume-up"></i>
           <i @click="addVol" v-else class="fas fa-volume-mute"></i>
         </div>
@@ -27,8 +26,11 @@
     components: {},
     data() {
       return {
-        toogleVal: true,
+        toogleVal: false,
       }
+    },
+    mounted() {
+      this.$refs.videoVol.volume = 0.0
     },
     methods: {
       addVol() {
@@ -48,7 +50,7 @@
 </script>
 
 <style scoped>
-/* .row {
+  /* .row {
   background-color: #be6c420a;
 } */
   .wrap-video {

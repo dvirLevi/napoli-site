@@ -33,7 +33,6 @@
                 <P>מיקוד: {{clientDatdlis.mikod}}</P>
                 <P>הערות: {{clientDatdlis.note}}</P>
               </div>
-
             </div>
           </div>
         </div>
@@ -99,9 +98,9 @@
       },
       iframeUrl() {
         if (this.ifCredit == 8) {
-          return `https://direct.tranzila.com/sabresltd/iframenew.php?sum=${this.allPayable}&currency=1&cred_type=${this.ifCredit}&npay=${this.numPay - 1}&spay=${this.namPayAmount}&fpay=${this.firstPayAmount}&lang=il&contact=${this.clientDatdlis.name}&phone=${this.clientDatdlis.tel}&email=${this.clientDatdlis.mail}&city=${this.clientDatdlis.city}&address=${this.clientDatdlis.address + this.clientDatdlis.namHome + this.clientDatdlis.mikod}&pdesc=${this.clientDatdlis.note + ' משלוח: ' + this.messenger + ' מוצרים: ' + this.nameProducts}`
+          return `https://direct.tranzila.com/sabresltd/iframenew.php?sum=${this.allPayable}&currency=1&cred_type=${this.ifCredit}&npay=${this.numPay - 1}&spay=${this.namPayAmount}&fpay=${this.firstPayAmount}&lang=il&contact=${this.clientDatdlis.name}&phone=${this.clientDatdlis.tel}&email=${this.clientDatdlis.mail}&city=${this.clientDatdlis.city}&address=${this.clientDatdlis.address + this.clientDatdlis.namHome + this.clientDatdlis.mikod}&json_purchase_data=${this.JSonProducts}`
         }
-        return `https://direct.tranzila.com/sabresltd/iframenew.php?sum=${this.allPayable}&currency=1&cred_type=${this.ifCredit}&lang=il&contact=${this.clientDatdlis.name}&phone=${this.clientDatdlis.tel}&email=${this.clientDatdlis.mail}&city=${this.clientDatdlis.city}&address=${this.clientDatdlis.address + this.clientDatdlis.namHome + this.clientDatdlis.mikod}&pdesc=${this.clientDatdlis.note + ' משלוח: ' + this.messenger + ' מוצרים: ' + this.nameProducts}`
+        return `https://direct.tranzila.com/sabresltd/iframenew.php?sum=${this.allPayable}&currency=1&cred_type=${this.ifCredit}&lang=il&contact=${this.clientDatdlis.name}&phone=${this.clientDatdlis.tel}&email=${this.clientDatdlis.mail}&city=${this.clientDatdlis.city}&address=${this.clientDatdlis.address + this.clientDatdlis.namHome + this.clientDatdlis.mikod}&json_purchase_data=${this.JSonProducts}`
       },
       Payable() {
         let Payable = 0;
@@ -110,7 +109,7 @@
         }
         return Payable
       },
-       priceMessenger() {
+      priceMessenger() {
         return this.$store.getters.priceMessenger;
       },
       allPayable() {
@@ -119,26 +118,51 @@
       products() {
         return this.$store.getters.inCart
       },
-       nameProducts() {
-         let name = "";
-         for(let x in this.products){
-           name += this.products[x].name +" "+ this.products[x].amount + 'כ ';
-         }
+      nameProducts() {
+        let name = "";
+        for (let x in this.products) {
+          name += this.products[x].name + " " + this.products[x].amount + 'כ ';
+        }
         return name
+      },
+      JSonProducts() {
+        let json = [];
+        for (let x in this.products) {
+          json.push({
+            product_name: this.products[x].name,
+            product_quantity: this.products[x].amount,
+            product_price: this.products[x].price,
+          })
+        }
+        if (this.priceMessenger) {
+          json.push({
+            product_name: "משלוח",
+            product_quantity: 1,
+            product_price: this.priceMessenger,
+          })
+        }
+        if (this.discount) {
+          json.push({
+            product_name: "הנחה",
+            product_quantity: 1,
+            product_price: "-" + this.discount,
+          })
+        }
+        return JSON.stringify(json)
       },
       clientDatdlis() {
         return this.$store.state.clientDatdlis;
       },
-        //תשלום ראשון
+      //תשלום ראשון
       firstPayAmount() {
-        let x  = this.namPayAmount * this.numPay;
+        let x = this.namPayAmount * this.numPay;
         let y = this.allPayable - x;
-        return  this.namPayAmount + y;
+        return this.namPayAmount + y;
       },
       //שאר תשלומים
       namPayAmount() {
         let nam = this.allPayable / this.numPay;
-        return  Math.floor(nam)
+        return Math.floor(nam)
       },
       ifCredit() {
         if (this.numPay == 1) {
@@ -149,7 +173,7 @@
       messenger() {
         return this.$store.state.messenger
       },
-        discount() {
+      discount() {
         return this.$store.getters.discount
       },
     }
