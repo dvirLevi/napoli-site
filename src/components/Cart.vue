@@ -36,10 +36,11 @@
           </div>
         </div>
       </div>
-      <div class="center-all">
+      <codeDiscount v-if="products.length"/>
+      <div class="center-all row">
         <p>סה"כ: {{Payable}} ₪</p>
       </div>
-      <div class="center-all ">
+      <div class="center-all row">
         <ButtonLink v-if="products.length" @customEvent="openCart" text="להמשך קנייה" link="/store" />
         <ButtonLink v-else @customEvent="openCart" text="לחנות" link="/store" />
         <ButtonLink @customEvent="openCart" text="לתשלום מאובטח" link="/befor-pay" v-if="products.length" />
@@ -50,12 +51,13 @@
 
 <script>
   // @ is an alias to /src
+  import codeDiscount from '@/components/codeDiscount.vue'
 
 
   export default {
     name: 'Cart',
     components: {
-
+codeDiscount
     },
     computed: {
       ifCart() {
@@ -72,7 +74,7 @@
         return Payable
       },
       payRoutCloseCart() {
-        if(this.$route.name == "pay"){
+        if (this.$route.name == "pay") {
           return false
         }
         return true

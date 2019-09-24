@@ -3,12 +3,12 @@
     <div class="row">
       <div class="col center-all">
         <div class="center-all wrap-video">
-          <video type="video/mp4" ref="videoVol" :src="srcVideo" playsinline=""
-             controls></video>
-            <!-- <video @play="addVol" type="video/mp4" ref="videoVol" :src="srcVideo" loop="" playsinline=""
+          <!-- <video type="video/mp4" ref="videoVol" :src="srcVideo" playsinline=""
+             controls></video> -->
+            <video @play="addVol" type="video/mp4" ref="videoVol" :src="srcVideo" loop="" playsinline=""
             autoplay=""></video>
           <i @click="addVol" v-if="!toogleVal" class="fas fa-volume-up"></i>
-          <i @click="addVol" v-else class="fas fa-volume-mute"></i> -->
+          <i @click="addVol" v-else class="fas fa-volume-mute"></i>
         </div>
       </div>
     </div>
@@ -47,6 +47,9 @@
 </script>
 
 <style scoped>
+.row {
+  background-color: #be6c420a;
+}
   .wrap-video {
     position: relative;
     width: 68%;

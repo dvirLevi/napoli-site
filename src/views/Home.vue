@@ -8,19 +8,14 @@
       </div>
     </div>
     <OnNapoli />
-    <videoTop />
-
     <!-- <videoMidle/> -->
     <RecipesLink />
     <ReelPizza />
-
     <!-- <TechnicalSpecifications/> -->
     <GasBurner />
-
+    <videoTop />
     <FoodImages />
     <SoWhy />
-   
-    <videoBottom srcVideo="https://res.cloudinary.com/dpdl5lxxb/video/upload/v1569249177/napoli_ybtqff.mp4"/>
     <videoBottom srcVideo=" https://res.cloudinary.com/dpdl5lxxb/video/upload/v1569263055/Napoli-Pizza_urm29r.mp4"/>
   </div>
 </template>

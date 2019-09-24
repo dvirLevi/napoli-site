@@ -26,7 +26,9 @@
         <RecipesModal v-for="row in rows" :key="row.id" :row="row" />
       </div>
     </div>
-    <videoTop />
+    <videoBottom srcVideo="https://res.cloudinary.com/dpdl5lxxb/video/upload/v1569249177/napoli_ybtqff.mp4"/>
+
+    <!-- <videoTop /> -->
     <div class="row row-box p-3 center-all" >
       <div class="col-md-6 bg-notebook">
         <div class="row" ref="divPrint">
@@ -34,8 +36,8 @@
             <TitleAndBorderR>ועכשיו, למתכון מומלץ (מתאים ל-8-6 פיצות אישיות):</TitleAndBorderR>
           </div>
           <div class="col-md-6">
-            <p class="underline mt-3 font-weight-bold">לבצק:</p>
-            <p class="underline mt-3">חומרי גלם:</p>
+            <p class="underline mt-3 font-weight-bold">חומרי גלם:</p>
+            <p class="underline mt-3">לבצק:</p>
             <p>1 ק"ג קמח "00" איטלקי</p>
             <p>550 גרם בדיוק של מים <span>קרים מאוד</span></p>
             <p>חצי כפית שמרים יבשים</p>
@@ -109,13 +111,15 @@
   // @ is an alias to /src
   import RecipesModal from '@/components/RecipesModal.vue'
   import videoTop from '@/components/videoTop.vue'
+  import videoBottom from '@/components/videoBottom.vue'
 
 
   export default {
     name: 'Recipes',
     components: {
       RecipesModal,
-      videoTop
+      videoTop,
+      videoBottom
     },
     data() {
       return {
