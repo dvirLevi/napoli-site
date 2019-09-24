@@ -1,11 +1,11 @@
 <template>
   <div>
-    <div>
-      <p class="mt-3" @click="showModal = !showModal">{{row.text}}</p>
+    <ul>
+      <li class="mt-3" @click="showModal = !showModal">{{row.text}}</li>
       <div class="w-100 bg-white p-3 mb-3" @customEvent="showModal = !showModal" v-if="showModal">
         <p v-html="row.modal"></p>
       </div>
-    </div>
+    </ul>
   </div>
 
 </template>
@@ -43,6 +43,10 @@
 
   h3 {
     font-weight: 400;
+    cursor: pointer;
+  }
+
+  li {
     cursor: pointer;
   }
 

@@ -16,11 +16,7 @@
             מגיע לחום גבוה מ-500°C, אז אתם מסודרים...</p>
 
           <p>עכשיו אתם זקוקים רק לשלושה חומרי גלם יסודיים, שנמצאים <span>בכל סופר שכונתי</span>:</p>
-          <ul>
-            <li>קמח "00" איטלקי לפיצה.</li>
-            <li>עגבניות איטלקיות קלופות בקופסת שימורים.</li>
-            <li>גבינת מוצרלה אמיתית.</li>
-          </ul>
+          <RecipesModal v-for="row in rows" :key="row.id" :row="row" />
         </div>
       </div>
       <div class="col-md-6">
@@ -30,7 +26,6 @@
     </div>
     <div class="row  part-shulders row-modals">
       <div class="col part-shulders-n">
-        <RecipesModal v-for="row in rows" :key="row.id" :row="row" />
       </div>
     </div>
 
@@ -130,20 +125,18 @@
     data() {
       return {
         rows: [{
-            text: 'מה הסיפור של "קמח 00"? >>',
-            modal: `<p>קמח טבעי לחלוטין, שעשוי מחלק בגרעין החיטה שעשיר מאוד בגלוטן. הקמח טחון בטחינה דקה במיוחד, וריכוז הגלוטן הגבוה שלו הופך את הבצק לגמיש וחזק ביותר. מכירים את הסרטונים האלה ביו-טיוב, של פיציולים שמשליכים לאוויר את בצק הפיצה שלהם ומסובבים אותו במהירות בלי שייקרע? הבצק עשוי מקמח "00"...</p>
-  <p>ועכשיו, סוד הזהב של הפיצה הנאפוליטנית: כדי שרשתות הגלוטן יתפתחו היטב בתוך הבצק, חובה לתת לו לישון במקרר 24 שעות לפחות לפני האפייה.</p>
-  <p>אז בקיצור, קמח "00" + לילה במקרר.</p>`,
+            text: 'קמח "00" איטלקי לפיצה >>',
+            modal: `<p>קמח דק ועשיר במיוחד בגלוטן. סוד הזהב של הנאפוליטנים: הבצק חייב לישון במקרר<span> 24 שעות לפחות</span, כדי שרשתות הגלוטן יתפתחו בבצק. כך הוא יהפוך לגמיש וחזק במיוחד!</p>`,
             id: 1
           },
           {
-            text: 'למה עגבניות איטלקיות קלופות? >>',
-            modal: ` <p>פשוט. הן הרבה יותר חלקות, רכות ומותאמות לאפייה בחום גבוה. </p>
-  <p>מי שהכין פעם אחת רוטב פיצה מהעגבניות האלה, כבר לא יחזור לרסק העגבניות הרגיל. </p>`,
+            text: 'עגבניות איטלקיות קלופות בקופסת שימורים >>',
+            modal: ` <p>העגבניות האלה הרבה יותר חלקות, רכות ומותאמות לאפייה בחום גבוה.</p>
+  <p>מי שהכין פעם אחת רוטב פיצה מהעגבניות האלה, כבר לא יחזור לרסק העגבניות הרגיל.</p>`,
             id: 2
           },
           {
-            text: 'מה הסיפור של גבינת מוצרלה? >>',
+            text: 'גבינת מוצרלה אמיתית >>',
             modal: "צריך בכלל להסביר?! 😄 ",
             id: 3
           },
