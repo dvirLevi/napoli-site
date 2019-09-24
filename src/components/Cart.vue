@@ -38,7 +38,8 @@
       </div>
       <codeDiscount v-if="products.length"/>
       <div class="center-all row">
-        <p>סה"כ: {{Payable}} ₪</p>
+        <h6 class="w-100 text-center" v-if="discount">הנחת קופון: {{discount}}- ₪</h6>
+        <p class="w-100 text-center">סה"כ: {{Payable - discount}} ₪</p>
       </div>
       <div class="center-all row">
         <ButtonLink v-if="products.length" @customEvent="openCart" text="להמשך קנייה" link="/store" />
@@ -78,6 +79,9 @@ codeDiscount
           return false
         }
         return true
+      },
+      discount() {
+        return this.$store.getters.discount
       },
     },
     methods: {

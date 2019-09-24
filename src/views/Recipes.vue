@@ -26,7 +26,7 @@
         <RecipesModal v-for="row in rows" :key="row.id" :row="row" />
       </div>
     </div>
-    <videoBottom srcVideo="https://res.cloudinary.com/dpdl5lxxb/video/upload/v1569249177/napoli_ybtqff.mp4"/>
+    <videoBottom BColor="#f5e6c680" srcVideo="https://res.cloudinary.com/dpdl5lxxb/video/upload/v1569249177/napoli_ybtqff.mp4"/>
 
     <!-- <videoTop /> -->
     <div class="row row-box p-3 center-all" >

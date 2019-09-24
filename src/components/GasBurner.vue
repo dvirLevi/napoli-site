@@ -22,7 +22,7 @@
     <div class="col-md-6 p-3 left-side center-all ">
       <div class="row row-gas">
         <div class="col-md-12 center-all">
-          <img data-aos="fade-up" src="../assets/ass8.png" alt="">
+          <img data-aos="fade-up" src="../assets/ass30.png" alt="">
         </div>
         <div class="col-md-12 center-all">
           <div class="block-text">

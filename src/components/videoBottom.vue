@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="row">
+    <div class="row" :style="{backgroundColor: BColor}">
       <div class="col center-all">
         <div class="center-all wrap-video">
           <!-- <video type="video/mp4" ref="videoVol" :src="srcVideo" playsinline=""
@@ -22,6 +22,7 @@
     name: 'videoBottom',
     props: {
       srcVideo: String,
+      BColor: String
     },
     components: {},
     data() {
@@ -47,9 +48,9 @@
 </script>
 
 <style scoped>
-.row {
+/* .row {
   background-color: #be6c420a;
-}
+} */
   .wrap-video {
     position: relative;
     width: 68%;

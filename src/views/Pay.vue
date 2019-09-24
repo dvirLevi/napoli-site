@@ -14,6 +14,7 @@
                 <P>סה"כ למוצר: {{product.amount * product.price}}</P>
               </div>
               <div class="w-100">
+                <p class="w-100" v-if="discount">הנחת קופון: {{discount}}- ₪</p>
                 <p class="w-100" v-if="messenger">משלוח עד הבית 40 ₪</p>
                 <h5>סה"כ לתשלום <span v-if="messenger">כולל משלוח</span>: {{allPayable}} ₪</h5>
               </div>
@@ -110,10 +111,10 @@
         return Payable
       },
        priceMessenger() {
-        return this.$store.getters.priceMessenger
+        return this.$store.getters.priceMessenger;
       },
       allPayable() {
-        return this.Payable + this.priceMessenger
+        return this.Payable + this.priceMessenger - this.discount;
       },
       products() {
         return this.$store.getters.inCart
@@ -126,13 +127,13 @@
         return name
       },
       clientDatdlis() {
-        return this.$store.state.clientDatdlis
+        return this.$store.state.clientDatdlis;
       },
         //תשלום ראשון
       firstPayAmount() {
         let x  = this.namPayAmount * this.numPay;
         let y = this.allPayable - x;
-        return  this.namPayAmount + y
+        return  this.namPayAmount + y;
       },
       //שאר תשלומים
       namPayAmount() {
@@ -147,6 +148,9 @@
       },
       messenger() {
         return this.$store.state.messenger
+      },
+        discount() {
+        return this.$store.getters.discount
       },
     }
   }

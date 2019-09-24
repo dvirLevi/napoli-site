@@ -23,10 +23,11 @@
           </div>
           <template v-if="products.length">
           <div class="w-100 center-all border-top p-4">
-            <p class="w-100">סה"כ: {{Payable}} ₪</p>
+            <p class="w-100" v-if="discount">הנחת קופון: {{discount}}- ₪</p>
+            <p class="w-100">סה"כ: {{Payable - discount}} ₪</p>
             <template v-if="messenger">
             <p class="w-100">משלוח עד הבית 40 ₪</p>
-            <p class="w-100">סה"כ כולל משלוח : {{Payable + priceMessenger}} ₪</p>
+            <p class="w-100">סה"כ כולל משלוח : {{Payable + priceMessenger - discount}} ₪</p>
             </template>
           </div>
           <div class="w-100 center-all border-top">
@@ -143,6 +144,9 @@
           Payable += this.$store.getters.inCart[x].amount * this.$store.getters.inCart[x].price;
         }
         return Payable
+      },
+       discount() {
+        return this.$store.getters.discount
       },
     },
    

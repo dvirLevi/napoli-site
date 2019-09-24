@@ -44,38 +44,38 @@ export default new Vuex.Store({
         addCart: false,
         price: 1450,
         amount: 0,
-        id: "1"
+        id: 1
       },
       {
         name: "מבער גז נאפולי",
         img: require("@/assets/ass16.png"),
         description: "",
-        specifications:`<li>מבער גז עוצמתי, תוכנן ועוצב במיוחד לתנור נאפולי</li><li>חיבור פשוט ומהיר לתנור</li><li>מתלהט לטמפרטורה של 450 מעלות תוך כ-15 דקות בלבד</li><li>חסכוני בגז – כ-420 גרם בלבד לשעת בעירה</li><li>מספק אש חזקה, יציבה ונקייה לכל אורך השימוש</li><li>כפתור הצתה בטיחותי</li><li>שליטה מלאה על עוצמת הלהבות</li><li>מבער הגז מגיע עם וסת גז אופציונלי (ניתן להרכיב וסתים אחרים בהתאם לסוג הבלון שברשותכם)
+        specifications: `<li>מבער גז עוצמתי, תוכנן ועוצב במיוחד לתנור נאפולי</li><li>חיבור פשוט ומהיר לתנור</li><li>מתלהט לטמפרטורה של 450 מעלות תוך כ-15 דקות בלבד</li><li>חסכוני בגז – כ-420 גרם בלבד לשעת בעירה</li><li>מספק אש חזקה, יציבה ונקייה לכל אורך השימוש</li><li>כפתור הצתה בטיחותי</li><li>שליטה מלאה על עוצמת הלהבות</li><li>מבער הגז מגיע עם וסת גז אופציונלי (ניתן להרכיב וסתים אחרים בהתאם לסוג הבלון שברשותכם)
         </li><li>אורך:  26.5 ס"מ; רוחב: 15 ס"מ</li>`,
         addCart: false,
         price: 350,
         amount: 0,
-        id: "2"
+        id: 2
       },
       {
         name: "כיסוי חוץ לתנור נאפולי",
         img: require("@/assets/ass14.jpg"),
         description: "",
-        specifications:`<li>כיסוי נאפולי ייעודי לשמירת התנור מאבק ולכלוך, ולהגנה מפני פגעי מזג האוויר</li><li>שוליים נמתחים להידוק הכיסוי סביב תחתית התנור</li>`,
+        specifications: `<li>כיסוי נאפולי ייעודי לשמירת התנור מאבק ולכלוך, ולהגנה מפני פגעי מזג האוויר</li><li>שוליים נמתחים להידוק הכיסוי סביב תחתית התנור</li>`,
         addCart: false,
         price: 100,
         amount: 0,
-        id: "3"
+        id: 3
       },
       {
         name: "מרדה לתנור נאפולי",
         img: require("@/assets/ass15.jpg"),
         description: "",
-        specifications:`<li>מותאמת במיוחד למידות התנור</li><li>כוללת חרירים ייעודיים לעודפי הקמח ולאוורור תחתית הפיצה</li>`,
+        specifications: `<li>מותאמת במיוחד למידות התנור</li><li>כוללת חרירים ייעודיים לעודפי הקמח ולאוורור תחתית הפיצה</li>`,
         addCart: false,
         price: 150,
         amount: 0,
-        id: "4"
+        id: 4
       },
 
     ],
@@ -91,7 +91,8 @@ export default new Vuex.Store({
       note: ""
     },
     nextPayment: false,
-    messenger: true
+    messenger: true,
+    ifCode: false,
   },
   getters: {
     inCart: state => {
@@ -101,15 +102,20 @@ export default new Vuex.Store({
       return inCart
     },
     priceMessenger: state => {
-      if(state.messenger){
+      if (state.messenger) {
         return 40
       }
       return 0
     },
     messenger: state => {
-        return state.messenger
+      return state.messenger
     },
-
+    discount: state => {
+      if (state.ifCode) {
+        return 45
+      }
+      return 0
+    }
   },
   mutations: {
     showCart(state) {
@@ -126,7 +132,13 @@ export default new Vuex.Store({
     },
     ifMessenger(state) {
       state.messenger = !state.messenger
-    }
+    },
+    IfCodeFalse(state) {
+      state.ifCode = false;
+    },
+    IfCodeTrue(state) {
+      state.ifCode = true;
+    },
   },
   actions: {
     async sendToMail(store, contentMail) {

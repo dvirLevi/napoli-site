@@ -2,8 +2,11 @@
   <div class="row">
     <div class="col">
       <div class="center-all w-100">
-        <input type="text" @click.stop="" v-model="myCode" placeholder="הכנס קוד קופון">
-        <button @click.stop="ifCodeCorrect">הפעל</button>
+        <template v-if="!discount">
+          <input type="text" @click.stop="" v-model="myCode" placeholder="הכנס קוד קופון">
+          <button @click.stop="ifCodeCorrect">הפעל</button>
+        </template>
+        <P class="w-100 text-center" v-else>קוד הקופון הופעל!</P>
       </div>
     </div>
   </div>
@@ -26,16 +29,46 @@
       }
     },
     computed: {
-
+      products() {
+        return this.$store.getters.inCart
+      },
+      ifProductsDiscount() {
+        let arrTest = this.products.filter((val) => {
+          return val.id === 1 || val.id === 2
+        })
+        if (arrTest.length >= 2) {
+          return true
+        }
+        return false
+      },
+      discount() {
+        return this.$store.getters.discount
+      },
+    },
+    watch: {
+      products: function () {
+        if (this.ifProductsDiscount && this.myCode === this.code) {
+          this.$store.commit('IfCodeTrue')
+        }else{
+          this.$store.commit('IfCodeFalse')
+        }
+      }
     },
     methods: {
       ifCodeCorrect() {
         if (this.myCode === this.code) {
-
+          if (this.ifProductsDiscount) {
+            this.$store.commit('IfCodeTrue')
+          } else {
+            Swal.fire({
+              type: 'error',
+              text: 'קוד הקופון תקף ברכישת תנור ומבער',
+              timer: 1500
+            });
+          }
         } else {
           Swal.fire({
             type: 'error',
-            // title: 'יופי',
             text: 'קוד קופון שגוי',
             timer: 1500
           });
