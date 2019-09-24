@@ -55,7 +55,7 @@
 } */
   .wrap-video {
     position: relative;
-    width: 68%;
+    width: 100%;
   }
 
   i {

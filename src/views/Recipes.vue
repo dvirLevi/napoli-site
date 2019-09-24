@@ -5,20 +5,27 @@
         <img class="w-100" src="../assets/ass3.jpg" alt="">
       </div>
     </div>
-    <div class="row  part-shulders mt-4 mb-4">
-      <div class="col part-shulders-n">
-        <p class="font-weight-bold">מי שטעם פיצה נאפוליטנית אמיתית, כבר יודע. מי שלא – הגיע הזמן להכיר!</p>
-        <p>הפיצה המופלאה הזו, שמקורה בעיר נאפולי באיטליה, עשויה מבצק עשיר ואוורירי, רוטב עגבניות איטלקיות וגבינת מוצרלה
-          אמיתית. היא מוכנסת לתנור לוהט ונאפית במהירות הבזק, דקה וחצי בלבד והיא בחוץ. איך תכינו את הנאפוליטנית שלכם?
-          קודם כל, אתם חייבים תנור שמתלהט ל-400°C לפחות, תנור בחום נמוך מזה, יפגום באיכות הפיצה ובטעמה. הנאפולי שלנו
-          מגיע לחום גבוה מ-500°C, אז אתם מסודרים...</p>
+    <div class="row mt-4 mb-4">
+      <div class="col-md-6 center-all">
+        <div class="block-text">
+          <p class="font-weight-bold">מי שטעם פיצה נאפוליטנית אמיתית, כבר יודע. מי שלא – הגיע הזמן להכיר!</p>
+          <p>הפיצה המופלאה הזו, שמקורה בעיר נאפולי באיטליה, עשויה מבצק עשיר ואוורירי, רוטב עגבניות איטלקיות וגבינת
+            מוצרלה
+            אמיתית. היא מוכנסת לתנור לוהט ונאפית במהירות הבזק, דקה וחצי בלבד והיא בחוץ. איך תכינו את הנאפוליטנית שלכם?
+            קודם כל, אתם חייבים תנור שמתלהט ל-400°C לפחות, תנור בחום נמוך מזה, יפגום באיכות הפיצה ובטעמה. הנאפולי שלנו
+            מגיע לחום גבוה מ-500°C, אז אתם מסודרים...</p>
 
-        <p>עכשיו אתם זקוקים רק לשלושה חומרי גלם יסודיים, שנמצאים <span>בכל סופר שכונתי</span>:</p>
-        <ul>
-          <li>קמח "00" איטלקי לפיצה.</li>
-          <li>עגבניות איטלקיות קלופות בקופסת שימורים.</li>
-          <li>גבינת מוצרלה אמיתית.</li>
-        </ul>
+          <p>עכשיו אתם זקוקים רק לשלושה חומרי גלם יסודיים, שנמצאים <span>בכל סופר שכונתי</span>:</p>
+          <ul>
+            <li>קמח "00" איטלקי לפיצה.</li>
+            <li>עגבניות איטלקיות קלופות בקופסת שימורים.</li>
+            <li>גבינת מוצרלה אמיתית.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <videoBottom BColor="#ffffff"
+          srcVideo="https://res.cloudinary.com/dpdl5lxxb/video/upload/v1569249177/napoli_ybtqff.mp4" />
       </div>
     </div>
     <div class="row  part-shulders row-modals">
@@ -28,7 +35,7 @@
     </div>
 
     <!-- <videoTop /> -->
-    <div class="row row-box p-3 center-all mb-5" >
+    <div class="row row-box p-3 center-all mb-5">
       <div class="col-md-6 bg-notebook">
         <div class="row" ref="divPrint">
           <div class="col-12">
@@ -99,10 +106,9 @@
                 class="fab fa-facebook-f h3 mt-3"></i></h3>
           </div>
         </div>
-         <ButtonLink @customEvent="print"  link="/recipes" text="להדפסת המתכון" />
+        <ButtonLink @customEvent="print" link="/recipes" text="להדפסת המתכון" />
       </div>
     </div>
-    <videoBottom BColor="#ffffff" srcVideo="https://res.cloudinary.com/dpdl5lxxb/video/upload/v1569249177/napoli_ybtqff.mp4"/>
   </div>
 
 </template>
@@ -223,10 +229,18 @@
     padding: 0 10% !important;
   }
 
+  .block-text {
+    width: 75%;
+  }
+
 
   @media (max-width: 767.98px) {
     .row-img {
       height: 100px;
+    }
+
+    .block-text {
+      width: 100%;
     }
 
     .row-box {
