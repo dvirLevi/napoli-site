@@ -1,6 +1,5 @@
 <template>
   <div>
-
     <div class="row mt-5 part-shulders pay">
       <div class="col-md-6">
         <div class="row border-bottom">
@@ -16,7 +15,8 @@
               <div class="w-100">
                 <p class="w-100" v-if="discount">הנחת קופון: {{discount}}%- </p>
                 <p class="w-100" v-if="messenger">משלוח עד הבית 40 ₪</p>
-                <h5>סה"כ לתשלום <span v-if="messenger">כולל משלוח</span>: {{allPayable}} ₪</h5>
+                <h5>סה"כ לתשלום: {{allPayable}} ₪</h5>
+                <!-- <h5>סה"כ לתשלום <span v-if="messenger">כולל משלוח</span>: {{allPayable}} ₪</h5> -->
               </div>
             </div>
           </div>

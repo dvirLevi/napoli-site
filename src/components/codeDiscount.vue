@@ -1,5 +1,5 @@
 <template>
-  <div class="row">
+  <div class="row" v-if="products.length">
     <div class="col">
       <div class="center-all w-100">
         <template v-if="!discount">
@@ -32,29 +32,12 @@
       products() {
         return this.$store.getters.inCart
       },
-      // ifProductsDiscount() {
-      //   let arrTest = this.products.filter((val) => {
-      //     return val.id === 1 || val.id === 2
-      //   })
-      //   if (arrTest.length >= 2) {
-      //     return true
-      //   }
-      //   return false
-      // },
       discount() {
         return this.$store.getters.discount
       },
     },
     watch: {
-      // products: function () {
-      //   if (this.ifProductsDiscount && this.myCode === this.code) {
-      //     this.$store.commit('IfCodeTrue')
-      //   }else{
-      //     this.$store.commit('IfCodeFalse')
-      //   }
-      // },
       products: function (products) {
-        alert()
         console.log(products)
         if (products.length && this.myCode === this.code) {
           this.$store.commit('IfCodeTrue')
