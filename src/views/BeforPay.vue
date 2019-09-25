@@ -22,21 +22,21 @@
             </div>
           </div>
           <template v-if="products.length">
-          <div class="w-100 center-all border-top p-4">
-            <p class="w-100" v-if="discount">הנחת קופון: {{discount}}- ₪</p>
-            <p class="w-100">סה"כ: {{Payable - discount}} ₪</p>
-            <template v-if="messenger">
-            <p class="w-100">משלוח עד הבית 40 ₪</p>
-            <p class="w-100">סה"כ כולל משלוח : {{Payable + priceMessenger - discount}} ₪</p>
-            </template>
-          </div>
-          <div class="w-100 center-all border-top">
-             <div class="w-100 center-all mt-3 confirm">
-              <input type="checkbox" :checked="!messenger" @click="ifMessenger" required>
-              <p>איסוף עצמי</p>
+            <div class="w-100 center-all border-top p-4">
+              <p class="w-100" v-if="discount">הנחת קופון: {{discount}}%-</p>
+              <p class="w-100">סה"כ: {{PayablePlusDiscount}} ₪</p>
+              <template v-if="messenger">
+                <p class="w-100">משלוח עד הבית 40 ₪</p>
+                <p class="w-100">סה"כ כולל משלוח : {{PayablePlusDiscount + priceMessenger}} ₪</p>
+              </template>
             </div>
-            <p class="w-100 text-center">כתובת לאיסוף: רחוב שמריהו לוין 13, ירושלים. בתיאום מראש. </p>
-          </div>
+            <div class="w-100 center-all border-top">
+              <div class="w-100 center-all mt-3 confirm">
+                <input type="checkbox" :checked="!messenger" @click="ifMessenger" required>
+                <p>איסוף עצמי</p>
+              </div>
+              <p class="w-100 text-center">כתובת לאיסוף: רחוב שמריהו לוין 13, ירושלים. בתיאום מראש. </p>
+            </div>
           </template>
           <template v-else>
             <h4>אין מוצרים בעגלה</h4>
@@ -78,7 +78,7 @@
               <p>קראתי והסכמתי <span @click="showModal = !showModal">לתקנון השימוש</span></p>
             </div>
             <Modal v-if="showModal" @customEvent="showModal = !showModal">
-          <Regulations/>
+              <Regulations />
             </Modal>
             <div class="w-100 center-all mt-3">
               <ButtonLink text="להמשך קנייה" link="/store" />
@@ -121,7 +121,7 @@
           })
         }
       },
-       ifMessenger() {
+      ifMessenger() {
         this.$store.commit('ifMessenger')
       }
     },
@@ -139,17 +139,16 @@
         return this.$store.state.clientDatdlis
       },
       Payable() {
-        let Payable = 0;
-        for (let x in this.$store.getters.inCart) {
-          Payable += this.$store.getters.inCart[x].amount * this.$store.getters.inCart[x].price;
-        }
-        return Payable
+        return  this.$store.getters.Payable
       },
-       discount() {
+      PayablePlusDiscount() {
+       return this.$store.getters.PayablePlusDiscount
+      },
+      discount() {
         return this.$store.getters.discount
       },
     },
-   
+
   }
 </script>
 
@@ -205,7 +204,7 @@
     font-size: 18px !important;
   }
 
-  .stap-one p span{
+  .stap-one p span {
     font-size: 18px !important;
   }
 
@@ -240,8 +239,9 @@
     .select-num-payment {
       width: 100%;
     }
+
     .confirm span {
-    font-size: 20px !important;
-  }
+      font-size: 20px !important;
+    }
   }
 </style>

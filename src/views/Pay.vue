@@ -14,7 +14,7 @@
                 <P>סה"כ למוצר: {{product.amount * product.price}}</P>
               </div>
               <div class="w-100">
-                <p class="w-100" v-if="discount">הנחת קופון: {{discount}}- ₪</p>
+                <p class="w-100" v-if="discount">הנחת קופון: {{discount}}%- </p>
                 <p class="w-100" v-if="messenger">משלוח עד הבית 40 ₪</p>
                 <h5>סה"כ לתשלום <span v-if="messenger">כולל משלוח</span>: {{allPayable}} ₪</h5>
               </div>
@@ -103,17 +103,16 @@
         return `https://direct.tranzila.com/sabresltd/iframenew.php?sum=${this.allPayable}&currency=1&cred_type=${this.ifCredit}&lang=il&contact=${this.clientDatdlis.name}&phone=${this.clientDatdlis.tel}&email=${this.clientDatdlis.mail}&city=${this.clientDatdlis.city}&address=${this.clientDatdlis.address +" "+ this.clientDatdlis.namHome +" "+ this.clientDatdlis.mikod}&json_purchase_data=${this.JSonProducts}&u71=1`
       },
       Payable() {
-        let Payable = 0;
-        for (let x in this.$store.getters.inCart) {
-          Payable += this.$store.getters.inCart[x].amount * this.$store.getters.inCart[x].price;
-        }
-        return Payable
+        return this.$store.getters.Payable
       },
       priceMessenger() {
         return this.$store.getters.priceMessenger;
       },
+      PayablePlusDiscount() {
+        return this.$store.getters.PayablePlusDiscount
+      },
       allPayable() {
-        return this.Payable + this.priceMessenger - this.discount;
+        return this.PayablePlusDiscount + this.priceMessenger;
       },
       products() {
         return this.$store.getters.inCart
@@ -148,7 +147,19 @@
             product_price: "-" + this.discount,
           })
         }
-        return JSON.stringify(json)
+        // let finaljson = "";
+        // for (let x in json) {
+
+        //   let y = json[x];
+
+        //   let objToString = JSON.stringify(y);
+
+        //   finaljson += objToString.substring(1, objToString.length - 1);
+        //   console.log(finaljson)
+
+        // }
+        console.log(encodeURI(JSON.stringify(json)))
+        return encodeURI(JSON.stringify(json))
       },
       clientDatdlis() {
         return this.$store.state.clientDatdlis;

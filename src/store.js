@@ -42,8 +42,8 @@ export default new Vuex.Store({
         גובה: 31.5 ס"מ<br>
         </li><li><span class="border-bottom border-dark">משקל:</span><br> 12.5 ק"ג</li><li><span class="border-bottom border-dark">שטח אבן האפייה:</span><br>רוחב: 31.75 ס"מ <br>עומק: 34.29 ס"מ </li>`,
         addCart: false,
-        price: 1450,
-        // price: 1,
+        // price: 1450,
+        price: 1,
         amount: 0,
         id: 1
       },
@@ -78,6 +78,16 @@ export default new Vuex.Store({
         amount: 0,
         id: 4
       },
+      {
+        name: "עסקה נאפוליטנית בהנחה: תנור + מבער + מרדה + כיסוי",
+        img: require("@/assets/ass19.jpg"),
+        description: "",
+        specifications: `<li>מותאמת במיוחד למידות התנור</li><li>כוללת חרירים ייעודיים לעודפי הקמח ולאוורור תחתית הפיצה</li>`,
+        addCart: false,
+        price: 150,
+        amount: 0,
+        id: 5
+      },
 
     ],
     ifCart: false,
@@ -100,6 +110,7 @@ export default new Vuex.Store({
       let inCart = state.products.filter((value) => {
         return value.amount > 0
       })
+      console.log(inCart)
       return inCart
     },
     priceMessenger: state => {
@@ -113,10 +124,25 @@ export default new Vuex.Store({
     },
     discount: state => {
       if (state.ifCode) {
-        return 45
+        return 10
       }
       return 0
-    }
+    },
+    PayablePlusDiscount: (state, getters) => {
+      if (getters.discount) {
+        let x = getters.Payable / 100;
+        let y = x * getters.discount
+        return getters.Payable - y;
+      }
+      return getters.Payable;
+    },
+    Payable: (state, getters) => {
+      let Payable = 0;
+      for (let x in getters.inCart) {
+        Payable += getters.inCart[x].amount * getters.inCart[x].price;
+      }
+      return Payable
+    },
   },
   mutations: {
     showCart(state) {

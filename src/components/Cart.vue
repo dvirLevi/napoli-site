@@ -36,10 +36,10 @@
           </div>
         </div>
       </div>
-      <codeDiscount v-if="products.length"/>
+      <codeDiscount v-if="products.length" />
       <div class="center-all row">
-        <h6 class="w-100 text-center" v-if="discount">הנחת קופון: {{discount}}- ₪</h6>
-        <p class="w-100 text-center">סה"כ: {{Payable - discount}} ₪</p>
+        <h6 class="w-100 text-center" v-if="discount">הנחת קופון: {{discount}}%- </h6>
+        <p class="w-100 text-center">סה"כ: {{PayablePlusDiscount}} ₪</p>
       </div>
       <div class="center-all row">
         <ButtonLink v-if="products.length" @customEvent="openCart" text="להמשך קנייה" link="/store" />
@@ -58,7 +58,7 @@
   export default {
     name: 'Cart',
     components: {
-codeDiscount
+      codeDiscount
     },
     computed: {
       ifCart() {
@@ -68,17 +68,16 @@ codeDiscount
         return this.$store.getters.inCart
       },
       Payable() {
-        let Payable = 0;
-        for (let x in this.$store.getters.inCart) {
-          Payable += this.$store.getters.inCart[x].amount * this.$store.getters.inCart[x].price;
-        }
-        return Payable
+        return this.$store.getters.Payable
       },
       payRoutCloseCart() {
         if (this.$route.name == "pay") {
           return false
         }
         return true
+      },
+      PayablePlusDiscount() {
+        return this.$store.getters.PayablePlusDiscount
       },
       discount() {
         return this.$store.getters.discount
