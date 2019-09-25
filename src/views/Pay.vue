@@ -98,9 +98,9 @@
       },
       iframeUrl() {
         if (this.ifCredit == 8) {
-          return `https://direct.tranzila.com/sabresltd/iframenew.php?sum=${this.allPayable}&currency=1&cred_type=${this.ifCredit}&npay=${this.numPay - 1}&spay=${this.namPayAmount}&fpay=${this.firstPayAmount}&lang=il&contact=${this.clientDatdlis.name}&phone=${this.clientDatdlis.tel}&email=${this.clientDatdlis.mail}&city=${this.clientDatdlis.city}&address=${this.clientDatdlis.address + this.clientDatdlis.namHome + this.clientDatdlis.mikod}&json_purchase_data=${this.JSonProducts}&u71=1`
+          return `https://direct.tranzila.com/sabresltd/iframenew.php?sum=${this.allPayable}&currency=1&cred_type=${this.ifCredit}&npay=${this.numPay - 1}&spay=${this.namPayAmount}&fpay=${this.firstPayAmount}&lang=il&contact=${this.clientDatdlis.name}&phone=${this.clientDatdlis.tel}&email=${this.clientDatdlis.mail}&city=${this.clientDatdlis.city}&address=${this.clientDatdlis.address + this.clientDatdlis.namHome + this.clientDatdlis.mikod}&u71=1&json_purchase_data=${this.JSonProducts}`
         }
-        return `https://direct.tranzila.com/sabresltd/iframenew.php?sum=${this.allPayable}&currency=1&cred_type=${this.ifCredit}&lang=il&contact=${this.clientDatdlis.name}&phone=${this.clientDatdlis.tel}&email=${this.clientDatdlis.mail}&city=${this.clientDatdlis.city}&address=${this.clientDatdlis.address +" "+ this.clientDatdlis.namHome +" "+ this.clientDatdlis.mikod}&json_purchase_data=${this.JSonProducts}&u71=1`
+        return `https://direct.tranzila.com/sabresltd/iframenew.php?sum=${this.allPayable}&currency=1&cred_type=${this.ifCredit}&lang=il&contact=${this.clientDatdlis.name}&phone=${this.clientDatdlis.tel}&email=${this.clientDatdlis.mail}&city=${this.clientDatdlis.city}&address=${this.clientDatdlis.address +" "+ this.clientDatdlis.namHome +" "+ this.clientDatdlis.mikod}&u71=1&json_purchase_data=${this.JSonProducts}`
       },
       Payable() {
         return this.$store.getters.Payable
@@ -144,7 +144,7 @@
           json.push({
             product_name: "הנחה",
             product_quantity: 1,
-            product_price: "-" + this.discount,
+            product_price: this.discount,
           })
         }
         // let finaljson = "";
@@ -158,8 +158,9 @@
         //   console.log(finaljson)
 
         // }
-        console.log(encodeURI(JSON.stringify(json)))
-        return encodeURI(JSON.stringify(json))
+        console.log(encodeURIComponent(JSON.stringify(json)))
+        console.log(JSON.stringify(json))
+        return encodeURIComponent(JSON.stringify(json))
       },
       clientDatdlis() {
         return this.$store.state.clientDatdlis;

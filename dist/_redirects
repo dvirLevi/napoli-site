@@ -1,0 +1,18 @@
+# These rules will change if you change your site’s custom domains or HTTPS settings
+
+# Redirect domain aliases to primary domain
+https://www.napoli-oven.co.il/* https://www.napoliovenisrael.com/:splat 301!
+
+# Optional: Redirect default Netlify subdomain to primary domain
+https://napoli-site.netlify.com/* https://www.napoliovenisrael.com/:splat 301!
+
+/store
+
+/befor-pay
+
+/contact
+
+/recipes
+
+/pay
+   
