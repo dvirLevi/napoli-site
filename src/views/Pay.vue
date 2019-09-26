@@ -46,6 +46,11 @@
         </div>
       </div>
       <div class="col-md-6 pay mt-3">
+        <!-- <form ref="form" @submit.prevent="onUpload">
+          <input id="json_purchase_data" name="json_purchase_data" :value="JSonProducts">
+          <input id="json_purchase_data" name="u71" :value="1">
+          <button type="submit"></button>
+        </form> -->
         <div class="center-all w-100">
           <h4 class="w-100 text-center">תשלומים</h4>
           <div class="center-all select-num-payment">
@@ -83,11 +88,41 @@
         this.$router.push('befor-pay')
       }
     },
+    mounted() {
+      // this.$refs.form.submit();
+      this.addProducts();
+    },
     methods: {
       nextToPay() {
         this.payment = true;
+      },
+      // async fetchProducs() {
+      //   alert()
+      //   let url = 'https://direct.tranzila.com/sabresltd/'
+      //   let formData = new FormData();
+      //   formData.append('value', this.JSonProducts);
+      //   formData.append('name', 'json_purchase_data');
+      //   const response = await fetch(url, {
+      //     method: 'POST',
+      //         headers: {
+      //                   "Content-Type": "application/json",
+      //               },
+      //               mode: 'no-cors',
+      //     body: formData
+      //   });
+      //   const json = await response.json();
+      //   console.log(json)
+      // },
+      async addProducts() {
+        let formData = new FormData();
+        formData.append('sum', this.allPayable);
+        const response = await fetch('https://direct.tranzila.com/sabresltd/iframenew.php', {
+          method: 'POST',
+          body: formData
+        });
+        const json = await response.json();
+        console.log(json)
       }
-
     },
     computed: {
       ifWidth() {
@@ -98,9 +133,9 @@
       },
       iframeUrl() {
         if (this.ifCredit == 8) {
-          return `https://direct.tranzila.com/sabresltd/iframenew.php?sum=${this.allPayable}&currency=1&cred_type=${this.ifCredit}&npay=${this.numPay - 1}&spay=${this.namPayAmount}&fpay=${this.firstPayAmount}&lang=il&contact=${this.clientDatdlis.name}&phone=${this.clientDatdlis.tel}&email=${this.clientDatdlis.mail}&city=${this.clientDatdlis.city}&address=${this.clientDatdlis.address + this.clientDatdlis.namHome + this.clientDatdlis.mikod}&u71=1&json_purchase_data=${this.JSonProducts}`
+          return `https://direct.tranzila.com/sabresltd/iframenew.php`
         }
-        return `https://direct.tranzila.com/sabresltd/iframenew.php?sum=${this.allPayable}&currency=1&cred_type=${this.ifCredit}&lang=il&contact=${this.clientDatdlis.name}&phone=${this.clientDatdlis.tel}&email=${this.clientDatdlis.mail}&city=${this.clientDatdlis.city}&address=${this.clientDatdlis.address +" "+ this.clientDatdlis.namHome +" "+ this.clientDatdlis.mikod}&u71=1&json_purchase_data=${this.JSonProducts}`
+        return `https://direct.tranzila.com/sabresltd/iframenew.php`
       },
       Payable() {
         return this.$store.getters.Payable
@@ -188,7 +223,8 @@
       discount() {
         return this.$store.getters.discount
       },
-    }
+    },
+
   }
 </script>
 
