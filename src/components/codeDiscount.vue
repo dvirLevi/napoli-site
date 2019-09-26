@@ -80,5 +80,9 @@
     font-weight: 400;
   }
 
+   button:hover {
+    background-color: #8c8c8c;
+  }
+
   @media (max-width: 767.98px) {}
 </style>
