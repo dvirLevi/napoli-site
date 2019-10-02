@@ -46,11 +46,26 @@
         </div>
       </div>
       <div class="col-md-6 pay mt-3">
-        <!-- <form ref="form" @submit.prevent="onUpload">
+        <form v-show="false"  ref="myForm" name='formname' method='POST' action='https://direct.tranzila.com/sabresltd/iframenew.php'
+          target='iframe'>
+
+          <input id="sum" name="sum" :value="allPayable">
+          <input id="currency" name="currency" value="1">
+          <input id="lang" name="lang" value="il">
+          <input id="cred_type" name="cred_type" :value="ifCredit">
+          <input v-if="ifCredit === 8" id="npay" name="npay" :value="numPay - 1">
+          <input v-if="ifCredit === 8" id="spay" name="spay" :value="namPayAmount">
+          <input v-if="ifCredit === 8" id="fpay" name="fpay" :value="firstPayAmount">
+          <input id="contact" name="contact" :value="clientDatdlis.name">
+          <input id="phone" name="phone" :value="clientDatdlis.tel">
+          <input id="email" name="email" :value="clientDatdlis.mail">
+          <input id="city" name="city" :value="clientDatdlis.city">
+          <input id="address" name="address"
+            :value="clientDatdlis.address +' '+ clientDatdlis.namHome +' '+ clientDatdlis.mikod">
           <input id="json_purchase_data" name="json_purchase_data" :value="JSonProducts">
-          <input id="json_purchase_data" name="u71" :value="1">
+          <input id="u71" name="u71" value="1">
           <button type="submit"></button>
-        </form> -->
+        </form>
         <div class="center-all w-100">
           <h4 class="w-100 text-center">תשלומים</h4>
           <div class="center-all select-num-payment">
@@ -62,7 +77,7 @@
           </div>
         </div>
         <div class="center-all w-100">
-          <iframe class="mt-5" :src="iframeUrl" height="650" :width="ifWidth"></iframe>
+          <iframe name="iframe" class="mt-5" height="650" :width="ifWidth"></iframe>
         </div>
       </div>
     </div>
@@ -89,39 +104,16 @@
       }
     },
     mounted() {
-      // this.$refs.form.submit();
-      this.addProducts();
+      this.$refs.myForm.submit();
     },
     methods: {
       nextToPay() {
         this.payment = true;
       },
-      // async fetchProducs() {
-      //   alert()
-      //   let url = 'https://direct.tranzila.com/sabresltd/'
-      //   let formData = new FormData();
-      //   formData.append('value', this.JSonProducts);
-      //   formData.append('name', 'json_purchase_data');
-      //   const response = await fetch(url, {
-      //     method: 'POST',
-      //         headers: {
-      //                   "Content-Type": "application/json",
-      //               },
-      //               mode: 'no-cors',
-      //     body: formData
-      //   });
-      //   const json = await response.json();
-      //   console.log(json)
-      // },
-      async addProducts() {
-        let formData = new FormData();
-        formData.append('sum', this.allPayable);
-        const response = await fetch('https://direct.tranzila.com/sabresltd/iframenew.php', {
-          method: 'POST',
-          body: formData
-        });
-        const json = await response.json();
-        console.log(json)
+      vat(num) {
+        let x = num / 100;
+        let vat = x * 17;
+        return num - vat;
       }
     },
     computed: {
@@ -130,12 +122,6 @@
           return 500
         }
         return 300
-      },
-      iframeUrl() {
-        if (this.ifCredit == 8) {
-          return `https://direct.tranzila.com/sabresltd/iframenew.php`
-        }
-        return `https://direct.tranzila.com/sabresltd/iframenew.php`
       },
       Payable() {
         return this.$store.getters.Payable
@@ -166,6 +152,7 @@
             product_name: this.products[x].name,
             product_quantity: this.products[x].amount,
             product_price: this.products[x].price,
+            // product_price: this.vat(this.products[x].price),
           })
         }
         if (this.priceMessenger) {
@@ -173,28 +160,16 @@
             product_name: "משלוח",
             product_quantity: 1,
             product_price: this.priceMessenger,
+            // product_price: this.vat(this.priceMessenger),
           })
         }
         if (this.discount) {
           json.push({
-            product_name: "הנחה",
+            product_name: "הנחה 10%",
             product_quantity: 1,
-            product_price: this.discount,
+            product_price: 0,
           })
         }
-        // let finaljson = "";
-        // for (let x in json) {
-
-        //   let y = json[x];
-
-        //   let objToString = JSON.stringify(y);
-
-        //   finaljson += objToString.substring(1, objToString.length - 1);
-        //   console.log(finaljson)
-
-        // }
-        console.log(encodeURIComponent(JSON.stringify(json)))
-        console.log(JSON.stringify(json))
         return encodeURIComponent(JSON.stringify(json))
       },
       clientDatdlis() {
@@ -224,6 +199,15 @@
         return this.$store.getters.discount
       },
     },
+    watch: {
+      numPay: function () {
+        setTimeout(()=>{
+        this.$refs.myForm.submit()
+        },100)
+
+      }
+    }
+
 
   }
 </script>

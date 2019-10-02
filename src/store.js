@@ -42,8 +42,7 @@ export default new Vuex.Store({
         גובה: 31.5 ס"מ<br>
         </li><li><span class="border-bottom border-dark">משקל:</span><br> 12.5 ק"ג</li><li><span class="border-bottom border-dark">שטח אבן האפייה:</span><br>רוחב: 31.75 ס"מ <br>עומק: 34.29 ס"מ </li>`,
         addCart: false,
-        // price: 1450,
-        price: 1,
+        price: 1450,
         amount: 0,
         id: 1
       },
