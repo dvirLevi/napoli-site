@@ -46,8 +46,8 @@
         </div>
       </div>
       <div class="col-md-6 pay mt-3">
-        <form v-show="false"  ref="myForm" name='formname' method='POST' action='https://direct.tranzila.com/sabresltd/iframenew.php'
-          target='iframe'>
+        <form v-show="false" ref="myForm" name='formname' method='POST'
+          action='https://direct.tranzila.com/sabresltd/iframenew.php' target='iframe'>
 
           <input id="sum" name="sum" :value="allPayable">
           <input id="currency" name="currency" value="1">
@@ -164,10 +164,12 @@
           })
         }
         if (this.discount) {
+          let vatDiscount = this.Payable - this.PayablePlusDiscount;
           json.push({
             product_name: "הנחה 10%",
             product_quantity: 1,
-            product_price: 0,
+            // product_price: -this.vat(vatDiscount),
+            product_price: -vatDiscount,
           })
         }
         return encodeURIComponent(JSON.stringify(json))
@@ -201,9 +203,9 @@
     },
     watch: {
       numPay: function () {
-        setTimeout(()=>{
-        this.$refs.myForm.submit()
-        },100)
+        setTimeout(() => {
+          this.$refs.myForm.submit()
+        }, 100)
 
       }
     }
