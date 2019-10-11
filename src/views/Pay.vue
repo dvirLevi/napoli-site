@@ -111,9 +111,8 @@
         this.payment = true;
       },
       vat(num) {
-        let x = num / 100;
-        let vat = x * 17;
-        return num - vat;
+        let vat = num / 1.17;
+        return vat.toFixed(2);
       }
     },
     computed: {
@@ -151,16 +150,16 @@
           json.push({
             product_name: this.products[x].name,
             product_quantity: this.products[x].amount,
-            product_price: this.products[x].price,
-            // product_price: this.vat(this.products[x].price),
+            // product_price: this.products[x].price,
+            product_price: this.vat(this.products[x].price),
           })
         }
         if (this.priceMessenger) {
           json.push({
             product_name: "משלוח",
             product_quantity: 1,
-            product_price: this.priceMessenger,
-            // product_price: this.vat(this.priceMessenger),
+            // product_price: this.priceMessenger,
+            product_price: this.vat(this.priceMessenger),
           })
         }
         if (this.discount) {
@@ -168,8 +167,8 @@
           json.push({
             product_name: "הנחה 10%",
             product_quantity: 1,
-            // product_price: -this.vat(vatDiscount),
-            product_price: -vatDiscount,
+            product_price: -this.vat(vatDiscount),
+            // product_price: - vatDiscount,
           })
         }
         return encodeURIComponent(JSON.stringify(json))
