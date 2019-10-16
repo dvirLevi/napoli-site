@@ -107,22 +107,28 @@
         showModal: false,
       }
     },
+    mounted(){
+       fbq('track', 'ViewContent', {
+        content_name: this.$route.name, 
+      });
+    },
     methods: {
       nextToPay() {
         if (this.products.length) {
-          this.$store.commit('nextPayment')
-          this.$router.push('pay')
+          this.$store.commit('nextPayment');
+          this.$router.push('pay');
+          fbq('track', 'AddPaymentInfo');
         } else {
           Swal.fire({
             type: 'error',
             title: 'אופס...',
             text: 'יש להוסיף פריטים לעגלה',
             timer: 1500
-          })
+          });
         }
       },
       ifMessenger() {
-        this.$store.commit('ifMessenger')
+        this.$store.commit('ifMessenger');
       }
     },
     computed: {

@@ -26,6 +26,7 @@
       return {
         myCode: "",
         code: 'napoli-sale',
+        codeGush: 'gush-sale'
       }
     },
     computed: {
@@ -39,7 +40,7 @@
     watch: {
       products: function (products) {
         console.log(products)
-        if (products.length && this.myCode === this.code) {
+        if (products.length && this.myCode === this.code || this.myCode === this.codeGush) {
           this.$store.commit('IfCodeTrue')
         } else {
           this.$store.commit('IfCodeFalse')
@@ -48,7 +49,7 @@
     },
     methods: {
       ifCodeCorrect() {
-        if (this.myCode === this.code) {
+        if (this.myCode === this.code || this.myCode === this.codeGush) {
           this.$store.commit('IfCodeTrue')
         } else {
           Swal.fire({

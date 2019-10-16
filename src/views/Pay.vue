@@ -105,6 +105,9 @@
     },
     mounted() {
       this.$refs.myForm.submit();
+      fbq('track', 'ViewContent', {
+        content_name: this.$route.name,
+      });
     },
     methods: {
       nextToPay() {

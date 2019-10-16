@@ -1,6 +1,6 @@
 <template>
   <div class="row mt-3 row-all">
-      <Product v-for="product in products" :product="product" :key="product.id"/>
+    <Product v-for="product in products" :product="product" :key="product.id" />
   </div>
 </template>
 
@@ -12,16 +12,17 @@
   export default {
     name: 'Store',
     components: {
-Product
+      Product
     },
     data() {
       return {
 
       }
     },
-    methods: {
-   
-   
+    mounted() {
+       fbq('track', 'ViewContent', {
+        content_name: this.$route.name, 
+      });
     },
     computed: {
       products() {

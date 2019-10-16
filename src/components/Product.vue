@@ -55,8 +55,9 @@
     },
     methods: {
       addToCart(product) {
-        product.amount++
-        this.$store.commit('allTimeShowCart')
+        product.amount++;
+        this.$store.commit('allTimeShowCart');
+        fbq('track', 'AddToCart');
       }
     },
     computed: {

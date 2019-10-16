@@ -143,7 +143,11 @@
         ]
       }
     },
-
+    mounted() {
+      fbq('track', 'ViewContent', {
+        content_name: this.$route.name,
+      });
+    },
     methods: {
       print() {
         let printContents = this.$refs.divPrint.innerHTML;
@@ -154,9 +158,6 @@
       }
 
     },
-    computed: {
-
-    }
   }
 </script>
 

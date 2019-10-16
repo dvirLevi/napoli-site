@@ -48,6 +48,11 @@
       RecipesLink,
       // videoMidle
     },
+    mounted(){
+       fbq('track', 'ViewContent', {
+        content_name: this.$route.name, 
+      });
+    }
 
   }
 </script>

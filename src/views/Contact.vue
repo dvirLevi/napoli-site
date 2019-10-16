@@ -3,10 +3,10 @@
     <div class="col">
       <div class="w-100 center-all">
         <div class="w-100">
-          <TitleAndBorderR>אודות Napoli Pizza Oven</TitleAndBorderR>
+          <TitleAndBorderR>אודות תנור הפיצה נאפולי</TitleAndBorderR>
 
         </div>
-        <p>מוצרי <span>Napoli Pizza Oven</span> מיובאים ומשווקים באופן בלעדי על ידי חברת ב.ל סברס שיווק בע"מ.</p>
+        <p>מוצרי ה-<span>Napoli</span> מיובאים ומשווקים באופן בלעדי על ידי חברת ב.ל סברס שיווק בע"מ.</p>
         <p>אנו עושים את כל המאמצים כדי שתיהנו ממוצרינו. </p>
         <p>נשמח מאוד לעמוד לרשותכם, השאירו את פרטיכם בטופס ונשוב אליכם בהקדם.</p>
       </div>
@@ -69,6 +69,11 @@
         }
       }
     },
+    mounted(){
+       fbq('track', 'ViewContent', {
+        content_name: this.$route.name, 
+      });
+    },
     methods: {
       async sendMail() {
         try {
@@ -97,8 +102,8 @@
             text: 'ההודעה נשלחה בהצלחה!',
             timer: 1500
           });
+          // fbq('track', 'Contact‎'‎)‎;
           this.clientDatdlis = {};
-
         } catch (err) {
           await Swal.fire({
             type: 'error',
@@ -110,9 +115,6 @@
 
       }
     },
-    computed: {
-
-    }
   }
 </script>
 
