@@ -45,7 +45,7 @@
         <p><i class="fas fa-mobile-alt"></i> <a class="text-decoration-none" href="tel:0526070675"> 0526070675</a> </p>
         <p>
           <i class="fab fa-instagram h1"></i>
-          <i class="fab fa-facebook-f mr-5 h1"></i>
+           <a href="https://www.facebook.com/napoli.oven.il/?__tn__=%2Cd%2CP-R&eid=ARAZokdIjzsZ4vZNMygiFQkyPLRRFrasxpFNiUCIhgwgD6_gfbXwOGZCbl0PJH3tjZODw30-sK0D7Die"><i class="fab fa-facebook-f mr-5 h1"></i></a>
         </p>
       </div>
     </div>
@@ -102,7 +102,7 @@
             text: 'ההודעה נשלחה בהצלחה!',
             timer: 1500
           });
-          // fbq('track', 'Contact‎'‎)‎;
+          fbq('track', 'Contact‎');
           this.clientDatdlis = {};
         } catch (err) {
           await Swal.fire({
