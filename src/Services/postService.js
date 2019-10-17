@@ -13,7 +13,6 @@ class postService {
                     headers: {
                         "Content-Type": "application/json",
                     },
-                    // mode: 'no-cors',
                     body: objtojson
                 });
                 const json = await response.json();
