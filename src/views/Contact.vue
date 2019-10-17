@@ -85,7 +85,7 @@
           await this.$store.dispatch('sendToMail', {
             contentMail: {
               from: "napoli@napoli.com",
-              to: "dvirlevi2@gmail.com",
+              to: "boazlevy100@gmail.com",
               subject: "napoli-oven",
               html: `<p>
       שם מלא: ${this.clientDatdlis.name} <br>
@@ -102,7 +102,7 @@
             text: 'ההודעה נשלחה בהצלחה!',
             timer: 1500
           });
-          fbq('track', 'Contact‎');
+          fbq('trackCustom', 'Contact');
           this.clientDatdlis = {};
         } catch (err) {
           await Swal.fire({
