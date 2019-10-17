@@ -70,7 +70,7 @@ a {
   background-color: transparent;
 }
 a:hover {
-  color: #000000;
+  color: none;
   text-decoration: none;
   background-color: transparent;
 }
