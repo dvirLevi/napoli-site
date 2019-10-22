@@ -111,6 +111,10 @@
        fbq('track', 'ViewContent', {
         content_name: this.$route.name, 
       });
+      gtag('config', 'UA-150230848-1', {
+        'page_title': this.$route.name,
+        'page_path': `/${this.$route.name}`
+      });
     },
     methods: {
       nextToPay() {

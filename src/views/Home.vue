@@ -24,14 +24,12 @@
   // @ is an alias to /src
   import OnNapoli from '@/components/OnNapoli.vue'
   import ReelPizza from '@/components/ReelPizza.vue'
-  // import TechnicalSpecifications from '@/components/TechnicalSpecifications.vue'
   import videoBottom from '@/components/videoBottom.vue'
   import videoTop from '@/components/videoTop.vue'
   import GasBurner from '@/components/GasBurner.vue'
   import SoWhy from '@/components/SoWhy.vue'
   import FoodImages from '@/components/FoodImages.vue'
   import RecipesLink from '@/components/RecipesLink.vue'
-  // import videoMidle from '@/components/videoMidle.vue'
   import 'aos/dist/aos.css'
 
   export default {
@@ -39,18 +37,20 @@
     components: {
       OnNapoli,
       ReelPizza,
-      // TechnicalSpecifications,
       videoBottom,
       videoTop,
       GasBurner,
       SoWhy,
       FoodImages,
       RecipesLink,
-      // videoMidle
     },
     mounted(){
        fbq('track', 'ViewContent', {
         content_name: this.$route.name, 
+      });
+      gtag('config', 'UA-150230848-1', {
+        'page_title': this.$route.name,
+        'page_path': `/${this.$route.name}`
       });
     }
 

@@ -45,7 +45,9 @@
         <p><i class="fas fa-mobile-alt"></i> <a class="text-decoration-none" href="tel:0526070675"> 0526070675</a> </p>
         <p>
           <i class="fab fa-instagram h1"></i>
-           <a href="https://www.facebook.com/napoli.oven.il/?__tn__=%2Cd%2CP-R&eid=ARAZokdIjzsZ4vZNMygiFQkyPLRRFrasxpFNiUCIhgwgD6_gfbXwOGZCbl0PJH3tjZODw30-sK0D7Die"><i class="fab fa-facebook-f mr-5 h1"></i></a>
+          <a
+            href="https://www.facebook.com/napoli.oven.il/?__tn__=%2Cd%2CP-R&eid=ARAZokdIjzsZ4vZNMygiFQkyPLRRFrasxpFNiUCIhgwgD6_gfbXwOGZCbl0PJH3tjZODw30-sK0D7Die"><i
+              class="fab fa-facebook-f mr-5 h1"></i></a>
         </p>
       </div>
     </div>
@@ -69,9 +71,13 @@
         }
       }
     },
-    mounted(){
-       fbq('track', 'ViewContent', {
-        content_name: this.$route.name, 
+    mounted() {
+      fbq('track', 'ViewContent', {
+        content_name: this.$route.name,
+      });
+      gtag('config', 'UA-150230848-1', {
+        'page_title': this.$route.name,
+        'page_path': `/${this.$route.name}`
       });
     },
     methods: {
@@ -170,8 +176,8 @@
     text-align: right;
   }
 
-  .confirm span{
-font-size: 18px;
+  .confirm span {
+    font-size: 18px;
   }
 
 
@@ -191,8 +197,9 @@ font-size: 18px;
     form {
       width: 100%;
     }
-     .confirm span{
-font-size: 14px;
-  }
+
+    .confirm span {
+      font-size: 14px;
+    }
   }
 </style>
