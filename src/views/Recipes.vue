@@ -111,15 +111,14 @@
 <script>
   // @ is an alias to /src
   import RecipesModal from '@/components/RecipesModal.vue'
-  // import videoTop from '@/components/videoTop.vue'
   import videoBottom from '@/components/videoBottom.vue'
+  import analyticsPages from '@/helpers/analyticsPages.js'
 
 
   export default {
     name: 'Recipes',
     components: {
       RecipesModal,
-      // videoTop,
       videoBottom
     },
     data() {
@@ -147,10 +146,11 @@
       fbq('track', 'ViewContent', {
         content_name: this.$route.name,
       });
-      gtag('config', 'UA-150230848-1', {
-        'page_title': this.$route.name,
-        'page_path': `/${this.$route.name}`
-      });
+      // gtag('config', 'UA-150230848-1', {
+      //   'page_title': this.$route.name,
+      //   'page_path': `/${this.$route.name}`
+      // });
+      analyticsPages(this.$route.name)
     },
     methods: {
       print() {
@@ -185,14 +185,9 @@
     background-image: url(../assets/ass3.jpg);
     background-size: cover;
     background-position: center;
-    /* height: 696px; */
   }
 
   .bg-notebook {
-    /* background-image: url(../assets/ass17.jpg); */
-    /* background-size: 42%; */
-    /* background-position: center; */
-    /* padding-right: 80px; */
     position: relative;
     z-index: 2;
   }
@@ -242,14 +237,10 @@
     }
 
     .row-box {
-      /* background-image: url(../img/ass3.b7124460.jpg); */
       background-image: url(../assets/ass3.jpg);
       background-size: cover;
-      /* background-position: center; */
-      /* background-size: 224%; */
       background-repeat: no-repeat;
       background-position: 70%;
-      /* height: 414px; */
     }
 
     .bg-notebook::after {

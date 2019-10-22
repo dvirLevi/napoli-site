@@ -15,7 +15,6 @@
                     <h5>{{product.name}}</h5>
                     <p>{{product.price}} ₪</p>
                     <p>כמות: {{product.amount}}</p>
-                    <!-- <p>סה"כ: {{product.price * product.amount}}</p> -->
                   </div>
                 </div>
               </div>
@@ -95,6 +94,7 @@
   // @ is an alias to /src
   import Regulations from '@/components/Regulations.vue'
   import Swal from 'sweetalert2'
+  import analyticsPages from '@/helpers/analyticsPages.js'
 
 
   export default {
@@ -111,10 +111,11 @@
        fbq('track', 'ViewContent', {
         content_name: this.$route.name, 
       });
-      gtag('config', 'UA-150230848-1', {
-        'page_title': this.$route.name,
-        'page_path': `/${this.$route.name}`
-      });
+      // gtag('config', 'UA-150230848-1', {
+      //   'page_title': this.$route.name,
+      //   'page_path': `/${this.$route.name}`
+      // });
+      analyticsPages(this.$route.name)
     },
     methods: {
       nextToPay() {

@@ -8,15 +8,14 @@
       </div>
     </div>
     <OnNapoli />
-    <!-- <videoMidle/> -->
     <RecipesLink />
     <ReelPizza />
-    <!-- <TechnicalSpecifications/> -->
     <GasBurner />
     <videoTop />
     <FoodImages />
     <SoWhy />
-    <videoBottom width="width-video-50" srcVideo=" https://res.cloudinary.com/dpdl5lxxb/video/upload/v1569263055/Napoli-Pizza_urm29r.mp4"/>
+    <videoBottom width="width-video-50"
+      srcVideo=" https://res.cloudinary.com/dpdl5lxxb/video/upload/v1569263055/Napoli-Pizza_urm29r.mp4" />
   </div>
 </template>
 
@@ -31,6 +30,8 @@
   import FoodImages from '@/components/FoodImages.vue'
   import RecipesLink from '@/components/RecipesLink.vue'
   import 'aos/dist/aos.css'
+  import analyticsPages from '@/helpers/analyticsPages.js'
+
 
   export default {
     name: 'home',
@@ -44,14 +45,21 @@
       FoodImages,
       RecipesLink,
     },
-    mounted(){
-       fbq('track', 'ViewContent', {
-        content_name: this.$route.name, 
+    mounted() {
+      fbq('track', 'ViewContent', {
+        content_name: this.$route.name,
       });
-      gtag('config', 'UA-150230848-1', {
-        'page_title': this.$route.name,
-        'page_path': `/`
-      });
+
+      analyticsPages('/')
+
+      // if (ifAlreadyAnalytics) {
+      //   alert()
+      //   gtag('config', 'UA-150230848-1', {
+      //     'page_title': this.$route.name,
+      //     'page_path': `/`
+      //   });
+      // }
+      // ifAlreadyAnalytics = true;
     }
 
   }

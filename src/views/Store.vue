@@ -7,6 +7,7 @@
 <script>
   // @ is an alias to /src
   import Product from '@/components/Product.vue'
+  import analyticsPages from '@/helpers/analyticsPages.js'
 
 
   export default {
@@ -23,10 +24,11 @@
        fbq('track', 'ViewContent', {
         content_name: this.$route.name, 
       });
-      gtag('config', 'UA-150230848-1', {
-        'page_title': this.$route.name,
-        'page_path': `/${this.$route.name}`
-      });
+      // gtag('config', 'UA-150230848-1', {
+      //   'page_title': this.$route.name,
+      //   'page_path': `/${this.$route.name}`
+      // });
+      analyticsPages(this.$route.name)
     },
     computed: {
       products() {
@@ -60,7 +62,6 @@
     color: #ffffff;
     padding: 10px;
     outline: none;
-    /* margin: 7px; */
   }
 
   .box-all {
