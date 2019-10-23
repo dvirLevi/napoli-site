@@ -50,16 +50,7 @@
         content_name: this.$route.name,
       });
 
-      analyticsPages('/')
-
-      // if (ifAlreadyAnalytics) {
-      //   alert()
-      //   gtag('config', 'UA-150230848-1', {
-      //     'page_title': this.$route.name,
-      //     'page_path': `/`
-      //   });
-      // }
-      // ifAlreadyAnalytics = true;
+      analyticsPages('/');
     }
 
   }

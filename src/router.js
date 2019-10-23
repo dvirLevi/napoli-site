@@ -28,7 +28,7 @@ export default new Router({
     },
     {
       path: '/befor-pay',
-      name: 'BeforPay',
+      name: 'befor-pay',
       component: BeforPay
     },
     {
