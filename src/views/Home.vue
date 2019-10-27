@@ -1,5 +1,6 @@
 <template>
   <div>
+    <counterDays/>
     <div class="row">
       <div class="col">
         <div class="w-100 center-all mb-2">
@@ -8,7 +9,6 @@
       </div>
     </div>
     <OnNapoli />
-    <counterDays/>
     <RecipesLink />
     <ReelPizza />
     <GasBurner />
