@@ -1,11 +1,13 @@
 <template>
   <div class="row mt-3 row-all">
+    <counterDays/>
     <Product v-for="product in products" :product="product" :key="product.id" />
   </div>
 </template>
 
 <script>
   // @ is an alias to /src
+  import counterDays from '@/components/counterDays.vue'
   import Product from '@/components/Product.vue'
   import analyticsPages from '@/helpers/analyticsPages.js'
 
@@ -13,7 +15,8 @@
   export default {
     name: 'Store',
     components: {
-      Product
+      Product,
+      counterDays
     },
     data() {
       return {

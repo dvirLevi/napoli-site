@@ -8,6 +8,7 @@
       </div>
     </div>
     <OnNapoli />
+    <counterDays/>
     <RecipesLink />
     <ReelPizza />
     <GasBurner />
@@ -31,6 +32,7 @@
   import RecipesLink from '@/components/RecipesLink.vue'
   import 'aos/dist/aos.css'
   import analyticsPages from '@/helpers/analyticsPages.js'
+  import counterDays from '@/components/counterDays.vue'
 
 
   export default {
@@ -44,6 +46,7 @@
       SoWhy,
       FoodImages,
       RecipesLink,
+      counterDays
     },
     mounted() {
       fbq('track', 'ViewContent', {
