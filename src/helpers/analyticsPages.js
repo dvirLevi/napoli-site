@@ -10,21 +10,39 @@ const analyticsPages = (route) => {
     });
 
 
-    // gtag('event', 'page_view', {
-    //   'send_to': 'AW-698669401',
-    //   'value': 'replace with value',
-    //   'items': [{
-    //     'id': 'replace with value',
-    //     'location_id': 'replace with value',
-    //     'google_business_vertical': 'local'
-    //   }, {
-    //     'id': 'replace with value',
-    //     'google_business_vertical': 'retail'
-    //   }]
-    // });
+    if (route === "store") {
+      gtag('event', 'conversion', {
+        'send_to': 'AW-698669401/AzPuCIabq7IBENmyk80C',
+        'value': 1.0,
+        'currency': 'ILS'
+      });
+    }
+    if (route === "befor-pay") {
+      gtag_report_conversion()
+    }
+
+
+
+
+
 
   }
   ifAlreadyAnalytics = true;
+}
+
+function gtag_report_conversion(url) {
+  var callback = function () {
+    if (typeof (url) != 'undefined') {
+      window.location = url;
+    }
+  };
+  gtag('event', 'conversion', {
+    'send_to': 'AW-698669401/yQmBCJromLIBENmyk80C',
+    'value': 2.0,
+    'currency': 'ILS',
+    'event_callback': callback
+  });
+  return false;
 }
 
 export default analyticsPages
