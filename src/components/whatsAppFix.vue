@@ -35,6 +35,7 @@
     width: 85px;
     height: 85px;
     border-radius: 100px;
+    box-shadow: 0 0 14px #000000bd;
   }
 
   a :hover {
