@@ -5,6 +5,7 @@
     <!-- <div @click="closeCart"> -->
       <router-view />
       <Footer />
+      <whatsAppFix />
     <!-- </div> -->
   </div>
 </template>
@@ -13,7 +14,7 @@
   // @ is an alias to /src
   import ToolBar from '@/components/ToolBar.vue'
   import Footer from '@/components/Footer.vue'
-  // import Cart from '@/components/Cart.vue'
+  import whatsAppFix from '@/components/whatsAppFix.vue'
 
 
   export default {
@@ -21,6 +22,7 @@
     components: {
       ToolBar,
       Footer,
+      whatsAppFix
       // Cart
     },
     methods: {

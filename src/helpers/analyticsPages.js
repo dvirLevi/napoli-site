@@ -1,15 +1,18 @@
 const analyticsPages = (route) => {
   if (ifAlreadyAnalytics) {
+
+    //אנליטיקס
     gtag('config', 'UA-150230848-1', {
       'page_title': route,
       'page_path': `/${route}`
     });
+    
+
+    //גוגל ADS
     gtag('config', 'AW-698669401', {
       'page_title': route,
       'page_path': `/${route}`
     });
-
-
     if (route === "store") {
       gtag('event', 'conversion', {
         'send_to': 'AW-698669401/AzPuCIabq7IBENmyk80C',
@@ -20,12 +23,6 @@ const analyticsPages = (route) => {
     if (route === "befor-pay") {
       gtag_report_conversion()
     }
-
-
-
-
-
-
   }
   ifAlreadyAnalytics = true;
 }
