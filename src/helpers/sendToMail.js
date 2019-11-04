@@ -1,3 +1,5 @@
+// לא בשימוש
+
 import Swal from 'sweetalert2'
 
 const myMail = {
@@ -48,8 +50,6 @@ const myMail = {
         text: 'ההודעה נשלחה בהצלחה!',
         timer: 1500
       });
-      fbq('trackCustom', 'Contact');
-      this.clientDatdlis = {};
     } catch (err) {
       await Swal.fire({
         type: 'error',

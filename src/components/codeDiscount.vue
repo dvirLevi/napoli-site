@@ -26,7 +26,8 @@
       return {
         myCode: "",
         code: 'napoli-sale',
-        codeGush: 'gush-sale'
+        codeGush: 'gush-sale',
+        codeSpecial: 'special-napoli'
       }
     },
     computed: {
@@ -40,17 +41,23 @@
     watch: {
       products: function (products) {
         console.log(products)
-        if (products.length && this.myCode === this.code || this.myCode === this.codeGush) {
-          this.$store.commit('IfCodeTrue')
-        } else {
-          this.$store.commit('IfCodeFalse')
+        if (products.length) {
+          if (this.myCode === this.code || this.myCode === this.codeGush) {
+            this.$store.commit('IfCodeTrue', 10)
+          } else if (this.myCode === this.codeSpecial) {
+            this.$store.commit('IfCodeTrue', 15)
+          } else {
+            this.$store.commit('IfCodeFalse')
+          }
         }
       }
     },
     methods: {
       ifCodeCorrect() {
         if (this.myCode === this.code || this.myCode === this.codeGush) {
-          this.$store.commit('IfCodeTrue')
+          this.$store.commit('IfCodeTrue', 10)
+        } else if (this.myCode === this.codeSpecial) {
+          this.$store.commit('IfCodeTrue', 15)
         } else {
           Swal.fire({
             type: 'error',
@@ -81,7 +88,7 @@
     font-weight: 400;
   }
 
-   button:hover {
+  button:hover {
     background-color: #8c8c8c;
   }
 

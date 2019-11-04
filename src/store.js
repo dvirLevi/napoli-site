@@ -103,13 +103,13 @@ export default new Vuex.Store({
     nextPayment: false,
     messenger: true,
     ifCode: false,
+    PercentageOfDiscount: 0
   },
   getters: {
     inCart: state => {
       let inCart = state.products.filter((value) => {
         return value.amount > 0
       })
-      console.log(inCart)
       return inCart
     },
     priceMessenger: state => {
@@ -123,7 +123,7 @@ export default new Vuex.Store({
     },
     discount: state => {
       if (state.ifCode) {
-        return 10
+        return state.PercentageOfDiscount;
       }
       return 0
     },
@@ -162,8 +162,9 @@ export default new Vuex.Store({
     IfCodeFalse(state) {
       state.ifCode = false;
     },
-    IfCodeTrue(state) {
+    IfCodeTrue(state, n) {
       state.ifCode = true;
+      state.PercentageOfDiscount = n;
     },
   },
   actions: {
