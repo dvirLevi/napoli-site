@@ -35,7 +35,7 @@
           </div>
 
           <div class="w-100 center-all">
-            <button type="submit">שלח טופס</button>
+            <button type="submit">{{textSend}}</button>
           </div>
         </form>
       </div>
@@ -68,7 +68,8 @@
         ifConfirm: true,
         clientDatdlis: {
 
-        }
+        },
+        textSend: "שלח טופס"
       }
     },
     mounted() {
@@ -79,43 +80,47 @@
     },
     methods: {
       async sendMail() {
-        try {
-          // להעיר את השרת
-          const response = await fetch('https://my-mail-service.herokuapp.com/WakeUpGet');
-          const json = await response.json();
-          console.log(json)
-          // שליחת הנתונים לשרת
-          await this.$store.dispatch('sendToMail', {
-            contentMail: {
-              from: "napoli@napoli.com",
-              to: "boazlevy100@gmail.com",
-              subject: "napoli-oven",
-              html: `<p>
+        if (this.textSend === "שלח טופס") {
+          try {
+            this.textSend = "המתן...";
+            // להעיר את השרת
+            const response = await fetch('https://my-mail-service.herokuapp.com/WakeUpGet');
+            const json = await response.json();
+            console.log(json)
+            // שליחת הנתונים לשרת
+            let res = await this.$store.dispatch('sendToMail', {
+              contentMail: {
+                from: "napoli@napoli.com",
+                to: "boazlevy100@gmail.com",
+                subject: "napoli-oven",
+                html: `<p>
       שם מלא: ${this.clientDatdlis.name} <br>
       טלפון: ${this.clientDatdlis.tel} <br>
       מייל: ${this.clientDatdlis.mail} <br>
       הערות: ${this.clientDatdlis.note} <br>
       אישור קבלת מיילים: ${this.ifConfirm} <br>
      </p>`,
-            }
-          })
-          await Swal.fire({
-            type: 'success',
-            title: 'יופי',
-            text: 'ההודעה נשלחה בהצלחה!',
-            timer: 1500
-          });
-          fbq('trackCustom', 'Contact');
-          this.clientDatdlis = {};
-        } catch (err) {
-          await Swal.fire({
-            type: 'error',
-            title: 'אופס',
-            text: 'ההודעה לא נשלחה',
-            timer: 1500
-          })
+              }
+            })
+            console.log(res + "(:")
+            await Swal.fire({
+              type: 'success',
+              title: 'יופי',
+              text: 'ההודעה נשלחה בהצלחה!',
+              timer: 1500
+            });
+            fbq('trackCustom', 'Contact');
+            this.textSend = "שלח טופס";
+            this.clientDatdlis = {};
+          } catch (err) {
+            await Swal.fire({
+              type: 'error',
+              title: 'אופס',
+              text: 'ההודעה לא נשלחה',
+              timer: 1500
+            })
+          }
         }
-
       }
     },
   }

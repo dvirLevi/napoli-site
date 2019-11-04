@@ -168,12 +168,14 @@ export default new Vuex.Store({
   },
   actions: {
     async sendToMail(store, contentMail) {
+      return new Promise(async (resolve, reject) => {
       try {
-        this.articles = await postService.sendMail(contentMail);
-
+        let res = await postService.sendMail(contentMail);
+        resolve(res)
       } catch (err) {
+        reject(err)
         console.log(err)
       }
-    }
+    })}
   }
 })
