@@ -87,7 +87,6 @@ export default new Vuex.Store({
         amount: 0,
         id: 5
       },
-
     ],
     ifCart: false,
     clientDatdlis: {

@@ -39,25 +39,26 @@
         hours: "",
         minutes: "",
         seconds: "",
-        ifCounter: true
+        // ifCounter: true
+        date: new Date("nov 5, 2019 10:00:00")
       }
     },
-    mounted() {
+    created() {
       this.counter()
     },
     methods: {
       counter() {
         // Set the date we're counting down to
-        var countDownDate = new Date("nov 5, 2019 10:00:00").getTime();
+        let countDownDate = this.date.getTime();
 
         // Update the count down every 1 second
-        var x = setInterval(() => {
+        let x = setInterval(() => {
 
           // Get today's date and time
-          var now = new Date().getTime();
+          let now = new Date().getTime();
 
           // Find the distance between now and the count down date
-          var distance = countDownDate - now;
+          let distance = countDownDate - now;
 
           // Time calculations for days, hours, minutes and seconds
           this.days = Math.floor(distance / (1000 * 60 * 60 * 24));
@@ -66,10 +67,21 @@
           this.seconds = Math.floor((distance % (1000 * 60)) / 1000);
           // If the count down is finished, write some text
           if (distance < 0) {
-            this.ifCounter = false;
+            // this.ifCounter = false;
             clearInterval(x);
           }
         }, 1000);
+      }
+    },
+    computed: {
+      ifCounter() {
+        let countDownDate = this.date.getTime();
+        let now = new Date().getTime();
+        let distance = countDownDate - now;
+        if (distance < 0) {
+          return false
+        }
+        return true
       }
     }
   }
@@ -88,11 +100,12 @@
   }
 
   @media (max-width: 767.98px) {
-     .el-time {
-    border: solid rgb(0, 0, 0) 2px;
-    margin: 3px;
-    width: 75px;
-  }
+    .el-time {
+      border: solid rgb(0, 0, 0) 2px;
+      margin: 3px;
+      width: 75px;
+    }
+
     .el-time h3 {
       font-size: 25px;
     }

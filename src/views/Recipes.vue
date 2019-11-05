@@ -21,7 +21,7 @@
       </div>
       <div class="col-md-6">
         <videoBottom width="width-video-100" BColor="#ffffff"
-          srcVideo="https://res.cloudinary.com/dpdl5lxxb/video/upload/v1569249177/napoli_ybtqff.mp4" />
+          srcVideo="https://res.cloudinary.com/dpdl5lxxb/video/upload/v1572942140/media.io_napoli_ybtqff_cwukoy.mp4" />
       </div>
     </div>
     <div class="row  part-shulders row-modals">
