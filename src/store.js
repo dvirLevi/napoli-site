@@ -81,7 +81,7 @@ export default new Vuex.Store({
         name: "עסקה נאפוליטנית בהנחה: תנור + מבער + מרדה + כיסוי",
         img: require("@/assets/ass19.jpg"),
         description: "",
-        specifications: `<li>מותאמת במיוחד למידות התנור</li><li>כוללת חרירים ייעודיים לעודפי הקמח ולאוורור תחתית הפיצה</li>`,
+        specifications: `<li>עסקה נאפוליטנית במחיר משתלם במיוחד!</li>`,
         addCart: false,
         price: 2290,
         amount: 0,
