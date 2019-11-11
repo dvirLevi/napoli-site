@@ -44,6 +44,7 @@ export default new Vuex.Store({
         addCart: false,
         price: 1690,
         amount: 0,
+        ifSize: true,
         id: 1
       },
       {
@@ -55,6 +56,7 @@ export default new Vuex.Store({
         addCart: false,
         price: 390,
         amount: 0,
+        ifSize: true,
         id: 2
       },
       {
@@ -65,6 +67,7 @@ export default new Vuex.Store({
         addCart: false,
         price: 90,
         amount: 0,
+        ifSize: false,
         id: 3
       },
       {
@@ -75,6 +78,7 @@ export default new Vuex.Store({
         addCart: false,
         price: 190,
         amount: 0,
+        ifSize: false,
         id: 4
       },
       {
@@ -85,6 +89,7 @@ export default new Vuex.Store({
         addCart: false,
         price: 2290,
         amount: 0,
+        ifSize: false,
         id: 5
       },
     ],

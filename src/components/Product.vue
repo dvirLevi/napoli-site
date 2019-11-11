@@ -24,7 +24,7 @@
         <div class="col-md-6 ">
           <h3>{{product.name}}</h3>
           <p>{{product.price}} ₪</p>
-          <p class="more" @click="showModal = !showModal">למידות ופרטים נוספים>></p>
+          <p class="more" @click="showModal = !showModal"><template v-if="product.ifSize">מידות ו</template>פרטים נוספים>></p>
           <div class="center-all mb-3  mt-3">
             <ButtonLink @customEvent="addToCart(product)" text="הוסף לעגלת הקניות" link="/store" />
 
@@ -80,7 +80,7 @@
   }
 
   .more {
-    color: #585858;
+    color: #ca6645;
     cursor: pointer;
   }
 

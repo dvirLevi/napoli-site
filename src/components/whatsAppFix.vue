@@ -27,13 +27,14 @@
   }
 
   i {
-    font-size: 70px
+    font-size: 70px;
+    color: #2cb742;
   }
 
   .wrap-w {
     background-color: rgba(255, 255, 255, 0.32);
-    width: 85px;
-    height: 85px;
+    width: 92px;
+    height: 92px;
     border-radius: 100px;
     box-shadow: 0 0 14px #000000bd;
   }
