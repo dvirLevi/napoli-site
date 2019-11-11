@@ -2,7 +2,7 @@
   <div class="all-fix center-all">
     <div class="wrap-w center-all">
       <a href="https://api.whatsapp.com/send?phone=972526070675" target="_blanc">
-       <i class="fab fa-whatsapp"></i>
+        <i class="fab fa-whatsapp"></i>
       </a>
     </div>
   </div>
@@ -12,7 +12,7 @@
   export default {
     name: 'whatsAppFix',
     props: {
-  
+
     }
   }
 </script>
@@ -40,19 +40,21 @@
   }
 
   a :hover {
-    color: rgb(0, 0, 0)
+    color: #2cb742;
   }
 
   @media (max-width: 767.98px) {
-     .all-fix {
-    padding: 10px 0px;
-  }
-     i {
-    font-size: 50px
-  }
-  .wrap-w {
-    width: 65px;
-    height: 65px;
-  }
+    .all-fix {
+      padding: 10px 0px;
+    }
+
+    i {
+      font-size: 50px
+    }
+
+    .wrap-w {
+      width: 65px;
+      height: 65px;
+    }
   }
 </style>
