@@ -16,6 +16,13 @@ body {
   flex-wrap: wrap;
 }
 
+.right-all {
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  flex-wrap: wrap;
+}
+
 .center-all-between {
   display: flex;
   align-items: center;
@@ -80,6 +87,10 @@ a:hover {
   color: none;
   text-decoration: none;
   background-color: transparent;
+}
+
+.c-p {
+  cursor: pointer;
 }
 
 @media (max-width: 767.98px) {

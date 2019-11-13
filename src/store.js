@@ -107,7 +107,8 @@ export default new Vuex.Store({
     nextPayment: false,
     messenger: true,
     ifCode: false,
-    PercentageOfDiscount: 0
+    PercentageOfDiscount: 0,
+    ifAutoModel: false,
   },
   getters: {
     inCart: state => {
@@ -150,6 +151,14 @@ export default new Vuex.Store({
   mutations: {
     showCart(state) {
       state.ifCart = !state.ifCart
+    },
+    upAutoModel(state) {
+      setTimeout(()=>{
+        state.ifAutoModel = true;
+      }, 7000)
+    },
+    closeAutoModel(state) {
+        state.ifAutoModel = false;
     },
     allTimeShowCart(state) {
       state.ifCart = true

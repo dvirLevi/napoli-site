@@ -1,6 +1,6 @@
 <template>
   <div>
-    <counterDays/>
+    <counterDays />
     <div class="row">
       <div class="col">
         <div class="w-100 center-all mb-2">
@@ -52,8 +52,9 @@
       fbq('track', 'ViewContent', {
         content_name: this.$route.name,
       });
-
       analyticsPages('/');
+
+      this.$store.commit('upAutoModel')
     }
 
   }

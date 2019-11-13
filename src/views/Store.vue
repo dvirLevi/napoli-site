@@ -27,7 +27,8 @@
        fbq('track', 'ViewContent', {
         content_name: this.$route.name, 
       });
-      analyticsPages(this.$route.name)
+      analyticsPages(this.$route.name);
+      this.$store.commit('upAutoModel')
     },
     computed: {
       products() {

@@ -3,9 +3,10 @@
     <!-- <Cart/> -->
     <ToolBar />
     <!-- <div @click="closeCart"> -->
-      <router-view />
-      <Footer />
-      <whatsAppFix />
+    <router-view />
+    <Footer />
+    <whatsAppFix />
+    <autoModal v-if="ifAutoModel" />
     <!-- </div> -->
   </div>
 </template>
@@ -15,6 +16,7 @@
   import ToolBar from '@/components/ToolBar.vue'
   import Footer from '@/components/Footer.vue'
   import whatsAppFix from '@/components/whatsAppFix.vue'
+  import autoModal from '@/components/autoModal.vue'
 
 
   export default {
@@ -22,8 +24,13 @@
     components: {
       ToolBar,
       Footer,
-      whatsAppFix
-      // Cart
+      whatsAppFix,
+      autoModal
+    },
+    computed: {
+      ifAutoModel() {
+        return this.$store.state.ifAutoModel;
+      },
     },
     methods: {
       closeCart() {

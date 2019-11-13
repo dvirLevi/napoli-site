@@ -40,11 +40,10 @@
     },
     watch: {
       products: function (products) {
-        console.log(products)
         if (products.length) {
-          if (this.myCode === this.code || this.myCode === this.codeGush) {
+          if (this.myCode.toLowerCase() === this.code || this.myCode.toLowerCase() === this.codeGush) {
             this.$store.commit('IfCodeTrue', 10)
-          } else if (this.myCode === this.codeSpecial) {
+          } else if (this.myCode.toLowerCase() === this.codeSpecial) {
             this.$store.commit('IfCodeTrue', 15)
           } else {
             this.$store.commit('IfCodeFalse')
@@ -54,9 +53,9 @@
     },
     methods: {
       ifCodeCorrect() {
-        if (this.myCode === this.code || this.myCode === this.codeGush) {
+        if (this.myCode.toLowerCase() === this.code || this.myCode.toLowerCase() === this.codeGush) {
           this.$store.commit('IfCodeTrue', 10)
-        } else if (this.myCode === this.codeSpecial) {
+        } else if (this.myCode.toLowerCase() === this.codeSpecial) {
           this.$store.commit('IfCodeTrue', 15)
         } else {
           Swal.fire({
