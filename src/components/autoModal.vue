@@ -72,5 +72,11 @@
     img {
       width: 100%;
     }
+    h2 {
+      font-size: 21px;
+    }
+    h3 {
+      font-size: 18px;
+    }
   }
 </style>
