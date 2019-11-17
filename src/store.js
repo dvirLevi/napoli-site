@@ -109,6 +109,7 @@ export default new Vuex.Store({
     ifCode: false,
     PercentageOfDiscount: 0,
     ifAutoModel: false,
+    blockAutoModel: true,
   },
   getters: {
     inCart: state => {
@@ -153,12 +154,16 @@ export default new Vuex.Store({
       state.ifCart = !state.ifCart
     },
     upAutoModel(state) {
-      setTimeout(()=>{
-        state.ifAutoModel = true;
-      }, 7000)
+      if (state.blockAutoModel) {
+        state.blockAutoModel = false;
+        setTimeout(() => {
+          state.ifAutoModel = true;
+          state.blockAutoModel = true;
+        }, 7000)
+      }
     },
     closeAutoModel(state) {
-        state.ifAutoModel = false;
+      state.ifAutoModel = false;
     },
     allTimeShowCart(state) {
       state.ifCart = true
@@ -183,13 +188,14 @@ export default new Vuex.Store({
   actions: {
     async sendToMail(store, contentMail) {
       return new Promise(async (resolve, reject) => {
-      try {
-        let res = await postService.sendMail(contentMail);
-        resolve(res)
-      } catch (err) {
-        reject(err)
-        console.log(err)
-      }
-    })}
+        try {
+          let res = await postService.sendMail(contentMail);
+          resolve(res)
+        } catch (err) {
+          reject(err)
+          console.log(err)
+        }
+      })
+    }
   }
 })
