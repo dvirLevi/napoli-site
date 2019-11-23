@@ -105,6 +105,7 @@
     data() {
       return {
         showModal: false,
+        add: ""
       }
     },
     mounted(){
