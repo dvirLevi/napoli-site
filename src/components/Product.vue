@@ -122,7 +122,7 @@
     position: absolute;
     width: 150px;
     z-index: 2;
-    top: -50px;
+    top: -30px;
     right: -30px;
     transform: rotate(20deg);
   }
