@@ -17,13 +17,15 @@
       </div>
     </Modal>
     <div class="box-product">
+      <img class="star" src="../assets/ass21.png" alt="">
       <div class="row mt-3">
         <div class="col-md-6 center-all">
           <img class="w-100" :src="product.img" alt="">
         </div>
         <div class="col-md-6 ">
           <h3>{{product.name}}</h3>
-          <p>{{product.price}} ₪</p>
+          <p>מחיר <span class="line-on-text">{{product.previousPrice}} ₪</span></p>
+          <p>מחיר בלאק פריידי {{product.price}} ₪</p>
           <p class="more" @click="showModal = !showModal"><template v-if="product.ifSize">מידות ו</template>פרטים נוספים>></p>
           <div class="center-all mb-3  mt-3">
             <ButtonLink @customEvent="addToCart(product)" text="הוסף לעגלת הקניות" link="/store" />
@@ -79,6 +81,14 @@
     font-weight: bold;
   }
 
+  span {
+    font-weight: 400;
+  }
+
+  .line-on-text {
+    text-decoration: line-through;
+  }
+
   .more {
     color: #ca6645;
     cursor: pointer;
@@ -105,6 +115,16 @@
     box-shadow: 1px 1px 3px #c1c1c1;
     margin: 15px;
     padding: 17px;
+    position: relative;
+  }
+
+  .star {
+    position: absolute;
+    width: 150px;
+    z-index: 2;
+    top: -50px;
+    right: -30px;
+    transform: rotate(20deg);
   }
 
   @media (max-width: 767.98px) {
@@ -114,5 +134,9 @@
     ul {
       padding-right: 25px;
     }
+     .star {
+    width: 120px;
+    right: -10px;
+  }
   }
 </style>

@@ -25,7 +25,7 @@
               <p class="w-100" v-if="discount">הנחת קופון: {{discount}}%-</p>
               <p class="w-100">סה"כ: {{PayablePlusDiscount}} ₪</p>
               <template v-if="messenger">
-                <p class="w-100">משלוח עד הבית 40 ₪</p>
+                <p class="w-100">משלוח עד הבית {{priceMessenger}} ₪</p>
                 <p class="w-100">סה"כ כולל משלוח : {{PayablePlusDiscount + priceMessenger}} ₪</p>
               </template>
             </div>

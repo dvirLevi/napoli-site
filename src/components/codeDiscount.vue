@@ -2,7 +2,7 @@
   <div class="row" v-if="products.length">
     <div class="col">
       <div class="center-all w-100">
-        <template v-if="!discount">
+        <template v-if="!discount && priceMessenger">
           <input type="text" @click.stop="" v-model="myCode" placeholder="הכנס קוד קופון">
           <button @click.stop="ifCodeCorrect">הפעל</button>
         </template>
@@ -25,9 +25,13 @@
     data() {
       return {
         myCode: "",
-        code: 'napoli-sale',
-        codeGush: 'gush-sale',
-        codeSpecial: 'special-napoli'
+        code: '!$&159',
+        codeGush: '!$&159',
+        codeSpecial: '!$&159',
+        codeBlack: 'black-napoli',
+        // code: 'napoli-sale',
+        // codeGush: 'gush-sale',
+        // codeSpecial: 'special-napoli'
       }
     },
     computed: {
@@ -37,6 +41,10 @@
       discount() {
         return this.$store.getters.discount
       },
+      priceMessenger() {
+        return this.$store.getters.priceMessenger
+      },
+      
     },
     watch: {
       products: function (products) {
@@ -45,6 +53,8 @@
             this.$store.commit('IfCodeTrue', 10)
           } else if (this.myCode.toLowerCase() === this.codeSpecial) {
             this.$store.commit('IfCodeTrue', 15)
+          } else if (this.myCode.toLowerCase() === this.codeBlack) {
+            this.$store.commit('IfCodeDiscountMessengerTrue', 0)
           } else {
             this.$store.commit('IfCodeFalse')
           }
@@ -57,6 +67,8 @@
           this.$store.commit('IfCodeTrue', 10)
         } else if (this.myCode.toLowerCase() === this.codeSpecial) {
           this.$store.commit('IfCodeTrue', 15)
+        }else if (this.myCode.toLowerCase() === this.codeBlack) {
+          this.$store.commit('IfCodeDiscountMessengerTrue', 0)
         } else {
           Swal.fire({
             type: 'error',
