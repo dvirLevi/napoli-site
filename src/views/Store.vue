@@ -6,7 +6,6 @@
 </template>
 
 <script>
-  // @ is an alias to /src
   import counterDays from '@/components/counterDays.vue'
   import Product from '@/components/Product.vue'
   import analyticsPages from '@/helpers/analyticsPages.js'
