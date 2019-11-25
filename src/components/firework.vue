@@ -28,7 +28,7 @@ let boxFire = this.$refs.boxFire.offsetWidth;
         ctx = canvas.getContext('2d'),
         // full screen dimensions
         cw = boxFire,
-        ch = 500,
+        ch = 550,
         // firework collection
         fireworks = [],
         // particle collection
@@ -132,6 +132,7 @@ let boxFire = this.$refs.boxFire.offsetWidth;
       // draw firework
       Firework.prototype.draw = function () {
         ctx.beginPath();
+        ctx.lineWidth = "3";
         // move to the last tracked coordinate in the set, then draw a line to the current x and y
         ctx.moveTo(this.coordinates[this.coordinates.length - 1][0], this.coordinates[this.coordinates.length - 1][
         1]);
@@ -167,7 +168,7 @@ let boxFire = this.$refs.boxFire.offsetWidth;
         this.brightness = random(50, 80);
         this.alpha = 1;
         // set how fast the particle fades out
-        this.decay = random(0.015, 0.03);
+        this.decay = random(0.005, 0.01);
       }
 
       // update particle
@@ -204,7 +205,7 @@ let boxFire = this.$refs.boxFire.offsetWidth;
       // create particle group/explosion
       function createParticles(x, y) {
         // increase the particle count for a bigger explosion, beware of the canvas performance hit with the increased particles though
-        var particleCount = 30;
+        var particleCount = 90;
         while (particleCount--) {
           particles.push(new Particle(x, y));
         }
@@ -300,7 +301,7 @@ let boxFire = this.$refs.boxFire.offsetWidth;
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 .box-fire {
-  margin-top: -500px;
+  margin-top: -550px;
   pointer-events: none;
 }
 </style>
