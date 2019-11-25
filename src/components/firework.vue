@@ -1,5 +1,5 @@
 <template>
-  <div ref="boxFire" class="w-100 center-all box-fire">
+  <div ref="boxFire" class="w-100 center-all box-fire" >
     <canvas id="canvas">Canvas is not supported in your browser.</canvas>
   </div>
 </template>
@@ -10,7 +10,13 @@
     props: {
       msg: String
     },
+    data(){
+return{
+  hs: 0
+}
+    },
     mounted() {
+      this.hs = screen.height
 let boxFire = this.$refs.boxFire.offsetWidth;
       // when animating on canvas, it is best to use requestAnimationFrame instead of setTimeout or setInterval
       // not supported in all browsers though and sometimes needs a prefix, so we need a shim
@@ -27,8 +33,8 @@ let boxFire = this.$refs.boxFire.offsetWidth;
       var canvas = document.getElementById('canvas'),
         ctx = canvas.getContext('2d'),
         // full screen dimensions
-        cw = boxFire,
-        ch = 550,
+        cw = screen.width,
+        ch = screen.height,
         // firework collection
         fireworks = [],
         // particle collection
@@ -301,7 +307,9 @@ let boxFire = this.$refs.boxFire.offsetWidth;
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 .box-fire {
-  margin-top: -550px;
+  /* margin-top: -550px; */
   pointer-events: none;
+  position: absolute;
+  top: 0
 }
 </style>

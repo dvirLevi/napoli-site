@@ -1,10 +1,12 @@
 <template>
   <div id="myModal" class="modal" @click.stop="$emit('customEvent')">
-
-    <!-- Modal content -->
-    <div class="modal-con center-all" v-if="modalCon">
-      <slot></slot>
+    <div class="wrap center-all">
+      <div class="modal-con center-all" v-if="modalCon">
+        <slot></slot>
+      </div>
     </div>
+    <!-- Modal content -->
+
 
   </div>
 </template>
@@ -21,10 +23,10 @@
     props: {
 
     },
-    data(){
-return {
-  modalCon: true
-}
+    data() {
+      return {
+        modalCon: true
+      }
     },
     mounted() {
       // setTimeout(() => {
@@ -67,6 +69,11 @@ return {
     to {
       background-color: #000000c9;
     }
+  }
+
+  .wrap {
+    position: relative;
+    height: 100%;
   }
 
   /* Modal Content */
