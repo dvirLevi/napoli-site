@@ -6,8 +6,13 @@
     <div class="w-100 center-all">
       <img src="../assets/ass20.jpg" alt="">
     </div>
+    
+
+    <h2 class="text-center mt-3 text-white">BLACK FRIDAY בנאפולי ישראל</h2>
+    <h3 class="text-center text-white">מבצע מחירים מטורף בחנות האתר עד ל-2 בדצמבר בלבד! המבצע עד גמר המלאי!</h3>
+    <router-link to="/store" tag="h3" class="text-white mt-4 c-p" ><h3 @click="closeModal">קנו עכשיו בחנות האתר>>></h3></router-link>
     <div class="w-100 center-all">
-      <div class="pyro">
+      <!-- <div class="pyro">
         <div class="before"></div>
         <div class="after"></div>
       </div>
@@ -18,24 +23,23 @@
       <div class="pyro">
         <div class="before"></div>
         <div class="after"></div>
-      </div>
+      </div> -->
+      <firework />
     </div>
-
-    <h2 class="text-center mt-3 text-white">BLACK FRIDAY בנאפולי ישראל</h2>
-    <h3 class="text-center text-white">מבצע מחירים מטורף בחנות האתר עד ל-2 בדצמבר בלבד! המבצע עד גמר המלאי!</h3>
-    <router-link to="/store" tag="h3" class="text-white mt-4 c-p" ><h3 @click="closeModal">קנו עכשיו בחנות האתר>>></h3></router-link>
   </ModalTransition>
 </template>
 
 <script>
   // @ is an alias to /src
   import ModalTransition from '@/components/ModalTransition.vue'
+  import firework from '@/components/firework.vue'
 
 
   export default {
     name: 'blackFridayModal',
     components: {
-      ModalTransition
+      ModalTransition,
+      firework
     },
     props: {
 

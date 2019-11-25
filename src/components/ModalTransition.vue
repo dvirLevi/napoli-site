@@ -23,13 +23,13 @@
     },
     data(){
 return {
-  modalCon: false
+  modalCon: true
 }
     },
     mounted() {
-      setTimeout(() => {
-        this.modalCon = true
-      }, 3000)
+      // setTimeout(() => {
+      //   this.modalCon = true
+      // }, 3000)
     }
   }
 </script>
