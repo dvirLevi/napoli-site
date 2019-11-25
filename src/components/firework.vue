@@ -12,11 +12,9 @@
     },
     data(){
 return{
-  hs: 0
 }
     },
     mounted() {
-      this.hs = screen.height
 let boxFire = this.$refs.boxFire.offsetWidth;
       // when animating on canvas, it is best to use requestAnimationFrame instead of setTimeout or setInterval
       // not supported in all browsers though and sometimes needs a prefix, so we need a shim
@@ -33,8 +31,8 @@ let boxFire = this.$refs.boxFire.offsetWidth;
       var canvas = document.getElementById('canvas'),
         ctx = canvas.getContext('2d'),
         // full screen dimensions
-        cw = screen.width,
-        ch = screen.height,
+        cw = window.innerWidth - 20,
+        ch = window.innerHeight ,
         // firework collection
         fireworks = [],
         // particle collection
