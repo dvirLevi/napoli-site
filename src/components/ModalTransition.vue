@@ -53,7 +53,7 @@ return {
     /* Full height */
     overflow: auto;
     /* Enable scroll if needed */
-    background-color: rgb(0, 0, 0);
+    background-color: #000000c9;
     /* Fallback color */
     animation-name: black-screen;
     animation-duration: 3s;
@@ -65,7 +65,7 @@ return {
     }
 
     to {
-      background-color: rgb(0, 0, 0);
+      background-color: #000000c9;
     }
   }
 

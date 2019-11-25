@@ -42,7 +42,7 @@ export default new Vuex.Store({
         גובה: 31.5 ס"מ<br>
         </li><li><span class="border-bottom border-dark">משקל:</span><br> 12.5 ק"ג</li><li><span class="border-bottom border-dark">שטח אבן האפייה:</span><br>רוחב: 31.75 ס"מ <br>עומק: 34.29 ס"מ </li>`,
         addCart: false,
-        price: 1290,
+        price: 1390,
         previousPrice: 1690,
         amount: 0,
         ifSize: true,
@@ -91,7 +91,7 @@ export default new Vuex.Store({
         description: "",
         specifications: `<li>עסקה נאפוליטנית במחיר משתלם במיוחד!</li>`,
         addCart: false,
-        price: 1690,
+        price: 1790,
         previousPrice: 2290,
         amount: 0,
         ifSize: false,
@@ -165,7 +165,7 @@ export default new Vuex.Store({
         setTimeout(() => {
           state.ifAutoModel = true;
           state.blockAutoModel = true;
-        }, 7000)
+        }, 3000)
       }
     },
     closeAutoModel(state) {
