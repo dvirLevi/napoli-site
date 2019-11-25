@@ -1,6 +1,6 @@
 <template>
   <div class="" @click.stop="$emit('customEvent')">
-    <router-link class="" tag="button" :to="link">{{text}}</router-link>
+    <router-link class="" tag="button" :to="link" :style="{fontSize: fontS + 'px'}">{{text}}</router-link>
   </div>
 </template>
 
@@ -10,6 +10,10 @@
     props: {
       link: String,
       text: String,
+      fontS: {
+      type: [String, Number],
+      default: 'inherit'
+    },
     }
   }
 </script>

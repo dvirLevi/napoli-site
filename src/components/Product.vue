@@ -25,7 +25,7 @@
         <div class="col-md-6 ">
           <h3>{{product.name}}</h3>
           <p>מחיר <span class="line-on-text">{{product.previousPrice}} ₪</span></p>
-          <p>מחיר בלאק פריידי {{product.price}} ₪</p>
+          <p>מחיר בלאק פריידי <span>{{product.price}} ₪</span></p>
           <p class="more" @click="showModal = !showModal"><template v-if="product.ifSize">מידות ו</template>פרטים נוספים>></p>
           <div class="center-all mb-3  mt-3">
             <ButtonLink @customEvent="addToCart(product)" text="הוסף לעגלת הקניות" link="/store" />
@@ -81,12 +81,10 @@
     font-weight: bold;
   }
 
-  span {
-    font-weight: 400;
-  }
-
   .line-on-text {
     text-decoration: line-through;
+    font-weight: 400;
+
   }
 
   .more {

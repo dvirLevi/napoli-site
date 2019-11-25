@@ -6,7 +6,8 @@
     <router-view />
     <Footer />
     <whatsAppFix />
-    <autoModal v-if="ifAutoModel" />
+    <!-- <autoModal v-if="ifAutoModel" /> -->
+    <blackFridayModal v-if="ifAutoModel" />
     <!-- </div> -->
   </div>
 </template>
@@ -16,7 +17,8 @@
   import ToolBar from '@/components/ToolBar.vue'
   import Footer from '@/components/Footer.vue'
   import whatsAppFix from '@/components/whatsAppFix.vue'
-  import autoModal from '@/components/autoModal.vue'
+  // import autoModal from '@/components/autoModal.vue'
+  import blackFridayModal from '@/components/blackFridayModal.vue'
 
 
   export default {
@@ -25,7 +27,8 @@
       ToolBar,
       Footer,
       whatsAppFix,
-      autoModal
+      // autoModal,
+      blackFridayModal
     },
     computed: {
       ifAutoModel() {
