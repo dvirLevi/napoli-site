@@ -31,11 +31,15 @@
             </div>
             <div class="w-100 center-all border-top">
               <p class="w-100" v-if="!ifMinPayable">מחיר מינימום למשלוח {{minPrice}} ₪</p>
-              <div class="w-100 center-all mt-3 confirm">
-                <input type="checkbox" :checked="!priceMessenger" @click="ifMessenger" required>
-                <p>איסוף עצמי</p>
-              </div>
-              <p class="w-100 text-center">כתובת לאיסוף: רחוב שמריהו לוין 13, ירושלים. בתיאום מראש. </p>
+              <p class="w-100" v-else-if="ifCode && !priceMessenger">משלוח חינם</p>
+
+              <template v-else>
+                <div class="w-100 center-all mt-3 confirm">
+                  <input type="checkbox" :checked="!priceMessenger" @click="ifMessenger" required>
+                  <p>איסוף עצמי</p>
+                </div>
+                <p class="w-100 text-center">כתובת לאיסוף: רחוב שמריהו לוין 13, ירושלים. בתיאום מראש. </p>
+              </template>
             </div>
           </template>
           <template v-else>
@@ -108,9 +112,9 @@
         showModal: false,
       }
     },
-    mounted(){
-       fbq('track', 'ViewContent', {
-        content_name: this.$route.name, 
+    mounted() {
+      fbq('track', 'ViewContent', {
+        content_name: this.$route.name,
       });
       analyticsPages(this.$route.name);
     },
@@ -140,6 +144,9 @@
       priceMessenger() {
         return this.$store.getters.priceMessenger
       },
+      ifCode() {
+        return this.$store.state.ifCode
+      },
       messenger() {
         return this.$store.state.messenger
       },
@@ -150,13 +157,13 @@
         return this.$store.state.clientDatdlis
       },
       Payable() {
-        return  this.$store.getters.Payable
+        return this.$store.getters.Payable
       },
       PayablePlusDiscount() {
-       return this.$store.getters.PayablePlusDiscount
+        return this.$store.getters.PayablePlusDiscount
       },
       ifMinPayable() {
-       return this.$store.getters.ifMinPayable
+        return this.$store.getters.ifMinPayable
       },
       discount() {
         return this.$store.getters.discount

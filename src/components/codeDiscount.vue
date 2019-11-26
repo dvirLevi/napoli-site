@@ -2,7 +2,7 @@
   <div class="row" v-if="products.length">
     <div class="col">
       <div class="center-all w-100">
-        <template v-if="!discount && priceMessenger">
+        <template v-if="!ifCode">
           <input type="text" @click.stop="" v-model="myCode" placeholder="הכנס קוד קופון">
           <button @click.stop="ifCodeCorrect">הפעל</button>
         </template>
@@ -43,6 +43,9 @@
       },
       priceMessenger() {
         return this.$store.getters.priceMessenger
+      },
+      ifCode() {
+        return this.$store.state.ifCode
       },
       
     },
