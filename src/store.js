@@ -125,8 +125,8 @@ export default new Vuex.Store({
       })
       return inCart
     },
-    priceMessenger: state => {
-      if (state.messenger) {
+    priceMessenger: (state, getters) => {
+      if (state.messenger && getters.ifMinPayable) {
         return state.priceMessenger;
       }
       return 0
@@ -154,6 +154,12 @@ export default new Vuex.Store({
         Payable += getters.inCart[x].amount * getters.inCart[x].price;
       }
       return Payable
+    },
+    ifMinPayable: (state, getters) => {
+      if(getters.Payable >= state.products[0].price){
+        return true
+      }
+      return false
     },
   },
   mutations: {
@@ -186,7 +192,14 @@ export default new Vuex.Store({
       state.nextPayment = true
     },
     ifMessenger(state) {
-      state.messenger = !state.messenger
+      // console.log(state.products[0].price)
+      // if(this.getters.ifMinPayable){
+      //   alert("asd")
+      //   state.messenger = false
+      // }else {
+      //   // alert()
+        state.messenger = !state.messenger
+      // }
     },
     IfCodeFalse(state) {
       state.ifCode = false;

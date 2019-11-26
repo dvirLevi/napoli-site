@@ -24,14 +24,15 @@
             <div class="w-100 center-all border-top p-4">
               <p class="w-100" v-if="discount">הנחת קופון: {{discount}}%-</p>
               <p class="w-100">סה"כ: {{PayablePlusDiscount}} ₪</p>
-              <template v-if="messenger">
+              <template v-if="priceMessenger">
                 <p class="w-100">משלוח עד הבית {{priceMessenger}} ₪</p>
                 <p class="w-100">סה"כ כולל משלוח : {{PayablePlusDiscount + priceMessenger}} ₪</p>
               </template>
             </div>
             <div class="w-100 center-all border-top">
+              <p class="w-100" v-if="!ifMinPayable">מחיר מינימום למשלוח {{minPrice}} ₪</p>
               <div class="w-100 center-all mt-3 confirm">
-                <input type="checkbox" :checked="!messenger" @click="ifMessenger" required>
+                <input type="checkbox" :checked="!priceMessenger" @click="ifMessenger" required>
                 <p>איסוף עצמי</p>
               </div>
               <p class="w-100 text-center">כתובת לאיסוף: רחוב שמריהו לוין 13, ירושלים. בתיאום מראש. </p>
@@ -111,7 +112,7 @@
        fbq('track', 'ViewContent', {
         content_name: this.$route.name, 
       });
-      analyticsPages(this.$route.name)
+      analyticsPages(this.$route.name);
     },
     methods: {
       nextToPay() {
@@ -142,6 +143,9 @@
       messenger() {
         return this.$store.state.messenger
       },
+      minPrice() {
+        return this.$store.state.products[0].price
+      },
       clientDatdlis() {
         return this.$store.state.clientDatdlis
       },
@@ -150,6 +154,9 @@
       },
       PayablePlusDiscount() {
        return this.$store.getters.PayablePlusDiscount
+      },
+      ifMinPayable() {
+       return this.$store.getters.ifMinPayable
       },
       discount() {
         return this.$store.getters.discount
