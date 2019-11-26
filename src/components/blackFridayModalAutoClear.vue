@@ -1,16 +1,16 @@
 <template>
-  <ModalTransition myClass="modal-transition">
-    <div class="w-100 right-all">
+  <ModalTransition myClass="modal-transition-b" @customEvent="$emit('customEvent')">
+    <!-- <div class="w-100 right-all">
       <span class="h1 c-p text-white" @click="closeModal">x</span>
     </div>
     <div class="w-100 center-all">
       <img src="../assets/ass20.jpg" alt="">
-    </div>
-    
+    </div> -->
 
-    <h2 class="text-center mt-3 text-white">BLACK FRIDAY בנאפולי ישראל</h2>
-    <h3 class="text-center text-white">מבצע מחירים מטורף בחנות האתר עד ל-2 בדצמבר בלבד! המבצע עד גמר המלאי!</h3>
-    <router-link to="/store" tag="h3" class="text-white mt-4 c-p" ><h3 @click="closeModal">קנו עכשיו בחנות האתר>>></h3></router-link>
+
+    <h2 class="text-center mt-3 text-white opas">BLACK FRIDAY בנאפולי ישראל</h2>
+    <!-- <h3 class="text-center text-white">מבצע מחירים מטורף בחנות האתר עד ל-2 בדצמבר בלבד! המבצע עד גמר המלאי!</h3> -->
+    <!-- <router-link to="/store" tag="h3" class="text-white mt-4 c-p" ><h3 @click="closeModal">קנו עכשיו בחנות האתר>>></h3></router-link> -->
     <div class="w-100 center-all">
       <!-- <div class="pyro">
         <div class="before"></div>
@@ -24,7 +24,9 @@
         <div class="before"></div>
         <div class="after"></div>
       </div> -->
-      <firework />
+      <!-- <transition name="fade"> -->
+        <firework class="opas"/>
+      <!-- </transition> -->
     </div>
   </ModalTransition>
 </template>
@@ -36,7 +38,7 @@
 
 
   export default {
-    name: 'blackFridayModal',
+    name: 'blackFridayModalAutoClear',
     components: {
       ModalTransition,
       firework
@@ -46,7 +48,7 @@
     },
     methods: {
       closeModal() {
-        this.$store.commit('closeAutoModel')
+        // this.$store.commit('closeAutoModel')
       }
     }
   }
@@ -79,6 +81,25 @@
 
   h2 {
     font-size: 70px;
+  }
+
+  .opas {
+    animation-name: opas;
+    animation-duration: 7s;
+  }
+
+  @keyframes opas {
+    0% {
+      opacity: 1;
+    }
+
+    90% {
+      opacity: 1;
+    }
+
+    100% {
+      opacity: 0;
+    }
   }
 
   @media (max-width: 767.98px) {

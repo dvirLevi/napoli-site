@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
 import postService from '@/Services/postService.js'
+import router from './router'
 
 
 Vue.use(Vuex)
@@ -160,10 +161,14 @@ export default new Vuex.Store({
       state.ifCart = !state.ifCart
     },
     upAutoModel(state) {
+      // console.log(router.history.current.name)
       if (state.blockAutoModel) {
         state.blockAutoModel = false;
         setTimeout(() => {
-          state.ifAutoModel = true;
+          console.log(router.history.current.name)
+          if (router.history.current.name !== "store") {
+            state.ifAutoModel = true;
+          }
           state.blockAutoModel = true;
         }, 3000)
       }

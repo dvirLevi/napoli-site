@@ -9,7 +9,7 @@ import Contact from './views/Contact.vue'
 import Recipes from './views/Recipes.vue'
 Vue.use(Router)
 
-export default new Router({
+let router = new Router({
   scrollBehavior() {
     return { x: 0, y: 0 };
   },
@@ -56,3 +56,5 @@ export default new Router({
  
   ]
 })
+
+export default router

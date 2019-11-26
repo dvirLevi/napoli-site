@@ -308,6 +308,6 @@ let boxFire = this.$refs.boxFire.offsetWidth;
   /* margin-top: -550px; */
   pointer-events: none;
   position: absolute;
-  top: 0
+  top: 0;
 }
 </style>

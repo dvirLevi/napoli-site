@@ -1,7 +1,8 @@
 <template>
   <div class="row mt-3 row-all">
-    <counterDays/>
+    <counterDays />
     <Product v-for="product in products" :product="product" :key="product.id" />
+    <blackFridayModalAutoClear v-if="ifModalStore" @customEvent="ifModalStore = false" />
   </div>
 </template>
 
@@ -9,25 +10,30 @@
   import counterDays from '@/components/counterDays.vue'
   import Product from '@/components/Product.vue'
   import analyticsPages from '@/helpers/analyticsPages.js'
+  import blackFridayModalAutoClear from '@/components/blackFridayModalAutoClear.vue'
 
 
   export default {
     name: 'Store',
     components: {
       Product,
-      counterDays
+      counterDays,
+      blackFridayModalAutoClear
     },
     data() {
       return {
-
+        ifModalStore: true
       }
     },
     mounted() {
-       fbq('track', 'ViewContent', {
-        content_name: this.$route.name, 
+      fbq('track', 'ViewContent', {
+        content_name: this.$route.name,
       });
       analyticsPages(this.$route.name);
       // this.$store.commit('upAutoModel')
+      setTimeout(() => {
+        this.ifModalStore = false
+      }, 7000)
     },
     computed: {
       products() {
