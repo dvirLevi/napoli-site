@@ -33,9 +33,9 @@
               <p class="w-100" v-if="!ifMinPayable">מחיר מינימום למשלוח {{minPrice}} ₪</p>
               <p class="w-100" v-else-if="ifCode && !priceMessenger">משלוח חינם</p>
 
-              <template v-else>
+              <template >
                 <div class="w-100 center-all mt-3 confirm">
-                  <input type="checkbox" :checked="!priceMessenger" @click="ifMessenger" required>
+                  <input type="checkbox" :checked="!priceMessenger && !ifCode || !ifMinPayable" @click="ifMessenger" required>
                   <p>איסוף עצמי</p>
                 </div>
                 <p class="w-100 text-center">כתובת לאיסוף: רחוב שמריהו לוין 13, ירושלים. בתיאום מראש. </p>
