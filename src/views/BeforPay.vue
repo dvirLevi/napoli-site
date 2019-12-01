@@ -70,10 +70,10 @@
             <div class="w-100 center-all">
               <input type="text" placeholder="*מספר בית" v-model="clientDatdlis.namHome" required>
             </div>
-            <div class="w-100 center-all">
+            <!-- <div class="w-100 center-all">
               <input type="text" placeholder="*מיקוד" pattern="[0-9]+" minlength="5" v-model="clientDatdlis.mikod"
                 required>
-            </div>
+            </div> -->
             <div class="w-100 center-all">
               <textarea id="" rows="5" placeholder="הערות" v-model="clientDatdlis.note"></textarea>
             </div>
@@ -85,7 +85,7 @@
               <Regulations />
             </Modal>
             <div class="w-100 center-all mt-3">
-              <ButtonLink text="להמשך קנייה" link="/store" />
+              <ButtonLink text="חזרה לעגלה" link="/store" />
               <button type="submit">המשך לתשלום מאובטח</button>
             </div>
           </form>

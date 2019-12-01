@@ -30,7 +30,7 @@
                 <P>עיר: {{clientDatdlis.city}}</P>
                 <P>רחוב: {{clientDatdlis.address}}</P>
                 <P>מס' בית: {{clientDatdlis.namHome}}</P>
-                <P>מיקוד: {{clientDatdlis.mikod}}</P>
+                <!-- <P>מיקוד: {{clientDatdlis.mikod}}</P> -->
                 <P>הערות: {{clientDatdlis.note}}</P>
               </div>
             </div>
@@ -39,7 +39,7 @@
         <div class="row">
           <div class="col">
             <div class="center-all w-100">
-              <ButtonLink text="להמשך קנייה" link="/store" />
+              <ButtonLink text="חזרה לעגלה" link="/store" />
               <ButtonLink link="/befor-pay" text="לעריכת פרטים אישיים" />
             </div>
           </div>
