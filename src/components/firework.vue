@@ -1,5 +1,5 @@
 <template>
-  <div ref="boxFire" class="w-100 center-all box-fire" >
+  <div ref="boxFire" class="w-100 center-all box-fire">
     <canvas id="canvas">Canvas is not supported in your browser.</canvas>
   </div>
 </template>
@@ -10,21 +10,23 @@
     props: {
       msg: String
     },
-    data(){
-return{
-}
+    data() {
+      return {
+        ifFireWork: true
+      }
     },
     mounted() {
-let boxFire = this.$refs.boxFire.offsetWidth;
+      let boxFire = this.$refs.boxFire.offsetWidth;
       // when animating on canvas, it is best to use requestAnimationFrame instead of setTimeout or setInterval
       // not supported in all browsers though and sometimes needs a prefix, so we need a shim
-      window.requestAnimFrame = (function () {
-        return window.requestAnimationFrame ||
-          window.webkitRequestAnimationFrame ||
-          window.mozRequestAnimationFrame ||
-          function (callback) {
-            window.setTimeout(callback, 1000 / 60);
-          };
+      let requestAnimFrame = (() => {
+        return (callback) => {
+          if (this.ifFireWork) {
+            setTimeout(callback, 1000 / 60);
+          }else{
+            clearTimeout(callback)
+          }
+        };
       })();
 
       // now we will setup our basic variables for the demo
@@ -32,7 +34,7 @@ let boxFire = this.$refs.boxFire.offsetWidth;
         ctx = canvas.getContext('2d'),
         // full screen dimensions
         cw = window.innerWidth - 20,
-        ch = window.innerHeight ,
+        ch = window.innerHeight,
         // firework collection
         fireworks = [],
         // particle collection
@@ -139,7 +141,8 @@ let boxFire = this.$refs.boxFire.offsetWidth;
         ctx.lineWidth = "3";
         // move to the last tracked coordinate in the set, then draw a line to the current x and y
         ctx.moveTo(this.coordinates[this.coordinates.length - 1][0], this.coordinates[this.coordinates.length - 1][
-        1]);
+          1
+        ]);
         ctx.lineTo(this.x, this.y);
         ctx.strokeStyle = 'hsl(' + hue + ', 100%, ' + this.brightness + '%)';
         ctx.stroke();
@@ -200,7 +203,8 @@ let boxFire = this.$refs.boxFire.offsetWidth;
         ctx.beginPath();
         // move to the last tracked coordinates in the set, then draw a line to the current x and y
         ctx.moveTo(this.coordinates[this.coordinates.length - 1][0], this.coordinates[this.coordinates.length - 1][
-        1]);
+          1
+        ]);
         ctx.lineTo(this.x, this.y);
         ctx.strokeStyle = 'hsla(' + this.hue + ', 100%, ' + this.brightness + '%, ' + this.alpha + ')';
         ctx.stroke();
@@ -217,6 +221,7 @@ let boxFire = this.$refs.boxFire.offsetWidth;
 
       // main demo loop
       function loop() {
+        console.log("asd")
         // this function will run endlessly with requestAnimationFrame
         requestAnimFrame(loop);
 
@@ -273,24 +278,23 @@ let boxFire = this.$refs.boxFire.offsetWidth;
           limiterTick++;
         }
       }
-
       // mouse event bindings
       // update the mouse coordinates on mousemove
-      canvas.addEventListener('mousemove', function (e) {
-        mx = e.pageX - canvas.offsetLeft;
-        my = e.pageY - canvas.offsetTop;
-      });
+      // canvas.addEventListener('mousemove', function (e) {
+      //   mx = e.pageX - canvas.offsetLeft;
+      //   my = e.pageY - canvas.offsetTop;
+      // });
 
-      // toggle mousedown state and prevent canvas from being selected
-      canvas.addEventListener('mousedown', function (e) {
-        e.preventDefault();
-        mousedown = true;
-      });
+      // // toggle mousedown state and prevent canvas from being selected
+      // canvas.addEventListener('mousedown', function (e) {
+      //   e.preventDefault();
+      //   mousedown = true;
+      // });
 
-      canvas.addEventListener('mouseup', function (e) {
-        e.preventDefault();
-        mousedown = false;
-      });
+      // canvas.addEventListener('mouseup', function (e) {
+      //   e.preventDefault();
+      //   mousedown = false;
+      // });
 
       // once the window loads, we are ready for some fireworks!
       loop();
@@ -298,16 +302,19 @@ let boxFire = this.$refs.boxFire.offsetWidth;
 
 
 
+    },
+    destroyed() {
+      this.ifFireWork = false;
     }
   }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-.box-fire {
-  /* margin-top: -550px; */
-  pointer-events: none;
-  position: absolute;
-  top: 0;
-}
+  .box-fire {
+    /* margin-top: -550px; */
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+  }
 </style>
