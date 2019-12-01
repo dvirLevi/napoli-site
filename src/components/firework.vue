@@ -221,7 +221,6 @@
 
       // main demo loop
       function loop() {
-        console.log("asd")
         // this function will run endlessly with requestAnimationFrame
         requestAnimFrame(loop);
 
