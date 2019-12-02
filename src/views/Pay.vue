@@ -131,9 +131,9 @@
       Payable() {
         return this.$store.getters.Payable
       },
-      priceMessenger() {
-        return this.$store.getters.priceMessenger;
-      },
+      // priceMessenger() {
+      //   return this.$store.getters.priceMessenger;
+      // },
       PayablePlusDiscount() {
         return this.$store.getters.PayablePlusDiscount
       },
