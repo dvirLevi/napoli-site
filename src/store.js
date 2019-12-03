@@ -118,9 +118,9 @@ export default new Vuex.Store({
       })
       return inCart
     },
-    priceMessenger: state => {
-      if (state.messenger) {
-        return 40
+    priceMessenger: (state, getters) => {
+      if (state.messenger && getters.ifMinPayable) {
+        return state.priceMessenger;
       }
       return 0
     },
