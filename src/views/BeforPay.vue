@@ -160,6 +160,9 @@
       ifMinPayable() {
         return this.$store.getters.ifMinPayable
       },
+      minPrice() {
+        return this.$store.state.products[0].price
+      },
       discount() {
         return this.$store.getters.discount
       },
