@@ -26,7 +26,7 @@
       return {
         myCode: "",
         code: 'napoli-sale',
-        codeGush: 'gush-sale',
+        codeGush: '!@#asd#@!',
         codeSpecial: 'special-napoli'
       }
     },

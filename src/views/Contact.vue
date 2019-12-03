@@ -30,7 +30,8 @@
             <textarea id="" rows="5" placeholder="*סיבת הפנייה" v-model="clientDatdlis.note" required></textarea>
           </div>
           <div class="w-100 center-all mt-3 confirm">
-            <input type="checkbox" :checked="ifConfirm" @click="ifConfirm = !ifConfirm">
+            <input type="checkbox" :checked="clientDatdlis.ifConfirmMail"
+              @click="clientDatdlis.ifConfirmMail = !clientDatdlis.ifConfirmMail">
             <span>לקבלת מתכונים, טיפים ומבצעים לדוא"ל</span>
           </div>
 
@@ -58,16 +59,16 @@
   // @ is an alias to /src
   import Swal from 'sweetalert2'
   import analyticsPages from '@/helpers/analyticsPages.js'
-
+  import myMail from '@/helpers/myMail.js'
 
   export default {
     name: 'Contact',
     components: {},
     data() {
       return {
-        ifConfirm: true,
+        // ifConfirm: true,
         clientDatdlis: {
-
+          ifConfirmMail: true,
         },
         textSend: "שלח טופס"
       }
@@ -80,11 +81,13 @@
       this.$store.commit('upAutoModel')
     },
     methods: {
-       async sendMail() {
-         if (this.textSend === "שלח טופס") {
+      async sendMail() {
+        if (this.textSend === "שלח טופס") {
           this.textSend = "המתן..."
           await myMail.sendToMail(this.clientDatdlis, null, "יצירת קשר נאפולי");
-          this.clientDatdlis = {};
+          this.clientDatdlis = {
+            ifConfirmMail: true,
+          };
           this.textSend = "שלח טופס"
         }
       }
