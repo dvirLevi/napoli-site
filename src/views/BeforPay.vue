@@ -157,6 +157,9 @@
       PayablePlusDiscount() {
        return this.$store.getters.PayablePlusDiscount
       },
+      ifMinPayable() {
+        return this.$store.getters.ifMinPayable
+      },
       discount() {
         return this.$store.getters.discount
       },
