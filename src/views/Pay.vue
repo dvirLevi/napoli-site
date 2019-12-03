@@ -39,7 +39,7 @@
         <div class="row">
           <div class="col">
             <div class="center-all w-100">
-              <ButtonLink text="להמשך קנייה" link="/store" />
+              <ButtonLink text="חזרה לחנות" link="/store" />
               <ButtonLink link="/befor-pay" text="לעריכת פרטים אישיים" />
             </div>
           </div>
@@ -69,7 +69,7 @@
         <div class="center-all w-100">
           <h4 class="w-100 text-center">תשלומים</h4>
           <div class="center-all select-num-payment">
-            <v-select class="w-100" :clearable="false" dir="rtl" :options="['1 ', '2', '3']" v-model="numPay">
+            <v-select class="w-100" :clearable="false" dir="rtl" :options="['1 ', '2', '3', '4', '5 ', '6', '7', '8', '9', '10']" v-model="numPay">
             </v-select>
             <p class="w-100" v-if="ifCredit == 8">תשלום ראשון: {{firstPayAmount}} ₪</p>
             <p class="w-100" v-if="ifCredit == 8">שאר התשלומים: {{namPayAmount}} ₪</p>
