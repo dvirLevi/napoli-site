@@ -101,7 +101,7 @@ export default new Vuex.Store({
       city: "",
       address: "",
       namHome: "",
-      mikod: "",
+      // mikod: "",
       note: ""
     },
     nextPayment: false,
