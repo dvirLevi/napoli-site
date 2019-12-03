@@ -30,7 +30,7 @@
                 <P>עיר: {{clientDatdlis.city}}</P>
                 <P>רחוב: {{clientDatdlis.address}}</P>
                 <P>מס' בית: {{clientDatdlis.namHome}}</P>
-                <P>מיקוד: {{clientDatdlis.mikod}}</P>
+                <!-- <P>מיקוד: {{clientDatdlis.mikod}}</P> -->
                 <P>הערות: {{clientDatdlis.note}}</P>
               </div>
             </div>
