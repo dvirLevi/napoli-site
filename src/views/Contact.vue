@@ -80,47 +80,12 @@
       this.$store.commit('upAutoModel')
     },
     methods: {
-      async sendMail() {
-        if (this.textSend === "שלח טופס") {
-          try {
-            this.textSend = "המתן...";
-            // להעיר את השרת
-            const response = await fetch('https://my-mail-service.herokuapp.com/WakeUpGet');
-            const json = await response.json();
-            console.log(json)
-            // שליחת הנתונים לשרת
-            let res = await this.$store.dispatch('sendToMail', {
-              contentMail: {
-                from: "napoli@napoli.com",
-                to: "boazlevy100@gmail.com",
-                subject: "napoli-oven",
-                html: `<p>
-      שם מלא: ${this.clientDatdlis.name} <br>
-      טלפון: ${this.clientDatdlis.tel} <br>
-      מייל: ${this.clientDatdlis.mail} <br>
-      הערות: ${this.clientDatdlis.note} <br>
-      אישור קבלת מיילים: ${this.ifConfirm} <br>
-     </p>`,
-              }
-            })
-            console.log(res + "(:")
-            await Swal.fire({
-              type: 'success',
-              title: 'יופי',
-              text: 'ההודעה נשלחה בהצלחה!',
-              timer: 1500
-            });
-            fbq('trackCustom', 'Contact');
-            this.textSend = "שלח טופס";
-            this.clientDatdlis = {};
-          } catch (err) {
-            await Swal.fire({
-              type: 'error',
-              title: 'אופס',
-              text: 'ההודעה לא נשלחה',
-              timer: 1500
-            })
-          }
+       async sendMail() {
+         if (this.textSend === "שלח טופס") {
+          this.textSend = "המתן..."
+          await myMail.sendToMail(this.clientDatdlis, null, "יצירת קשר נאפולי");
+          this.clientDatdlis = {};
+          this.textSend = "שלח טופס"
         }
       }
     },
