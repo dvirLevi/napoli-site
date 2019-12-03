@@ -20,21 +20,27 @@
               </div>
             </div>
           </div>
-          <template v-if="products.length">
+         <template v-if="products.length">
             <div class="w-100 center-all border-top p-4">
               <p class="w-100" v-if="discount">הנחת קופון: {{discount}}%-</p>
               <p class="w-100">סה"כ: {{PayablePlusDiscount}} ₪</p>
-              <template v-if="messenger">
-                <p class="w-100">משלוח עד הבית 40 ₪</p>
+              <template v-if="priceMessenger">
+                <p class="w-100">משלוח עד הבית {{priceMessenger}} ₪</p>
                 <p class="w-100">סה"כ כולל משלוח : {{PayablePlusDiscount + priceMessenger}} ₪</p>
               </template>
             </div>
             <div class="w-100 center-all border-top">
-              <div class="w-100 center-all mt-3 confirm">
-                <input type="checkbox" :checked="!messenger" @click="ifMessenger" required>
-                <p>איסוף עצמי</p>
-              </div>
-              <p class="w-100 text-center">כתובת לאיסוף: רחוב שמריהו לוין 13, ירושלים. בתיאום מראש. </p>
+              <p class="w-100" v-if="!ifMinPayable">מחיר מינימום למשלוח {{minPrice}} ₪</p>
+              <p class="w-100" v-else-if="ifCode && !priceMessenger">משלוח חינם</p>
+
+              <template>
+                <div class="w-100 center-all mt-3 confirm">
+                  <input type="checkbox" :checked="!priceMessenger && !ifCode || !ifMinPayable" @click="ifMessenger"
+                    required>
+                  <p>איסוף עצמי</p>
+                </div>
+                <p class="w-100 text-center">כתובת לאיסוף: רחוב שמריהו לוין 13, ירושלים. בתיאום מראש. </p>
+              </template>
             </div>
           </template>
           <template v-else>
