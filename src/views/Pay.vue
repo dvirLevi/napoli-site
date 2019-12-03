@@ -14,7 +14,7 @@
               </div>
               <div class="w-100">
                 <p class="w-100" v-if="discount">הנחת קופון: {{discount}}%- </p>
-                <p class="w-100" v-if="messenger">משלוח עד הבית 40 ₪</p>
+                <p class="w-100" v-if="priceMessenger">משלוח עד הבית {{priceMessenger}} ₪</p>
                 <h5>סה"כ לתשלום: {{allPayable}} ₪</h5>
                 <!-- <h5>סה"כ לתשלום <span v-if="messenger">כולל משלוח</span>: {{allPayable}} ₪</h5> -->
               </div>
