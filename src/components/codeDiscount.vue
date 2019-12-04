@@ -2,7 +2,7 @@
   <div class="row" v-if="products.length">
     <div class="col">
       <div class="center-all w-100">
-        <template v-if="!discount">
+        <template v-if="!ifCode">
           <input type="text" @click.stop="" v-model="myCode" placeholder="הכנס קוד קופון">
           <button @click.stop="ifCodeCorrect">הפעל</button>
         </template>
@@ -38,6 +38,9 @@
       discount() {
         return this.$store.getters.discount
       },
+      ifCode() {
+        return this.$store.state.ifCode
+      },
     },
     watch: {
       products: function (products) {
@@ -46,6 +49,9 @@
             this.$store.commit('IfCodeTrue', 10)
           } else if (this.myCode.toLowerCase() === this.codeSpecial) {
             this.$store.commit('IfCodeTrue', 15)
+          } else if (this.myCode.toLowerCase() === this.codeBezza) {
+            this.$store.commit('IfCodeTrue', 10)
+            this.$store.commit('IfCodeDiscountMessengerTrue', 0)
           } else {
             this.$store.commit('IfCodeFalse')
           }
@@ -59,8 +65,9 @@
         } else if (this.myCode.toLowerCase() === this.codeSpecial) {
           this.$store.commit('IfCodeTrue', 15)
         } else if (this.myCode.toLowerCase() === this.codeBezza) {
-            this.$store.commit('IfCodeDiscountMessengerTrue', 0)
-          } else {
+          this.$store.commit('IfCodeTrue', 10)
+          this.$store.commit('IfCodeDiscountMessengerTrue', 0)
+        } else {
           Swal.fire({
             type: 'error',
             text: 'קוד קופון שגוי',
