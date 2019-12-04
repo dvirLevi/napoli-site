@@ -38,7 +38,7 @@
       </div>
       <codeDiscount />
       <div class="center-all row">
-        <h6 class="w-100 text-center" v-if="ifCode">הנחת קופון: {{discount}}%- </h6>
+        <h6 class="w-100 text-center" v-if="discount">הנחת קופון: {{discount}}%- </h6>
         <p class="w-100 text-center">סה"כ: {{PayablePlusDiscount}} ₪</p>
       </div>
       <div class="center-all row">
@@ -63,9 +63,6 @@
     computed: {
       ifCart() {
         return this.$store.state.ifCart
-      },
-      ifCode(){
-return this.$store.state.ifCode
       },
       products() {
         return this.$store.getters.inCart
