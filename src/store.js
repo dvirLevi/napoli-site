@@ -192,7 +192,6 @@ export default new Vuex.Store({
       state.PercentageOfDiscount = n;
     },
     IfCodeDiscountMessengerTrue(state, n) {
-      alert()
       state.ifCode = true;
       state.priceMessenger = n;
     },
