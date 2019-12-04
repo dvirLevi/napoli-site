@@ -27,7 +27,8 @@
         myCode: "",
         code: 'napoli-sale',
         codeGush: '!@#asd#@!',
-        codeSpecial: 'special-napoli'
+        codeSpecial: 'special-napoli',
+        codeBezza: 'bezza-napoli'
       }
     },
     computed: {
@@ -57,7 +58,9 @@
           this.$store.commit('IfCodeTrue', 10)
         } else if (this.myCode.toLowerCase() === this.codeSpecial) {
           this.$store.commit('IfCodeTrue', 15)
-        } else {
+        } else if (this.myCode.toLowerCase() === this.codeBezza) {
+            this.$store.commit('IfCodeDiscountMessengerTrue', 0)
+          } else {
           Swal.fire({
             type: 'error',
             text: 'קוד קופון שגוי',
