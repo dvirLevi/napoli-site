@@ -191,6 +191,10 @@ export default new Vuex.Store({
       state.ifCode = true;
       state.PercentageOfDiscount = n;
     },
+    IfCodeDiscountMessengerTrue(state, n) {
+      state.ifCode = true;
+      state.priceMessenger = n;
+    },
   },
   actions: {
     async sendToMail(store, contentMail) {
