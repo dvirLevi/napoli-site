@@ -1,5 +1,5 @@
 <template>
-  <div class="cart" v-if="ifCart" v-show="payRoutCloseCart">
+  <div class="cart" v-show="payRoutCloseCart && ifCart">
     <div class="arrow-up"></div>
     <div class="w-100 over-scroll">
       <div class="w-100 center-all">
