@@ -42,7 +42,7 @@ export default new Vuex.Store({
         גובה: 31.5 ס"מ<br>
         </li><li><span class="border-bottom border-dark">משקל:</span><br> 12.5 ק"ג</li><li><span class="border-bottom border-dark">שטח אבן האפייה:</span><br>רוחב: 31.75 ס"מ <br>עומק: 34.29 ס"מ </li>`,
         addCart: false,
-        price: 1690,
+        price: 1590,
         amount: 0,
         ifSize: true,
         id: 1
@@ -87,7 +87,7 @@ export default new Vuex.Store({
         description: "",
         specifications: `<li>עסקה נאפוליטנית במחיר משתלם במיוחד!</li>`,
         addCart: false,
-        price: 2290,
+        price: 2190,
         amount: 0,
         ifSize: false,
         id: 5
@@ -108,6 +108,7 @@ export default new Vuex.Store({
     messenger: true,
     ifCode: false,
     priceMessenger: 40,
+    freeMessenger: false,
     PercentageOfDiscount: 0,
     ifAutoModel: false,
     blockAutoModel: true,
@@ -193,6 +194,7 @@ export default new Vuex.Store({
     },
     IfCodeDiscountMessengerTrue(state, n) {
       state.ifCode = true;
+      state.freeMessenger = true;
       state.priceMessenger = n;
     },
   },

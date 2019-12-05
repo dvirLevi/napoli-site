@@ -31,10 +31,11 @@
             </div>
             <div class="w-100 center-all border-top">
               <p class="w-100" v-if="!ifMinPayable">מחיר מינימום למשלוח {{minPrice}} ₪</p>
+              <p class="w-100" v-if="freeMessenger && ifMinPayable">משלוח חינם</p>
               <template>
                 <div class="w-100 center-all mt-3 confirm">
                   <input type="checkbox" :checked="!messenger || !ifMinPayable" @click="ifMessenger"
-                    required>
+                    required :disabled="!ifMinPayable || freeMessenger">
                   <p>איסוף עצמי</p>
                 </div>
                 <p class="w-100 text-center">כתובת לאיסוף: רחוב שמריהו לוין 13, ירושלים. בתיאום מראש. </p>
@@ -148,6 +149,9 @@
       },
       clientDatdlis() {
         return this.$store.state.clientDatdlis
+      },
+      freeMessenger(){
+        return this.$store.state.freeMessenger
       },
       Payable() {
         return  this.$store.getters.Payable
