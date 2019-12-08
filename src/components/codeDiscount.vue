@@ -47,11 +47,14 @@
         if (products.length) {
           if (this.myCode.toLowerCase() === this.code || this.myCode.toLowerCase() === this.codeGush) {
             this.$store.commit('IfCodeTrue', 10)
+            this.$store.commit('pushNameCode', this.myCode.toLowerCase())
           } else if (this.myCode.toLowerCase() === this.codeSpecial) {
             this.$store.commit('IfCodeTrue', 15)
+            this.$store.commit('pushNameCode', this.myCode.toLowerCase())
           } else if (this.myCode.toLowerCase() === this.codeBezza) {
             this.$store.commit('IfCodeTrue', 10)
             this.$store.commit('IfCodeDiscountMessengerTrue', 0)
+            this.$store.commit('pushNameCode', this.myCode.toLowerCase())
           } else {
             this.$store.commit('IfCodeFalse')
           }
@@ -62,11 +65,17 @@
       ifCodeCorrect() {
         if (this.myCode.toLowerCase() === this.code || this.myCode.toLowerCase() === this.codeGush) {
           this.$store.commit('IfCodeTrue', 10)
+          this.$store.commit('pushNameCode', this.myCode.toLowerCase())
+
         } else if (this.myCode.toLowerCase() === this.codeSpecial) {
           this.$store.commit('IfCodeTrue', 15)
+          this.$store.commit('pushNameCode', this.myCode.toLowerCase())
+
         } else if (this.myCode.toLowerCase() === this.codeBezza) {
           this.$store.commit('IfCodeTrue', 10)
           this.$store.commit('IfCodeDiscountMessengerTrue', 0)
+          this.$store.commit('pushNameCode', this.myCode.toLowerCase())
+
         } else {
           Swal.fire({
             type: 'error',

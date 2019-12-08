@@ -112,6 +112,7 @@ export default new Vuex.Store({
     PercentageOfDiscount: 0,
     ifAutoModel: false,
     blockAutoModel: true,
+    codeCoupon: ""
   },
   getters: {
     inCart: state => {
@@ -160,6 +161,9 @@ export default new Vuex.Store({
   mutations: {
     showCart(state) {
       state.ifCart = !state.ifCart
+    },
+    pushNameCode(state, nameCode) {
+      state.codeCoupon = nameCode
     },
     upAutoModel(state) {
       if (state.blockAutoModel) {
