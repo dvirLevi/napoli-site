@@ -5,6 +5,9 @@
       <!-- <h2 class="h5 w-100">תפריט:</h2> -->
       <router-link class="items-menu h5 m-3" tag="div" :to="item.link" v-for="item in categories" :key="item.id"
         router-link-active>{{item.name}}</router-link>
+      <div class="w-100 center-all app-life">
+        <p>התקשרו אלינו <a class="text-decoration-none" href="tel:0537234223"> 053-7234223</a></p>
+      </div>
     </div>
 
     <!-- </div> -->
@@ -14,10 +17,12 @@
 
     <div class="col-md-2 center-all p-4">
       <div class="w-50 text-center">
-        <i class="fab fa-instagram"></i>
+        <a href="https://www.instagram.com/napoli_pizza_oven_israel/" target="_blanc"><i
+            class="fab fa-instagram"></i></a>
       </div>
       <div class="w-50 text-center">
-        <a href="https://www.facebook.com/napoli.oven.il/?__tn__=%2Cd%2CP-R&eid=ARAZokdIjzsZ4vZNMygiFQkyPLRRFrasxpFNiUCIhgwgD6_gfbXwOGZCbl0PJH3tjZODw30-sK0D7Die"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://www.facebook.com/napoli.oven.il/?__tn__=%2Cd%2CP-R&eid=ARAZokdIjzsZ4vZNMygiFQkyPLRRFrasxpFNiUCIhgwgD6_gfbXwOGZCbl0PJH3tjZODw30-sK0D7Die"
+          target="_blanc"><i class="fab fa-facebook-f"></i></a>
       </div>
     </div>
     <div class="col-md-12 center-all mt-5 app-life">

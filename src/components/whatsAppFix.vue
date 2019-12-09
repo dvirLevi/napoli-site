@@ -1,7 +1,7 @@
 <template>
   <div class="all-fix center-all">
     <div class="wrap-w center-all">
-      <a href="https://api.whatsapp.com/send?phone=972526070675" target="_blanc">
+      <a href="https://api.whatsapp.com/send?phone=972537234223" target="_blanc">
         <i class="fab fa-whatsapp"></i>
       </a>
     </div>
