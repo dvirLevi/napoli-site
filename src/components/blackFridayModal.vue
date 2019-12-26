@@ -6,9 +6,10 @@
     <div class="w-100 center-all">
       <img src="../assets/ass20.jpg" alt="">
     </div>
-    <h2 class="text-center mt-3 text-white">BLACK FRIDAY בנאפולי ישראל</h2>
-    <h3 class="text-center text-white">מבצע מחירים מטורף בחנות האתר עד ל-2 בדצמבר בלבד! המבצע עד גמר המלאי!</h3>
-    <router-link to="/store" tag="h3" class="text-white mt-4 c-p" ><h3 @click="closeModal" class="text-primary">קנו עכשיו >>></h3></router-link>
+    <h2 class="text-center mt-3 text-white">מבצע חנוכה מטורף בנאפולי ישראל!</h2>
+    <h3 class="text-center text-white">מחירים מטורללים עד ל-31.12.2019 בלבד! 
+הזדרזו! המבצע עד גמר המלאי!</h3>
+    <router-link to="/store" tag="h3" class="text-white mt-4 c-p" ><h3 @click="closeModal" class="text-primary">קנו עכשיו בחנות האתר >>></h3></router-link>
     <div class="w-100 center-all">
       <firework />
     </div>

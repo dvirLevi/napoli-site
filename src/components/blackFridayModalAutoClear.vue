@@ -1,6 +1,7 @@
 <template>
   <ModalTransition myClass="modal-transition-b" @customEvent="$emit('customEvent')">
-    <h2 class="text-center mt-3 text-white opas">BLACK FRIDAY בנאפולי ישראל</h2>
+    <h2 class="text-center mt-3 text-white opas">מבצע חנוכה בנאפולי ישראל</h2>
+    <h4 class="text-center mt-3 text-white opas">עד ה-31 בדצמבר או עד גמר המלאי</h4>
     <div class="w-100 center-all">
         <firework class="opas"/>
     </div>
