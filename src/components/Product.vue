@@ -69,7 +69,7 @@
 </script>
 
 <style scoped>
-  .row-all {
+   .row-all {
     padding: 0% 15%;
   }
 
@@ -118,9 +118,9 @@
 
   .star {
     position: absolute;
-    width: 110px;
+    width: 150px;
     z-index: 2;
-    top: 0px;
+    top: -30px;
     right: -30px;
     transform: rotate(20deg);
   }
@@ -133,8 +133,8 @@
       padding-right: 25px;
     }
      .star {
-    width: 73px;
-    right: 0px;
+    width: 120px;
+    right: -10px;
   }
   }
 </style>
