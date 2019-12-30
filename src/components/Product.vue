@@ -25,7 +25,7 @@
         <div class="col-md-6 ">
           <h3>{{product.name}}</h3>
           <p>מחיר <span class="line-on-text">{{product.previousPrice}} ₪</span></p>
-          <h4 class=""><span class="font-weight-normal"> מחיר מיוחד לחנוכה </span> <span>{{product.price}} ₪</span></h4>
+          <h4 class=""><span class="font-weight-normal"> מחיר סוף שנה מיוחד </span> <span>₪{{product.price}}</span></h4>
           <p class="more" @click="showModal = !showModal"><template v-if="product.ifSize">מידות ו</template>פרטים נוספים>></p>
           <div class="center-all mb-3  mt-3">
             <ButtonLink @customEvent="addToCart(product)" text="הוסף לעגלת הקניות" link="/store" />
@@ -112,7 +112,7 @@
   .box-product {
     box-shadow: 1px 1px 3px #c1c1c1;
     margin: 15px;
-    padding: 17px;
+    padding: 10px;
     position: relative;
   }
 
@@ -123,6 +123,10 @@
     top: -30px;
     right: -30px;
     transform: rotate(20deg);
+  }
+
+  h4 span {
+    font-weight: 800;
   }
 
   @media (max-width: 767.98px) {
