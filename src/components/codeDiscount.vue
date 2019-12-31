@@ -28,7 +28,8 @@
         code: '!$&159',
         codeGush: '!$&159',
         codeSpecial: '!$&159',
-        codeBlack: 'black-napoli',
+        codeBlack: '!$&159',
+        // codeBlack: 'black-napoli',
         // code: 'napoli-sale',
         // codeGush: 'gush-sale',
         // codeSpecial: 'special-napoli'
