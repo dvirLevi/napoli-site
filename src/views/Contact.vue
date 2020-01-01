@@ -30,7 +30,8 @@
             <textarea id="" rows="5" placeholder="*סיבת הפנייה" v-model="clientDatdlis.note" required></textarea>
           </div>
           <div class="w-100 center-all mt-3 confirm">
-            <input type="checkbox" :checked="ifConfirm" @click="ifConfirm = !ifConfirm">
+            <input type="checkbox" :checked="clientDatdlis.ifConfirmMail"
+              @click="clientDatdlis.ifConfirmMail = !clientDatdlis.ifConfirmMail">
             <span>לקבלת מתכונים, טיפים ומבצעים לדוא"ל</span>
           </div>
 
@@ -42,8 +43,11 @@
       <div class="w-100 border-top mt-5">
         <p>ב.ל סברס שיווק בע"מ</p>
         <p>ח.פ. 516069135</p>
-        <p><i class="fas fa-mobile-alt"></i> <a class="text-decoration-none" href="tel:0526070675"> 0526070675</a> </p>
-        <p>
+        <p class="m-0"><i class="fas fa-mobile-alt"></i> <a class="text-decoration-none" href="tel:0537234223"> 0537234223</a> </p>
+        <p class="m-0">שעות מענה טלפוני:</p>
+        <p class="m-0">ימים א-ה: 9:00 - 18:00</p>
+        <p class="m-0">יום ו: 10:00 - 13:00</p>
+        <p class="mt-3">
           <i class="fab fa-instagram h1"></i>
           <a
             href="https://www.facebook.com/napoli.oven.il/?__tn__=%2Cd%2CP-R&eid=ARAZokdIjzsZ4vZNMygiFQkyPLRRFrasxpFNiUCIhgwgD6_gfbXwOGZCbl0PJH3tjZODw30-sK0D7Die"><i
@@ -65,9 +69,9 @@
     components: {},
     data() {
       return {
-        ifConfirm: true,
+        // ifConfirm: true,
         clientDatdlis: {
-
+          ifConfirmMail: true,
         },
         textSend: "שלח טופס"
       }
@@ -81,10 +85,12 @@
     },
     methods: {
       async sendMail() {
-         if (this.textSend === "שלח טופס") {
+        if (this.textSend === "שלח טופס") {
           this.textSend = "המתן..."
           await myMail.sendToMail(this.clientDatdlis, null, "יצירת קשר נאפולי");
-          this.clientDatdlis = {};
+          this.clientDatdlis = {
+            ifConfirmMail: true,
+          };
           this.textSend = "שלח טופס"
         }
       }
