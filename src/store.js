@@ -111,7 +111,7 @@ export default new Vuex.Store({
     freeMessenger: false,
     PercentageOfDiscount: 0,
     ifAutoModel: false,
-    blockAutoModel: false,
+    blockAutoModel: true,
     codeCoupon: ""
   },
   getters: {
