@@ -17,7 +17,12 @@
       </div>
     </Modal>
     <div class="box-product">
-      <img class="star" src="../assets/ass31.png" alt="">
+      <div class="star">
+         <div class="w-100 center-all position-relative">
+         <img class="w-100" src="../assets/ass31.png" alt="">
+         <h5 class="text-center w-100 m-0">PIZZA DAY PRICE!</h5>
+         </div>
+      </div>
       <div class="row mt-3">
         <div class="col-md-6 center-all">
           <img class="w-100" :src="product.img" alt="">
@@ -123,6 +128,13 @@
     top: -30px;
     right: -30px;
     transform: rotate(20deg);
+  }
+
+  .star h5 {
+    position: absolute;
+    font-weight: 800;
+    font-size: 17px;
+    text-shadow: 0 0 2px white;
   }
 
   h4 span {
