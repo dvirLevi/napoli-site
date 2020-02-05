@@ -151,6 +151,9 @@ myClass: String,
       padding: 15px;
       width: 77%;
     }
+    .modal-con-b {
+    width: 77%;
+  }
 
   }
 </style>

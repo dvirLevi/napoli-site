@@ -1,6 +1,10 @@
 <template>
   <ModalTransition myClass="modal-transition-b" @customEvent="$emit('customEvent')">
-    <h2 class="text-center mt-3 text-white opas">מבצע מיוחד בנאפולי ישראל לכבוד יום הפיצה הבינלאומי</h2>
+    <div class="w-100 center-all">
+      <img src="../assets/ass20.jpg" alt="" class="opas">
+    </div>
+    <h2 class="text-center mt-3 text-white opas">מבצע מיוחד בנאפולי ישראל </h2>
+    <h1 class="text-center mt-3 text-white opas"> לכבוד יום הפיצה הבינלאומי</h1>
     <h4 class="text-center mt-3 text-white opas">עד ה-10.2.2020 או עד גמר המלאי</h4>
     <div class="w-100 center-all">
         <firework class="opas"/>
@@ -60,6 +64,10 @@
     font-size: 70px;
   }
 
+   h1 {
+    font-size: 75px;
+  }
+
   .opas {
     animation-name: opas;
     animation-duration: 7s;
@@ -87,6 +95,9 @@
     h2 {
       font-size: 35px;
     }
+     h1 {
+    font-size: 38px;
+  }
 
     h3 {
       font-size: 20px;

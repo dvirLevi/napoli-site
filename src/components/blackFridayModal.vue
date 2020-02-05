@@ -8,7 +8,9 @@
     </div>
     <div class="w-100 center-all">
       <h2 class="text-center mt-3 text-white">לכבוד יום הפיצה הבינלאומי
-מבצע לוהט בנאפולי ישראל!</h2>
+</h2>
+<h1 class="text-center mt-3 text-white">
+מבצע לוהט בנאפולי ישראל!</h1>
     <h3 class="text-center text-white">מחירים מטורללים עד ל-10.2.2020 בלבד! 
 המבצע עד גמר המלאי!</h3>
     </div>
@@ -71,6 +73,10 @@
     font-size: 70px;
   }
 
+   h1 {
+    font-size: 75px;
+  }
+
   @media (max-width: 767.98px) {
     img {
       width: 100%;
@@ -79,6 +85,9 @@
     h2 {
       font-size: 35px;
     }
+     h1 {
+    font-size: 38px;
+  }
 
     h3 {
       font-size: 20px;
