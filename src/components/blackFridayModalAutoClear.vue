@@ -1,7 +1,7 @@
 <template>
   <ModalTransition myClass="modal-transition-b" @customEvent="$emit('customEvent')">
-    <h2 class="text-center mt-3 text-white opas">מבצע סוף שנה בנאפולי ישראל</h2>
-    <h4 class="text-center mt-3 text-white opas">עד ה-1.1.2020 או עד גמר המלאי</h4>
+    <h2 class="text-center mt-3 text-white opas">מבצע מיוחד בנאפולי ישראל לכבוד יום הפיצה הבינלאומי</h2>
+    <h4 class="text-center mt-3 text-white opas">עד ה-10.2.2020 או עד גמר המלאי</h4>
     <div class="w-100 center-all">
         <firework class="opas"/>
     </div>

@@ -6,9 +6,12 @@
     <div class="w-100 center-all">
       <img src="../assets/ass20.jpg" alt="">
     </div>
-    <h2 class="text-center mt-3 text-white">מבצע סוף שנה מטורף בנאפולי ישראל!</h2>
-    <h3 class="text-center text-white">מחירים מטורללים עד ל-1.1.2020 בלבד! 
-הזדרזו! המבצע עד גמר המלאי!</h3>
+    <div class="w-100 center-all">
+      <h2 class="text-center mt-3 text-white">לכבוד יום הפיצה הבינלאומי
+מבצע לוהט בנאפולי ישראל!</h2>
+    <h3 class="text-center text-white">מחירים מטורללים עד ל-10.2.2020 בלבד! 
+המבצע עד גמר המלאי!</h3>
+    </div>
     <router-link to="/store" tag="h3" class="text-white mt-4 c-p" ><h3 @click="closeModal" class="text-primary">קנו עכשיו בחנות האתר >>></h3></router-link>
     <div class="w-100 center-all">
       <firework />
