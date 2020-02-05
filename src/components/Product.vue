@@ -135,6 +135,7 @@
     font-weight: 800;
     font-size: 17px;
     text-shadow: 0 0 2px white;
+        direction: ltr;
   }
 
   h4 span {
