@@ -1,10 +1,10 @@
 <template>
   <ModalTransition myClass="modal-transition-b" @customEvent="$emit('customEvent')">
-    <div class="w-100 center-all">
-      <img src="../assets/ass20.jpg" alt="" class="opas">
-    </div>
-    <h2 class="text-center mt-3 text-white opas">מבצע מיוחד בנאפולי ישראל </h2>
-    <h1 class="text-center mt-3 text-white opas"> לכבוד יום הפיצה הבינלאומי</h1>
+    //<div class="w-100 center-all">
+     // <img src="../assets/ass20.jpg" alt="" class="opas">
+  //  </div>
+    <h2 class="text-center mt-3 text-white mb-0 opas">מבצע מיוחד בנאפולי ישראל </h2>
+    <h1 class="text-center text-white opas"> לכבוד יום הפיצה הבינלאומי</h1>
     <h4 class="text-center mt-3 text-white opas">עד ה-10.2.2020 או עד גמר המלאי</h4>
     <div class="w-100 center-all">
         <firework class="opas"/>
