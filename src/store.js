@@ -176,7 +176,7 @@ export default new Vuex.Store({
             state.ifAutoModel = true;
           }
           state.blockAutoModel = true;
-        }, 3000)
+        }, 1500)
       }
     },
     closeAutoModel(state) {
