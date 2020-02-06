@@ -7,9 +7,9 @@
       <img src="../assets/ass20.jpg" alt="">
     </div>
     <div class="w-100 center-all">
-      <h2 class="text-center mt-3 text-white">לכבוד יום הפיצה הבינלאומי
+      <h2 class="text-center mt-3 text-white mb-0">לכבוד יום הפיצה הבינלאומי
 </h2>
-<h1 class="text-center mt-3 text-white">
+<h1 class="text-center  text-white">
 מבצע לוהט בנאפולי ישראל!</h1>
     <h3 class="text-center text-white">מחירים מטורללים עד ל-10.2.2020 בלבד! 
 המבצע עד גמר המלאי!</h3>
