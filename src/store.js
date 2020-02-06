@@ -92,7 +92,7 @@ export default new Vuex.Store({
         description: "",
         specifications: `<li>עסקה נאפוליטנית במחיר משתלם במיוחד!</li>`,
         addCart: false,
-        price: 1870,
+        price: 1850,
         previousPrice: 2290,
         amount: 0,
         ifSize: false,
