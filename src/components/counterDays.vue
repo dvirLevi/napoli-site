@@ -40,7 +40,7 @@
         minutes: "",
         seconds: "",
         // ifCounter: true
-        date: new Date("nov 5, 2019 10:00:00")
+        date: new Date("February 11, 2020 00:00:00")
       }
     },
     created() {
