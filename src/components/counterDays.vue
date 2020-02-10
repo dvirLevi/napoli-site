@@ -19,7 +19,7 @@
           <h3 class="w-100">{{days}}</h3>
         </div>
       </div>
-      <h2 class="text-center w-100">לסיום מבצע ההשקה</h2>
+      <h2 class="text-center w-100">לסיום מבצע יום הפיצה הבינלאומי</h2>
     </div>
   </div>
 </template>
@@ -40,7 +40,7 @@
         minutes: "",
         seconds: "",
         // ifCounter: true
-        date: new Date("February 11, 2020 00:00:00")
+        date: new Date("February 11, 2020 10:00:00")
       }
     },
     created() {
