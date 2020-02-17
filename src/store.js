@@ -110,6 +110,7 @@ export default new Vuex.Store({
     priceMessenger: 40,
     freeMessenger: false,
     PercentageOfDiscount: 0,
+    IntegerOfDiscount: 0,
     ifAutoModel: false,
     blockAutoModel: true,
     codeCoupon: ""
@@ -136,13 +137,28 @@ export default new Vuex.Store({
       }
       return 0
     },
+    ifNapoliDeal: (state, getters) => {
+      let ifNapoliDeal = getters.inCart.filter((val) => {
+        return val.id === 5
+      })
+      if (ifNapoliDeal.length) {
+        return true
+      }
+      return false
+    },
+    IntegerOfDiscount: (state, getters) => {
+      if (getters.ifNapoliDeal) {
+        return state.IntegerOfDiscount
+      }
+      return 0
+    },
     PayablePlusDiscount: (state, getters) => {
       if (getters.discount) {
         let x = getters.Payable / 100;
         let y = x * getters.discount
-        return getters.Payable - y;
+        return getters.Payable - y - getters.IntegerOfDiscount;
       }
-      return getters.Payable;
+      return getters.Payable - getters.IntegerOfDiscount;
     },
     Payable: (state, getters) => {
       let Payable = 0;
@@ -195,6 +211,10 @@ export default new Vuex.Store({
     IfCodeTrue(state, n) {
       state.ifCode = true;
       state.PercentageOfDiscount = n;
+    },
+    IfCodeTrueInteger(state, n) {
+      state.ifCode = true;
+      state.IntegerOfDiscount = n;
     },
     IfCodeDiscountMessengerTrue(state, n) {
       state.ifCode = true;
