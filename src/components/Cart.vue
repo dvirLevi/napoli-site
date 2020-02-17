@@ -39,6 +39,8 @@
       <codeDiscount />
       <div class="center-all row">
         <h6 class="w-100 text-center" v-if="discount">הנחת קופון: {{discount}}%- </h6>
+        <h6 class="w-100 text-center" v-if="IntegerOfDiscount">הנחת קופון: ₪{{IntegerOfDiscount}}- </h6>
+        
         <p class="w-100 text-center">סה"כ: {{PayablePlusDiscount}} ₪</p>
       </div>
       <div class="center-all row">
@@ -82,6 +84,9 @@
       discount() {
         return this.$store.getters.discount
       },
+      IntegerOfDiscount() {
+        return this.$store.getters.IntegerOfDiscount
+      }
     },
     methods: {
       openCart() {
