@@ -31,7 +31,7 @@
             <!-- <h2>מבער גז</h2> -->
              <TitleAndBorderR>בטיחות ואחריות</TitleAndBorderR>
             <ul>
-            <li>טאבון הנאפולי בטוח לחלוטין לשימוש והוא בעל תקן אירופאי מחמיר CE</li>
+            <li>טאבון הנאפולי בטוח לחלוטין לשימוש והוא בעל תקן אירופאי מחמיר <img src="../assets/ass21.png" alt=""></li>
             <li>בעל יציבה מושלמת: 4 רגליים מתקפלות חזקות במיוחד</li>
             <li>מתנייד בקלות, ניתן להנחה על כל משטח</li>
             <li>דפנות כפולות ומבודדות, לשמירת החום בתוך תא האפייה</li>
@@ -77,20 +77,24 @@
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-  .left-side img {
+  /* .left-side img {
     width: 25%;
-  }
+  } */
 
   .block-text {
     width: 75%;
     /* text-align: center; */
   }
 
+   li img {
+      width: 40px;
+    }
+
 
   @media (max-width: 767.98px) {
-    .left-side img {
+    /* .left-side img {
       width: 100%;
-    }
+    } */
 
     .block-text {
       width: 100%;
@@ -100,6 +104,8 @@
       font-weight: bold;
       font-size: 18px
     }
+
+   
 
   }
 </style>
