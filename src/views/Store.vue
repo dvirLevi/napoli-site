@@ -1,7 +1,14 @@
 <template>
-  <div class="row mt-3 row-all">
-    <counterDays/>
-    <Product v-for="product in products" :product="product" :key="product.id" />
+  <div>
+    <div class="row mt-3 row-all">
+      <div class="col">
+        <counterDays />
+        <videoTop plase="store" />
+        <div class="row">
+          <Product v-for="product in products" :product="product" :key="product.id" />
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -10,13 +17,15 @@
   import counterDays from '@/components/counterDays.vue'
   import Product from '@/components/Product.vue'
   import analyticsPages from '@/helpers/analyticsPages.js'
+  import videoTop from '@/components/videoTop.vue'
 
 
   export default {
     name: 'Store',
     components: {
       Product,
-      counterDays
+      counterDays,
+      videoTop
     },
     data() {
       return {
@@ -24,11 +33,11 @@
       }
     },
     mounted() {
-       fbq('track', 'ViewContent', {
-        content_name: this.$route.name, 
+      fbq('track', 'ViewContent', {
+        content_name: this.$route.name,
       });
       analyticsPages(this.$route.name);
-      this.$store.commit('upAutoModel')
+      this.$store.commit('upAutoModel', this.$route.name)
     },
     computed: {
       products() {

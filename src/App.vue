@@ -42,5 +42,5 @@
 </script>
 
 <style>
-  #app {}
+  
 </style>

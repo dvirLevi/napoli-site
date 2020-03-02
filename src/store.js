@@ -113,6 +113,7 @@ export default new Vuex.Store({
     IntegerOfDiscount: 0,
     ifAutoModel: false,
     blockAutoModel: true,
+    aleadyUp: [],
     codeCoupon: ""
   },
   getters: {
@@ -168,7 +169,7 @@ export default new Vuex.Store({
       return Payable
     },
     ifMinPayable: (state, getters) => {
-      if(getters.Payable >= state.products[0].price){
+      if (getters.Payable >= state.products[0].price) {
         return true
       }
       return false
@@ -181,13 +182,21 @@ export default new Vuex.Store({
     pushNameCode(state, nameCode) {
       state.codeCoupon = nameCode
     },
-    upAutoModel(state) {
-      if (state.blockAutoModel) {
+    upAutoModel(state, routeName) {
+      let ifRoute = ""
+      state.aleadyUp.map((val) => {
+        if (val === routeName) {
+          ifRoute = routeName
+        }
+      })
+
+      if (state.blockAutoModel && !ifRoute.length) {
         state.blockAutoModel = false;
         setTimeout(() => {
           state.ifAutoModel = true;
           state.blockAutoModel = true;
-        }, 7000)
+          state.aleadyUp.push(routeName)
+        }, 5000)
       }
     },
     closeAutoModel(state) {

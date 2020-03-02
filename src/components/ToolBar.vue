@@ -28,7 +28,7 @@
         </div>
 
         <Hamburger :ifMenu="ifMenu" @openClose="ifMenu = !ifMenu" />
-        <router-link class="" tag="div" to="/">
+        <router-link class="" tag="div" to="/store">
           <img src="../assets/napoli_logo.jpg" alt="">
         </router-link>
       </div>

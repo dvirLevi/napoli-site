@@ -16,7 +16,7 @@
         </div>
       </div>
     </Modal>
-    <div class="box-product">
+    <div class="box-product center-all">
       <div class="row mt-3">
         <div class="col-md-6 center-all">
           <img class="w-100" :src="product.img" alt="">
@@ -24,7 +24,8 @@
         <div class="col-md-6 ">
           <h3>{{product.name}}</h3>
           <p>{{product.price}} ₪</p>
-          <p class="more" @click="showModal = !showModal"><template v-if="product.ifSize">מידות ו</template>פרטים נוספים>></p>
+          <p class="more" @click="showModal = !showModal"><template v-if="product.ifSize">מידות ו</template>פרטים
+            נוספים>></p>
           <div class="center-all mb-3  mt-3">
             <ButtonLink @customEvent="addToCart(product)" text="הוסף לעגלת הקניות" link="/store" />
 
@@ -105,14 +106,26 @@
     box-shadow: 1px 1px 3px #c1c1c1;
     margin: 15px;
     padding: 17px;
+    height: auto;
+  }
+
+  @media (max-width: 1410px) {
+    .box-product {
+      height: 395px;
+    }
   }
 
   @media (max-width: 767.98px) {
     .row-all {
       padding: 0% 0%;
     }
+
     ul {
       padding-right: 25px;
+    }
+
+    .box-product {
+      height: auto;
     }
   }
 </style>

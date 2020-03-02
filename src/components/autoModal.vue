@@ -7,8 +7,8 @@
       <img src="../assets/ass20.jpg" alt="">
     </div>
     <h2 class="text-center mt-3">גם אתם התאהבתם בטאבון הנאפולי שלנו?</h2>
-    <h3 class="text-center">בקשו מאיתנו עוד היום קוד קופון מיוחד וקבלו הנחה משתלמת!</h3>
     <div class="w-100 center-all">
+      <h2 class="text-center">צרו איתנו קשר ב - </h2>
       <div class="wrap-w center-all w m-3">
         <a href="https://api.whatsapp.com/send?phone=972537234223" target="_blanc">
           <i class="fab fa-whatsapp"></i>
@@ -18,6 +18,9 @@
         <a href="https://m.me/napoli.oven.il">
           <i class="fab fa-facebook-messenger"></i>
         </a>
+      </div>
+      <div class="w-100 center-all">
+        <h2 class="text-center">וקבלו מיד קוד קופון מיוחד להנחה משתלמת!</h2>
       </div>
     </div>
   </Modal>
@@ -35,8 +38,8 @@
     props: {
 
     },
-    methods:{
-      closeModal(){
+    methods: {
+      closeModal() {
         this.$store.commit('closeAutoModel')
       }
     }
@@ -72,9 +75,11 @@
     img {
       width: 100%;
     }
+
     h2 {
       font-size: 21px;
     }
+
     h3 {
       font-size: 18px;
     }

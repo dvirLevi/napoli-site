@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="row" :style="{backgroundColor: BColor}">
+    <div class="row mt-5" :style="{backgroundColor: BColor}">
       <div class="col center-all">
         <div class="center-all wrap-video" :class="[width]">
           <!-- <video type="video/mp4" ref="videoVol" :src="srcVideo" playsinline=""

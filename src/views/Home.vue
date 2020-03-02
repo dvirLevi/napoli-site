@@ -54,7 +54,7 @@
       });
       analyticsPages('/');
 
-      this.$store.commit('upAutoModel')
+      this.$store.commit('upAutoModel', this.$route.name)
     }
 
   }
