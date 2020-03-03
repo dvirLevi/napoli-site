@@ -4,7 +4,7 @@
       <span class="h3 c-p" @click="closeModal">x</span>
     </div>
     <div class="w-100 center-all">
-      <img src="../assets/ass20.jpg" alt="">
+      <img src="../assets/ass22.png" alt="">
     </div>
     <h2 class="text-center mt-3">גם אתם התאהבתם בטאבון הנאפולי שלנו?</h2>
     <div class="w-100 center-all">

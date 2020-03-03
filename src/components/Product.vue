@@ -27,8 +27,7 @@
           <p class="more" @click="showModal = !showModal"><template v-if="product.ifSize">מידות ו</template>פרטים
             נוספים>></p>
           <div class="center-all mb-3  mt-3">
-            <ButtonLink @customEvent="addToCart(product)" text="הוסף לעגלת הקניות" link="/store" />
-
+            <ButtonLink @customEvent="addToCart(product)" text="הוסף לעגלת הקניות" link="/store" class="h5" />
           </div>
         </div>
       </div>
