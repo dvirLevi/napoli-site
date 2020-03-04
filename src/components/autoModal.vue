@@ -78,6 +78,7 @@
 
     h2 {
       font-size: 21px;
+      width: 100%;
     }
 
     h3 {
