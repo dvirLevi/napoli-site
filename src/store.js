@@ -206,7 +206,7 @@ export default new Vuex.Store({
           // }
           state.blockAutoModel = true;
           state.aleadyUp.push(routeName)
-        }, 5000)
+        }, 3000)
       }
     },
     closeAutoModel(state) {
