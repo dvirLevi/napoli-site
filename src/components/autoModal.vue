@@ -1,19 +1,21 @@
 <template>
-  <Modal>
+  <!-- <ModalTransition> -->
+    <ModalTransition myClass="modal-transition">
     <div class="w-100 right-all">
       <span class="h3 c-p" @click="closeModal">x</span>
     </div>
     <div class="w-100 center-all">
       <img src="../assets/ass20.jpg" alt="">
     </div>
-    <h2 class="text-center mt-3">כולם בבית? נמאס כבר מפתיתים ופיצה מקפיצה במיקרוגל? 
-עכשיו זה הזמן להתחיל להכין פיצות גורמה בטאבון ביתי אמיתי!</h2>
+    <h2 class="text-center mt-3">כולם בבית? נמאס כבר מפיצה מקפיצה במיקרוגל?</h2>
+    <h2 class="text-center ">עכשיו הזמן להתחיל להכין פיצות גורמה</h2>
+    <h2 class="text-center ">בטאבון ביתי אמיתי!</h2>
     <div class="w-100 center-all">
       <div class="w-100 center-all mt-3 link" @click="closeModal">
-        <router-link to="/Store" class="text-center h3" >מבצע מיוחד לימי הקורונה בחנות האתר. רכשו עכשיו והטאבון יגיע אליכם עם שליח מהיר >></router-link>
+        <router-link to="/Store" class="text-center h3" ><h4 class="m-0">מבצע מיוחד לימי הקורונה בחנות האתר.</h4> <h4>רכשו עכשיו והטאבון יגיע אליכם עם שליח מהיר >></h4></router-link>
       </div>
       <h2 class="text-center h4">שאלות נוספות? צרו איתנו קשר בוואטספ - </h2>
-      <div class="wrap-w center-all w m-3">
+      <div class="wrap-w center-all w m-1">
         <a href="https://api.whatsapp.com/send?phone=972537234223" target="_blanc">
           <i class="fab fa-whatsapp"></i>
         </a>
@@ -27,17 +29,17 @@
         <h2 class="text-center">וקבלו מיד קוד קופון מיוחד להנחה משתלמת!</h2>
       </div> -->
     </div>
-  </Modal>
+  </ModalTransition>
 </template>
 
 <script>
   // @ is an alias to /src
-
+  import ModalTransition from '@/components/ModalTransition.vue'
 
   export default {
     name: 'autoModal',
     components: {
-
+ModalTransition
     },
     props: {
 
@@ -88,12 +90,16 @@
     }
 
     h2 {
-      font-size: 21px;
+      font-size: 18px;
       width: 100%;
     }
 
     h3 {
       font-size: 18px;
     }
+
+    .link a h4{
+    font-size: 18px;
+  }
   }
 </style>

@@ -129,11 +129,12 @@ myClass: String,
 
   /* Modal Content */
   .modal-con {
-    background-color: #000000;
+    background-color: #ffffff;
     margin: auto;
     padding: 30px;
     /* border: 1px solid #888; */
-    width: 60%;
+    width: 40%;
+    border: 3px dashed rgb(82, 82, 82);
   }
 
   .modal-con-b {
