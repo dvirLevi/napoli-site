@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
 import postService from '@/Services/postService.js'
-import router from './router'
+// import router from './router'
 
 
 Vue.use(Vuex)
@@ -43,7 +43,7 @@ export default new Vuex.Store({
         גובה: 31.5 ס"מ<br>
         </li><li><span class="border-bottom border-dark">משקל:</span><br> 12.5 ק"ג</li><li><span class="border-bottom border-dark">שטח אבן האפייה:</span><br>רוחב: 31.75 ס"מ <br>עומק: 34.29 ס"מ </li>`,
         addCart: false,
-        price: 1390,
+        price: 1490,
         previousPrice: 1690,
         amount: 0,
         ifSize: true,
@@ -56,7 +56,7 @@ export default new Vuex.Store({
         specifications: `<li>מבער גז עוצמתי, תוכנן ועוצב במיוחד לתנור נאפולי</li><li>חיבור פשוט ומהיר לתנור</li><li>מתלהט לטמפרטורה של 450 מעלות תוך כ-15 דקות בלבד</li><li>חסכוני בגז – כ-420 גרם בלבד לשעת בעירה</li><li>מספק אש חזקה, יציבה ונקייה לכל אורך השימוש</li><li>כפתור הצתה בטיחותי</li><li>שליטה מלאה על עוצמת הלהבות</li><li>מבער הגז מגיע עם וסת גז אופציונלי (ניתן להרכיב וסתים אחרים בהתאם לסוג הבלון שברשותכם)
         </li><li>הרכבה באחריות הלקוח, באמצעות טכנאי גז כנדרש ע"פ דין</li><li>אורך:  26.5 ס"מ; רוחב: 15 ס"מ</li>`,
         addCart: false,
-        price: 299,
+        price: 290,
         previousPrice: 390,
         amount: 0,
         ifSize: true,
@@ -68,7 +68,7 @@ export default new Vuex.Store({
         description: "",
         specifications: `<li>כיסוי נאפולי ייעודי לשמירת התנור מאבק ולכלוך, ולהגנה מפני פגעי מזג האוויר</li><li>שוליים נמתחים להידוק הכיסוי סביב תחתית התנור</li>`,
         addCart: false,
-        price: 69,
+        price: 50,
         previousPrice: 90,
         amount: 0,
         ifSize: false,
@@ -80,7 +80,7 @@ export default new Vuex.Store({
         description: "",
         specifications: `<li>מותאמת במיוחד למידות התנור</li><li>כוללת חרירים ייעודיים לעודפי הקמח ולאוורור תחתית הפיצה</li>`,
         addCart: false,
-        price: 149,
+        price: 100,
         previousPrice: 190,
         amount: 0,
         ifSize: false,
@@ -92,7 +92,7 @@ export default new Vuex.Store({
         description: "",
         specifications: `<li>עסקה נאפוליטנית במחיר משתלם במיוחד!</li>`,
         addCart: false,
-        price: 1850,
+        price: 1890,
         previousPrice: 2290,
         amount: 0,
         ifSize: false,
@@ -200,10 +200,10 @@ export default new Vuex.Store({
       if (state.blockAutoModel && !ifRoute.length) {
         state.blockAutoModel = false;
         setTimeout(() => {
-          console.log(router.history.current.name)
-          if (router.history.current.name !== "store") {
+          // console.log(router.history.current.name)
+          // if (router.history.current.name !== "store") {
             state.ifAutoModel = true;
-          }
+          // }
           state.blockAutoModel = true;
           state.aleadyUp.push(routeName)
         }, 5000)

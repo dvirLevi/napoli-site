@@ -4,24 +4,28 @@
       <span class="h3 c-p" @click="closeModal">x</span>
     </div>
     <div class="w-100 center-all">
-      <img src="../assets/ass22.png" alt="">
+      <img src="../assets/ass20.jpg" alt="">
     </div>
-    <h2 class="text-center mt-3">גם אתם התאהבתם בטאבון הנאפולי שלנו?</h2>
+    <h2 class="text-center mt-3">כולם בבית? נמאס כבר מפתיתים ופיצה מקפיצה במיקרוגל? 
+עכשיו זה הזמן להתחיל להכין פיצות גורמה בטאבון ביתי אמיתי!</h2>
     <div class="w-100 center-all">
-      <h2 class="text-center">צרו איתנו קשר ב - </h2>
+      <div class="w-100 center-all mt-3 link" @click="closeModal">
+        <router-link to="/Store" class="text-center h3" >מבצע מיוחד לימי הקורונה בחנות האתר. רכשו עכשיו והטאבון יגיע אליכם עם שליח מהיר >></router-link>
+      </div>
+      <h2 class="text-center h4">שאלות נוספות? צרו איתנו קשר בוואטספ - </h2>
       <div class="wrap-w center-all w m-3">
         <a href="https://api.whatsapp.com/send?phone=972537234223" target="_blanc">
           <i class="fab fa-whatsapp"></i>
         </a>
       </div>
-      <div class="wrap-w center-all f m-3">
+      <!-- <div class="wrap-w center-all f m-3">
         <a href="https://m.me/napoli.oven.il">
           <i class="fab fa-facebook-messenger"></i>
         </a>
-      </div>
-      <div class="w-100 center-all">
+      </div> -->
+      <!-- <div class="w-100 center-all">
         <h2 class="text-center">וקבלו מיד קוד קופון מיוחד להנחה משתלמת!</h2>
-      </div>
+      </div> -->
     </div>
   </Modal>
 </template>
@@ -69,6 +73,13 @@
 
   .w {
     background-color: #2cb742;
+  }
+
+  .link a {
+    color: #1a0dab;
+    text-decoration: underline;
+    cursor: pointer;
+    font-weight: 500 !important;
   }
 
   @media (max-width: 767.98px) {

@@ -25,11 +25,11 @@
     data() {
       return {
         myCode: "",
-        code: 'napoli-sale',
+        code: '!@#asd#@!',
         codeGush: '!@#asd#@!',
-        codeSpecial: 'special-napoli',
-        codeBezza: 'bezza-napoli',
-        napoli200: 'napoli200'
+        codeSpecial: '!@#asd#@!',
+        codeBezza: '!@#asd#@!',
+        napoli200: '!@#asd#@!'
       }
     },
     computed: {
