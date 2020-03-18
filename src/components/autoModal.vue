@@ -11,8 +11,8 @@
     <h2 class="text-center ">עכשיו הזמן להתחיל להכין פיצות גורמה</h2>
     <h2 class="text-center ">בטאבון ביתי אמיתי!</h2>
     <div class="w-100 center-all">
-      <div class="w-100 center-all mt-3 link" @click="closeModal">
-        <router-link to="/Store" class="text-center h3" ><h4 class="m-0">מבצע מיוחד לימי הקורונה בחנות האתר.</h4> <h4>רכשו עכשיו והטאבון יגיע אליכם עם שליח מהיר >></h4></router-link>
+      <div class="w-100 center-all mt-2 link" @click="closeModal">
+        <router-link to="/Store" class="text-center h3" ><h4 class="m-0">מבצע מיוחד לימי הקורונה <span>בחנות האתר.</span></h4> <h4>רכשו עכשיו והטאבון יגיע אליכם עם שליח מהיר >></h4></router-link>
       </div>
       <h2 class="text-center h4">שאלות נוספות? צרו איתנו קשר בוואטספ - </h2>
       <div class="wrap-w center-all w m-1">
@@ -77,11 +77,22 @@ ModalTransition
     background-color: #2cb742;
   }
 
-  .link a {
+   h2 {
+      font-size: 24px;
+      width: 100%;
+    }
+
+  .link a h4{
     color: #1a0dab;
-    text-decoration: underline;
+    /* text-decoration: underline; */
     cursor: pointer;
     font-weight: 500 !important;
+    font-size: 27px;
+  }
+
+  .link a h4 span{
+    text-decoration: underline;
+   
   }
 
   @media (max-width: 767.98px) {
@@ -95,7 +106,7 @@ ModalTransition
     }
 
     h3 {
-      font-size: 18px;
+      font-size: 20px;
     }
 
     .link a h4{
