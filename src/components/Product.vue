@@ -17,12 +17,12 @@
       </div>
     </Modal>
     <div class="box-product">
-      <div class="star">
+      <!-- <div class="star">
          <div class="w-100 center-all position-relative">
          <img class="w-100" src="../assets/ass31.png" alt="">
          <h5 class="text-center w-100 m-0">PIZZA DAY PRICE!</h5>
          </div>
-      </div>
+      </div> -->
       <div class="row mt-3">
         <div class="col-md-6 center-all">
           <img class="w-100" :src="product.img" alt="">
@@ -30,7 +30,7 @@
         <div class="col-md-6 ">
           <h3>{{product.name}}</h3>
           <p>מחיר <span class="line-on-text">{{product.previousPrice}} ₪</span></p>
-          <h4 class=""><span class="font-weight-normal"> מחיר מיוחד ליום הפיצה הבינלאומי </span> <span>₪{{product.price}}</span></h4>
+          <h4 class=""><span class="font-weight-normal"> מחיר מיוחד לימים לא פשוטים! </span> <span>₪{{product.price}}</span></h4>
           <p class="more" @click="showModal = !showModal"><template v-if="product.ifSize">מידות ו</template>פרטים נוספים>></p>
           <div class="center-all mb-3  mt-3">
             <ButtonLink @customEvent="addToCart(product)" text="הוסף לעגלת הקניות" link="/store" />
