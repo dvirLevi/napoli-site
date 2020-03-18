@@ -33,8 +33,7 @@
           <h4 class=""><span class="font-weight-normal"> מחיר מיוחד לימים לא פשוטים! </span> <span>₪{{product.price}}</span></h4>
           <p class="more" @click="showModal = !showModal"><template v-if="product.ifSize">מידות ו</template>פרטים נוספים>></p>
           <div class="center-all mb-3  mt-3">
-            <ButtonLink @customEvent="addToCart(product)" text="הוסף לעגלת הקניות" link="/store" />
-
+            <ButtonLink @customEvent="addToCart(product)" text="הוסף לעגלת הקניות" link="/store" class="h5" />
           </div>
         </div>
       </div>
@@ -146,6 +145,7 @@
     .row-all {
       padding: 0% 0%;
     }
+
     ul {
       padding-right: 25px;
     }

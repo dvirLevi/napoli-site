@@ -1,8 +1,14 @@
 <template>
-  <div class="row mt-3 row-all">
-    <counterDays />
-    <Product v-for="product in products" :product="product" :key="product.id" />
-    <blackFridayModalAutoClear v-if="ifModalStore" @customEvent="ifModalStore = false" />
+  <div>
+    <div class="row mt-3 row-all">
+      <div class="col">
+        <counterDays />
+        <videoTop plase="store" />
+        <div class="row">
+          <Product v-for="product in products" :product="product" :key="product.id" />
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -11,6 +17,7 @@
   import Product from '@/components/Product.vue'
   import analyticsPages from '@/helpers/analyticsPages.js'
   import blackFridayModalAutoClear from '@/components/blackFridayModalAutoClear.vue'
+  import videoTop from '@/components/videoTop.vue'
 
 
   export default {
@@ -18,7 +25,8 @@
     components: {
       Product,
       counterDays,
-      blackFridayModalAutoClear
+      blackFridayModalAutoClear,
+      videoTop
     },
     data() {
       return {
@@ -30,10 +38,7 @@
         content_name: this.$route.name,
       });
       analyticsPages(this.$route.name);
-      // this.$store.commit('upAutoModel')
-      setTimeout(() => {
-        this.ifModalStore = false
-      }, 7000)
+      this.$store.commit('upAutoModel', this.$route.name)
     },
     computed: {
       products() {

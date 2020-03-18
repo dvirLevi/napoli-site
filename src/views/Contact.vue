@@ -81,7 +81,7 @@
         content_name: this.$route.name,
       });
       analyticsPages(this.$route.name);
-      this.$store.commit('upAutoModel')
+      // this.$store.commit('upAutoModel')
     },
     methods: {
       async sendMail() {

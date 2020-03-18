@@ -61,7 +61,7 @@
           <input id="email" name="email" :value="clientDatdlis.mail">
           <input id="city" name="city" :value="clientDatdlis.city">
           <input id="address" name="address"
-            :value="clientDatdlis.address +' '+ clientDatdlis.namHome +' '+ clientDatdlis.mikod">
+            :value="clientDatdlis.address +' '+ clientDatdlis.namHome +' '+ codeCouponName">
           <input id="json_purchase_data" name="json_purchase_data" :value="JSonProducts">
           <input id="u71" name="u71" value="1">
           <button type="submit"></button>
@@ -69,7 +69,7 @@
         <div class="center-all w-100">
           <h4 class="w-100 text-center">תשלומים</h4>
           <div class="center-all select-num-payment">
-            <v-select class="w-100" :clearable="false" dir="rtl" :options="['1 ', '2', '3', '4', '5 ', '6', '7', '8', '9', '10']" v-model="numPay">
+            <v-select class="w-100" :clearable="false" dir="rtl" :options="['1', '2', '3', '4', '5 ', '6', '7', '8', '9', '10']" v-model="numPay">
             </v-select>
             <p class="w-100" v-if="ifCredit == 8">תשלום ראשון: {{firstPayAmount}} ₪</p>
             <p class="w-100" v-if="ifCredit == 8">שאר התשלומים: {{namPayAmount}} ₪</p>
@@ -201,6 +201,9 @@
       },
       messenger() {
         return this.$store.state.messenger
+      },
+      codeCouponName() {
+        return this.$store.state.codeCoupon
       },
       discount() {
         return this.$store.getters.discount

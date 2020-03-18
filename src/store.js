@@ -54,7 +54,7 @@ export default new Vuex.Store({
         img: require("@/assets/ass16.png"),
         description: "",
         specifications: `<li>מבער גז עוצמתי, תוכנן ועוצב במיוחד לתנור נאפולי</li><li>חיבור פשוט ומהיר לתנור</li><li>מתלהט לטמפרטורה של 450 מעלות תוך כ-15 דקות בלבד</li><li>חסכוני בגז – כ-420 גרם בלבד לשעת בעירה</li><li>מספק אש חזקה, יציבה ונקייה לכל אורך השימוש</li><li>כפתור הצתה בטיחותי</li><li>שליטה מלאה על עוצמת הלהבות</li><li>מבער הגז מגיע עם וסת גז אופציונלי (ניתן להרכיב וסתים אחרים בהתאם לסוג הבלון שברשותכם)
-        </li><li>אורך:  26.5 ס"מ; רוחב: 15 ס"מ</li>`,
+        </li><li>הרכבה באחריות הלקוח, באמצעות טכנאי גז כנדרש ע"פ דין</li><li>אורך:  26.5 ס"מ; רוחב: 15 ס"מ</li>`,
         addCart: false,
         price: 299,
         previousPrice: 390,
@@ -114,9 +114,14 @@ export default new Vuex.Store({
     messenger: true,
     priceMessenger: 40,
     ifCode: false,
+    // priceMessenger: 40,
+    freeMessenger: false,
     PercentageOfDiscount: 0,
+    IntegerOfDiscount: 0,
     ifAutoModel: false,
     blockAutoModel: true,
+    aleadyUp: [],
+    codeCoupon: ""
   },
   getters: {
     inCart: state => {
@@ -140,13 +145,28 @@ export default new Vuex.Store({
       }
       return 0
     },
+    ifNapoliDeal: (state, getters) => {
+      let ifNapoliDeal = getters.inCart.filter((val) => {
+        return val.id === 5
+      })
+      if (ifNapoliDeal.length) {
+        return true
+      }
+      return false
+    },
+    IntegerOfDiscount: (state, getters) => {
+      if (getters.ifNapoliDeal) {
+        return state.IntegerOfDiscount
+      }
+      return 0
+    },
     PayablePlusDiscount: (state, getters) => {
       if (getters.discount) {
         let x = getters.Payable / 100;
         let y = x * getters.discount
-        return getters.Payable - y;
+        return getters.Payable - y - getters.IntegerOfDiscount;
       }
-      return getters.Payable;
+      return getters.Payable - getters.IntegerOfDiscount;
     },
     Payable: (state, getters) => {
       let Payable = 0;
@@ -156,7 +176,7 @@ export default new Vuex.Store({
       return Payable
     },
     ifMinPayable: (state, getters) => {
-      if(getters.Payable >= state.products[0].price){
+      if (getters.Payable >= state.products[0].price) {
         return true
       }
       return false
@@ -166,9 +186,18 @@ export default new Vuex.Store({
     showCart(state) {
       state.ifCart = !state.ifCart
     },
-    upAutoModel(state) {
-      // console.log(router.history.current.name)
-      if (state.blockAutoModel) {
+    pushNameCode(state, nameCode) {
+      state.codeCoupon = nameCode
+    },
+    upAutoModel(state, routeName) {
+      let ifRoute = ""
+      state.aleadyUp.map((val) => {
+        if (val === routeName) {
+          ifRoute = routeName
+        }
+      })
+
+      if (state.blockAutoModel && !ifRoute.length) {
         state.blockAutoModel = false;
         setTimeout(() => {
           console.log(router.history.current.name)
@@ -176,7 +205,8 @@ export default new Vuex.Store({
             state.ifAutoModel = true;
           }
           state.blockAutoModel = true;
-        }, 1500)
+          state.aleadyUp.push(routeName)
+        }, 5000)
       }
     },
     closeAutoModel(state) {
@@ -208,8 +238,13 @@ export default new Vuex.Store({
       state.ifCode = true;
       state.PercentageOfDiscount = n;
     },
+    IfCodeTrueInteger(state, n) {
+      state.ifCode = true;
+      state.IntegerOfDiscount = n;
+    },
     IfCodeDiscountMessengerTrue(state, n) {
       state.ifCode = true;
+      state.freeMessenger = true;
       state.priceMessenger = n;
     },
   },

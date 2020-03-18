@@ -20,7 +20,7 @@
               </div>
             </div>
           </div>
-          <template v-if="products.length">
+         <template v-if="products.length">
             <div class="w-100 center-all border-top p-4">
               <p class="w-100" v-if="discount">הנחת קופון: {{discount}}%-</p>
               <p class="w-100">סה"כ: {{PayablePlusDiscount}} ₪</p>
@@ -31,11 +31,11 @@
             </div>
             <div class="w-100 center-all border-top">
               <p class="w-100" v-if="!ifMinPayable">מחיר מינימום למשלוח {{minPrice}} ₪</p>
-              <p class="w-100" v-else-if="ifCode && !priceMessenger">משלוח חינם</p>
-
-              <template >
+              <p class="w-100" v-if="freeMessenger && ifMinPayable">משלוח חינם</p>
+              <template>
                 <div class="w-100 center-all mt-3 confirm">
-                  <input type="checkbox" :checked="!priceMessenger && !ifCode || !ifMinPayable" @click="ifMessenger" required>
+                  <input type="checkbox" :checked="!messenger || !ifMinPayable" @click="ifMessenger"
+                    required :disabled="!ifMinPayable || freeMessenger">
                   <p>איסוף עצמי</p>
                 </div>
                 <p class="w-100 text-center">כתובת לאיסוף: רחוב שמריהו לוין 13, ירושלים. בתיאום מראש. </p>
@@ -156,6 +156,9 @@
       clientDatdlis() {
         return this.$store.state.clientDatdlis
       },
+      freeMessenger(){
+        return this.$store.state.freeMessenger
+      },
       Payable() {
         return this.$store.getters.Payable
       },
@@ -164,6 +167,12 @@
       },
       ifMinPayable() {
         return this.$store.getters.ifMinPayable
+      },
+      ifMinPayable() {
+        return this.$store.getters.ifMinPayable
+      },
+      minPrice() {
+        return this.$store.state.products[0].price
       },
       discount() {
         return this.$store.getters.discount
