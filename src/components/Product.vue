@@ -155,8 +155,8 @@
       padding-right: 25px;
     }
      .star {
-    width: 120px;
-    height: 120px;
+    width: 100px;
+    height: 100px;
 
     right: -10px;
   }
