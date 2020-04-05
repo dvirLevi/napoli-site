@@ -16,13 +16,14 @@
         </div>
       </div>
     </Modal>
-    <div class="box-product">
-      <!-- <div class="star">
+    <div class="box-product ">
+      <div class="star center-all" v-if="product.name === 'תנור פיצה נאפולי' || product.name === 'עסקה נאפוליטנית בהנחה: תנור + מבער + מרדה + כיסוי'">
          <div class="w-100 center-all position-relative">
-         <img class="w-100" src="../assets/ass31.png" alt="">
-         <h5 class="text-center w-100 m-0">PIZZA DAY PRICE!</h5>
+         <!-- <img class="w-100" src="../assets/ass31.png" alt=""> -->
+         <h5 class="text-center w-100 m-0" v-if="product.name === 'תנור פיצה נאפולי'">אזל זמנית מהמלאי</h5>
+         <h5 class="text-center w-100 m-0" v-else>אזל חלקית מהמלאי</h5>
          </div>
-      </div> -->
+      </div>
       <div class="row mt-3">
         <div class="col-md-6 center-all">
           <img class="w-100" :src="product.img" alt="">
@@ -124,16 +125,19 @@
   .star {
     position: absolute;
     width: 150px;
+    height: 150px;
     z-index: 2;
     top: -30px;
     right: -30px;
     transform: rotate(20deg);
+    border-radius: 100px;
+    background-color: #bebebe;
   }
 
   .star h5 {
-    position: absolute;
+    /* position: absolute; */
     font-weight: 800;
-    font-size: 17px;
+    font-size: 21px;
     text-shadow: 0 0 2px white;
         direction: ltr;
   }
@@ -152,7 +156,14 @@
     }
      .star {
     width: 120px;
+    height: 120px;
+
     right: -10px;
+  }
+  .star h5 {
+    
+    font-size: 18px;
+   
   }
   }
 </style>
