@@ -7,21 +7,24 @@
     <div class="w-100 center-all">
       <img src="../assets/ass20.jpg" alt="">
     </div>
-    <h2 class="text-center mt-3">רוצים להכין בבית פיצות איטלקיות לוהטות טריות ומפנקות?</h2>
-    <h2 class="text-center ">עכשיו זה בדיוק הזמן לרכוש</h2>
-    <h2 class="text-center font-weight-bold">טאבון ביתי אמיתי!</h2>
+    <h2 class="text-center mt-3">הקורונה השאירה אותנו בלי מלאי במחסנים... 🙂</h2>
+    <h2 class="text-center ">אבל אל דאגה, המלאי יתחדש בעוד מספר שבועות!</h2>
+    <h2 class="text-center font-weight-bold">שלחו לנו הודעת וואטספ עם המילים "אנא עדכנו אותי", וניידע אתכם מיד כשהמלאי יתחדש.</h2>
+    <h2 class="text-center font-weight-bold">שווה לכם לחכות לטאבון המהמם שלנו  😎</h2>
     <div class="w-100 center-all">
-      <div class="w-100 center-all mt-2 link" @click="closeModal">
+      <!-- <div class="w-100 center-all mt-2 link" @click="closeModal">
         <router-link to="/Store" class="text-center h3">
           <h4 class="m-0">מבצע משוגע לימים משוגעים <span>בחנות האתר</span>.</h4>
           <h4>הזמינו עכשיו והטאבון יגיע אליכם עם שליח מהיר >></h4>
         </router-link>
-      </div>
-      <h2 class="text-center h4">שאלות נוספות? צרו איתנו קשר בוואטספ - </h2>
+      </div> -->
+      <div class="center-all w-100">
+        <h3 class="text-center h4">שלחו הודעה - </h3>
       <div class="wrap-w center-all w m-1">
         <a href="https://api.whatsapp.com/send?phone=972537234223" target="_blanc">
           <i class="fab fa-whatsapp"></i>
         </a>
+      </div>
       </div>
       <!-- <div class="wrap-w center-all f m-3">
         <a href="https://m.me/napoli.oven.il">
@@ -32,10 +35,10 @@
         <h2 class="text-center">וקבלו מיד קוד קופון מיוחד להנחה משתלמת!</h2>
       </div> -->
     </div>
-    <div class="stompa center-all">
+    <!-- <div class="stompa center-all">
       פריטים אחרונים
       במלאי
-    </div>
+    </div> -->
   </ModalTransition>
 </template>
 
