@@ -21,7 +21,7 @@
 
     },
     props: {
-myClass: String,
+      myClass: String,
     },
     data() {
       return {
@@ -34,8 +34,8 @@ myClass: String,
       // }, 3000)
     },
     computed: {
-      bucCon(){
-        if(this.myClass === "modal-transition"){
+      bucCon() {
+        if (this.myClass === "modal-transition") {
           return "modal-con"
         }
         return "modal-con-b"
@@ -67,7 +67,7 @@ myClass: String,
     /* Fallback color */
     animation-name: black-screen;
     animation-duration: 3s;
-     
+
   }
 
   @keyframes black-screen {
@@ -101,7 +101,7 @@ myClass: String,
     /* Fallback color */
     animation-name: black-screen-b;
     animation-duration: 7s;
-     
+
   }
 
   @keyframes black-screen-b {
@@ -153,9 +153,10 @@ myClass: String,
       padding: 15px;
       width: 77%;
     }
+
     .modal-con-b {
-    width: 77%;
-  }
+      width: 77%;
+    }
 
   }
 </style>

@@ -5,12 +5,14 @@
       <span class="h3 c-p" @click="closeModal">x</span>
     </div>
     <div class="w-100 center-all">
-      <img src="../assets/ass20.jpg" alt="">
+      <img src="../assets/ass201.jpg" alt="">
     </div>
-    <h2 class="text-center mt-3">הקורונה השאירה אותנו בלי מלאי במחסנים... 🙂</h2>
-    <h2 class="text-center ">אבל אל דאגה, המלאי יתחדש בעוד מספר שבועות!</h2>
-    <h2 class="text-center font-weight-bold">שלחו לנו הודעת וואטספ עם המילים "אנא עדכנו אותי", וניידע אתכם מיד כשהמלאי יתחדש.</h2>
-    <h2 class="text-center font-weight-bold">שווה לכם לחכות לטאבון המהמם שלנו  😎</h2>
+    <h2 class="text-center mt-3">בעוד כמה שבועות זה קורה...</h2>
+    <h2 class="text-center ">מלאי חדש מגיע לארץ!!!</h2>
+    <h2 class="text-center ">תודה לכל השואלים, המתעניינים והממתינים!</h2>
+    <h2 class="text-center ">אם טרם שלחתם לנו הודעה, אז עכשיו זה הזמן:</h2>
+    <h2 class="text-center font-weight-bold">שלחו לנו הודעת וואטספ עם המילים "אנא עדכנו אותי", וניידע אתכם מיד כשהמלאי יגיע למחסנים שלנו.</h2>
+    <h2 class="text-center font-weight-bold">אפשרות לרכישה מוקדמת לפני כולם – בקרוב 😎</h2>
     <div class="w-100 center-all">
       <!-- <div class="w-100 center-all mt-2 link" @click="closeModal">
         <router-link to="/Store" class="text-center h3">

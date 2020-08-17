@@ -20,8 +20,8 @@
       <div class="star center-all" v-if="product.name === 'תנור פיצה נאפולי' || product.name === 'עסקה נאפוליטנית בהנחה: תנור + מבער + מרדה + כיסוי'">
          <div class="w-100 center-all position-relative">
          <!-- <img class="w-100" src="../assets/ass31.png" alt=""> -->
-         <h5 class="text-center w-100 m-0" v-if="product.name === 'תנור פיצה נאפולי'">אזל זמנית מהמלאי</h5>
-         <h5 class="text-center w-100 m-0" v-else>אזל חלקית מהמלאי</h5>
+         <h5 class="text-center w-100 m-0" v-if="product.name === 'תנור פיצה נאפולי'">בקרוב במלאי</h5>
+         <h5 class="text-center w-100 m-0" v-else>בקרוב במלאי</h5>
          </div>
       </div>
       <div class="row mt-3">
