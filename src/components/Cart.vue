@@ -1,53 +1,61 @@
 <template>
-  <div class="cart" v-show="payRoutCloseCart && ifCart">
-    <div class="arrow-up"></div>
-    <div class="w-100 over-scroll">
-      <div class="w-100 center-all">
-        <h5 class="m-0">עגלת קניות</h5>
+  <div class="bac-menu-cert" v-show="payRoutCloseCart && ifCart">
+    <div class="p-2 wrap-items f-center-between-column">
+      <!-- <div class="arrow-up"></div> -->
+      <!-- <div class="w-100 over-scroll"> -->
+      <div class="w-100">
+        <div class="w-100 center-all">
+        <h2 class="mb-3">עגלת קניות</h2>
       </div>
-      <div class="row center-all m-1 " v-if="products.length">
-        <div class="col-md-12 box-product mt-2" v-for="product in products" :key="product.id">
-          <div class="row center-all">
-            <div class="col-3 ">
-              <img class="w-100" :src="product.img" alt="">
-            </div>
-            <div class="col-9 text-center ">
-              <p>{{product.name}}</p>
-              <div class="w-100 center-all">
-                <p>{{product.price}} ₪</p>
-                <div @click.stop="product.amount++" class=" border-left butt-oper">
-                  +
-                </div>
-                <div>
-                  {{product.amount}}
-                </div>
-                <div @click.stop="product.amount--" class=" border-right butt-oper">
-                  -
+      <div class="w-100">
+        <div class="row center-all m-1 " v-if="products.length">
+          <div class="col-md-12 box-product mt-2" v-for="product in products" :key="product.id">
+            <div class="row center-all">
+              <div class="col-3 ">
+                <img class="w-100" :src="product.img" alt="">
+              </div>
+              <div class="col-9 text-center ">
+                <p>{{product.name}}</p>
+                <div class="w-100 center-all">
+                  <p>{{product.price}} ₪</p>
+                  <div @click.stop="product.amount++" class=" border-left butt-oper">
+                    +
+                  </div>
+                  <div>
+                    {{product.amount}}
+                  </div>
+                  <div @click.stop="product.amount--" class=" border-right butt-oper">
+                    -
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-      <div v-else>
-        <div class="row pt-5">
-          <div class="col-12 center-all font-weight-bold">
-            <p>אין מוצרים בעגלה</p>
+        <div v-else>
+          <div class="row pt-5">
+            <div class="col-12 center-all font-weight-bold">
+              <p>אין מוצרים בעגלה</p>
+            </div>
           </div>
         </div>
       </div>
-      <codeDiscount />
-      <div class="center-all row">
-        <h6 class="w-100 text-center" v-if="discount">הנחת קופון: {{discount}}%- </h6>
-        <h6 class="w-100 text-center" v-if="IntegerOfDiscount">הנחת קופון: ₪{{IntegerOfDiscount}}- </h6>
-        
-        <p class="w-100 text-center">סה"כ: {{PayablePlusDiscount}} ₪</p>
       </div>
-      <div class="center-all row">
-        <ButtonLink v-if="products.length" @customEvent="openCart" text="חזרה לחנות" link="/store" />
-        <ButtonLink v-else @customEvent="openCart" text="לחנות" link="/store" />
-        <ButtonLink @customEvent="openCart" text="לתשלום מאובטח" link="/befor-pay" v-if="products.length" />
+      <div class="w-100">
+        <codeDiscount />
+        <div class="center-all row">
+          <h6 class="w-100 text-center" v-if="discount">הנחת קופון: {{discount}}%- </h6>
+          <h6 class="w-100 text-center" v-if="IntegerOfDiscount">הנחת קופון: ₪{{IntegerOfDiscount}}- </h6>
+
+          <p class="w-100 text-center">סה"כ: {{PayablePlusDiscount}} ₪</p>
+        </div>
+        <div class="center-all row">
+          <ButtonLink v-if="products.length" @customEvent="openCart" text="חזרה לחנות" link="/store" />
+          <ButtonLink v-else @customEvent="openCart" text="לחנות" link="/store" />
+          <ButtonLink @customEvent="openCart" text="לתשלום מאובטח" link="/befor-pay" v-if="products.length" />
+        </div>
       </div>
+      <!-- </div> -->
     </div>
   </div>
 </template>
@@ -98,20 +106,40 @@
 </script>
 
 <style scoped>
-  .cart {
-
-    position: absolute;
-    width: 360px;
-    z-index: 5;
-    top: 61px;
+  .bac-menu-cert {
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+    background: #3333338c;
     right: 0;
-    background-color: #f1f1f1;
+    top: 0;
+    height: 100%;
+
   }
 
-  /* .close-m {
+  .wrap-items {
     position: absolute;
-    cursor: pointer;
-  } */
+    right: 0;
+    top: 0;
+    width: 20%;
+    background: #ffffff;
+    height: 100%;
+    flex-direction: column;
+    animation-name: op;
+    animation-duration: 0.3s;
+    display: flex;
+  }
+
+
+  @keyframes op {
+    0% {
+      right: -100%;
+    }
+
+    100% {
+      right: 0%;
+    }
+  }
 
   .box-product {
     box-shadow: 1px 1px 3px #c1c1c1;
@@ -130,41 +158,47 @@
     padding: 0px 13px;
   }
 
-  .arrow-up {
-    position: absolute;
-    top: -23px;
-    right: 0px;
-    width: 0px;
-    height: 0px;
-    border-left: 15px solid transparent;
-    border-right: 15px solid transparent;
-    border-bottom: 24px solid #f1f1f1;
-    /* border-bottom: 24px solid #e0e0e0; */
-  }
-
-  h5 {
-    font-weight: 100;
-  }
-
   .over-scroll {
     /* overflow: auto; */
     padding: 10px;
     /* max-height: 600px */
   }
 
+
+
+
   @media (max-width: 767.98px) {
-    .cart {
-      width: 289px;
-      right: 6px;
+
+    .bac-menu-cert .title h1 {
+      padding: 15px;
+      font-size: 21px;
     }
 
-    .arrow-up {
-      top: -19px;
-      right: 0px;
-      border-left: 10px solid transparent;
-      border-right: 10px solid transparent;
-      border-bottom: 20px solid #f1f1f1;
+    .wrap-items {
+      width: 75%;
     }
 
+    .items-menu {
+      font-size: 18px;
+    }
+
+    .bac-menu-cert h3 {
+      font-size: 21px;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+    /* .box-img {
+      width: 100px;
+    } */
   }
 </style>

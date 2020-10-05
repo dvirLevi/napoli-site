@@ -29,7 +29,7 @@
 
         <Hamburger :ifMenu="ifMenu" @openClose="ifMenu = !ifMenu" />
         <router-link class="" tag="div" to="/">
-          <img src="../assets/napoli_logo.jpg" alt="">
+          <img src="https://cdn.shopify.com/s/files/1/0011/6195/3290/files/Bertello_FINAL2_use_cropped_100x.jpg" alt="">
         </router-link>
       </div>
     </div>

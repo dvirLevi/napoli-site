@@ -1,7 +1,7 @@
 <template>
   <div class="row pt-3 pb-3">
     <div class="col-12 mt-3 mb-2">
-       <TitleAndBorderC>מה תעשו עם הנאפולי שלכם?</TitleAndBorderC>
+       <TitleAndBorderC>מה תעשו עם הברטלו&#8209;נאפולי שלכם?</TitleAndBorderC>
     </div>
     <div class="col-md-4">
       <div class="row">
@@ -25,7 +25,7 @@
       <div class="row">
         <div class="col">
           <TitleAndBorderR>סטייק מושלם</TitleAndBorderR>
-          <p>בחום האדיר של טאבון <span>נאפולי</span> תוכלו לצלות את הנתח האהוב עליכם באיכות מדהימה. לא לשכוח בירה קרה
+          <p>בחום האדיר של טאבון <span>הברטלו&#8209;נאפולי</span> תוכלו לצלות את הנתח האהוב עליכם באיכות מדהימה. לא לשכוח בירה קרה
             בצד</p>
         </div>
       </div>
@@ -39,7 +39,7 @@
       <div class="row">
         <div class="col">
           <TitleAndBorderR>ירקות גורמה</TitleAndBorderR>
-          <p>עם קצת שמן זית ותבלינים, הכינו את לקט הירקות האהוב עליכם בתנור הנאפולי</p>
+          <p>עם קצת שמן זית ותבלינים, הכינו את לקט הירקות האהוב עליכם בתנור הברטלו&#8209;נאפולי</p>
         </div>
       </div>
     </div>
