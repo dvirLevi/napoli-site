@@ -1,5 +1,5 @@
 <template>
-  <div class="col-md-6 box-all">
+  <div class="col-md-6 box-all p-md-2 p-0 ">
     <Modal v-if="showModal" @customEvent="showModal = !showModal">
       <div class="">
         <h3 class="w-100 text-center">{{product.name}}</h3>
@@ -24,8 +24,7 @@
         <div class="col-md-6 ">
           <h3>{{product.name}}</h3>
           <p>{{product.price}} ₪</p>
-          <p class="more" @click="showModal = !showModal"><template v-if="product.ifSize">מידות ו</template>פרטים
-            נוספים>></p>
+          <p class="more" @click="showModal = !showModal">לחץ כאן למידע נוסף>></p>
           <div class="center-all mb-3  mt-3">
             <ButtonLink @customEvent="addToCart(product)" text="הוסף לעגלת הקניות" link="/store" class="h5" />
           </div>
@@ -105,7 +104,8 @@
     box-shadow: 1px 1px 3px #c1c1c1;
     margin: 15px;
     padding: 17px;
-    height: auto;
+    height: 100%;
+    width: 100%;
   }
 
   @media (max-width: 1410px) {
@@ -125,6 +125,7 @@
 
     .box-product {
       height: auto;
+    width: auto;
     }
   }
 </style>

@@ -52,7 +52,7 @@
         <div class="center-all row">
           <ButtonLink v-if="products.length" @customEvent="openCart" text="חזרה לחנות" link="/store" />
           <ButtonLink v-else @customEvent="openCart" text="לחנות" link="/store" />
-          <ButtonLink @customEvent="openCart" text="לתשלום מאובטח" link="/befor-pay" v-if="products.length" />
+          <ButtonLink @customEvent="openCart" text="לתשלום מאובטח" link="/before-pay" v-if="products.length" />
         </div>
       </div>
       <!-- </div> -->

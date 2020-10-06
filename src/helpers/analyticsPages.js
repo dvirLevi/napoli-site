@@ -20,7 +20,7 @@ const analyticsPages = (route) => {
         'currency': 'ILS'
       });
     }
-    if (route === "befor-pay") {
+    if (route === "before-pay") {
       gtag_report_conversion()
     }
   }

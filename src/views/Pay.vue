@@ -40,7 +40,7 @@
           <div class="col">
             <div class="center-all w-100">
               <ButtonLink text="חזרה לחנות" link="/store" />
-              <ButtonLink link="/befor-pay" text="לעריכת פרטים אישיים" />
+              <ButtonLink link="/before-pay" text="לעריכת פרטים אישיים" />
             </div>
           </div>
         </div>
@@ -99,7 +99,7 @@
     },
     created() {
       if (!this.$store.state.nextPayment) {
-        this.$router.push('befor-pay')
+        this.$router.push('before-pay')
       }
     },
     mounted() {
