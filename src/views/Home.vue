@@ -3,6 +3,9 @@
     <counterDays />
     <div class="row">
       <div class="col">
+        <div class="w-100 f-center">
+          <h2 class="text-center">טאבון Napoli האהוב השתדרג עם שם חדש! קבלו את Bertello🔥!!! </h2>
+        </div>
         <div class="w-100 center-all mb-2">
           <img src="../assets/ass1.jpg" alt="">
         </div>
@@ -11,6 +14,7 @@
     <OnNapoli />
     <RecipesLink />
     <ReelPizza />
+    <iconsBanner />
     <GasBurner />
     <videoTop />
     <FoodImages />
@@ -33,6 +37,7 @@
   import 'aos/dist/aos.css'
   import analyticsPages from '@/helpers/analyticsPages.js'
   import counterDays from '@/components/counterDays.vue'
+  import iconsBanner from '@/components/iconsBanner.vue'
 
 
   export default {
@@ -46,7 +51,8 @@
       SoWhy,
       FoodImages,
       RecipesLink,
-      counterDays
+      counterDays,
+      iconsBanner
     },
     mounted() {
       fbq('track', 'ViewContent', {
