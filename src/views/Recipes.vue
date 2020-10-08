@@ -21,7 +21,7 @@
       </div>
       <div class="col-md-6">
         <videoBottom width="width-video-100" BColor="#ffffff"
-          srcVideo="videos/v1.mp4" />
+          srcVideo="videos/v2.mp4" />
       </div>
     </div>
     <div class="row  part-shulders row-modals">
