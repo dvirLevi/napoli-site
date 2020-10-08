@@ -16,7 +16,11 @@
         </div>
       </div>
     </Modal>
+    
     <div class="box-product center-all">
+      <div class="label f-center" v-if="product.label">
+      {{product.label}}
+    </div>
       <div class="row mt-3">
         <div class="col-md-6 center-all">
           <img class="w-100" :src="product.img" alt="">
@@ -101,11 +105,26 @@
   }
 
   .box-product {
+    position: relative;
     box-shadow: 1px 1px 3px #c1c1c1;
     margin: 15px;
     padding: 17px;
     height: 100%;
     width: 100%;
+  }
+
+  .label {
+   position: absolute;
+    top: -8px;
+    right: -8px;
+    background-color: #ca6645;
+    color: #fff;
+    height: 51px;
+    width: 140px;
+    padding: 4px;
+    font-size: 14px;
+    text-align: center;
+        z-index: 1;
   }
 
   @media (max-width: 1410px) {

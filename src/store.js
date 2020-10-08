@@ -45,6 +45,7 @@ export default new Vuex.Store({
         price: 1590,
         amount: 0,
         ifSize: true,
+        label: "מלאי חדש במבצע!",
         id: 1
       },
       {
@@ -57,6 +58,7 @@ export default new Vuex.Store({
         price: 390,
         amount: 0,
         ifSize: true,
+        label: "",
         id: 2
       },
       {
@@ -68,6 +70,7 @@ export default new Vuex.Store({
         price: 90,
         amount: 0,
         ifSize: false,
+        label: "",
         id: 3
       },
       {
@@ -79,10 +82,11 @@ export default new Vuex.Store({
         price: 190,
         amount: 0,
         ifSize: false,
+        label: "",
         id: 4
       },
       {
-        name: "מגירה משולבת פחמים+גז לתנור ברטלו",
+        name: "מגירה משולבת פחמים + גז לתנור ברטלו",
         img: require("@/assets/ass24.jpg"),
         description: "",
         specifications: `<li>אביזר ייחודי של ברטלו. </li><li>מאפשר הבערה בו זמנית של גז ועצים, לקבלת טעם מעושן אמיתי של הפיצה. </li><li>חיבור נוח של תא פחמים פנימי למבער הגז החיצוני.</li><li>מומלץ! </li>`,
@@ -90,6 +94,7 @@ export default new Vuex.Store({
         price: 175,
         amount: 0,
         ifSize: false,
+        label: "מוצר חדש!",
         id: 6
       },
       {
@@ -101,6 +106,7 @@ export default new Vuex.Store({
         price: 175,
         amount: 0,
         ifSize: false,
+        label: "",
         id: 7
       },
       {
@@ -112,6 +118,7 @@ export default new Vuex.Store({
         price: 1890,
         amount: 0,
         ifSize: false,
+        label: "מלאי חדש במבצע!",
         id: 5
       },
       {
@@ -123,6 +130,7 @@ export default new Vuex.Store({
         price: 2020,
         amount: 0,
         ifSize: false,
+        label: "מלאי חדש במבצע!",
         id: 8
       },
     ],
