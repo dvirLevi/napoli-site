@@ -4,7 +4,7 @@
     <div class="row">
       <div class="col">
         <div class="w-100 f-center">
-          <h2 class="text-center">טאבון Napoli האהוב השתדרג עם שם חדש! קבלו את Bertello🔥!!! </h2>
+          <h4 class="text-center">טאבון Napoli האהוב השתדרג עם שם חדש! קבלו את Bertello🔥 </h4>
         </div>
         <div class="w-100 center-all mb-2">
           <img src="../assets/ass1.jpg" alt="">
@@ -20,11 +20,13 @@
     <FoodImages />
     <SoWhy />
     <videoBottom width="width-video-50"
-      srcVideo=" https://res.cloudinary.com/dpdl5lxxb/video/upload/v1569263055/Napoli-Pizza_urm29r.mp4" />
+      srcVideo="videos/v1.mp4" />
   </div>
 </template>
 
 <script>
+  /* eslint-disable */
+
   // @ is an alias to /src
   import OnNapoli from '@/components/OnNapoli.vue'
   import ReelPizza from '@/components/ReelPizza.vue'

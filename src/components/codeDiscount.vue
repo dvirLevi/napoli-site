@@ -29,7 +29,8 @@
         codeGush: '!@#asd#@!',
         codeSpecial: 'special-napoli',
         codeBezza: 'bezza-napoli',
-        napoli200: 'napoli200'
+        napoli200: 'napoli200',
+        hours: "48hours"
       }
     },
     computed: {
@@ -64,6 +65,11 @@
             // this.$store.commit('IfCodeDiscountMessengerTrue', 0)
             this.$store.commit('pushNameCode', this.myCode.toLowerCase())
 
+          } else if (this.myCode.toLowerCase() === this.hours) {
+            this.$store.commit('IfCodeTrueInteger', 50)
+            // this.$store.commit('IfCodeDiscountMessengerTrue', 0)
+            this.$store.commit('pushNameCode', this.myCode.toLowerCase())
+
           } else {
             this.$store.commit('IfCodeFalse')
           }
@@ -87,6 +93,11 @@
 
         } else if (this.myCode.toLowerCase() === this.napoli200 && this.ifNapoliDeal) {
           this.$store.commit('IfCodeTrueInteger', 200)
+          // this.$store.commit('IfCodeDiscountMessengerTrue', 0)
+          this.$store.commit('pushNameCode', this.myCode.toLowerCase())
+
+        } else if (this.myCode.toLowerCase() === this.hours) {
+          this.$store.commit('IfCodeTrueInteger', 50)
           // this.$store.commit('IfCodeDiscountMessengerTrue', 0)
           this.$store.commit('pushNameCode', this.myCode.toLowerCase())
 

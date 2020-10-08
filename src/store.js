@@ -83,7 +83,7 @@ export default new Vuex.Store({
       },
       {
         name: "מגירה משולבת פחמים+גז לתנור ברטלו",
-        img: require("@/assets/ass15.jpg"),
+        img: require("@/assets/ass24.jpg"),
         description: "",
         specifications: `<li>אביזר ייחודי של ברטלו. </li><li>מאפשר הבערה בו זמנית של גז ועצים, לקבלת טעם מעושן אמיתי של הפיצה. </li><li>חיבור נוח של תא פחמים פנימי למבער הגז החיצוני.</li><li>מומלץ! </li>`,
         addCart: false,
@@ -94,7 +94,7 @@ export default new Vuex.Store({
       },
       {
         name: "אבן אפייה לתנור ברטלו",
-        img: require("@/assets/ass15.jpg"),
+        img: require("@/assets/ass25.jpg"),
         description: "",
         specifications: `<li>אבן קורדיאריט מינרלית ייחודית ואיכותית במיוחד (מכונה גם אבן שמוט) </li><li>אוגרת את החום בתנור ומפזרת אותו באופן אחיד</li><li>מעניקה תחתית פריכה למאפים</li>`,
         addCart: false,
@@ -109,14 +109,14 @@ export default new Vuex.Store({
         description: "",
         specifications: `<li>עסקה איטלקית במחיר משתלם במיוחד!</li>`,
         addCart: false,
-        price: 2190,
+        price: 1890,
         amount: 0,
         ifSize: false,
         id: 5
       },
       {
-        name: "עסקה איטלקית בהנחה: תנור+מבער+מרדה+מגירה משולבת+כיסוי",
-        img: require("@/assets/ass19.jpg"),
+        name: "עסקה איטלקית בהנחה: תנור + מבער + מרדה + מגירה משולבת + כיסוי",
+        img: require("@/assets/ass26.jpg"),
         description: "",
         specifications: `<li>עסקה איטלקית במחיר משתלם במיוחד!</li>`,
         addCart: false,
@@ -182,6 +182,8 @@ export default new Vuex.Store({
     },
     IntegerOfDiscount: (state, getters) => {
       if (getters.ifNapoliDeal) {
+        return state.IntegerOfDiscount
+      } else if (!getters.ifNapoliDeal && state.IntegerOfDiscount < 200){
         return state.IntegerOfDiscount
       }
       return 0
@@ -255,6 +257,7 @@ export default new Vuex.Store({
       state.PercentageOfDiscount = n;
     },
     IfCodeTrueInteger(state, n) {
+      // alert()
       state.ifCode = true;
       state.IntegerOfDiscount = n;
     },

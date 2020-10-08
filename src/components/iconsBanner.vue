@@ -47,7 +47,7 @@
             id: 4
           },
           {
-            icon: "las la-smile-beam",
+            icon: "",
             text: "תו תקן אירופאי CE ",
             id: 5
           },

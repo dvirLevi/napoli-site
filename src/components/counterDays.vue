@@ -3,23 +3,23 @@
     <div class="w-100 center-all">
       <div class="w-100 center-all">
         <div class="el-time center-all">
-          <h3 class="w-100">שניות</h3>
-          <h3 class="w-100">{{seconds}}</h3>
+          <h4 class="w-100">שניות</h4>
+          <h4 class="w-100">{{seconds}}</h4>
         </div>
         <div class="el-time center-all">
-          <h3 class="w-100">דקות</h3>
-          <h3 class="w-100">{{minutes}}</h3>
+          <h4 class="w-100">דקות</h4>
+          <h4 class="w-100">{{minutes}}</h4>
         </div>
         <div class="el-time center-all">
-          <h3 class="w-100">שעות</h3>
-          <h3 class="w-100">{{hours}}</h3>
+          <h4 class="w-100">שעות</h4>
+          <h4 class="w-100">{{hours}}</h4>
         </div>
         <div class="el-time center-all">
-          <h3 class="w-100">ימים</h3>
-          <h3 class="w-100">{{days}}</h3>
+          <h4 class="w-100">ימים</h4>
+          <h4 class="w-100">{{days}}</h4>
         </div>
       </div>
-      <h2 class="text-center w-100">מבצע חגיגי לרגל קבלת המלאי החדש!</h2>
+      <h4 class="text-center w-100">מבצע חגיגי לרגל קבלת המלאי החדש!</h4>
     </div>
   </div>
 </template>
@@ -99,11 +99,15 @@
     font-size: 35px;
   }
 
+  h4 {
+    color: rgb(175, 76, 30);
+  }
+
   @media (max-width: 767.98px) {
     .el-time {
       border: solid rgb(0, 0, 0) 2px;
-      margin: 3px;
-      width: 75px;
+      margin: 0.9%;
+      width: 23%;
     }
 
     .el-time h3 {

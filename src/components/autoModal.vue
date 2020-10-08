@@ -4,7 +4,7 @@
       <span class="h3 c-p" @click="closeModal">x</span>
     </div>
     <div class="w-100 center-all">
-      <img src="../assets/ass22.png" alt="">
+      <img src="../assets/ass23.jpg" alt="">
     </div>
     <h3 class="text-center mt-3">חיכינו וחיכינו, והנה זה הגיע!!!</h3>
     <h3 class="text-center">מלאי חדש של תנורי נאפולי הגיע סוף-סוף לארץ!</h3>
