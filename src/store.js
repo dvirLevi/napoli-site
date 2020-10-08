@@ -58,7 +58,7 @@ export default new Vuex.Store({
         price: 390,
         amount: 0,
         ifSize: true,
-        label: "",
+        label: "מלאי חדש במבצע!",
         id: 2
       },
       {
@@ -70,7 +70,7 @@ export default new Vuex.Store({
         price: 90,
         amount: 0,
         ifSize: false,
-        label: "",
+        label: "מלאי חדש במבצע!",
         id: 3
       },
       {
@@ -82,7 +82,7 @@ export default new Vuex.Store({
         price: 190,
         amount: 0,
         ifSize: false,
-        label: "",
+        label: "מלאי חדש במבצע!",
         id: 4
       },
       {
@@ -106,7 +106,7 @@ export default new Vuex.Store({
         price: 175,
         amount: 0,
         ifSize: false,
-        label: "",
+        label: "מלאי חדש במבצע!",
         id: 7
       },
       {

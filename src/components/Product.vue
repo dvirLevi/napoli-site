@@ -16,11 +16,13 @@
         </div>
       </div>
     </Modal>
-    
+
     <div class="box-product center-all">
       <div class="label f-center" v-if="product.label">
-      {{product.label}}
-    </div>
+        <img class="w-100" src="@/assets/ass31.svg" alt="">
+        <h4>{{product.label}}</h4>
+        <!-- {{product.label}} -->
+      </div>
       <div class="row mt-3">
         <div class="col-md-6 center-all">
           <img class="w-100" :src="product.img" alt="">
@@ -114,17 +116,23 @@
   }
 
   .label {
-   position: absolute;
-    top: -8px;
-    right: -8px;
-    background-color: #ca6645;
+    position: absolute;
+    top: -84px;
+    right: -66px;
     color: #fff;
-    height: 51px;
-    width: 140px;
-    padding: 4px;
+    width: 206px;
+    -webkit-transform: rotate(20deg);
+    transform: rotate(20deg);
     font-size: 14px;
     text-align: center;
-        z-index: 1;
+    z-index: 1;
+  }
+
+  .label h4 {
+    position: absolute;
+    top: 50%;
+    font-size: 14px;
+    width: 50%;
   }
 
   @media (max-width: 1410px) {
@@ -144,7 +152,12 @@
 
     .box-product {
       height: auto;
-    width: auto;
+      width: auto;
+    }
+
+    .label {
+      top: -98px;
+      right: -31px;
     }
   }
 </style>
