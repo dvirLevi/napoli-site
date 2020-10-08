@@ -29,6 +29,8 @@
         </div>
         <div class="col-md-6 ">
           <h3>{{product.name}}</h3>
+          <p>מחיר <span class="line-on-text">{{product.previousPrice}} ₪</span></p>
+          <h4 class=""><span class="font-weight-normal">מבצע משוגע לימים משוגעים!</span></h4>
           <p>{{product.price}} ₪</p>
           <p class="more" @click="showModal = !showModal">לחץ כאן למידע נוסף>></p>
           <div class="center-all mb-3  mt-3">
