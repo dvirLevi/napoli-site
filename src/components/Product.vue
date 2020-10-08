@@ -31,7 +31,7 @@
           <h3>{{product.name}}</h3>
           <p><span class="line-on-text" v-if="product.previousPrice">{{product.previousPrice}} ₪</span></p>
           <h4 class=""><span class="font-weight-normal">מחיר מיוחד לימים מיוחדים</span></h4>
-          <p>{{product.price}} ₪</p>
+          <p class="font-weight-bold">{{product.price}} ₪</p>
           <p class="more" @click="showModal = !showModal">לחץ כאן למידע נוסף>></p>
           <div class="center-all mb-3  mt-3">
             <ButtonLink @customEvent="addToCart(product)" text="הוסף לעגלת הקניות" link="/store" class="h5" />

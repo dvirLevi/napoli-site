@@ -29,7 +29,7 @@ export default new Vuex.Store({
       },
     ],
     products: [{
-        name: "תנור פיצה ברטלו",
+        name: " תנור פיצה ברטלו (אבן אפייה כלולה)",
         img: require("@/assets/ass6.png"),
         description: `מושלם לאפיית פיצות גורמה, פוקצ'ות, בשרים, ירקות ודגים.
         עשוי מחומרים איכותיים ובעל עיצוב מושלם. 
@@ -82,7 +82,7 @@ export default new Vuex.Store({
         description: "",
         specifications: `<li>מותאמת במיוחד למידות התנור</li><li>כוללת חרירים ייעודיים לעודפי הקמח ולאוורור תחתית הפיצה</li>`,
         addCart: false,
-        price: 150,
+        price: 190,
         previousPrice: 150,
         amount: 0,
         ifSize: false,
@@ -96,6 +96,7 @@ export default new Vuex.Store({
         specifications: `<li>אביזר ייחודי של ברטלו. </li><li>מאפשר הבערה בו זמנית של גז ועצים, לקבלת טעם מעושן אמיתי של הפיצה. </li><li>חיבור נוח של תא פחמים פנימי למבער הגז החיצוני.</li><li>מומלץ! </li>`,
         addCart: false,
         price: 175,
+        previousPrice: 0,
         amount: 0,
         ifSize: false,
         label: "מוצר חדש!",
@@ -108,9 +109,10 @@ export default new Vuex.Store({
         specifications: `<li>אבן קורדיאריט מינרלית ייחודית ואיכותית במיוחד (מכונה גם אבן שמוט) </li><li>אוגרת את החום בתנור ומפזרת אותו באופן אחיד</li><li>מעניקה תחתית פריכה למאפים</li>`,
         addCart: false,
         price: 175,
+        previousPrice: 0,
         amount: 0,
         ifSize: false,
-        label: "מבצע",
+        label: "",
         id: 7
       },
       {
