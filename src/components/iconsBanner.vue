@@ -32,15 +32,16 @@
             id: 1
           },
           {
-            icon: "las la-shipping-fast",
-            text: "משלוח מהיר",
-            id: 2
-          },
-          {
             icon: "las la-fire-alt",
             text: "מתלהט במהירות",
             id: 3
           },
+          {
+            icon: "las la-shipping-fast",
+            text: "משלוח מהיר",
+            id: 2
+          },
+          
           {
             icon: "las la-lock",
             text: "רכישה מאובטחת",

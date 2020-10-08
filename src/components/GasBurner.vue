@@ -7,7 +7,7 @@
       <div class="row center-all">
         <div class="col center-all">
           <div class="block-text">
-            <TitleAndBorderR>מבער פחמים</TitleAndBorderR>
+            <TitleAndBorderR>תא פחמים נשלף</TitleAndBorderR>
             <p>תנור הפיצה <span>ברטלו</span> מגיע עם תא נירוסטה מעוצב, גדול וייחודי להבערת פחמים, עצים או שבבים. התא נפרד מחלל האפייה וניתן לשליפה בקלות. פתח הזנה בגג התנור מאפשר להוסיף בקלות עצים חדשים תוך כדי עבודה.</p>
           </div>
         </div>
