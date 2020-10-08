@@ -29,7 +29,8 @@ export default new Vuex.Store({
       },
     ],
     products: [{
-        name: `תנור פיצה ברטלו <br><span style="font-weight: normal">(אבן אפייה כלולה)</span>`,
+        // name: `תנור פיצה ברטלו <br><span style="font-weight: normal">(אבן אפייה כלולה)</span>`,
+        name: `תנור פיצה ברטלו`,
         img: require("@/assets/ass6.png"),
         description: `מושלם לאפיית פיצות גורמה, פוקצ'ות, בשרים, ירקות ודגים.
         עשוי מחומרים איכותיים ובעל עיצוב מושלם. 
@@ -102,19 +103,19 @@ export default new Vuex.Store({
         label: "מוצר חדש!",
         id: 6
       },
-      {
-        name: "אבן אפייה לתנור ברטלו",
-        img: require("@/assets/ass25.jpg"),
-        description: "",
-        specifications: `<li>אבן קורדיאריט מינרלית ייחודית ואיכותית במיוחד (מכונה גם אבן שמוט) </li><li>אוגרת את החום בתנור ומפזרת אותו באופן אחיד</li><li>מעניקה תחתית פריכה למאפים</li>`,
-        addCart: false,
-        price: 175,
-        previousPrice: 0,
-        amount: 0,
-        ifSize: false,
-        label: "",
-        id: 7
-      },
+      // {
+      //   name: "אבן אפייה לתנור ברטלו",
+      //   img: require("@/assets/ass25.jpg"),
+      //   description: "",
+      //   specifications: `<li>אבן קורדיאריט מינרלית ייחודית ואיכותית במיוחד (מכונה גם אבן שמוט) </li><li>אוגרת את החום בתנור ומפזרת אותו באופן אחיד</li><li>מעניקה תחתית פריכה למאפים</li>`,
+      //   addCart: false,
+      //   price: 175,
+      //   previousPrice: 0,
+      //   amount: 0,
+      //   ifSize: false,
+      //   label: "",
+      //   id: 7
+      // },
       {
         name: "עסקה נאפוליטנית בהנחה: תנור + מבער + מרדה + כיסוי",
         img: require("@/assets/ass19.jpg"),
