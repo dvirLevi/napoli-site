@@ -120,7 +120,7 @@ export default new Vuex.Store({
         description: "",
         specifications: `<li>עסקה איטלקית במחיר משתלם במיוחד!</li>`,
         addCart: false,
-        price: 2190,
+        price: 2020,
         amount: 0,
         ifSize: false,
         id: 8
@@ -183,7 +183,7 @@ export default new Vuex.Store({
     IntegerOfDiscount: (state, getters) => {
       if (getters.ifNapoliDeal) {
         return state.IntegerOfDiscount
-      } else if (!getters.ifNapoliDeal && state.IntegerOfDiscount < 200){
+      } else if (!getters.ifNapoliDeal && state.IntegerOfDiscount < 200 && getters.Payable > 1000){
         return state.IntegerOfDiscount
       }
       return 0

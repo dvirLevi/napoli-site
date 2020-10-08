@@ -45,6 +45,9 @@
       },
       ifNapoliDeal() {
         return this.$store.getters.ifNapoliDeal;
+      },
+      Payable() {
+        return this.$store.getters.Payable;
       }
     },
     watch: {
@@ -65,7 +68,7 @@
             // this.$store.commit('IfCodeDiscountMessengerTrue', 0)
             this.$store.commit('pushNameCode', this.myCode.toLowerCase())
 
-          } else if (this.myCode.toLowerCase() === this.hours) {
+          } else if (this.myCode.toLowerCase() === this.hours && this.Payable > 999) {
             this.$store.commit('IfCodeTrueInteger', 50)
             // this.$store.commit('IfCodeDiscountMessengerTrue', 0)
             this.$store.commit('pushNameCode', this.myCode.toLowerCase())
@@ -96,7 +99,7 @@
           // this.$store.commit('IfCodeDiscountMessengerTrue', 0)
           this.$store.commit('pushNameCode', this.myCode.toLowerCase())
 
-        } else if (this.myCode.toLowerCase() === this.hours) {
+        } else if (this.myCode.toLowerCase() === this.hours && this.Payable > 999) {
           this.$store.commit('IfCodeTrueInteger', 50)
           // this.$store.commit('IfCodeDiscountMessengerTrue', 0)
           this.$store.commit('pushNameCode', this.myCode.toLowerCase())

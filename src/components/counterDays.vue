@@ -19,7 +19,7 @@
           <h4 class="w-100">{{days}}</h4>
         </div>
       </div>
-      <h4 class="text-center w-100">מבצע חגיגי לרגל קבלת המלאי החדש!</h4>
+      <h4 class="text-center w-100">לסיום מבצע חידוש המלאי</h4>
     </div>
   </div>
 </template>

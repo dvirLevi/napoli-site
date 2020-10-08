@@ -28,7 +28,7 @@
         ifShowQues: true,
         icons: [{
             icon: "las la-pizza-slice",
-            text: "לאפייה איטלקית אמיתית",
+            text: "אפייה איטלקית אמיתית",
             id: 1
           },
           {

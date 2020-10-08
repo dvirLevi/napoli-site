@@ -168,7 +168,7 @@
         if (this.discount) {
           let vatDiscount = this.Payable - this.PayablePlusDiscount;
           json.push({
-            product_name: "הנחה 10%",
+            product_name: `הנחה ${this.discount}%`,
             product_quantity: 1,
             product_price: -this.vat(vatDiscount),
             // product_price: - vatDiscount,
