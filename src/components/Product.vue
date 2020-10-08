@@ -28,7 +28,7 @@
           <img class="w-100" :src="product.img" alt="">
         </div>
         <div class="col-md-6 ">
-          <h3>{{product.name}}</h3>
+          <h3 v-html="product.name"></h3>
           <p><span class="line-on-text" v-if="product.previousPrice">{{product.previousPrice}} ₪</span></p>
           <h4 class=""><span class="font-weight-normal">מחיר מיוחד לימים מיוחדים</span></h4>
           <p class="font-weight-bold">{{product.price}} ₪</p>

@@ -29,7 +29,7 @@ export default new Vuex.Store({
       },
     ],
     products: [{
-        name: " תנור פיצה ברטלו (אבן אפייה כלולה)",
+        name: " תנור פיצה ברטלו <br>(אבן אפייה כלולה)",
         img: require("@/assets/ass6.png"),
         description: `מושלם לאפיית פיצות גורמה, פוקצ'ות, בשרים, ירקות ודגים.
         עשוי מחומרים איכותיים ובעל עיצוב מושלם. 
@@ -82,8 +82,8 @@ export default new Vuex.Store({
         description: "",
         specifications: `<li>מותאמת במיוחד למידות התנור</li><li>כוללת חרירים ייעודיים לעודפי הקמח ולאוורור תחתית הפיצה</li>`,
         addCart: false,
-        price: 190,
-        previousPrice: 150,
+        price: 150,
+        previousPrice: 190,
         amount: 0,
         ifSize: false,
         label: "מבצע",
