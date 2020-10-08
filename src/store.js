@@ -42,10 +42,11 @@ export default new Vuex.Store({
         גובה: 31.5 ס"מ<br>
         </li><li><span class="border-bottom border-dark">משקל:</span><br> 12.5 ק"ג</li><li><span class="border-bottom border-dark">שטח אבן האפייה:</span><br>רוחב: 31.75 ס"מ <br>עומק: 34.29 ס"מ </li>`,
         addCart: false,
-        price: 1590,
+        price: 1490,
+        previousPrice: 1590,
         amount: 0,
         ifSize: true,
-        label: "מלאי חדש במבצע!",
+        label: "מבצע",
         id: 1
       },
       {
@@ -55,10 +56,11 @@ export default new Vuex.Store({
         specifications: `<li>מבער גז עוצמתי, תוכנן ועוצב במיוחד לתנור ברטלו</li><li>חיבור פשוט ומהיר לתנור</li><li>מתלהט לטמפרטורה של 450 מעלות תוך כ-15 דקות בלבד</li><li>חסכוני בגז – כ-420 גרם בלבד לשעת בעירה</li><li>מספק אש חזקה, יציבה ונקייה לכל אורך השימוש</li><li>כפתור הצתה בטיחותי</li><li>שליטה מלאה על עוצמת הלהבות</li><li>מבער הגז מגיע עם וסת גז אופציונלי (ניתן להרכיב וסתים אחרים בהתאם לסוג הבלון שברשותכם)
         </li><li>הרכבה באחריות הלקוח, באמצעות טכנאי גז כנדרש ע"פ דין</li><li>אורך:  26.5 ס"מ; רוחב: 15 ס"מ</li>`,
         addCart: false,
-        price: 390,
+        price: 290,
+        previousPrice: 390,
         amount: 0,
         ifSize: true,
-        label: "מלאי חדש במבצע!",
+        label: "מבצע",
         id: 2
       },
       {
@@ -67,10 +69,11 @@ export default new Vuex.Store({
         description: "",
         specifications: `<li>כיסוי ברטלו ייעודי לשמירת התנור מאבק ולכלוך, ולהגנה מפני פגעי מזג האוויר</li><li>שוליים נמתחים להידוק הכיסוי סביב תחתית התנור</li>`,
         addCart: false,
-        price: 90,
+        price: 50,
+        previousPrice: 90,
         amount: 0,
         ifSize: false,
-        label: "מלאי חדש במבצע!",
+        label: "מבצע",
         id: 3
       },
       {
@@ -79,10 +82,11 @@ export default new Vuex.Store({
         description: "",
         specifications: `<li>מותאמת במיוחד למידות התנור</li><li>כוללת חרירים ייעודיים לעודפי הקמח ולאוורור תחתית הפיצה</li>`,
         addCart: false,
-        price: 190,
+        price: 150,
+        previousPrice: 150,
         amount: 0,
         ifSize: false,
-        label: "מלאי חדש במבצע!",
+        label: "מבצע",
         id: 4
       },
       {
@@ -106,19 +110,20 @@ export default new Vuex.Store({
         price: 175,
         amount: 0,
         ifSize: false,
-        label: "מלאי חדש במבצע!",
+        label: "מבצע",
         id: 7
       },
       {
-        name: "עסקה איטלקית בהנחה: תנור + מבער + מרדה + כיסוי",
+        name: "עסקה נאפוליטנית בהנחה: תנור + מבער + מרדה + כיסוי",
         img: require("@/assets/ass19.jpg"),
         description: "",
         specifications: `<li>עסקה איטלקית במחיר משתלם במיוחד!</li>`,
         addCart: false,
         price: 1890,
+        previousPrice: 2190,
         amount: 0,
         ifSize: false,
-        label: "מלאי חדש במבצע!",
+        label: "מבצע",
         id: 5
       },
       {
@@ -128,9 +133,10 @@ export default new Vuex.Store({
         specifications: `<li>עסקה איטלקית במחיר משתלם במיוחד!</li>`,
         addCart: false,
         price: 2020,
+        previousPrice: 2350,
         amount: 0,
         ifSize: false,
-        label: "מלאי חדש במבצע!",
+        label: "מבצע",
         id: 8
       },
     ],

@@ -20,7 +20,7 @@
     <div class="box-product center-all">
       <div class="label f-center" v-if="product.label">
         <img class="w-100" src="@/assets/ass31.svg" alt="">
-        <h4>{{product.label}}</h4>
+        <h4 class="m-0">{{product.label}}</h4>
         <!-- {{product.label}} -->
       </div>
       <div class="row mt-3">
@@ -29,8 +29,8 @@
         </div>
         <div class="col-md-6 ">
           <h3>{{product.name}}</h3>
-          <p>מחיר <span class="line-on-text">{{product.previousPrice}} ₪</span></p>
-          <h4 class=""><span class="font-weight-normal">מבצע משוגע לימים משוגעים!</span></h4>
+          <p><span class="line-on-text" v-if="product.previousPrice">{{product.previousPrice}} ₪</span></p>
+          <h4 class=""><span class="font-weight-normal">מחיר מיוחד לימים מיוחדים</span></h4>
           <p>{{product.price}} ₪</p>
           <p class="more" @click="showModal = !showModal">לחץ כאן למידע נוסף>></p>
           <div class="center-all mb-3  mt-3">
@@ -95,6 +95,12 @@
     cursor: pointer;
   }
 
+    .line-on-text {
+    text-decoration: line-through;
+    font-weight: 400;
+
+  }
+
   button {
     border: none;
     background-color: black;
@@ -133,7 +139,7 @@
   .label h4 {
     position: absolute;
     top: 50%;
-    font-size: 14px;
+    font-size: 17px;
     width: 50%;
   }
 
