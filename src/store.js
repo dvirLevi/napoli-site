@@ -221,7 +221,8 @@ export default new Vuex.Store({
       return Payable
     },
     ifMinPayable: (state, getters) => {
-      if (getters.Payable >= state.products[0].price) {
+      // if (getters.Payable >= state.products[0].price) {
+        if (getters.Payable >= 0) {
         return true
       }
       return false
