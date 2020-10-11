@@ -1,7 +1,7 @@
 <template>
   <div class="row mt-3">
     <div class="col-12 p-4">
-      <TitleAndBorderC>מבער Napoli</TitleAndBorderC>
+      <TitleAndBorderC>מבער Bertello</TitleAndBorderC>
     </div>
     <div class="col-md-6 p-3 left-side center-all border-left">
       <div class="row center-all">

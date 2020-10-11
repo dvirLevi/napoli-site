@@ -165,7 +165,7 @@
     }
 
     .wrap-all-el {
-      height: 38px;
+      height: 60px;
       /* padding: 20px 0px; */
       width: 100%;
     }
@@ -208,9 +208,6 @@
       border-radius: 100px;
       background-color: #ff9743;
     }
-
-    img {
-    width: 78px;
-}
+    
   }
 </style>
