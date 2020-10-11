@@ -29,7 +29,7 @@
 
         <Hamburger :ifMenu="ifMenu" @openClose="ifMenu = !ifMenu" />
         <router-link class="" tag="div" to="/">
-          <img src="https://cdn.shopify.com/s/files/1/0011/6195/3290/files/Bertello_FINAL2_use_cropped_100x.jpg" alt="">
+          <img src="@/assets/napoli_logo.jpg" alt="">
         </router-link>
       </div>
     </div>
@@ -165,7 +165,7 @@
     }
 
     .wrap-all-el {
-      height: 60px;
+      height: 38px;
       /* padding: 20px 0px; */
       width: 100%;
     }
@@ -208,5 +208,9 @@
       border-radius: 100px;
       background-color: #ff9743;
     }
+
+    img {
+    width: 78px;
+}
   }
 </style>

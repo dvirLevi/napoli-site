@@ -12,7 +12,7 @@
 
     <!-- </div> -->
     <div class="col-md-5 center-all">
-      <!-- <img class="w-25" src="https://cdn.shopify.com/s/files/1/0011/6195/3290/files/Bertello_FINAL2_use_cropped_100x.jpg" alt=""> -->
+      <img class="w-25" src="@/assets/ass13.png" alt="">
     </div>
 
     <div class="col-md-2 center-all p-4">
