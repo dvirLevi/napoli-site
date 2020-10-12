@@ -4,32 +4,33 @@
       <span class="h3 c-p" @click="closeModal">x</span>
     </div>
     <div class="w-100 center-all">
-      <img src="../assets/ass23.jpg" alt="">
+      <img src="../assets/ass32.jpg" alt="">
     </div>
-    <h3 class="text-center mt-3">חיכינו וחיכינו, והנה זה הגיע!!!</h3>
-    <h3 class="text-center">מלאי חדש של תנורי נאפולי הגיע סוף-סוף לארץ!</h3>
-    <h3 class="text-center font-weight-bold">עכשיו במבצע השקה לשבוע בלבד!</h3>
-    <h3 class="text-center font-weight-bold">מהרו לרכוש לפני שהמלאי שוב יתחסל... 🙂</h3>
-    <div class="w-100 f-center">
-    <ButtonLink class="h5" @customEvent="closeModal" text="לחנות" link="/store" />
+    <h3 class="text-center mt-3">הוא הגיע!!!</h3>
+    <!-- <h3 class="text-center">מלאי חדש של תנורי נאפולי הגיע סוף-סוף לארץ!</h3> -->
+    <!-- <h3 class="text-center font-weight-bold">עכשיו במבצע השקה לשבוע בלבד!</h3> -->
+    <h3 class="text-center font-weight-bold">הטאבון האהוב שלנו חזר למלאי! עכשיו במבצע מיוחד לשבוע בלבד!
+מהרו לרכוש לפני שהמלאי שוב יתחסל... 🙂</h3>
+    <!-- <div class="w-100 f-center"> -->
+    <!-- <ButtonLink class="h5" @customEvent="closeModal" text="לחנות" link="/store" /> -->
 
-    </div>
-    <!-- <div class="w-100 center-all">
-      <h2 class="text-center">צרו איתנו קשר ב - </h2>
+    <!-- </div> -->
+    <div class="w-100 center-all">
+      <h2 class="text-center">יש לכם שאלות? דברו איתנו</h2>
       <div class="wrap-w center-all w m-3">
         <a href="https://api.whatsapp.com/send?phone=972537234223" target="_blanc">
           <i class="fab fa-whatsapp"></i>
         </a>
       </div>
-      <div class="wrap-w center-all f m-3">
+      <!-- <div class="wrap-w center-all f m-3">
         <a href="https://m.me/napoli.oven.il">
           <i class="fab fa-facebook-messenger"></i>
         </a>
-      </div>
-      <div class="w-100 center-all">
+      </div> -->
+      <!-- <div class="w-100 center-all">
         <h2 class="text-center">וקבלו מיד קוד קופון מיוחד להנחה משתלמת!</h2>
-      </div>
-    </div> -->
+      </div> -->
+    </div>
   </Modal>
 </template>
 
