@@ -28,9 +28,9 @@
         code: 'napoli-sale',
         codeGush: '!@#asd#@!',
         codeSpecial: 'special-napoli',
-        codeBezza: 'bezza-napoli',
-        napoli200: 'napoli200',
-        hours: "48hours"
+        codeBezza: '!@#asd#@!',
+        napoli200: '!@#asd#@!',
+        hours: "!@#asd#@!"
       }
     },
     computed: {
