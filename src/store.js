@@ -47,7 +47,7 @@ export default new Vuex.Store({
         previousPrice: 0,
         amount: 0,
         ifSize: true,
-        label: "מבצע",
+        label: "",
         id: 1
       },
       {
@@ -60,7 +60,7 @@ export default new Vuex.Store({
         previousPrice: 0,
         amount: 0,
         ifSize: true,
-        label: "מבצע",
+        label: "",
         id: 2
       },
       {
@@ -73,7 +73,7 @@ export default new Vuex.Store({
         previousPrice: 0,
         amount: 0,
         ifSize: false,
-        label: "מבצע",
+        label: "",
         id: 3
       },
       {
@@ -86,7 +86,7 @@ export default new Vuex.Store({
         previousPrice: 0,
         amount: 0,
         ifSize: false,
-        label: "מבצע",
+        label: "",
         id: 4
       },
       {
@@ -99,7 +99,7 @@ export default new Vuex.Store({
         previousPrice: 0,
         amount: 0,
         ifSize: false,
-        label: "מוצר חדש!",
+        label: "",
         id: 6
       },
       // {
@@ -125,7 +125,7 @@ export default new Vuex.Store({
         previousPrice: 0,
         amount: 0,
         ifSize: false,
-        label: "מבצע",
+        label: "",
         id: 5
       },
       {
@@ -138,7 +138,7 @@ export default new Vuex.Store({
         previousPrice: 0,
         amount: 0,
         ifSize: false,
-        label: "מבצע",
+        label: "",
         id: 8
       },
     ],
