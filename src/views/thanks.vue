@@ -29,8 +29,7 @@ import analyticsPages from '@/helpers/analyticsPages.js'
       // setTimeout(() => {
       //   this.$router.push("/");
       // }, 5000)
-    }
-
+    },
   }
 </script>
 

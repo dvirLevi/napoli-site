@@ -128,7 +128,8 @@
               this.$router.push("/thanks");
             }
           }, 2000)
-
+        } else {
+          localStorage.removeItem("ifPay");
         }
       }
     },
