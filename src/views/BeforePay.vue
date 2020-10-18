@@ -20,7 +20,7 @@
               </div>
             </div>
           </div>
-         <template v-if="products.length">
+          <template v-if="products.length">
             <div class="w-100 center-all border-top p-4">
               <p class="w-100" v-if="discount">הנחת קופון: {{discount}}%-</p>
               <p class="w-100">סה"כ: {{PayablePlusDiscount}} ₪</p>
@@ -34,8 +34,8 @@
               <p class="w-100" v-if="freeMessenger && ifMinPayable">משלוח חינם</p>
               <template>
                 <div class="w-100 center-all mt-3 confirm">
-                  <input type="checkbox" :checked="!messenger || !ifMinPayable" @click="ifMessenger"
-                    required :disabled="!ifMinPayable || freeMessenger">
+                  <input type="checkbox" :checked="!messenger || !ifMinPayable" @click="ifMessenger" required
+                    :disabled="!ifMinPayable || freeMessenger">
                   <p>איסוף עצמי</p>
                 </div>
                 <p class="w-100 text-center">כתובת לאיסוף: רחוב שמריהו לוין 13, ירושלים. בתיאום מראש. </p>
@@ -112,9 +112,9 @@
         showModal: false,
       }
     },
-    mounted(){
-       fbq('track', 'ViewContent', {
-        content_name: this.$route.name, 
+    mounted() {
+      fbq('track', 'ViewContent', {
+        content_name: this.$route.name,
       });
       analyticsPages(this.$route.name)
     },
@@ -124,6 +124,10 @@
           this.$store.commit('nextPayment');
           this.$router.push('pay');
           fbq('track', 'AddPaymentInfo');
+          gtag('event', 'add_payment_info', {
+            'event_category': 'add_payment_info',
+            'event_label': 'add_payment_info'
+          });
         } else {
           Swal.fire({
             type: 'error',
@@ -150,14 +154,14 @@
       clientDatdlis() {
         return this.$store.state.clientDatdlis
       },
-      freeMessenger(){
+      freeMessenger() {
         return this.$store.state.freeMessenger
       },
       Payable() {
-        return  this.$store.getters.Payable
+        return this.$store.getters.Payable
       },
       PayablePlusDiscount() {
-       return this.$store.getters.PayablePlusDiscount
+        return this.$store.getters.PayablePlusDiscount
       },
       ifMinPayable() {
         return this.$store.getters.ifMinPayable

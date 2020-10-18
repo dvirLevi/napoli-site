@@ -65,6 +65,10 @@
         product.amount++;
         this.$store.commit('allTimeShowCart');
         fbq('track', 'AddToCart');
+        gtag('event', 'add_to_cart', {
+          'event_category': 'add_to_cart',
+          'event_label': 'add_to_cart'
+        });
       }
     },
     computed: {
@@ -95,7 +99,7 @@
     cursor: pointer;
   }
 
-    .line-on-text {
+  .line-on-text {
     text-decoration: line-through;
     font-weight: 400;
 
