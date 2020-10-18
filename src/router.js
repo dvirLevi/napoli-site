@@ -8,6 +8,7 @@ import BeforePay from './views/BeforePay.vue'
 import Contact from './views/Contact.vue'
 import Recipes from './views/Recipes.vue'
 import thanks from './views/thanks.vue'
+import FailsPay from './views/FailsPay.vue'
 Vue.use(Router)
 
 export default new Router({
@@ -47,7 +48,11 @@ export default new Router({
       name: 'thanks',
       component: thanks
     },
-    
+    {
+      path: '/FailsPay',
+      name: 'FailsPay',
+      component: FailsPay
+    },
     {
       path: '/pay',
       // redirect: { name: 'BeforPay' },
