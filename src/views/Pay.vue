@@ -77,7 +77,7 @@
           </div>
         </div>
         <div class="center-all w-100">
-          <iframe id="ifa" name="iframe" @load="endPay" class="mt-5" height="650" :width="ifWidth"></iframe>
+          <iframe name="iframe" class="mt-5" height="650" :width="ifWidth"></iframe>
         </div>
       </div>
     </div>
@@ -116,10 +116,6 @@
       vat(num) {
         let vat = num / 1.17;
         return vat.toFixed(2);
-      },
-      endPay(e) {
-        console.log(document.getElementById('ifa').contentWindow)
-        // console.log(document.getElementById('ifa').contentWindow.location.href)
       }
     },
     computed: {
