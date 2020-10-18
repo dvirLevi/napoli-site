@@ -13,7 +13,7 @@
 
 <script>
   // @ is an alias to /src
-
+import analyticsPages from '@/helpers/analyticsPages.js'
 
   export default {
     name: 'thanks',
