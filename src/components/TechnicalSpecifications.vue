@@ -5,7 +5,7 @@
 
 
         <div class="col-12 center-all pt-5 pb-5 text-center">
-          <h3>Napoli Pizza Oven – נתונים טכניים</h3>
+          <h3>Bertello Pizza Oven – נתונים טכניים</h3>
         </div>
         <div class="col-md-5 center-all" data-aos="fade-up">
           <div class="row">

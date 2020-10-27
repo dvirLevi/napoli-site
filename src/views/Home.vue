@@ -3,9 +3,9 @@
     <counterDays />
     <div class="row">
       <div class="col">
-        <div class="w-100 f-center">
+        <!-- <div class="w-100 f-center">
           <h4 class="text-center">טאבון Napoli האהוב השתדרג עם שם חדש! קבלו את Bertello🔥 </h4>
-        </div>
+        </div> -->
         <div class="w-100 center-all mb-2">
           <img src="../assets/ass1.jpg" alt="">
         </div>

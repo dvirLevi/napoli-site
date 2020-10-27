@@ -3,10 +3,10 @@
     <div class="col">
       <div class="w-100 center-all">
         <div class="w-100">
-          <TitleAndBorderR>אודות תנור הפיצה נאפולי</TitleAndBorderR>
+          <TitleAndBorderR>אודות תנור הפיצה ברטלו</TitleAndBorderR>
 
         </div>
-        <p>מוצרי ה-<span>Napoli</span> מיובאים ומשווקים באופן בלעדי על ידי חברת ב.ל סברס שיווק בע"מ.</p>
+        <p>מוצרי ה-<span>Bertello</span> מיובאים ומשווקים באופן בלעדי על ידי חברת ב.ל סברס שיווק בע"מ.</p>
         <p>אנו עושים את כל המאמצים כדי שתיהנו ממוצרינו. </p>
         <p>נשמח מאוד לעמוד לרשותכם, השאירו את פרטיכם בטופס ונשוב אליכם בהקדם.</p>
       </div>
@@ -87,7 +87,7 @@
       async sendMail() {
         if (this.textSend === "שלח טופס") {
           this.textSend = "המתן..."
-          await myMail.sendToMail(this.clientDatdlis, null, "יצירת קשר נאפולי");
+          await myMail.sendToMail(this.clientDatdlis, null, "יצירת קשר ברטלו");
           this.clientDatdlis = {
             ifConfirmMail: true,
           };
