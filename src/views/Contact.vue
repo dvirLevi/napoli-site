@@ -50,7 +50,7 @@
         <p class="mt-3">
           <i class="fab fa-instagram h1"></i>
           <a
-            href="https://www.facebook.com/napoli.oven.il/?__tn__=%2Cd%2CP-R&eid=ARAZokdIjzsZ4vZNMygiFQkyPLRRFrasxpFNiUCIhgwgD6_gfbXwOGZCbl0PJH3tjZODw30-sK0D7Die"><i
+            href="https://www.facebook.com/Bertello.oven.il"><i
               class="fab fa-facebook-f mr-5 h1"></i></a>
         </p>
       </div>

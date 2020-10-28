@@ -61,7 +61,7 @@
           },
           {
             question: "מה מידות הטאבון?",
-            answer: `רוחב: כ-35 ס"מ. אורך: כ-54 ס"מ. משקל: 13.5 ק"ג. מידע טכני מפורט יותר נמצא <a href='https://www.bertello.co.il/store'>בחנות האתר</a>.`,
+            answer: `רוחב: כ-35 ס"מ. אורך: כ-54 ס"מ. משקל: 13.5 ק"ג. מידע טכני מפורט יותר נמצא <a class="link" href='https://www.bertello.co.il/store'>בחנות האתר</a>.`,
             id: 6
           },
           {
@@ -111,7 +111,7 @@
           },
             {
             question: "יש לכם מתכונים?",
-            answer: `מלא! כנסו <a href='https://www.facebook.com/Bertello.oven.il'>לפייסבוק</a> שלנו, או בקשו מאיתנו בהודעת וואטספ – <a href="https://api.whatsapp.com/send?phone=972537234223" target="_blanc"><i class="fab fa-whatsapp"></i></a>.`,
+            answer: `מלא! כנסו <a class="link" href='https://www.facebook.com/Bertello.oven.il'>לפייסבוק</a> שלנו, או בקשו מאיתנו בהודעת וואטספ – <a class="link" href="https://api.whatsapp.com/send?phone=972537234223" target="_blanc"><i class="fab fa-whatsapp"></i></a>.`,
             id: 8
           },
         ]

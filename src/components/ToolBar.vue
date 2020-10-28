@@ -19,7 +19,7 @@
                   <a href="https://www.instagram.com/napoli_pizza_oven_israel/" target="_blanc"><i class="fab fa-instagram"></i></a>
                 </div>
                 <div class="w-50 text-center">
-                 <a href="https://www.facebook.com/napoli.oven.il/?__tn__=%2Cd%2CP-R&eid=ARAZokdIjzsZ4vZNMygiFQkyPLRRFrasxpFNiUCIhgwgD6_gfbXwOGZCbl0PJH3tjZODw30-sK0D7Die" target="_blanc"><i class="fab fa-facebook-f"></i></a>
+                 <a href="https://www.facebook.com/Bertello.oven.il" target="_blanc"><i class="fab fa-facebook-f"></i></a>
                 </div>
               </div>
             </div>

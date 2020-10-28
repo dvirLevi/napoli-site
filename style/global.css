@@ -184,7 +184,7 @@ ul span {
 }
 
 a {
-  color: #3c7ad6;
+  color: #000000;
   text-decoration: none;
   background-color: transparent;
 }
@@ -193,6 +193,10 @@ a:hover {
   color: none;
   text-decoration: none;
   background-color: transparent;
+}
+
+.link {
+  color: #007bff;
 }
 
 .c-p {
