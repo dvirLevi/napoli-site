@@ -1,25 +1,26 @@
 <template>
-      <section class="row row-details pt-5 pb-5 mt-4">
-        <div class="col">
-          <div class="container">
-            <div class="row">
-              <div class="col f-center" @click="showHideText">
-                <h2 class="font-weight-bold">שאלות ותשובות: <span><i v-if="!ifShowQues" class="las la-angle-down"></i><i v-else class="las la-angle-up"></i></span></h2>
-              </div>
+  <section class="row row-details pt-5 pb-5 mt-4">
+    <div class="col">
+      <div class="container">
+        <div class="row">
+          <div class="col f-center" @click="showHideText">
+            <h2 class="font-weight-bold">שאלות ותשובות: <span><i v-if="!ifShowQues" class="las la-angle-down"></i><i
+                  v-else class="las la-angle-up"></i></span></h2>
+          </div>
+        </div>
+        <div class="row" v-if="ifShowQues">
+          <div class="col-md-6 mt-2" v-for="item in questions" :key="item.id">
+            <div class="w-100 f-center-right">
+              <h4>{{item.question}}</h4>
             </div>
-            <div class="row" v-if="ifShowQues">
-              <div class="col-md-6 mt-2" v-for="item in questions" :key="item.id">
-                <div class="w-100 f-center-right">
-                  <h4>{{item.question}}</h4>
-                </div>
-                <div class="w-100 f-center-right">
-                  <h6 v-html="item.answer"></h6>
-                </div>
-              </div>
+            <div class="w-100 f-center-right">
+              <h6 v-html="item.answer"></h6>
             </div>
           </div>
         </div>
-      </section>
+      </div>
+    </div>
+  </section>
 </template>
 
 <script>
@@ -74,52 +75,48 @@
             answer: "באמת באמת.",
             id: 8
           },
-              {
-            question: "האם הטאבון באמת מגיע ל-450 מעלות?",
-            answer: "באמת באמת.",
-            id: 8
-          },
-              {
+
+          {
             question: "האם הפיצה באמת מוכנה בדקה וחצי?",
             answer: "באמת באמת. זה כמובן תלוי בבצק שלכם. יש בצקים שמוכנים תוך דקה אחת, ויש כאלה שיצטרכו שתי דקות. ",
-            id: 8
+            id: 10
           },
-              {
+          {
             question: "האם צריך להרכיב את הטאבון?",
             answer: "כן. ההרכבה פשוטה מאוד ואורכת 3-2 דקות. אין שום צורך בחוש טכני, ובכל מקרה יש לנו סרטוני הדרכה ותמיכה טכנית בטלפון.",
-            id: 8
+            id: 11
           },
-              {
+          {
             question: "איך הטאבון מתחבר לגז?",
             answer: "כמו גריל גז רגיל: או לבלון נייד (עם וסת 30 מיליבר), או לנקודת גז קבועה. ",
-            id: 8
+            id: 12
           },
-              {
+          {
             question: "הטאבון לא קטן מדי?",
             answer: "לא. זה הגודל הממוצע של טאבונים ביתיים. ויש לכך סיבה טובה: הטאבונים הגדולים יותר מתחממים לאט, זוללים גז, כבדים מאוד, ויקרים להחריד.",
-            id: 8
+            id: 13
           },
-              {
+          {
             question: "האם ניתן לשלם בטלפון?",
             answer: "כן. אנחנו זמינים בכל יום משעה 9:00 ועד השעה 18:00.",
-            id: 8
+            id: 14
           },
-            {
+          {
             question: "האם ניתן לפרוס את העסקה לתשלומים?",
             answer: "כן. עד 10 תשלומים ללא ריבית.",
-            id: 8
+            id: 15
           },
-            {
+          {
             question: "יש לכם מתכונים?",
             answer: `מלא! כנסו <a class="link" href='https://www.facebook.com/Bertello.oven.il'>לפייסבוק</a> שלנו, או בקשו מאיתנו בהודעת וואטספ – <a class="link" href="https://api.whatsapp.com/send?phone=972537234223" target="_blanc"><i class="fab fa-whatsapp"></i></a>.`,
-            id: 8
+            id: 16
           },
         ]
       }
     },
     mounted() {
-      
-      
+
+
       // if (this.mobOrDesk) {
       //   this.ifShowQues = false
       // }
@@ -127,7 +124,7 @@
     methods: {
       showHideText() {
         // if (this.mobOrDesk) {
-          this.ifShowQues = !this.ifShowQues
+        this.ifShowQues = !this.ifShowQues
         // }
       },
       // track() {
