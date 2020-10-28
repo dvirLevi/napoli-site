@@ -19,6 +19,7 @@
     <videoTop />
     <FoodImages />
     <SoWhy />
+    <questions />
     <videoBottom width="width-video-50"
       srcVideo="videos/v1.mp4" />
   </div>
@@ -40,6 +41,7 @@
   import analyticsPages from '@/helpers/analyticsPages.js'
   import counterDays from '@/components/counterDays.vue'
   import iconsBanner from '@/components/iconsBanner.vue'
+  import questions from '@/components/questions.vue'
 
 
   export default {
@@ -54,7 +56,8 @@
       FoodImages,
       RecipesLink,
       counterDays,
-      iconsBanner
+      iconsBanner,
+      questions
     },
     mounted() {
       fbq('track', 'ViewContent', {
