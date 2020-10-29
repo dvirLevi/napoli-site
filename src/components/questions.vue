@@ -3,12 +3,13 @@
     <div class="col">
       <div class="container">
         <div class="row">
-          <div class="col f-center" @click="showHideText">
-            <h2 class="font-weight-bold">שאלות ותשובות: <span><i v-if="!ifShowQues" class="las la-angle-down"></i><i
-                  v-else class="las la-angle-up"></i></span></h2>
+          <div class="col f-center-right">
+            <!-- <h2 class="font-weight-bold">שאלות ותשובות: <span><i v-if="!ifShowQues" class="las la-angle-down"></i><i
+                  v-else class="las la-angle-up"></i></span></h2> -->
+            <TitleAndBorderR>שאלות ותשובות: </TitleAndBorderR>
           </div>
         </div>
-        <div class="row" v-if="ifShowQues">
+        <div class="row">
           <div class="col-md-6 mt-2" v-for="item in questions" :key="item.id">
             <div class="w-100 f-center-right">
               <h4>{{item.question}}</h4>
@@ -17,6 +18,20 @@
               <h6 v-html="item.answer"></h6>
             </div>
           </div>
+        </div>
+        <div class="row" v-if="ifShowQues">
+          <div class="col-md-6 mt-2" v-for="item in moreQuestions" :key="item.id">
+            <div class="w-100 f-center-right">
+              <h4>{{item.question}}</h4>
+            </div>
+            <div class="w-100 f-center-right">
+              <h6 v-html="item.answer"></h6>
+            </div>
+          </div>
+        </div>
+        <div class="w-100 more mt-3">
+          <h6 v-if="!ifShowQues" @click="ifShowQues = !ifShowQues">עוד שאלות ותשובות>></h6>
+          <h6 v-else @click="ifShowQues = !ifShowQues">פחות שאלות ותשובות>></h6>
         </div>
       </div>
     </div>
@@ -50,7 +65,8 @@
             answer: "למרות שהחבילות גדולות וכבדות יחסית, משלוח בפריסה ארצית עולה אצלנו 40 שקלים בלבד. ניתן כמובן לבצע איסוף עצמי מהמחסן שלנו בירושלים",
             id: 3
           },
-          {
+        ],
+        moreQuestions: [{
             question: "למה אין לכם תצוגה?",
             answer: "כי אנחנו רוצים להוריד את המחירים ככל האפשר! תצוגה מחייבת להחזיק חנות ולשכור עובדים, וזה מייקר מאוד את המוצרים. אנחנו מעדיפים להשקיע במשלוחים ובשירות הלקוחות ",
             id: 4
@@ -122,11 +138,11 @@
       // }
     },
     methods: {
-      showHideText() {
-        // if (this.mobOrDesk) {
-        this.ifShowQues = !this.ifShowQues
-        // }
-      },
+      // showHideText() {
+      //   // if (this.mobOrDesk) {
+      //   this.ifShowQues = !this.ifShowQues
+      //   // }
+      // },
       // track() {
       //   alert()
       //   this.$ga.page('/')
@@ -166,6 +182,10 @@
     font-size: 45px;
     color: #fff;
   } */
+
+  .more {
+    color: #ff3d00;
+  }
 
   @media (max-width: 767.98px) {
     /* .row-icons .icon {

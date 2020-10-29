@@ -19,7 +19,7 @@
     <videoTop />
     <FoodImages />
     <SoWhy />
-    <!-- <questions /> -->
+    <questions class="mobile" />
     <videoBottom width="width-video-50"
       srcVideo="videos/v1.mp4" />
   </div>
