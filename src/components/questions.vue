@@ -1,6 +1,6 @@
 <template>
   
-      <div class="row">
+      <div class="row mt-2">
         <div class="col">
           <div class="row">
           <div class="col f-center-right">
@@ -129,7 +129,7 @@
           },
           {
             question: "יש לכם מתכונים?",
-            answer: `מלא! כנסו לפייסבוק <a class="link" href='https://www.facebook.com/Bertello.oven.il'><i class="fab fa-facebook-f"></i></a> שלנו, או בקשו מאיתנו בהודעת וואטספ <a href="https://api.whatsapp.com/send?phone=972537234223" target="_blanc"><i class="fab fa-whatsapp"></i></a>.`,
+            answer: `מלא! כנסו לפייסבוק <a class="link" href='https://www.facebook.com/Bertello.oven.il'><i class="fab fa-facebook-f"></i></a> שלנו. </br> יש לכם שאלות נוספות? שלחו לנו בוואטספ  <a href="https://api.whatsapp.com/send?phone=972537234223" target="_blanc"><i class="fab fa-whatsapp"></i></a>.`,
             id: 16
           },
         ]
