@@ -1,8 +1,8 @@
 <template>
-  <section class="row row-details pt-5 pb-5 mt-4">
-    <div class="col">
-      <div class="container">
-        <div class="row">
+  
+      <div class="row">
+        <div class="col">
+          <div class="row">
           <div class="col f-center-right">
             <!-- <h2 class="font-weight-bold">שאלות ותשובות: <span><i v-if="!ifShowQues" class="las la-angle-down"></i><i
                   v-else class="las la-angle-up"></i></span></h2> -->
@@ -15,7 +15,7 @@
               <h4>{{item.question}}</h4>
             </div>
             <div class="w-100 f-center-right">
-              <h6 v-html="item.answer"></h6>
+              <p v-html="item.answer"></p>
             </div>
           </div>
         </div>
@@ -25,17 +25,17 @@
               <h4>{{item.question}}</h4>
             </div>
             <div class="w-100 f-center-right">
-              <h6 v-html="item.answer"></h6>
+              <p v-html="item.answer"></p>
             </div>
           </div>
         </div>
-        <div class="w-100 more mt-3">
-          <h6 v-if="!ifShowQues" @click="ifShowQues = !ifShowQues">עוד שאלות ותשובות>></h6>
-          <h6 v-else @click="ifShowQues = !ifShowQues">פחות שאלות ותשובות>></h6>
+        <div class="w-100 more mt-2">
+          <p v-if="!ifShowQues" @click="ifShowQues = !ifShowQues">עוד שאלות ותשובות>></p>
+          <p v-else @click="ifShowQues = !ifShowQues">פחות שאלות ותשובות>></p>
+        </div>
         </div>
       </div>
-    </div>
-  </section>
+ 
 </template>
 
 <script>
@@ -57,18 +57,18 @@
           },
           {
             question: "תוך כמה זמן החבילה תגיע אליי?",
-            answer: `החבילות מגיעות בדרך כלל תוך 5-3 ימי עסקים. אבל הצוות הלוגיסטי שלנו כל כך יעיל, שלא פעם משלוחים הגיעו כבר למחרת ההזמנה.`,
+            answer: `החבילות מגיעות בדרך כלל תוך 5-2 ימי עסקים.`,
             id: 2
           },
           {
             question: "כמה עולה משלוח, והאם יש אפשרות לאיסוף עצמי?",
-            answer: "למרות שהחבילות גדולות וכבדות יחסית, משלוח בפריסה ארצית עולה אצלנו 40 שקלים בלבד. ניתן כמובן לבצע איסוף עצמי מהמחסן שלנו בירושלים",
+            answer: "עלות המשלוח 40 שקלים בלבד. ניתן כמובן לבצע איסוף עצמי מהמחסן שלנו בירושלים.",
             id: 3
           },
         ],
         moreQuestions: [{
             question: "למה אין לכם תצוגה?",
-            answer: "כי אנחנו רוצים להוריד את המחירים ככל האפשר! תצוגה מחייבת להחזיק חנות ולשכור עובדים, וזה מייקר מאוד את המוצרים. אנחנו מעדיפים להשקיע במשלוחים ובשירות הלקוחות ",
+            answer: "כי אנחנו רוצים להוריד את המחירים ככל האפשר! תצוגה מחייבת להחזיק חנות ולשכור עובדים, וזה מייקר מאוד את המוצרים. אנחנו מעדיפים להשקיע במשלוחים ובשירות הלקוחות",
             id: 4
           },
           {
@@ -81,11 +81,11 @@
             answer: `רוחב: כ-35 ס"מ. אורך: כ-54 ס"מ. משקל: 13.5 ק"ג. מידע טכני מפורט יותר נמצא <a class="link" href='https://www.bertello.co.il/store'>בחנות האתר</a>.`,
             id: 6
           },
-          {
-            question: "איפה הטאבון מיוצר?",
-            answer: 'ברטלו היא חברה אמריקנית שיושבת במינסוטה ארה"ב. הטאבון מיוצר במפעל שלה בסין (גם חברת אייפון, ומותגים אמריקניים אחרים, מייצרים את המכשירים שלהם בסין ) ',
-            id: 7
-          },
+          // {
+          //   question: "איפה הטאבון מיוצר?",
+          //   answer: 'ברטלו היא חברה אמריקנית שיושבת במינסוטה ארה"ב. הטאבון מיוצר במפעל שלה בסין (גם חברת אייפון, ומותגים אמריקניים אחרים, מייצרים את המכשירים שלהם בסין ) ',
+          //   id: 7
+          // },
           {
             question: "האם הטאבון באמת מגיע ל-450 מעלות?",
             answer: "באמת באמת.",
@@ -94,12 +94,12 @@
 
           {
             question: "האם הפיצה באמת מוכנה בדקה וחצי?",
-            answer: "באמת באמת. זה כמובן תלוי בבצק שלכם. יש בצקים שמוכנים תוך דקה אחת, ויש כאלה שיצטרכו שתי דקות. ",
+            answer: "באמת באמת. זה כמובן תלוי בבצק שלכם. יש בצקים שמוכנים תוך דקה אחת, ויש כאלה שיצטרכו שתי דקות.",
             id: 10
           },
           {
             question: "האם צריך להרכיב את הטאבון?",
-            answer: "כן. ההרכבה פשוטה מאוד ואורכת 3-2 דקות. אין שום צורך בחוש טכני, ובכל מקרה יש לנו סרטוני הדרכה ותמיכה טכנית בטלפון.",
+            answer: "כן. ההרכבה פשוטה מאוד ואורכת 3-2 דקות. אין צורך בחוש טכני, ובכל מקרה יש לנו סרטוני הדרכה ותמיכה טלפונית.",
             id: 11
           },
           {
@@ -111,6 +111,11 @@
             question: "הטאבון לא קטן מדי?",
             answer: "לא. זה הגודל הממוצע של טאבונים ביתיים. ויש לכך סיבה טובה: הטאבונים הגדולים יותר מתחממים לאט, זוללים גז, כבדים מאוד, ויקרים להחריד.",
             id: 13
+          },
+              {
+            question: "האם התשלום באתר מאובטח?",
+            answer: "לחלוטין. מערכת הסליקה באתר מופעלת על ידי חברת טרנזילה – החברה המובילה בישראל.",
+            id: 17
           },
           {
             question: "האם ניתן לשלם בטלפון?",
@@ -124,7 +129,7 @@
           },
           {
             question: "יש לכם מתכונים?",
-            answer: `מלא! כנסו <a class="link" href='https://www.facebook.com/Bertello.oven.il'>לפייסבוק</a> שלנו, או בקשו מאיתנו בהודעת וואטספ – <a class="link" href="https://api.whatsapp.com/send?phone=972537234223" target="_blanc"><i class="fab fa-whatsapp"></i></a>.`,
+            answer: `מלא! כנסו לפייסבוק <a class="link" href='https://www.facebook.com/Bertello.oven.il'><i class="fab fa-facebook-f"></i></a> שלנו, או בקשו מאיתנו בהודעת וואטספ – <a class="link" href="https://api.whatsapp.com/send?phone=972537234223" target="_blanc"><i data-v-683d9aed class="fab fa-whatsapp"></i></a>.`,
             id: 16
           },
         ]
@@ -186,6 +191,10 @@
   .more {
     color: #ff3d00;
   }
+
+  .fa-whatsapp {
+  color: #2cb742;
+}
 
   @media (max-width: 767.98px) {
     /* .row-icons .icon {
