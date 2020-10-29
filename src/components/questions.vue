@@ -68,7 +68,7 @@
         ],
         moreQuestions: [{
             question: "למה אין לכם תצוגה?",
-            answer: "כי אנחנו רוצים להוריד את המחירים ככל האפשר! תצוגה מחייבת להחזיק חנות ולשכור עובדים, וזה מייקר מאוד את המוצרים. אנחנו מעדיפים להשקיע במשלוחים ובשירות הלקוחות",
+            answer: "כי אנחנו רוצים להוריד את המחירים ככל האפשר! תצוגה מחייבת להחזיק חנות ולשכור עוד עובדים, וזה מייקר מאוד את המוצרים.",
             id: 4
           },
           {
@@ -129,7 +129,7 @@
           },
           {
             question: "יש לכם מתכונים?",
-            answer: `מלא! כנסו לפייסבוק <a class="link" href='https://www.facebook.com/Bertello.oven.il'><i class="fab fa-facebook-f"></i></a> שלנו. </br> יש לכם שאלות נוספות? שלחו לנו בוואטספ  <a href="https://api.whatsapp.com/send?phone=972537234223" target="_blanc"><i class="fab fa-whatsapp"></i></a>.`,
+            answer: `מלא! כנסו לפייסבוק <a class="link" href='https://www.facebook.com/Bertello.oven.il'><i class="fab fa-facebook-f"></i></a> שלנו. </br>  </br>יש לכם שאלות נוספות? שלחו לנו בוואטספ  <a href="https://api.whatsapp.com/send?phone=972537234223" target="_blanc"><i class="fab fa-whatsapp"></i></a>`,
             id: 16
           },
         ]
