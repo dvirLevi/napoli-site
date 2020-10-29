@@ -129,7 +129,7 @@
           },
           {
             question: "יש לכם מתכונים?",
-            answer: `מלא! כנסו לפייסבוק <a class="link" href='https://www.facebook.com/Bertello.oven.il'><i class="fab fa-facebook-f"></i></a> שלנו, או בקשו מאיתנו בהודעת וואטספ – <a href="https://api.whatsapp.com/send?phone=972537234223" target="_blanc"><i data-v-683d9aed class="fab fa-whatsapp"></i></a>.`,
+            answer: `מלא! כנסו לפייסבוק <a class="link" href='https://www.facebook.com/Bertello.oven.il'><i class="fab fa-facebook-f"></i></a> שלנו, או בקשו מאיתנו בהודעת וואטספ – <a href="https://api.whatsapp.com/send?phone=972537234223" target="_blanc"><i class="fab fa-whatsapp"></i></a>.`,
             id: 16
           },
         ]
@@ -191,10 +191,6 @@
   .more {
     color: #ff3d00;
   }
-
-  .fa-whatsapp {
-  color: #2cb742;
-}
 
   @media (max-width: 767.98px) {
     /* .row-icons .icon {
