@@ -89,19 +89,19 @@ export default new Vuex.Store({
         label: "",
         id: 4
       },
-      {
-        name: "מגירה משולבת פחמים + גז לתנור ברטלו",
-        img: require("@/assets/ass24.jpg"),
-        description: "",
-        specifications: `<li>אביזר ייחודי של ברטלו. </li><li>מאפשר הבערה בו זמנית של גז ועצים, לקבלת טעם מעושן אמיתי של הפיצה. </li><li>חיבור נוח של תא פחמים פנימי למבער הגז החיצוני.</li><li>מומלץ! </li>`,
-        addCart: false,
-        price: 175,
-        previousPrice: 0,
-        amount: 0,
-        ifSize: false,
-        label: "",
-        id: 6
-      },
+      // {
+      //   name: "מגירה משולבת פחמים + גז לתנור ברטלו",
+      //   img: require("@/assets/ass24.jpg"),
+      //   description: "",
+      //   specifications: `<li>אביזר ייחודי של ברטלו. </li><li>מאפשר הבערה בו זמנית של גז ועצים, לקבלת טעם מעושן אמיתי של הפיצה. </li><li>חיבור נוח של תא פחמים פנימי למבער הגז החיצוני.</li><li>מומלץ! </li>`,
+      //   addCart: false,
+      //   price: 175,
+      //   previousPrice: 0,
+      //   amount: 0,
+      //   ifSize: false,
+      //   label: "",
+      //   id: 6
+      // },
       // {
       //   name: "אבן אפייה לתנור ברטלו",
       //   img: require("@/assets/ass25.jpg"),
@@ -128,19 +128,19 @@ export default new Vuex.Store({
         label: "",
         id: 5
       },
-      {
-        name: "עסקה איטלקית בהנחה: תנור + מבער + מרדה + מגירה משולבת + כיסוי",
-        img: require("@/assets/ass26.jpg"),
-        description: "",
-        specifications: `<li>עסקה איטלקית במחיר משתלם במיוחד!</li>`,
-        addCart: false,
-        price: 2350,
-        previousPrice: 0,
-        amount: 0,
-        ifSize: false,
-        label: "",
-        id: 8
-      },
+      // {
+      //   name: "עסקה איטלקית בהנחה: תנור + מבער + מרדה + מגירה משולבת + כיסוי",
+      //   img: require("@/assets/ass26.jpg"),
+      //   description: "",
+      //   specifications: `<li>עסקה איטלקית במחיר משתלם במיוחד!</li>`,
+      //   addCart: false,
+      //   price: 2350,
+      //   previousPrice: 0,
+      //   amount: 0,
+      //   ifSize: false,
+      //   label: "",
+      //   id: 8
+      // },
     ],
     ifCart: false,
     clientDatdlis: {
