@@ -29,7 +29,7 @@
     },
     computed: {
       ifAutoModel() {
-        // return this.$store.state.ifAutoModel;
+        return this.$store.state.ifAutoModel;
       },
     },
     methods: {
