@@ -39,7 +39,7 @@
         </div>
       </div>
       <div class="box-shopil">
-        <img class="w-100" src="@/assets/ass33.jpg" alt="">
+        <img class="w-100" src="@/assets/ass34.jpg" alt="">
       </div>
     </div>
   </div>
@@ -154,7 +154,7 @@
     position: absolute;
     bottom: 0px;
     right: 0px;
-    width: 150px;
+    width: 160px;
   }
 
   @media (max-width: 1410px) {
@@ -184,7 +184,7 @@
 
     .box-shopil {
       top: 0px;
-      width: 130px;
+      width: 140px;
     }
   }
 </style>
