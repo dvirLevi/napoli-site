@@ -38,6 +38,9 @@
           </div>
         </div>
       </div>
+      <div class="box-shopil">
+        <img class="w-100" src="@/assets/ass33.jpg" alt="">
+      </div>
     </div>
   </div>
 </template>
@@ -147,6 +150,13 @@
     width: 50%;
   }
 
+  .box-shopil {
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    width: 150px;
+  }
+
   @media (max-width: 1410px) {
     .box-product {
       height: 395px;
@@ -170,6 +180,11 @@
     .label {
       top: -98px;
       right: -31px;
+    }
+
+    .box-shopil {
+      top: 0px;
+      width: 130px;
     }
   }
 </style>

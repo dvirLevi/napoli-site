@@ -6,8 +6,26 @@
         <!-- <div class="w-100 f-center">
           <h4 class="text-center">טאבון Napoli האהוב השתדרג עם שם חדש! קבלו את Bertello🔥 </h4>
         </div> -->
-        <div class="w-100 center-all mb-2">
+        <!-- <div class="w-100 center-all mb-2">
           <img src="../assets/ass1.jpg" alt="">
+        </div> -->
+        <div class="row part-shulders">
+          <div class="col-md-5">
+            <div class="w-100 f-center-right">
+              <img class="img-shopil" src="@/assets/ass33.jpg" alt="">
+            </div>
+            <div class="w-100">
+              <h1>11-10 בנובמבר</h1>
+              <h2>10 אחוז הנחה</h2>
+              <h3>מוצרי ברטלו במבצע ל-48 שעות</h3>
+            </div>
+            <div class="w-100">
+              <img src="" alt="">
+            </div>
+          </div>
+          <div class="col-md-7">
+            <img class="w-100" src="@/assets/ass6.png" alt="">
+          </div>
         </div>
       </div>
     </div>
@@ -20,8 +38,7 @@
     <FoodImages />
     <SoWhy />
     <questions class="mobile" />
-    <videoBottom width="width-video-50"
-      srcVideo="videos/v1.mp4" />
+    <videoBottom width="width-video-50" srcVideo="videos/v1.mp4" />
   </div>
 </template>
 
@@ -86,6 +103,23 @@
     margin-top: -188.3px;
   }
 
+  .img-shopil {
+    width: 50%;
+  }
+
+  /* h1 {
+    font-size: 50px;
+  } */
+  h2 {
+    font-size: 60px;
+  }
+
+  h3 {
+    font-size: 35px;
+    font-weight: 300;
+
+  }
+
   @media (max-width: 767.98px) {
     img {
       width: 100%;
@@ -98,6 +132,18 @@
     video {
       width: 100%;
       margin-top: -44px;
+    }
+
+    h1 {
+      font-size: 24px;
+    }
+
+    h2 {
+      font-size: 47px;
+    }
+
+    h3 {
+      font-size: 6.6vw;
     }
   }
 </style>
