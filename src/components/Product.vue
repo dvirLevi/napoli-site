@@ -154,7 +154,7 @@
     position: absolute;
     bottom: 0px;
     right: 0px;
-    width: 160px;
+    width: 195px;
   }
 
   @media (max-width: 1410px) {
@@ -184,7 +184,7 @@
 
     .box-shopil {
       top: 0px;
-      width: 140px;
+      width: 161px;
     }
   }
 </style>

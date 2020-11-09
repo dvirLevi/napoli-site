@@ -17,7 +17,7 @@
             <div class="w-100">
               <!-- <h1>11-10 בנובמבר</h1> -->
               <h2>10 אחוז הנחה + משלוח חינם</h2>
-              <h3>מוצרי ברטלו במבצע ל48 שעות </h3>
+              <h3>מוצרי ברטלו במבצע ל-48 שעות </h3>
             </div>
             <div class="w-100">
               <img src="" alt="">
@@ -28,13 +28,22 @@
             <div class="w-100">
               <img class="w-100" src="../assets/ass1.jpg" alt="">
             </div>
+          </div>
+          <div class="col-md-12">
             <div class="w-100">
               <img class="icon-shop" src="../assets/shop1.jpg" alt="">
               <img class="icon-shop" src="../assets/shop6.jpg" alt="">
-              <img class="icon-shop" src="../assets/shop2.jpg" alt="">
-              <img class="icon-shop" src="../assets/shop3.jpg" alt="">
+              <img class="icon-shop-logo" src="../assets/ass33.jpg" alt="">
+              <img class="icon-shop" src="../assets/shop7.jpg" alt="">
               <img class="icon-shop" src="../assets/shop4.jpg" alt="">
-              <img class="icon-shop" src="../assets/shop5.jpg" alt="">
+              <img class="icon-shop" src="../assets/shop6.jpg" alt="">
+              <img class="icon-shop" src="../assets/shop8.jpg" alt="">
+              <img class="icon-shop" src="../assets/shop3.jpg" alt="">
+              <img class="icon-shop" src="../assets/shop9.jpg" alt="">
+              <img class="icon-shop" src="../assets/shop2.jpg" alt="">
+              <img class="icon-shop" src="../assets/shop10.jpg" alt="">
+              <!-- <img class="icon-shop" src="../assets/shop5.jpg" alt=""> -->
+              <!-- <img class="icon-shop" src="../assets/shop5.jpg" alt=""> -->
             </div>
           </div>
         </div>
@@ -131,8 +140,12 @@
 
   }
 
+  .icon-shop-logo {
+    width: 10%;
+  }
+
   .icon-shop {
-    width: 16.666%;
+    width: 8.33%;
   }
 
   @media (max-width: 767.98px) {
