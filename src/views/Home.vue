@@ -16,8 +16,8 @@
             </div>
             <div class="w-100">
               <!-- <h1>11-10 בנובמבר</h1> -->
-              <h2>10 אחוז הנחה + משלוח חינם</h2>
               <h3>מוצרי ברטלו במבצע ל-48 שעות </h3>
+              <h2>10 אחוז הנחה + משלוח חינם</h2>
             </div>
             <div class="w-100">
               <img src="" alt="">
@@ -131,12 +131,12 @@
     font-size: 50px;
   } */
   h2 {
-    font-size: 33px;
+    font-size: 35px;
     color: #c5211f;
   }
 
   h3 {
-    font-size: 35px;
+    font-size: 29px;
     font-weight: 300;
 color: #c5211f;
   }
@@ -168,11 +168,11 @@ color: #c5211f;
     } */
 
     h2 {
-      font-size: 23px;
+      font-size: 6.6vw;
     }
 
     h3 {
-      font-size: 6.6vw;
+      font-size: 21px;
     }
   }
 </style>

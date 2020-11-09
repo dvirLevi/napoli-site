@@ -23,7 +23,7 @@
           <template v-if="products.length">
             <div class="w-100 center-all border-top p-4">
               <p class="w-100" v-if="discount">הנחת קופון: {{discount}}%-</p>
-              <p class="w-100">סה"כ: {{PayablePlusDiscount}} ₪</p>
+              <p class="w-100">סה"כ: {{PayablePlusDiscount}} ₪ - <span> ShoppingIl כולל משלוח חינם</span> </p>
               <template v-if="priceMessenger">
                 <p class="w-100">משלוח עד הבית {{priceMessenger}} ₪</p>
                 <p class="w-100">סה"כ כולל משלוח : {{PayablePlusDiscount + priceMessenger}} ₪</p>
