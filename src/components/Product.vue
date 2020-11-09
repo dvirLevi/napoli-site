@@ -25,7 +25,7 @@
       </div>
       <div class="row mt-3">
         <div class="col-md-6 center-all">
-          <img class="w-100" :src="product.img" alt="">
+          <img class="w-100 mt-md-0 mt-5" :src="product.img" alt="">
         </div>
         <div class="col-md-6 ">
           <h3 v-html="product.name"></h3>
@@ -184,7 +184,7 @@
 
     .box-shopil {
       top: 0px;
-      width: 205px;
+      width: 90%;
     }
   }
 </style>
