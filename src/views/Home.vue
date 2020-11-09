@@ -141,7 +141,7 @@
   }
 
   .icon-shop-logo {
-    width: 10%;
+    width: 16.7%;
   }
 
   .icon-shop {
