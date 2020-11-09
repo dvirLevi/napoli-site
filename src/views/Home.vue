@@ -132,12 +132,13 @@
   } */
   h2 {
     font-size: 33px;
+    color: #c5211f;
   }
 
   h3 {
     font-size: 35px;
     font-weight: 300;
-
+color: #c5211f;
   }
 
   .icon-shop-logo {

@@ -156,7 +156,7 @@ export default new Vuex.Store({
     nextPayment: false,
     messenger: true,
     ifCode: false,
-    priceMessenger: 40,
+    priceMessenger: 0,
     freeMessenger: false,
     PercentageOfDiscount: 0,
     IntegerOfDiscount: 0,
