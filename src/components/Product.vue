@@ -155,6 +155,7 @@
     bottom: 0px;
     right: 0px;
     width: 195px;
+    height: fit-content;
   }
 
   @media (max-width: 1410px) {
