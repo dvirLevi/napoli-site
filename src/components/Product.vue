@@ -184,7 +184,7 @@
 
     .box-shopil {
       top: 0px;
-      width: 161px;
+      width: 205px;
     }
   }
 </style>
