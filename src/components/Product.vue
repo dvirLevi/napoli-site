@@ -38,7 +38,7 @@
           </div>
         </div>
       </div>
-      <div class="box-shopil">
+      <div class="box-shopil p-2">
         <img class="w-100" src="@/assets/ass34.jpg" alt="">
       </div>
     </div>
