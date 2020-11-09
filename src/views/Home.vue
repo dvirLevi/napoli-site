@@ -15,9 +15,9 @@
               <img class="img-shopil" src="@/assets/ass33.jpg" alt="">
             </div>
             <div class="w-100">
-              <h1>11-10 בנובמבר</h1>
-              <h2>10 אחוז הנחה</h2>
-              <h3>10 אחוז הנחה + משלוח חינם</h3>
+              <!-- <h1>11-10 בנובמבר</h1> -->
+              <h2>10 אחוז הנחה + משלוח חינם</h2>
+              <h3>מוצרי ברטלו במבצע ל48 שעות </h3>
             </div>
             <div class="w-100">
               <img src="" alt="">
@@ -122,7 +122,7 @@
     font-size: 50px;
   } */
   h2 {
-    font-size: 60px;
+    font-size: 33px;
   }
 
   h3 {
@@ -149,12 +149,12 @@
       margin-top: -44px;
     }
 
-    h1 {
+    /* h1 {
       font-size: 24px;
-    }
+    } */
 
     h2 {
-      font-size: 47px;
+      font-size: 23px;
     }
 
     h3 {
