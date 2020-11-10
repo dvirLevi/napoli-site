@@ -42,7 +42,7 @@
       </div>
       </div>
       <div class="w-100">
-        <codeDiscount />
+        <!-- <codeDiscount /> -->
         <div class="center-all row">
           <h6 class="w-100 text-center" v-if="discount">הנחת קופון: {{discount}}%- </h6>
           <h6 class="w-100 text-center" v-if="IntegerOfDiscount">הנחת קופון: ₪{{IntegerOfDiscount}}- </h6>
@@ -62,13 +62,13 @@
 
 <script>
   // @ is an alias to /src
-  import codeDiscount from '@/components/codeDiscount.vue'
+  // import codeDiscount from '@/components/codeDiscount.vue'
 
 
   export default {
     name: 'Cart',
     components: {
-      codeDiscount
+      // codeDiscount
     },
     computed: {
       ifCart() {

@@ -19,7 +19,7 @@
           <h4 class="w-100">{{days}}</h4>
         </div>
       </div>
-      <h4 class="text-center w-100">לסיום מבצע חידוש המלאי</h4>
+      <!-- <h4 class="text-center w-100">לסיום מבצע חידוש המלאי</h4> -->
     </div>
   </div>
 </template>
@@ -40,7 +40,7 @@
         minutes: "",
         seconds: "",
         // ifCounter: true
-        date: new Date("2020-10-16")
+        date: new Date("2020-11-12")
       }
     },
     created() {
