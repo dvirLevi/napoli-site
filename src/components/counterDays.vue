@@ -100,12 +100,12 @@
   }
 
   h4 {
-    color: rgb(175, 76, 30);
+    color: #c5211f;
   }
 
   @media (max-width: 767.98px) {
     .el-time {
-      border: solid rgb(0, 0, 0) 2px;
+      /* border: solid rgb(0, 0, 0) 2px; */
       margin: 0.9%;
       width: 23%;
     }
