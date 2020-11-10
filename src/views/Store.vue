@@ -37,7 +37,7 @@
         content_name: this.$route.name,
       });
       analyticsPages(this.$route.name);
-      this.$store.commit('upAutoModel', this.$route.name)
+      // this.$store.commit('upAutoModel', this.$route.name)
     },
     computed: {
       products() {

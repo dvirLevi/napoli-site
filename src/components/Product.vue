@@ -33,7 +33,7 @@
           <h3 v-html="product.name"></h3>
           <p><span class="line-on-text" v-if="product.previousPrice">{{product.previousPrice}} ₪</span></p>
           <!-- <h4 class=""><span class="font-weight-normal">מחיר מבצע SgoppingIl</span></h4> -->
-          <p class="font-weight-bold">{{product.price}} ₪ מבצע SgoppingIl</p>
+          <p class="font-weight-bold">{{product.price}} ₪ מבצע <span class="color-shoping">shoppingil</span></p>
           <p class="more" @click="showModal = !showModal">לחץ כאן למידע נוסף>></p>
           <div class="center-all mb-3  mt-3">
             <ButtonLink @customEvent="addToCart(product)" text="הוסף לעגלת הקניות" link="/store" class="h5" />
@@ -163,6 +163,10 @@ border-radius: 8px;
     right: 0px;
     width: 195px;
     height: fit-content;
+  }
+
+  .color-shoping {
+    color: #4087f4;
   }
 
   @media (max-width: 1410px) {
