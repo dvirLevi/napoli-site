@@ -23,15 +23,18 @@
     </div>
     <div class="w-100">
       <h2 class="text-center mt-3 text-white font-weight-normal">ShoppingIL בברטלו ישראל!</h2>
-    <h2 class="text-center mt-3 text-white font-weight-bold">מבצע מפנק ליומיים בלבד!</h2>
-    <h2 class="text-center mt-3 text-white font-weight-bold">אל תפספסו!!!</h2>
-    <h2 class="text-center mt-3 text-white font-weight-normal">יש לכם שאלות? דברו איתנו</h2>
-    </div>
-     <div class="wrap-w center-all w m-3">
-        <a href="https://api.whatsapp.com/send?phone=972537234223" target="_blanc">
-          <i class="fab fa-whatsapp"></i>
-        </a>
+      <h2 class="text-center mt-3 text-white font-weight-bold">מבצע מפנק ליומיים בלבד!</h2>
+      <h2 class="text-center mt-3 text-white font-weight-bold">אל תפספסו!!!</h2>
+      <div class="w-100 f-center">
+        <h2 class="text-center m-0 text-white font-weight-normal">יש לכם שאלות? דברו איתנו</h2>
+        <div class="wrap-w center-all w m-3">
+          <a href="https://api.whatsapp.com/send?phone=972537234223" target="_blanc">
+            <i class="fab fa-whatsapp"></i>
+          </a>
+        </div>
       </div>
+    </div>
+
     <!-- <router-link to="/store" tag="h3" class="text-white mt-4 c-p">
       <h3 @click="closeModal" class="text-primary">קנו עכשיו >>></h3>
     </router-link> -->
@@ -110,8 +113,8 @@
     }
 
     .box-icon-shop {
-    width: 100%;
-  }
+      width: 100%;
+    }
 
     h2 {
       font-size: 19px;
