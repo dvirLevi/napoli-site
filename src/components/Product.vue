@@ -139,10 +139,10 @@
     padding: 10px 18px;
     color: #fff;
     /* width: 146px; */
-
+border-radius: 8px;
     /* -webkit-transform: rotate(20deg); */
     /* transform: rotate(20deg); */
-    background-color: #af4c1e;
+    background-color: #4087f4;
     /* font-size: 14px; */
     text-align: center;
     z-index: 1;
