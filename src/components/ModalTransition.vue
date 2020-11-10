@@ -61,7 +61,7 @@ myClass: String,
     /* Full width */
     height: 100%;
     /* Full height */
-    overflow: auto;
+        overflow-y: overlay;
     /* Enable scroll if needed */
     background-color: #000000c9;
     /* Fallback color */
