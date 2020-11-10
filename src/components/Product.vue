@@ -19,8 +19,10 @@
 
     <div class="box-product center-all">
       <div class="label f-center" v-if="product.label">
-        <img class="w-100" src="@/assets/ass31.svg" alt="">
+        <!-- <div class="bg"> -->
         <h4 class="m-0">{{product.label}}</h4>
+
+        <!-- </div> -->
         <!-- {{product.label}} -->
       </div>
       <div class="row mt-3">
@@ -132,22 +134,27 @@
 
   .label {
     position: absolute;
-    top: -84px;
-    right: -66px;
+    top: -7px;
+    right: -5px;
+    padding: 10px 18px;
     color: #fff;
-    width: 206px;
-    -webkit-transform: rotate(20deg);
-    transform: rotate(20deg);
-    font-size: 14px;
+    /* width: 146px; */
+
+    /* -webkit-transform: rotate(20deg); */
+    /* transform: rotate(20deg); */
+    background-color: #af4c1e;
+    /* font-size: 14px; */
     text-align: center;
     z-index: 1;
   }
 
   .label h4 {
-    position: absolute;
-    top: 50%;
+    /* position: absolute; */
+    /* top: 50%; */
     font-size: 17px;
-    width: 50%;
+    /* width: 50%; */
+    /* background-color: red; */
+
   }
 
   .box-shopil {
@@ -179,8 +186,8 @@
     }
 
     .label {
-      top: -98px;
-      right: -31px;
+      top: -16px;
+    right: -5px;
     }
 
     .box-shopil {

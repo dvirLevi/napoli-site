@@ -99,7 +99,7 @@ export default new Vuex.Store({
         previousPrice: 175,
         amount: 0,
         ifSize: false,
-        label: "",
+        label: "מוצר חדש",
         id: 6
       },
       // {
