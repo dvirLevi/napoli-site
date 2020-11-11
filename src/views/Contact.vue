@@ -10,12 +10,12 @@
         <p>אנו עושים את כל המאמצים כדי שתיהנו ממוצרינו. </p>
         <p>נשמח מאוד לעמוד לרשותכם, השאירו את פרטיכם בטופס ונשוב אליכם בהקדם.</p>
       </div>
-      <div class="w-100 center-all mt-5">
+      <div class="w-100 f-center-right mt-5">
         <div class="w-100">
           <TitleAndBorderR>יצירת קשר</TitleAndBorderR>
 
         </div>
-        <form @submit.prevent="sendMail" class=" center-all mt-3">
+        <form @submit.prevent="sendMail" class=" f-center mt-3">
           <div class="w-100 center-all">
             <input type="text" placeholder="*שם מלא" v-model="clientDatdlis.name" required>
           </div>
@@ -29,13 +29,13 @@
           <div class="w-100 center-all">
             <textarea id="" rows="5" placeholder="*סיבת הפנייה" v-model="clientDatdlis.note" required></textarea>
           </div>
-          <div class="w-100 center-all mt-3 confirm">
+          <div class="w-100 f-center-right mt-3 confirm">
             <input type="checkbox" :checked="clientDatdlis.ifConfirmMail"
               @click="clientDatdlis.ifConfirmMail = !clientDatdlis.ifConfirmMail">
             <span>לקבלת מתכונים, טיפים ומבצעים לדוא"ל</span>
           </div>
 
-          <div class="w-100 center-all">
+          <div class="w-100 f-center-right">
             <button type="submit">{{textSend}}</button>
           </div>
         </form>
