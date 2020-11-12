@@ -1,18 +1,28 @@
 const analyticsPages = (route) => {
   if (ifAlreadyAnalytics) {
+    gtag('event', 'page_view', {
+      'page_title': route,
+      'page_path': `/${route}`,
+      // page_path: '<Page Path>'
+      // send_to: '<GA_MEASUREMENT_ID>'
+      // 'event_callback': function(e) {
+      //   console.log(e)
+      // }
+          
+    })
 
     //אנליטיקס
-    gtag('config', 'UA-150230848-1', {
-      'page_title': route,
-      'page_path': `/${route}`
-    });
+    // gtag('config', 'UA-150230848-1', {
+    //   'page_title': route,
+    //   'page_path': `/${route}`
+    // });
     
 
-    //גוגל ADS
-    gtag('config', 'AW-698669401', {
-      'page_title': route,
-      'page_path': `/${route}`
-    });
+    // //גוגל ADS
+    // gtag('config', 'AW-698669401', {
+    //   'page_title': route,
+    //   'page_path': `/${route}`
+    // });
     if (route === "store") {
       gtag('event', 'conversion', {
         'send_to': 'AW-698669401/AzPuCIabq7IBENmyk80C',

@@ -10,6 +10,7 @@
   "dependencies": {
     "aos": "^2.3.4",
     "core-js": "^2.6.5",
+    "shortid": "^2.2.16",
     "sweetalert2": "^8.16.3",
     "vue": "^2.6.10",
     "vue-gtm": "^3.0.0",
