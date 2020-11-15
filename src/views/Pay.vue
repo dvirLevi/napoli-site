@@ -123,7 +123,7 @@
       endPay() {
         this.numOfLoadIframe = this.numOfLoadIframe + 1;
         if (this.numOfLoadIframe > 1) {
-          setInterval(() => {
+          let interval = setInterval(() => {
             let ifPay = localStorage.getItem("ifPay");
             if (ifPay) {
               this.$router.push("/thanks");
@@ -155,7 +155,7 @@
                   return arr
                 })()
               });
-
+              clearInterval(interval)
             }
           }, 2000)
         } else {
