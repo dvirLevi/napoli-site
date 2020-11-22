@@ -155,7 +155,8 @@
                   return arr
                 })()
               });
-              clearInterval(interval)
+              clearInterval(interval);
+              localStorage.removeItem("ifPay");
             }
           }, 2000)
         } else {
