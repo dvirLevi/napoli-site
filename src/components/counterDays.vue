@@ -4,22 +4,26 @@
       <div class="w-100 center-all">
         <div class="el-time center-all">
           <h4 class="w-100">שניות</h4>
-          <h4 class="w-100">{{seconds}}</h4>
+          <h4 class="w-100" v-if="seconds">{{seconds}}</h4>
+          <h4 class="w-100" v-else>00</h4>
         </div>
         <div class="el-time center-all">
           <h4 class="w-100">דקות</h4>
-          <h4 class="w-100">{{minutes}}</h4>
+          <h4 class="w-100" v-if="minutes">{{minutes}}</h4>
+          <h4 class="w-100" v-else>00</h4>
         </div>
         <div class="el-time center-all">
           <h4 class="w-100">שעות</h4>
-          <h4 class="w-100">{{hours}}</h4>
+          <h4 class="w-100" v-if="hours">{{hours}}</h4>
+          <h4 class="w-100" v-else>00</h4>
         </div>
         <div class="el-time center-all">
           <h4 class="w-100">ימים</h4>
-          <h4 class="w-100">{{days}}</h4>
+          <h4 class="w-100" v-if="days">{{days}}</h4>
+          <h4 class="w-100" v-else>00</h4>
         </div>
       </div>
-      <h4 class="text-center w-100">לסיום מבצע חידוש המלאי</h4>
+      <h4 class="text-center w-100">לסיום מבצע BLACK FRIDAY</h4>
     </div>
   </div>
 </template>
@@ -40,7 +44,7 @@
         minutes: "",
         seconds: "",
         // ifCounter: true
-        date: new Date("2020-10-16")
+        date: new Date("2020-11-29")
       }
     },
     created() {
