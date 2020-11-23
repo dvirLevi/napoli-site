@@ -144,7 +144,8 @@
     position: absolute;
     top: 50%;
     font-size: 17px;
-    width: 50%;
+    width: 46%;
+    font-weight: 700;
   }
 
   @media (max-width: 1410px) {
