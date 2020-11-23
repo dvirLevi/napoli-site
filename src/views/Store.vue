@@ -33,7 +33,7 @@
     },
     data() {
       return {
-        ifModalStore: false
+        ifModalStore: true
       }
     },
     mounted() {
