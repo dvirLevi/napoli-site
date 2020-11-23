@@ -1,0 +1,94 @@
+<template>
+  <ModalTransition myClass="modal-transition-b" @customEvent="$emit('customEvent')">
+    <h2 class="text-center mt-3 text-white opas">BLACK FRIDAY בנאפולי ישראל</h2>
+    <div class="w-100 center-all">
+        <firework class="opas"/>
+    </div>
+  </ModalTransition>
+</template>
+
+<script>
+  // @ is an alias to /src
+  import ModalTransition from '@/components/ModalTransition.vue'
+  import firework from '@/components/firework.vue'
+
+
+  export default {
+    name: 'blackFridayModalAutoClear',
+    components: {
+      ModalTransition,
+      firework
+    },
+    props: {
+
+    },
+    methods: {
+      closeModal() {
+        // this.$store.commit('closeAutoModel')
+      }
+    }
+  }
+</script>
+
+<style scoped>
+  img {
+    width: 50%;
+  }
+
+  i {
+    font-size: 50px;
+    color: #ffffff;
+  }
+
+  .wrap-w {
+    width: 70px;
+    height: 70px;
+    border-radius: 100px;
+    box-shadow: 0 0 14px #000000bd;
+  }
+
+  .f {
+    background-color: #4267b2;
+  }
+
+  .w {
+    background-color: #2cb742;
+  }
+
+  h2 {
+    font-size: 70px;
+  }
+
+  .opas {
+    animation-name: opas;
+    animation-duration: 7s;
+  }
+
+  @keyframes opas {
+    0% {
+      opacity: 1;
+    }
+
+    90% {
+      opacity: 1;
+    }
+
+    100% {
+      opacity: 0;
+    }
+  }
+
+  @media (max-width: 767.98px) {
+    img {
+      width: 100%;
+    }
+
+    h2 {
+      font-size: 35px;
+    }
+
+    h3 {
+      font-size: 20px;
+    }
+  }
+</style>
