@@ -29,7 +29,7 @@
     },
     data() {
       return {
-
+        ifModalStore: false
       }
     },
     mounted() {
@@ -38,6 +38,9 @@
       });
       analyticsPages(this.$route.name);
       // this.$store.commit('upAutoModel', this.$route.name)
+      setTimeout(() => {
+        this.ifModalStore = false
+      }, 7000)
     },
     computed: {
       products() {
