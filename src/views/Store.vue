@@ -9,6 +9,7 @@
         </div>
       </div>
     </div>
+    <blackFridayModalAutoClear v-if="ifModalStore" @customEvent="ifModalStore = false" />
   </div>
 </template>
 
@@ -18,6 +19,8 @@
   import Product from '@/components/Product.vue'
   import analyticsPages from '@/helpers/analyticsPages.js'
   import videoTop from '@/components/videoTop.vue'
+  import blackFridayModalAutoClear from '@/components/blackFridayModalAutoClear.vue'
+
 
 
   export default {
@@ -25,7 +28,8 @@
     components: {
       Product,
       counterDays,
-      videoTop
+      videoTop,
+      blackFridayModalAutoClear
     },
     data() {
       return {
