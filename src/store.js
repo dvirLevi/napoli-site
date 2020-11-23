@@ -43,11 +43,11 @@ export default new Vuex.Store({
         גובה: 31.5 ס"מ<br>
         </li><li><span class="border-bottom border-dark">משקל:</span><br> 12.5 ק"ג</li><li><span class="border-bottom border-dark">שטח אבן האפייה:</span><br>רוחב: 31.75 ס"מ <br>עומק: 34.29 ס"מ </li>`,
         addCart: false,
-        price: 1431,
+        price: 1390,
         previousPrice: 1590,
         amount: 0,
         ifSize: true,
-        label: "Black Friday",
+        label: "BLACK FRIDAY",
         id: 1
       },
       {
@@ -56,11 +56,11 @@ export default new Vuex.Store({
         description: "",
         specifications: `<li>מבער גז עוצמתי, תוכנן ועוצב במיוחד לתנור ברטלו</li><li>חיבור פשוט ומהיר לתנור</li><li>מתלהט לטמפרטורה של 450 מעלות תוך כ-15 דקות בלבד</li><li>חסכוני בגז – כ-420 גרם בלבד לשעת בעירה</li><li>מספק אש חזקה, יציבה ונקייה לכל אורך השימוש</li><li>כפתור הצתה בטיחותי</li><li>שליטה מלאה על עוצמת הלהבות</li><li>יש לחבר למבער הגז וסת ישראלי תקני בלחץ 30 מיליבר        </li><li>הרכבה באחריות הלקוח, באמצעות טכנאי גז כנדרש ע"פ דין</li><li>אורך:  26.5 ס"מ; רוחב: 15 ס"מ</li>`,
         addCart: false,
-        price: 351,
+        price: 299,
         previousPrice: 390,
         amount: 0,
         ifSize: true,
-        label: "Black Friday",
+        label: "BLACK FRIDAY",
         id: 2
       },
       {
@@ -69,11 +69,11 @@ export default new Vuex.Store({
         description: "",
         specifications: `<li>כיסוי ברטלו ייעודי לשמירת התנור מאבק ולכלוך, ולהגנה מפני פגעי מזג האוויר</li><li>שוליים נמתחים להידוק הכיסוי סביב תחתית התנור</li>`,
         addCart: false,
-        price: 81,
+        price: 69,
         previousPrice: 90,
         amount: 0,
         ifSize: false,
-        label: "Black Friday",
+        label: "BLACK FRIDAY",
         id: 3
       },
       {
@@ -82,11 +82,11 @@ export default new Vuex.Store({
         description: "",
         specifications: `<li>מותאמת במיוחד למידות התנור</li><li>כוללת חרירים ייעודיים לעודפי הקמח ולאוורור תחתית הפיצה</li>`,
         addCart: false,
-        price: 171,
+        price: 149,
         previousPrice: 190,
         amount: 0,
         ifSize: false,
-        label: "Black Friday",
+        label: "BLACK FRIDAY",
         id: 4
       },
       {
@@ -95,11 +95,11 @@ export default new Vuex.Store({
         description: "",
         specifications: `<li>אביזר ייחודי של ברטלו. </li><li>מאפשר הבערה בו זמנית של גז ועצים, לקבלת טעם מעושן אמיתי של הפיצה. </li><li>חיבור נוח של תא פחמים פנימי למבער הגז החיצוני.</li><li>מומלץ! </li>`,
         addCart: false,
-        price: 157,
+        price: 145,
         previousPrice: 175,
         amount: 0,
         ifSize: false,
-        label: "Black Friday",
+        label: "BLACK FRIDAY",
         id: 6
       },
       // {
@@ -125,7 +125,7 @@ export default new Vuex.Store({
         previousPrice: 2190,
         amount: 0,
         ifSize: false,
-        label: "Black Friday",
+        label: "BLACK FRIDAY",
         id: 5
       },
       {
@@ -138,7 +138,7 @@ export default new Vuex.Store({
         previousPrice: 2350,
         amount: 0,
         ifSize: false,
-        label: "Black Friday",
+        label: "BLACK FRIDAY",
         id: 8
       },
     ],
