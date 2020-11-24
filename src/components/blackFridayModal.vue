@@ -7,7 +7,7 @@
       <img src="../assets/ass32.jpg" alt="">
     </div>
     <h2 class="text-center mt-3 text-white">BLACK FRIDAY בברטלו ישראל</h2>
-    <h3 class="text-center text-white">מחירים מטורפים בחנות האתר עד ל-1 בדצמבר בלבד! המבצע עד גמר המלאי!</h3>
+    <h3 class="text-center text-white w-100">מחירים מטורפים בחנות האתר עד ל-1 בדצמבר בלבד! המבצע עד גמר המלאי!</h3>
     <router-link to="/store" tag="h3" class="text-white mt-4 c-p" ><h3 @click="closeModal" class="text-primary">קנו עכשיו >>></h3></router-link>
     <div class="w-100 center-all">
       <firework />

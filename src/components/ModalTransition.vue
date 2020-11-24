@@ -134,6 +134,7 @@ myClass: String,
     padding: 30px;
     /* border: 1px solid #888; */
     width: 60%;
+    border-radius: 20px;
   }
 
   .modal-con-b {
