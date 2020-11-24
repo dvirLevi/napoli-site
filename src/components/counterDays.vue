@@ -44,7 +44,7 @@
         minutes: "",
         seconds: "",
         // ifCounter: true
-        date: new Date("2020-11-29")
+        date: new Date("2020-11-30")
       }
     },
     created() {
