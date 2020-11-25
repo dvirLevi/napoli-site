@@ -28,11 +28,11 @@
 
   i {
     font-size: 70px;
-    color: #2cb742;
+    color: #ffffff;
   }
 
   .wrap-w {
-    background-color: rgba(255, 255, 255, 0.32);
+    background-color: #2cb742;
     width: 92px;
     height: 92px;
     border-radius: 100px;
