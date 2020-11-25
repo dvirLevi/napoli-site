@@ -31,21 +31,22 @@
         // codeBezza: '!@#asd#@!',
         // napoli200: '!@#asd#@!',
         // hours: "!@#asd#@!",
-        codes: [{
-            code: 'napoli-sale',
-            discount: 10,
-            typeDiscount: "IfCodeTrue"
-          },
-          {
-            code: 'special-napoli',
-            discount: 15,
-            typeDiscount: "IfCodeTrue"
-          },
-          {
-            code: 'bertello-sale',
-            discount: 7,
-            typeDiscount: "IfCodeTrue"
-          }
+        codes: [
+          // {
+          //   code: 'napoli-sale',
+          //   discount: 10,
+          //   typeDiscount: "IfCodeTrue"
+          // },
+          // {
+          //   code: 'special-napoli',
+          //   discount: 15,
+          //   typeDiscount: "IfCodeTrue"
+          // },
+          // {
+          //   code: 'bertello-sale',
+          //   discount: 7,
+          //   typeDiscount: "IfCodeTrue"
+          // }
         ]
       }
     },
