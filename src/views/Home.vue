@@ -38,7 +38,7 @@
   import FoodImages from '@/components/FoodImages.vue'
   import RecipesLink from '@/components/RecipesLink.vue'
   import 'aos/dist/aos.css'
-  import analyticsPages from '@/helpers/analyticsPages.js'
+  
   import counterDays from '@/components/counterDays.vue'
   import iconsBanner from '@/components/iconsBanner.vue'
   import questions from '@/components/questions.vue'
@@ -63,8 +63,6 @@
       fbq('track', 'ViewContent', {
         content_name: this.$route.name,
       });
-      analyticsPages('/');
-
       this.$store.commit('upAutoModel', this.$route.name)
     }
 

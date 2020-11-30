@@ -61,7 +61,7 @@
 <script>
   // @ is an alias to /src
   import Swal from 'sweetalert2'
-  import analyticsPages from '@/helpers/analyticsPages.js'
+  
   import myMail from '@/helpers/myMail.js'
 
   export default {
@@ -80,7 +80,6 @@
       fbq('track', 'ViewContent', {
         content_name: this.$route.name,
       });
-      analyticsPages(this.$route.name);
       // this.$store.commit('upAutoModel')
     },
     methods: {

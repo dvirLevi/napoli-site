@@ -87,7 +87,7 @@
 
 <script>
   // @ is an alias to /src
-  import analyticsPages from '@/helpers/analyticsPages.js'
+
   import shortid from 'shortid'
 
 
@@ -110,7 +110,6 @@
       fbq('track', 'ViewContent', {
         content_name: this.$route.name,
       });
-      analyticsPages(this.$route.name)
     },
     methods: {
       nextToPay() {
@@ -133,15 +132,14 @@
                 currency: 'ILS'
               });
 
-              gtag('event', 'purchase', {
-                'event_category': 'purchase',
-                'event_label': 'purchase',
+                this.$gtag.purchase({
                 "transaction_id": shortid.generate(),
                 "affiliation": "Bertello store",
                 "value": this.allPayable,
+                'event_category': 'purchase',
+                'event_label': 'purchase',
+                "affiliation": "Bertello store",
                 "currency": "ILS",
-                "tax": this.allPayable - this.vat(this.allPayable),
-                "shipping": this.priceMessenger,
                 "items": (() => {
                   let arr = [];
                   for (let x in this.products) {
@@ -154,7 +152,30 @@
                   }
                   return arr
                 })()
-              });
+              })
+
+              // gtag('event', 'purchase', {
+              //   'event_category': 'purchase',
+              //   'event_label': 'purchase',
+              //   "transaction_id": shortid.generate(),
+              //   "affiliation": "Bertello store",
+              //   "value": this.allPayable,
+              //   "currency": "ILS",
+              //   "tax": this.allPayable - this.vat(this.allPayable),
+              //   "shipping": this.priceMessenger,
+              //   "items": (() => {
+              //     let arr = [];
+              //     for (let x in this.products) {
+              //       arr.push({
+              //         "id": this.products[x].id.toString(),
+              //         "name": this.products[x].name,
+              //         "quantity": this.products[x].amount,
+              //         "price": this.products[x].price.toString()
+              //       })
+              //     }
+              //     return arr
+              //   })()
+              // });
               clearInterval(interval);
               localStorage.removeItem("ifPay");
             }

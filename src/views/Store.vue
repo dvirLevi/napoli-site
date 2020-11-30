@@ -16,7 +16,7 @@
   // @ is an alias to /src
   import counterDays from '@/components/counterDays.vue'
   import Product from '@/components/Product.vue'
-  import analyticsPages from '@/helpers/analyticsPages.js'
+  
   import videoTop from '@/components/videoTop.vue'
 
 
@@ -36,7 +36,6 @@
       fbq('track', 'ViewContent', {
         content_name: this.$route.name,
       });
-      analyticsPages(this.$route.name);
       // this.$store.commit('upAutoModel', this.$route.name)
     },
     computed: {

@@ -13,7 +13,7 @@
 
 <script>
   // @ is an alias to /src
-import analyticsPages from '@/helpers/analyticsPages.js'
+
 
   export default {
     name: 'thanks',
@@ -24,7 +24,6 @@ import analyticsPages from '@/helpers/analyticsPages.js'
       fbq('track', 'ViewContent', {
         content_name: this.$route.name,
       });
-      analyticsPages(this.$route.name);
       localStorage.setItem("ifPay",true);
       // setTimeout(() => {
       //   this.$router.push("/");

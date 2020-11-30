@@ -99,7 +99,7 @@
   // @ is an alias to /src
   import Regulations from '@/components/Regulations.vue'
   import Swal from 'sweetalert2'
-  import analyticsPages from '@/helpers/analyticsPages.js'
+  
 
 
   export default {
@@ -116,7 +116,6 @@
       fbq('track', 'ViewContent', {
         content_name: this.$route.name,
       });
-      analyticsPages(this.$route.name)
     },
     methods: {
       nextToPay() {
@@ -124,10 +123,14 @@
           this.$store.commit('nextPayment');
           this.$router.push('pay');
           fbq('track', 'AddPaymentInfo');
-          gtag('event', 'add_payment_info', {
-            'event_category': 'add_payment_info',
-            'event_label': 'add_payment_info'
-          });
+            this.$gtag.event('add_payment_info', {
+        'event_category': 'ecommerce',
+        'event_label': 'add_payment_info'
+      })
+          // gtag('event', 'add_payment_info', {
+          //   'event_category': 'add_payment_info',
+          //   'event_label': 'add_payment_info'
+          // });
         } else {
           Swal.fire({
             type: 'error',

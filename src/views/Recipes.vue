@@ -112,7 +112,7 @@
   // @ is an alias to /src
   import RecipesModal from '@/components/RecipesModal.vue'
   import videoBottom from '@/components/videoBottom.vue'
-  import analyticsPages from '@/helpers/analyticsPages.js'
+  
 
 
   export default {
@@ -146,7 +146,6 @@
       fbq('track', 'ViewContent', {
         content_name: this.$route.name,
       });
-      analyticsPages(this.$route.name);
       // this.$store.commit('upAutoModel')
     },
     methods: {

@@ -65,10 +65,14 @@
         product.amount++;
         this.$store.commit('allTimeShowCart');
         fbq('track', 'AddToCart');
-        gtag('event', 'add_to_cart', {
-          'event_category': 'add_to_cart',
-          'event_label': 'add_to_cart'
-        });
+        // gtag('event', 'add_to_cart', {
+        //   'event_category': 'add_to_cart',
+        //   'event_label': 'add_to_cart'
+        // });
+        this.$gtag.event('add_to_cart', {
+        'event_category': 'ecommerce',
+        'event_label': 'add_to_cart'
+      })
       }
     },
     computed: {
