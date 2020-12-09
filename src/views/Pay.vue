@@ -64,6 +64,7 @@
             :value="clientDatdlis.address +' '+ clientDatdlis.namHome +' '+ codeCouponName">
           <input id="json_purchase_data" name="json_purchase_data" :value="JSonProducts">
           <input id="u71" name="u71" value="1">
+
           <button type="submit"></button>
         </form>
         <div class="center-all w-100">
@@ -138,7 +139,6 @@
                 "value": this.allPayable,
                 'event_category': 'purchase',
                 'event_label': 'purchase',
-                "affiliation": "Bertello store",
                 "currency": "ILS",
                 "items": (() => {
                   let arr = [];
