@@ -9,7 +9,12 @@
     <!-- <h3 class="text-center mt-3">הוא הגיע!!!</h3> -->
     <!-- <h3 class="text-center">מלאי חדש של תנורי נאפולי הגיע סוף-סוף לארץ!</h3> -->
     <!-- <h3 class="text-center font-weight-bold">עכשיו במבצע השקה לשבוע בלבד!</h3> -->
-    <h3 class="text-center mt-3">גם אתם התאהבתם בברטלו שלנו? בצדק! הוא כבר כבש את ארה"ב, ועכשיו הוא כובש גם את ישראל 🙂</h3>
+    <div>
+      <h3 class="text-center mt-3">גם אתם התאהבתם בברטלו שלנו?</h3>
+      <h3 class="text-center mt-3 font-weight-bolder">בצדק!</h3>
+      <h3 class="text-center mt-3">הגיע הזמן שתיהנו מפיצות איטלקיות לוהטות אצלכם בבית!!!</h3>
+    </div>
+
     <!-- <h3 class="text-center font-weight-bold">אז אל תפספסו את המבצע שלנו, כי הוא תכף נגמר.</h3> -->
     <!-- <router-link class="font-weight-bold c-p link-store" tag="h3" to="/store" @click.native="closeModal">רכשו עכשיו >></router-link> -->
     <!-- <div class="w-100 f-center">
@@ -17,7 +22,7 @@
 
     </div> -->
     <div class="w-100 center-all">
-      <h3 class="text-center">יש לכם שאלות? דברו איתנו</h3>
+      <h3 class="text-center">דברו איתנו - נשמח לענות על כל שאלה</h3>
       <div class="wrap-w center-all w m-3">
         <a href="https://api.whatsapp.com/send?phone=972537234223" target="_blanc">
           <i class="fab fa-whatsapp"></i>
@@ -28,9 +33,6 @@
           <i class="fab fa-facebook-messenger"></i>
         </a>
       </div> -->
-      <div class="w-100 center-all">
-        <h3 class="text-center">נשמח לענות על כל שאלה!</h3>
-      </div>
     </div>
   </Modal>
 </template>

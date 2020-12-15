@@ -50,6 +50,7 @@
   /* border: 1px solid #888; */
   width:40%;
   border: 3px dashed rgb(82, 82, 82);
+  border-radius: 20px;
 }
 
 

@@ -132,28 +132,28 @@
                 value: this.allPayable,
                 currency: 'ILS'
               });
-
+              setTimeout(() => {
                 this.$gtag.purchase({
-                "transaction_id": shortid.generate(),
-                "affiliation": "Bertello store",
-                "value": this.allPayable,
-                'event_category': 'purchase',
-                'event_label': 'purchase',
-                "currency": "ILS",
-                "items": (() => {
-                  let arr = [];
-                  for (let x in this.products) {
-                    arr.push({
-                      "id": this.products[x].id.toString(),
-                      "name": this.products[x].name,
-                      "quantity": this.products[x].amount,
-                      "price": this.products[x].price.toString()
-                    })
-                  }
-                  return arr
-                })()
-              })
-
+                  "transaction_id": shortid.generate(),
+                  "affiliation": "Bertello store",
+                  "value": this.allPayable,
+                  'event_category': 'purchase',
+                  'event_label': 'purchase',
+                  "currency": "ILS",
+                  "items": (() => {
+                    let arr = [];
+                    for (let x in this.products) {
+                      arr.push({
+                        "id": this.products[x].id.toString(),
+                        "name": this.products[x].name,
+                        "quantity": this.products[x].amount,
+                        "price": this.products[x].price.toString()
+                      })
+                    }
+                    return arr
+                  })()
+                })
+              }, 3000)
               // gtag('event', 'purchase', {
               //   'event_category': 'purchase',
               //   'event_label': 'purchase',
