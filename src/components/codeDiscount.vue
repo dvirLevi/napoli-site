@@ -68,67 +68,11 @@
     },
     watch: {
       products: function (products) {
-        // if (products.length) {
-        // if (this.myCode.toLowerCase() === this.code || this.myCode.toLowerCase() === this.codeGush) {
-        //   this.$store.commit('IfCodeTrue', 10)
-        //   this.$store.commit('pushNameCode', this.myCode.toLowerCase())
-        // } else if (this.myCode.toLowerCase() === this.codeSpecial) {
-        //   this.$store.commit('IfCodeTrue', 15)
-        //   this.$store.commit('pushNameCode', this.myCode.toLowerCase())
-        // } else if (this.myCode.toLowerCase() === this.codeBezza) {
-        //   this.$store.commit('IfCodeTrue', 10)
-        //   this.$store.commit('IfCodeDiscountMessengerTrue', 0)
-        //   this.$store.commit('pushNameCode', this.myCode.toLowerCase())
-        // } else if (this.myCode.toLowerCase() === this.napoli200 && this.ifNapoliDeal) {
-        //   this.$store.commit('IfCodeTrueInteger', 200)
-        //   // this.$store.commit('IfCodeDiscountMessengerTrue', 0)
-        //   this.$store.commit('pushNameCode', this.myCode.toLowerCase())
-
-        // } else if (this.myCode.toLowerCase() === this.hours && this.Payable > 999) {
-        //   this.$store.commit('IfCodeTrueInteger', 50)
-        //   // this.$store.commit('IfCodeDiscountMessengerTrue', 0)
-        //   this.$store.commit('pushNameCode', this.myCode.toLowerCase())
-
-        // } else {
-        //   this.$store.commit('IfCodeFalse')
-        // }
         this.ifCodeCorrect()
-        // }
       }
     },
     methods: {
       ifCodeCorrect() {
-        // if (this.myCode.toLowerCase() === this.code || this.myCode.toLowerCase() === this.codeGush) {
-        //   this.$store.commit('IfCodeTrue', 10)
-        //   this.$store.commit('pushNameCode', this.myCode.toLowerCase())
-
-        // } else if (this.myCode.toLowerCase() === this.codeSpecial) {
-        //   this.$store.commit('IfCodeTrue', 15)
-        //   this.$store.commit('pushNameCode', this.myCode.toLowerCase())
-
-        // } else if (this.myCode.toLowerCase() === this.codeBezza) {
-        //   this.$store.commit('IfCodeTrue', 10)
-        //   this.$store.commit('IfCodeDiscountMessengerTrue', 0)
-        //   this.$store.commit('pushNameCode', this.myCode.toLowerCase())
-
-        // } else if (this.myCode.toLowerCase() === this.napoli200 && this.ifNapoliDeal) {
-        //   this.$store.commit('IfCodeTrueInteger', 200)
-        //   // this.$store.commit('IfCodeDiscountMessengerTrue', 0)
-        //   this.$store.commit('pushNameCode', this.myCode.toLowerCase())
-
-        // } else if (this.myCode.toLowerCase() === this.hours && this.Payable > 999) {
-        //   this.$store.commit('IfCodeTrueInteger', 50)
-        //   // this.$store.commit('IfCodeDiscountMessengerTrue', 0)
-        //   this.$store.commit('pushNameCode', this.myCode.toLowerCase())
-
-        // } else {
-        //   Swal.fire({
-        //     type: 'error',
-        //     text: 'קוד קופון שגוי',
-        //     timer: 1500
-        //   });
-        // }
-
         if (this.products.length) {
           for (let x in this.codes) {
             if (this.myCode.toLowerCase() === this.codes[x].code.toLowerCase()) {
