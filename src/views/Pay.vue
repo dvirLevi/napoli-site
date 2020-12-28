@@ -13,7 +13,7 @@
                 <P>סה"כ למוצר: {{product.amount * product.price}}</P>
               </div>
               <div class="w-100">
-                <p class="w-100" v-if="discount">הנחת קופון: {{discount}}%- </p>
+                <p class="w-100" v-if="discount">הנחת קופון:  ₪{{discount}}- </p>
                 <p class="w-100" v-if="priceMessenger">משלוח עד הבית {{priceMessenger}} ₪</p>
                 <h5>סה"כ לתשלום: {{allPayable}} ₪</h5>
                 <!-- <h5>סה"כ לתשלום <span v-if="messenger">כולל משלוח</span>: {{allPayable}} ₪</h5> -->
@@ -235,7 +235,7 @@
         if (this.discount) {
           let vatDiscount = this.Payable - this.PayablePlusDiscount;
           json.push({
-            product_name: `הנחה ${this.discount}%`,
+            product_name: `הנחה ${this.discount}₪`,
             product_quantity: 1,
             product_price: -this.vat(vatDiscount),
             // product_price: - vatDiscount,
@@ -270,7 +270,7 @@
         return this.$store.state.codeCoupon
       },
       discount() {
-        return this.$store.getters.discount
+        return this.$store.getters.discountCompute
       },
     },
     watch: {
@@ -281,8 +281,6 @@
 
       }
     }
-
-
   }
 </script>
 

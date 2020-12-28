@@ -155,11 +155,11 @@ export default new Vuex.Store({
     },
     nextPayment: false,
     messenger: true,
-    ifCode: false,
+    // ifCode: false,
     priceMessenger: 40,
-    freeMessenger: false,
-    PercentageOfDiscount: 0,
-    IntegerOfDiscount: 0,
+    // freeMessenger: false,
+    percentageOfDiscount: 0,
+    integerOfDiscount: 0,
     ifAutoModel: false,
     blockAutoModel: true,
     aleadyUp: [],
@@ -178,39 +178,44 @@ export default new Vuex.Store({
       }
       return 0
     },
-    messenger: state => {
-      return state.messenger
-    },
-    discount: state => {
-      if (state.ifCode) {
-        return state.PercentageOfDiscount;
-      }
-      return 0
-    },
-    ifNapoliDeal: (state, getters) => {
-      let ifNapoliDeal = getters.inCart.filter((val) => {
-        return val.id === 5
-      })
-      if (ifNapoliDeal.length) {
-        return true
-      }
-      return false
-    },
-    IntegerOfDiscount: (state, getters) => {
-      if (getters.ifNapoliDeal) {
-        return state.IntegerOfDiscount
-      } else if (!getters.ifNapoliDeal && state.IntegerOfDiscount < 200 && getters.Payable > 1000){
-        return state.IntegerOfDiscount
+    // messenger: state => {
+    //   return state.messenger
+    // },
+    // discount: state => {
+    //   if (state.PercentageOfDiscount) {
+    //     return state.PercentageOfDiscount;
+    //   }
+    //   return 0
+    // },
+    // ifNapoliDeal: (state, getters) => {
+    //   let ifNapoliDeal = getters.inCart.filter((val) => {
+    //     return val.id === 5
+    //   })
+    //   if (ifNapoliDeal.length) {
+    //     return true
+    //   }
+    //   return false
+    // },
+    // IntegerOfDiscount: (state, getters) => {
+    //   if (getters.ifNapoliDeal) {
+    //     return state.IntegerOfDiscount
+    //   } else if (!getters.ifNapoliDeal && state.IntegerOfDiscount < 200 && getters.Payable > 1000){
+    //     return state.IntegerOfDiscount
+    //   }
+    //   return 0
+    // },
+    discountCompute: (state, getters) => {
+      if (state.percentageOfDiscount) {
+        let x = getters.Payable / 100;
+        let y = x * state.percentageOfDiscount;
+        return y
+      } else if (state.integerOfDiscount) {
+        return state.integerOfDiscount
       }
       return 0
     },
     PayablePlusDiscount: (state, getters) => {
-      if (getters.discount) {
-        let x = getters.Payable / 100;
-        let y = x * getters.discount
-        return getters.Payable - y - getters.IntegerOfDiscount;
-      }
-      return getters.Payable - getters.IntegerOfDiscount;
+      return getters.Payable - getters.discountCompute;
     },
     Payable: (state, getters) => {
       let Payable = 0;
@@ -221,7 +226,7 @@ export default new Vuex.Store({
     },
     ifMinPayable: (state, getters) => {
       // if (getters.Payable >= state.products[0].price) {
-        if (getters.Payable >= 0) {
+      if (getters.Payable >= 0) {
         return true
       }
       return false
@@ -231,9 +236,9 @@ export default new Vuex.Store({
     showCart(state) {
       state.ifCart = !state.ifCart
     },
-    pushNameCode(state, nameCode) {
-      state.codeCoupon = nameCode
-    },
+    // pushNameCode(state, nameCode) {
+    //   state.codeCoupon = nameCode
+    // },
     upAutoModel(state, routeName) {
       let ifRoute = ""
       state.aleadyUp.map((val) => {
@@ -267,22 +272,29 @@ export default new Vuex.Store({
       state.messenger = !state.messenger
     },
     IfCodeFalse(state) {
-      state.ifCode = false;
+      state.integerOfDiscount = 0;
+      state.percentageOfDiscount = 0;
     },
-    IfCodeTrue(state, n) {
-      state.ifCode = true;
-      state.PercentageOfDiscount = n;
+    pushDiscount(state, t) {
+      state.codeCoupon = t.code;
+      if (t.type === "%") {
+        state.integerOfDiscount = 0;
+        state.percentageOfDiscount = t.discount;
+      } else if (t.type === "-") {
+        state.percentageOfDiscount = 0;
+        state.integerOfDiscount = t.discount;
+      }
     },
-    IfCodeTrueInteger(state, n) {
-      // alert()
-      state.ifCode = true;
-      state.IntegerOfDiscount = n;
-    },
-    IfCodeDiscountMessengerTrue(state, n) {
-      state.ifCode = true;
-      state.freeMessenger = true;
-      state.priceMessenger = n;
-    },
+    // IfCodeTrueInteger(state, n) {
+    //   // alert()
+    //   state.ifCode = true;
+    //   state.IntegerOfDiscount = n;
+    // },
+    // IfCodeDiscountMessengerTrue(state, n) {
+    //   state.ifCode = true;
+    //   state.freeMessenger = true;
+    //   state.priceMessenger = n;
+    // },
   },
   actions: {
     async sendToMail(store, contentMail) {

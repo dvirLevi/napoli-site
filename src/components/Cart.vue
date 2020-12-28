@@ -43,13 +43,14 @@
       </div>
       <div class="w-100">
         <codeDiscount />
-        <div class="center-all row">
-          <h6 class="w-100 text-center" v-if="discount">הנחת קופון: {{discount}}%- </h6>
-          <h6 class="w-100 text-center" v-if="IntegerOfDiscount">הנחת קופון: ₪{{IntegerOfDiscount}}- </h6>
-
+        <!-- <div class="center-all" v-else>
+          <h6 class="w-100 text-center" v-if="percentageOfDiscount">הנחת קופון: {{percentageOfDiscount}}%</h6>
+          <h6 class="w-100 text-center" v-else-if="integerOfDiscount">הנחת קופון: ₪{{integerOfDiscount}}- </h6>
+        </div> -->
+        <div class="center-all" >
           <p class="w-100 text-center">סה"כ: {{PayablePlusDiscount}} ₪</p>
         </div>
-        <div class="center-all row">
+        <div class="center-all">
           <ButtonLink v-if="products.length" @customEvent="openCart" text="חזרה לחנות" link="/store" />
           <ButtonLink v-else @customEvent="openCart" text="לחנות" link="/store" />
           <ButtonLink @customEvent="openCart" text="לתשלום מאובטח" link="/before-pay" v-if="products.length" />
@@ -89,12 +90,15 @@
       PayablePlusDiscount() {
         return this.$store.getters.PayablePlusDiscount
       },
-      discount() {
-        return this.$store.getters.discount
-      },
-      IntegerOfDiscount() {
-        return this.$store.getters.IntegerOfDiscount
-      }
+      // discountCompute() {
+      //   return this.$store.getters.discountCompute
+      // },
+      // percentageOfDiscount() {
+      //   return this.$store.state.percentageOfDiscount
+      // },
+      // integerOfDiscount() {
+      //   return this.$store.state.integerOfDiscount
+      // },
     },
     methods: {
       openCart() {

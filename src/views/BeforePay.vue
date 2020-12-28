@@ -22,7 +22,8 @@
           </div>
           <template v-if="products.length">
             <div class="w-100 center-all border-top p-4">
-              <p class="w-100" v-if="discount">הנחת קופון: {{discount}}%-</p>
+              <p class="w-100" v-if="percentageOfDiscount">הנחת קופון: {{percentageOfDiscount}}%</p>
+              <p class="w-100" v-else-if="integerOfDiscount">הנחת קופון: ₪{{integerOfDiscount}} </p>
               <p class="w-100">סה"כ: {{PayablePlusDiscount}} ₪</p>
               <template v-if="priceMessenger">
                 <p class="w-100">משלוח עד הבית {{priceMessenger}} ₪</p>
@@ -99,7 +100,7 @@
   // @ is an alias to /src
   import Regulations from '@/components/Regulations.vue'
   import Swal from 'sweetalert2'
-  
+
 
 
   export default {
@@ -123,10 +124,10 @@
           this.$store.commit('nextPayment');
           this.$router.push('pay');
           fbq('track', 'AddPaymentInfo');
-            this.$gtag.event('add_payment_info', {
-        'event_category': 'ecommerce',
-        'event_label': 'add_payment_info'
-      })
+          this.$gtag.event('add_payment_info', {
+            'event_category': 'ecommerce',
+            'event_label': 'add_payment_info'
+          })
           // gtag('event', 'add_payment_info', {
           //   'event_category': 'add_payment_info',
           //   'event_label': 'add_payment_info'
@@ -172,8 +173,11 @@
       minPrice() {
         return this.$store.state.products[0].price
       },
-      discount() {
-        return this.$store.getters.discount
+      percentageOfDiscount() {
+        return this.$store.state.percentageOfDiscount
+      },
+      integerOfDiscount() {
+        return this.$store.state.integerOfDiscount
       },
     },
 

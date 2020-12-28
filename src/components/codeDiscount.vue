@@ -2,11 +2,14 @@
   <div class="row" v-if="products.length">
     <div class="col">
       <div class="center-all w-100">
-        <template v-if="!ifCode">
+        <template v-if="!discountCompute">
           <input type="text" @click.stop="" v-model="myCode" placeholder="הכנס קוד קופון">
           <button @click.stop="ifCodeCorrect">הפעל</button>
         </template>
-        <P class="w-100 text-center" v-else>קוד הקופון הופעל!</P>
+        <template v-else>
+          <h6 class="w-100 text-center" v-if="percentageOfDiscount">הנחת קופון: {{percentageOfDiscount}}%</h6>
+          <h6 class="w-100 text-center" v-else-if="integerOfDiscount">הנחת קופון: ₪{{integerOfDiscount}}- </h6>
+        </template>
       </div>
     </div>
   </div>
@@ -14,7 +17,8 @@
 
 <script>
   // @ is an alias to /src
-  import Swal from 'sweetalert2'
+  // import Swal from 'sweetalert2'
+  import getSheets from "../helpers/getSheets"
 
 
   export default {
@@ -31,59 +35,84 @@
         // codeBezza: '!@#asd#@!',
         // napoli200: '!@#asd#@!',
         // hours: "!@#asd#@!",
-        codes: [{
-            code: 'napoli-sale',
-            discount: 10,
-            typeDiscount: "IfCodeTrue"
-          },
-          {
-            code: 'special-napoli',
-            discount: 15,
-            typeDiscount: "IfCodeTrue"
-          },
-          {
-            code: 'bertello-sale',
-            discount: 7,
-            typeDiscount: "IfCodeTrue"
-          }
+        codes: [
+          // {
+          //   code: 'asd',
+          //   discount: 10,
+          //   minprice: 200,
+          //   type: "%"
+          // },
+          // {
+          //   code: 'zxc',
+          //   discount: 15,
+          //   minprice: 1000,
+          //   type: "-"
+          // },
         ]
       }
     },
+    // mounted() {
+    //   this.getCodes()
+    // },
     computed: {
       products() {
         return this.$store.getters.inCart
       },
-      discount() {
-        return this.$store.getters.discount
-      },
-      ifCode() {
-        return this.$store.state.ifCode
-      },
-      ifNapoliDeal() {
-        return this.$store.getters.ifNapoliDeal;
-      },
+      // discount() {
+      //   return this.$store.getters.discount
+      // },
+      // ifCode() {
+      //   return this.$store.state.ifCode
+      // },
+      // ifNapoliDeal() {
+      //   return this.$store.getters.ifNapoliDeal;
+      // },
       Payable() {
         return this.$store.getters.Payable;
-      }
+      },
+      discountCompute() {
+        return this.$store.getters.discountCompute
+      },
+      percentageOfDiscount() {
+        return this.$store.state.percentageOfDiscount
+      },
+      integerOfDiscount() {
+        return this.$store.state.integerOfDiscount
+      },
     },
     watch: {
-      products: function (products) {
+      products: function () {
         this.ifCodeCorrect()
       }
     },
     methods: {
-      ifCodeCorrect() {
-        if (this.products.length) {
-          for (let x in this.codes) {
-            if (this.myCode.toLowerCase() === this.codes[x].code.toLowerCase()) {
-              this.$store.commit(this.codes[x].typeDiscount, this.codes[x].discount);
-              this.$store.commit('pushNameCode', this.myCode.toLowerCase());
-              break;
-            }
+     async ifCodeCorrect() {
+        // if (this.products.length) {
+        await this.getCodes();
+        for (let x in this.codes) {
+          if (this.myCode.toLowerCase() === this.codes[x].code.toLowerCase() && this.Payable >= this.codes[x]
+            .minprice) {
+            this.$store.commit('pushDiscount', this.codes[x]);
+            // this.$store.commit('pushNameCode', this.myCode.toLowerCase());
+            break;
+          } else {
+            this.$store.commit('IfCodeFalse')
           }
-        } else {
-          this.$store.commit('IfCodeFalse')
         }
+        // } else {
+        //   this.$store.commit('IfCodeFalse')
+        // }
+      },
+      async getCodes() {
+        this.codes = await getSheets.get(
+          'https://spreadsheets.google.com/feeds/list/1yWnG47qzf_ZmXLofrQGvaXsPJpMPrvqXzjU2g2vSZ-c/od6/public/values?alt=json',
+          [
+            'code',
+            'discount',
+            'minprice',
+            'type'
+          ]);
+        // console.log(this.codes)
       }
     }
   }
