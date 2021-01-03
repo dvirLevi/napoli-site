@@ -24,7 +24,7 @@
       fbq('track', 'ViewContent', {
         content_name: this.$route.name,
       });
-      localStorage.setItem("ifPay",true);
+      // localStorage.setItem("ifPay",true);
       // setTimeout(() => {
       //   this.$router.push("/");
       // }, 5000)

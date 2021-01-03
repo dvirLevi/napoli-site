@@ -29,26 +29,7 @@
     data() {
       return {
         myCode: "",
-        // code: 'napoli-sale',
-        // codeGush: '!@#asd#@!',
-        // codeSpecial: 'special-napoli',
-        // codeBezza: '!@#asd#@!',
-        // napoli200: '!@#asd#@!',
-        // hours: "!@#asd#@!",
-        codes: [
-          // {
-          //   code: 'asd',
-          //   discount: 10,
-          //   minprice: 200,
-          //   type: "%"
-          // },
-          // {
-          //   code: 'zxc',
-          //   discount: 15,
-          //   minprice: 1000,
-          //   type: "-"
-          // },
-        ]
+        codes: []
       }
     },
     // mounted() {

@@ -13,7 +13,7 @@
                 <P>סה"כ למוצר: {{product.amount * product.price}}</P>
               </div>
               <div class="w-100">
-                <p class="w-100" v-if="discount">הנחת קופון:  ₪{{discount}}- </p>
+                <p class="w-100" v-if="discount">הנחת קופון: ₪{{discount}}- </p>
                 <p class="w-100" v-if="priceMessenger">משלוח עד הבית {{priceMessenger}} ₪</p>
                 <h5>סה"כ לתשלום: {{allPayable}} ₪</h5>
                 <!-- <h5>סה"כ לתשלום <span v-if="messenger">כולל משלוח</span>: {{allPayable}} ₪</h5> -->
@@ -60,6 +60,7 @@
           <input id="phone" name="phone" :value="clientDatdlis.tel">
           <input id="email" name="email" :value="clientDatdlis.mail">
           <input id="city" name="city" :value="clientDatdlis.city">
+          <input id="tranid" name="tranid" :value="tranid">
           <input id="address" name="address"
             :value="clientDatdlis.address +' '+ clientDatdlis.namHome +' '+ codeCouponName">
           <input id="json_purchase_data" name="json_purchase_data" :value="JSonProducts">
@@ -98,13 +99,16 @@
     data() {
       return {
         numPay: 1,
-        numOfLoadIframe: 0
+        numOfLoadIframe: 0,
+        tranid: ""
       }
     },
     created() {
+      fetch('https://free-services.herokuapp.com/wake-server');
       if (!this.$store.state.nextPayment) {
         this.$router.push('before-pay')
       }
+      this.tranid = shortid.generate();
     },
     mounted() {
       this.$refs.myForm.submit();
@@ -122,19 +126,21 @@
       },
       endPay() {
         this.numOfLoadIframe = this.numOfLoadIframe + 1;
-        if (this.numOfLoadIframe > 1) {
-          let interval = setInterval(() => {
-            let ifPay = localStorage.getItem("ifPay");
+        let interval = false;
+        if (this.numOfLoadIframe > 1 && !interval) {
+          interval = setInterval(async () => {
+            let ifPay = await this.checkPay();
+            console.log(ifPay)
             if (ifPay) {
+              clearInterval(interval);
               this.$router.push("/thanks");
-
               fbq('track', 'Purchase', {
                 value: this.allPayable,
                 currency: 'ILS'
               });
               setTimeout(() => {
                 this.$gtag.purchase({
-                  "transaction_id": shortid.generate(),
+                  "transaction_id": this.tranid,
                   "affiliation": "Bertello store",
                   "value": this.allPayable,
                   'event_category': 'purchase',
@@ -153,7 +159,7 @@
                     return arr
                   })()
                 })
-              }, 3000)
+              }, 2000)
               // gtag('event', 'purchase', {
               //   'event_category': 'purchase',
               //   'event_label': 'purchase',
@@ -176,12 +182,26 @@
               //     return arr
               //   })()
               // });
-              clearInterval(interval);
-              localStorage.removeItem("ifPay");
+              // localStorage.removeItem("ifPay");
             }
-          }, 2000)
-        } else {
-          localStorage.removeItem("ifPay");
+          }, 3000)
+        }
+      },
+      async checkPay() {
+        try {
+          const response = await fetch('https://free-services.herokuapp.com/bertello/check-pay', {
+            method: 'post',
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+              tranid: this.tranid
+            })
+          });
+          const json = await response.json();
+          return json
+        } catch (err) {
+          return err
         }
       }
     },
