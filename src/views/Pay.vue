@@ -130,7 +130,7 @@
         if (this.numOfLoadIframe > 1 && !interval) {
           interval = setInterval(async () => {
             let ifPay = await this.checkPay();
-            console.log(ifPay)
+            // console.log(ifPay)
             if (ifPay) {
               clearInterval(interval);
               this.$router.push("/thanks");
@@ -138,7 +138,7 @@
                 value: this.allPayable,
                 currency: 'ILS'
               });
-              setTimeout(() => {
+              // setTimeout(() => {
                 this.$gtag.purchase({
                   "transaction_id": this.tranid,
                   "affiliation": "Bertello store",
@@ -159,7 +159,7 @@
                     return arr
                   })()
                 })
-              }, 2000)
+              // }, 2000)
               // gtag('event', 'purchase', {
               //   'event_category': 'purchase',
               //   'event_label': 'purchase',
@@ -184,7 +184,7 @@
               // });
               // localStorage.removeItem("ifPay");
             }
-          }, 3000)
+          }, 2000)
         }
       },
       async checkPay() {
