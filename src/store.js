@@ -47,7 +47,7 @@ export default new Vuex.Store({
         previousPrice: 0,
         amount: 0,
         ifSize: true,
-        label: "",
+        label: "אחרונים במלאי",
         id: 1
       },
       {
@@ -60,7 +60,7 @@ export default new Vuex.Store({
         previousPrice: 0,
         amount: 0,
         ifSize: true,
-        label: "",
+        label: "אחרונים במלאי",
         id: 2
       },
       {
@@ -125,7 +125,7 @@ export default new Vuex.Store({
         previousPrice: 0,
         amount: 0,
         ifSize: false,
-        label: "",
+        label: "אחרונים במלאי",
         id: 5
       },
       {
@@ -138,7 +138,7 @@ export default new Vuex.Store({
         previousPrice: 0,
         amount: 0,
         ifSize: false,
-        label: "",
+        label: "אחרונים במלאי",
         id: 8
       },
     ],

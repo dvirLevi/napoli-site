@@ -63,6 +63,10 @@
       fbq('track', 'ViewContent', {
         content_name: this.$route.name,
       });
+       this.$gtag.event('add_to_wishlist', {
+            'event_category': 'ecommerce',
+            'event_label': 'add_to_wishlist'
+          })
       this.$store.commit('upAutoModel', this.$route.name)
     }
 
