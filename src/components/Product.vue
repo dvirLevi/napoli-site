@@ -19,9 +19,12 @@
 
     <div class="box-product center-all">
       <div class="label f-center" v-if="product.label">
-        <img class="w-100" src="@/assets/ass31.svg" alt="">
-        <h4 class="m-0">{{product.label}}</h4>
-        <!-- {{product.label}} -->
+        <!-- star lable -->
+        <!-- <img class="w-100" src="@/assets/ass31.svg" alt="">
+        <h4 class="m-0">{{product.label}}</h4> -->
+        <div class="circle f-center" :style="{backgroundColor: product.labelColor}">
+          <h5 class="m-0">{{product.label}}</h5>
+        </div>
       </div>
       <div class="row mt-3">
         <div class="col-md-6 center-all">
@@ -70,9 +73,9 @@
         //   'event_label': 'add_to_cart'
         // });
         this.$gtag.event('add_to_cart', {
-        'event_category': 'ecommerce',
-        'event_label': 'add_to_cart'
-      })
+          'event_category': 'ecommerce',
+          'event_label': 'add_to_cart'
+        })
       }
     },
     computed: {
@@ -151,6 +154,12 @@
     width: 50%;
   }
 
+  .circle {
+    width: 150px;
+    height: 150px;
+    border-radius: 100%;
+  }
+
   @media (max-width: 1410px) {
     .box-product {
       height: 395px;
@@ -172,8 +181,17 @@
     }
 
     .label {
-      top: -98px;
-      right: -31px;
+      top: -46px;
+      right: -49px;
+    }
+
+    .label h5 {
+      font-size: 17px;
+    }
+
+    .circle {
+      width: 130px;
+      height: 130px;
     }
   }
 </style>

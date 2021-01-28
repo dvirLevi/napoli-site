@@ -48,6 +48,7 @@ export default new Vuex.Store({
         amount: 0,
         ifSize: true,
         label: "אחרונים במלאי",
+        labelColor: "#716868",
         id: 1
       },
       {
@@ -60,7 +61,8 @@ export default new Vuex.Store({
         previousPrice: 0,
         amount: 0,
         ifSize: true,
-        label: "אחרונים במלאי",
+        label: "אזל מהמלאי. יחזור ב-25/02",
+        labelColor: "red",
         id: 2
       },
       {
@@ -73,7 +75,8 @@ export default new Vuex.Store({
         previousPrice: 0,
         amount: 0,
         ifSize: false,
-        label: "",
+        label: "אחרונים במלאי",
+        labelColor: "#716868",
         id: 3
       },
       {
@@ -86,7 +89,8 @@ export default new Vuex.Store({
         previousPrice: 0,
         amount: 0,
         ifSize: false,
-        label: "",
+        label: "אחרונים במלאי",
+        labelColor: "#716868",
         id: 4
       },
       {
@@ -99,7 +103,8 @@ export default new Vuex.Store({
         previousPrice: 0,
         amount: 0,
         ifSize: false,
-        label: "מוצר חדש",
+        label: "אחרונים במלאי",
+        labelColor: "#716868",
         id: 6
       },
       // {
@@ -125,7 +130,8 @@ export default new Vuex.Store({
         previousPrice: 0,
         amount: 0,
         ifSize: false,
-        label: "אחרונים במלאי",
+        label: "אזל מהמלאי. יחזור ב-25/02",
+        labelColor: "red",
         id: 5
       },
       {
@@ -138,7 +144,8 @@ export default new Vuex.Store({
         previousPrice: 0,
         amount: 0,
         ifSize: false,
-        label: "אחרונים במלאי",
+        label: "אזל מהמלאי. יחזור ב-25/02",
+        labelColor: "red",
         id: 8
       },
     ],
