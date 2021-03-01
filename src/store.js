@@ -61,7 +61,7 @@ export default new Vuex.Store({
         previousPrice: 0,
         amount: 0,
         ifSize: true,
-        label: "אזל מהמלאי. יחזור ב-25/02",
+        label: "אזל מהמלאי. יחזור ב-04/03",
         labelColor: "red",
         id: 2
       },
@@ -130,7 +130,7 @@ export default new Vuex.Store({
         previousPrice: 0,
         amount: 0,
         ifSize: false,
-        label: "אזל מהמלאי. יחזור ב-25/02",
+        label: "אזל מהמלאי. יחזור ב-04/03",
         labelColor: "red",
         id: 5
       },
@@ -144,7 +144,7 @@ export default new Vuex.Store({
         previousPrice: 0,
         amount: 0,
         ifSize: false,
-        label: "אזל מהמלאי. יחזור ב-25/02",
+        label: "אזל מהמלאי. יחזור ב-04/03",
         labelColor: "red",
         id: 8
       },
