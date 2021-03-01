@@ -11,7 +11,7 @@
     <!-- <h3 class="text-center font-weight-bold">עכשיו במבצע השקה לשבוע בלבד!</h3> -->
     <div>
       <h3 class="text-center mt-3 font-weight-bolder">מבערי הגז שלנו אזלו מהמלאי 🙁</h3>
-      <h3 class="text-center mt-3 ">אבל אל דאגה, משלוח חדש צפוי להגיע ב-25 לפברואר!</h3>
+      <h3 class="text-center mt-3 ">אבל אל דאגה, משלוח חדש צפוי להגיע ב-4 למרץ!</h3>
       <h3 class="text-center mt-3">שלחו לנו הודעה - "עדכנו אותי", ותיכנסו מיד לרשימת הממתינים.</h3>
     </div>
 
