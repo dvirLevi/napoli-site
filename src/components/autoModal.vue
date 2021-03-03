@@ -17,7 +17,7 @@
     </div>
 
     <!-- <h3 class="text-center font-weight-bold">אז אל תפספסו את המבצע שלנו, כי הוא תכף נגמר.</h3> -->
-    <router-link class="font-weight-bold c-p link-store" tag="h3" to="/store" @click.native="closeModal">רכשו עכשיו >></router-link>
+    <router-link class="font-weight-bold c-p link-store text-center" tag="h2" to="/store" @click.native="closeModal">רכשו עכשיו >></router-link>
     <!-- <div class="w-100 f-center">
     <ButtonLink class="h5" @customEvent="closeModal" text="לחנות" link="/store" />
 
