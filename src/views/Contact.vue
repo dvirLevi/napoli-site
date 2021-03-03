@@ -36,7 +36,7 @@
           </div>
 
           <div class="w-100 f-center-right">
-            <button type="submit">{{textSend}}</button>
+            <button class="rounded" type="submit">{{textSend}}</button>
           </div>
         </form>
       </div>

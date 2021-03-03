@@ -27,7 +27,7 @@
         </div> -->
       </div>
       <div class="row mt-3">
-        <div class="col-md-6 center-all">
+        <div class="col-md-6 center-all-top">
           <img class="w-100" :src="product.img" alt="">
         </div>
         <div class="col-md-6 ">
