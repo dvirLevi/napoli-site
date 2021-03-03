@@ -99,8 +99,8 @@ export default new Vuex.Store({
         description: "",
         specifications: `<li>אביזר ייחודי של ברטלו. </li><li>מאפשר הבערה בו זמנית של גז ועצים, לקבלת טעם מעושן אמיתי של הפיצה. </li><li>חיבור נוח של תא פחמים פנימי למבער הגז החיצוני.</li><li>מומלץ! </li>`,
         addCart: false,
-        price: 190,
-        previousPrice: 140,
+        price: 140,
+        previousPrice: 190,
         amount: 0,
         ifSize: false,
         label: "מבצע חידוש מלאי",
@@ -121,12 +121,12 @@ export default new Vuex.Store({
       //   id: 7
       // },
       {
-        name: "עסקה נאפוליטנית בהנחה: תנור + מבער + מגירה משולבת",
+        name: "עסקה נאפוליטנית: תנור + מבער + מגירה משולבת",
         img: require("@/assets/ass27.png"),
         description: "",
         specifications: `<li>עסקה איטלקית במחיר משתלם במיוחד!</li>`,
         addCart: false,
-        price: 1690,
+        price: 1890,
         previousPrice: 2090,
         amount: 0,
         ifSize: false,
@@ -135,7 +135,7 @@ export default new Vuex.Store({
         id: 5
       },
       {
-        name: "עסקה איטלקית בהנחה: תנור + מבער + מגירה + מרדה + כיסוי",
+        name: "עסקה איטלקית מלאה: תנור + מבער + מגירה + מרדה + כיסוי",
         img: require("@/assets/ass26.jpg"),
         description: "",
         specifications: `<li>עסקה איטלקית במחיר משתלם במיוחד!</li>`,
