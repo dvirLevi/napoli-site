@@ -1,6 +1,6 @@
 <template>
   <div class="" @click.stop="$emit('customEvent')">
-    <router-link class="" tag="button" :to="link">{{text}}</router-link>
+    <router-link class="rounded" tag="button" :to="link">{{text}}</router-link>
   </div>
 </template>
 
@@ -22,7 +22,7 @@
     color: #ffffff;
     padding: 10px;
     outline: none;
-    margin: 5px;
+    /* margin: 5px; */
     margin-top: 20px;
     font-weight: 400;
   }

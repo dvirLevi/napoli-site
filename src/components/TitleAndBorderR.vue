@@ -20,7 +20,7 @@
   h2 {
     display: inline-block;
     position: relative;
-    padding: 13px;
+    padding: 13px 0px 13px 13px;
     /* border: solid #000000 2px;
         border-top: 0px; */
   }

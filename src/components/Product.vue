@@ -1,5 +1,5 @@
 <template>
-  <div class="col-md-6 box-all p-md-2 p-0 ">
+  <div class="col-md-6 pb-3 pt-3">
     <Modal v-if="showModal" @customEvent="showModal = !showModal">
       <div class="">
         <h3 class="w-100 text-center">{{product.name}}</h3>
@@ -17,14 +17,14 @@
       </div>
     </Modal>
 
-    <div class="box-product center-all">
+    <div class="box-product center-all p-3">
       <div class="label f-center" v-if="product.label">
         <!-- star lable -->
-        <!-- <img class="w-100" src="@/assets/ass31.svg" alt="">
-        <h4 class="m-0">{{product.label}}</h4> -->
-        <div class="circle f-center" :style="{backgroundColor: product.labelColor}">
+        <img class="w-100" src="@/assets/ass31.svg" alt="">
+        <h4 class="m-0">{{product.label}}</h4>
+        <!-- <div class="circle f-center" :style="{backgroundColor: product.labelColor}">
           <h5 class="m-0">{{product.label}}</h5>
-        </div>
+        </div> -->
       </div>
       <div class="row mt-3">
         <div class="col-md-6 center-all">
@@ -121,15 +121,15 @@
     /* margin: 7px; */
   }
 
-  .box-all {
+  /* .box-all {
     padding: 0px;
-  }
+  } */
 
   .box-product {
     position: relative;
     box-shadow: 1px 1px 3px #c1c1c1;
-    margin: 15px;
-    padding: 17px;
+    /* margin: 15px; */
+    /* padding: 17px; */
     height: 100%;
     width: 100%;
   }
@@ -150,8 +150,8 @@
   .label h4 {
     position: absolute;
     top: 50%;
-    font-size: 17px;
-    width: 50%;
+    font-size: 16px;
+    width: 45%;
   }
 
   .circle {
@@ -160,11 +160,11 @@
     border-radius: 100%;
   }
 
-  @media (max-width: 1410px) {
+  /* @media (max-width: 1410px) {
     .box-product {
       height: 395px;
     }
-  }
+  } */
 
   @media (max-width: 767.98px) {
     .row-all {

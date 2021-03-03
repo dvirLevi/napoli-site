@@ -101,7 +101,7 @@
                 class="fab fa-facebook-f h3 mt-3"></i></h3>
           </div>
         </div>
-        <ButtonLink @customEvent="print" link="/recipes" text="להדפסת המתכון" />
+        <ButtonLink class="mb-3" @customEvent="print" link="/recipes" text="להדפסת המתכון" />
       </div>
     </div>
   </div>
