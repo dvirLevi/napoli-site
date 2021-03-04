@@ -80,7 +80,7 @@
           </div>
         </div>
         <div class="center-all w-100">
-          <iframe name="iframe" @load="endPay" class="mt-5" height="650" :width="ifWidth"></iframe>
+          <iframe name="iframe" class="mt-5" height="650" :width="ifWidth"></iframe>
         </div>
       </div>
     </div>
@@ -99,7 +99,8 @@
     data() {
       return {
         numPay: 1,
-        numOfLoadIframe: 0,
+        // numOfLoadIframe: 0,
+        interval: null,
         tranid: ""
       }
     },
@@ -115,6 +116,7 @@
       fbq('track', 'ViewContent', {
         content_name: this.$route.name,
       });
+      this.endPay();
     },
     methods: {
       nextToPay() {
@@ -125,67 +127,66 @@
         return vat.toFixed(2);
       },
       endPay() {
-        this.numOfLoadIframe = this.numOfLoadIframe + 1;
-        let interval = false;
-        if (this.numOfLoadIframe > 1 && !interval) {
-          interval = setInterval(async () => {
-            let ifPay = await this.checkPay();
-            // console.log(ifPay)
-            if (ifPay) {
-              clearInterval(interval);
-              this.$router.push("/thanks");
-              fbq('track', 'Purchase', {
-                value: this.allPayable,
-                currency: 'ILS'
-              });
-              // setTimeout(() => {
-                this.$gtag.purchase({
-                  "transaction_id": this.tranid,
-                  "affiliation": "Bertello store",
-                  "value": this.allPayable,
-                  'event_category': 'purchase',
-                  'event_label': 'purchase',
-                  "currency": "ILS",
-                  "items": (() => {
-                    let arr = [];
-                    for (let x in this.products) {
-                      arr.push({
-                        "id": this.products[x].id.toString(),
-                        "name": this.products[x].name,
-                        "quantity": this.products[x].amount,
-                        "price": this.products[x].price.toString()
-                      })
-                    }
-                    return arr
-                  })()
-                })
-              // }, 2000)
-              // gtag('event', 'purchase', {
-              //   'event_category': 'purchase',
-              //   'event_label': 'purchase',
-              //   "transaction_id": shortid.generate(),
-              //   "affiliation": "Bertello store",
-              //   "value": this.allPayable,
-              //   "currency": "ILS",
-              //   "tax": this.allPayable - this.vat(this.allPayable),
-              //   "shipping": this.priceMessenger,
-              //   "items": (() => {
-              //     let arr = [];
-              //     for (let x in this.products) {
-              //       arr.push({
-              //         "id": this.products[x].id.toString(),
-              //         "name": this.products[x].name,
-              //         "quantity": this.products[x].amount,
-              //         "price": this.products[x].price.toString()
-              //       })
-              //     }
-              //     return arr
-              //   })()
-              // });
-              // localStorage.removeItem("ifPay");
-            }
-          }, 2000)
-        }
+        // this.numOfLoadIframe = this.numOfLoadIframe + 1;
+        // let interval = false;
+        // if (this.numOfLoadIframe > 1 && !interval) {
+        this.interval = setInterval(async () => {
+          let ifPay = await this.checkPay();
+          if (ifPay) {
+            clearInterval(this.interval);
+            this.$router.push("/thanks");
+            fbq('track', 'Purchase', {
+              value: this.allPayable,
+              currency: 'ILS'
+            });
+            // setTimeout(() => {
+            this.$gtag.purchase({
+              "transaction_id": this.tranid,
+              "affiliation": "Bertello store",
+              "value": this.allPayable,
+              'event_category': 'purchase',
+              'event_label': 'purchase',
+              "currency": "ILS",
+              "items": (() => {
+                let arr = [];
+                for (let x in this.products) {
+                  arr.push({
+                    "id": this.products[x].id.toString(),
+                    "name": this.products[x].name,
+                    "quantity": this.products[x].amount,
+                    "price": this.products[x].price.toString()
+                  })
+                }
+                return arr
+              })()
+            })
+            // }, 2000)
+            // gtag('event', 'purchase', {
+            //   'event_category': 'purchase',
+            //   'event_label': 'purchase',
+            //   "transaction_id": shortid.generate(),
+            //   "affiliation": "Bertello store",
+            //   "value": this.allPayable,
+            //   "currency": "ILS",
+            //   "tax": this.allPayable - this.vat(this.allPayable),
+            //   "shipping": this.priceMessenger,
+            //   "items": (() => {
+            //     let arr = [];
+            //     for (let x in this.products) {
+            //       arr.push({
+            //         "id": this.products[x].id.toString(),
+            //         "name": this.products[x].name,
+            //         "quantity": this.products[x].amount,
+            //         "price": this.products[x].price.toString()
+            //       })
+            //     }
+            //     return arr
+            //   })()
+            // });
+            // localStorage.removeItem("ifPay");
+          }
+        }, 2000)
+        // }
       },
       async checkPay() {
         try {

@@ -60,7 +60,7 @@
 
 <script>
   // @ is an alias to /src
-  import Swal from 'sweetalert2'
+  // import Swal from 'sweetalert2'
   
   import myMail from '@/helpers/myMail.js'
 
