@@ -23,7 +23,7 @@
             <li>בעל עיצוב מתקדם ודפנות מבודדות</li>
             <li>קל מאוד לניוד, מושלם לבית ולשטח</li>
             <li>הרכבה עצמית מהירה</li>
-            <ButtonLink text="קנו עכשיו" link="/store" class="h4"/>
+            <ButtonLink text="קנו עכשיו" link="/store" class="h4 mt-3"/>
             <!-- <li>  מחיר משתלם. הוכרז כ-<span>Best seller</span> וכ-<span>Amazon choice</span> באמזון ארה"ב</li> -->
           </ul>
         </div>

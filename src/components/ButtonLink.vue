@@ -1,6 +1,7 @@
 <template>
   <div class="" @click.stop="$emit('customEvent')">
-    <router-link class="rounded" tag="button" :to="link">{{text}}</router-link>
+    <router-link v-if="!type" class="rounded" tag="button" :to="link">{{text}}</router-link>
+    <button v-else :type="type" class="rounded">{{text}}</button>
   </div>
 </template>
 
@@ -10,6 +11,10 @@
     props: {
       link: String,
       text: String,
+      type: {
+        default: "",
+        type: String
+      }
     }
   }
 </script>
@@ -23,7 +28,7 @@
     padding: 10px;
     outline: none;
     /* margin: 5px; */
-    margin-top: 20px;
+    /* margin-top: 20px; */
     font-weight: 400;
   }
 

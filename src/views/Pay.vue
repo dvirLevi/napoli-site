@@ -39,7 +39,7 @@
         <div class="row">
           <div class="col">
             <div class="center-all w-100">
-              <ButtonLink text="חזרה לחנות" link="/store" />
+              <ButtonLink class="ml-1" text="חזרה לחנות" link="/store" />
               <ButtonLink link="/before-pay" text="לעריכת פרטים אישיים" />
             </div>
           </div>

@@ -4,7 +4,8 @@
       <div class="center-all w-100">
         <template v-if="!discountCompute">
           <input type="text" @click.stop="" v-model="myCode" placeholder="הכנס קוד קופון">
-          <button @click.stop="ifCodeCorrect">הפעל</button>
+          <ButtonLink @click.native="ifCodeCorrect" type="button" text="הפעל" />
+          <!-- <button @click.stop="ifCodeCorrect">הפעל</button> -->
         </template>
         <template v-else>
           <h6 class="w-100 text-center" v-if="percentageOfDiscount">הנחת קופון: {{percentageOfDiscount}}%</h6>

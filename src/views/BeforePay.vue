@@ -86,8 +86,9 @@
               <Regulations />
             </Modal>
             <div class="w-100 center-all mt-3">
-              <ButtonLink text="חזרה לחנות" link="/store" />
-              <button type="submit">המשך לתשלום מאובטח</button>
+              <ButtonLink class="ml-1" text="חזרה לחנות" link="/store" />
+              <ButtonLink type="submit" text="המשך לתשלום מאובטח" />
+              <!-- <button type="submit">המשך לתשלום מאובטח</button> -->
             </div>
           </form>
         </div>
