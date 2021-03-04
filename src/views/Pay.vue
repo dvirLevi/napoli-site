@@ -294,6 +294,9 @@
         return this.$store.getters.discountCompute
       },
     },
+    destroyed() {
+      clearInterval(this.interval);
+    },
     watch: {
       numPay: function () {
         setTimeout(() => {
