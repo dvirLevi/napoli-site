@@ -202,7 +202,8 @@
           const json = await response.json();
           return json
         } catch (err) {
-          return err
+          console.log(err);
+          return false
         }
       }
     },
