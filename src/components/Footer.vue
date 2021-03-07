@@ -1,5 +1,5 @@
 <template>
-  <div class="row mt-5 p-3">
+  <footer class="row mt-5 p-3">
     <div class="col-md-5 center-all">
       <!-- <div class="w-50 text-center"> -->
       <!-- <h2 class="h5 w-100">תפריט:</h2> -->
@@ -28,7 +28,7 @@
     <div class="col-md-12 center-all mt-5 app-life">
       <p class="m-0">נבנה ופותח ב<a href="https://apps-life.netlify.com/#/">AppsLife</a></p>
     </div>
-  </div>
+  </footer>
 </template>
 
 <script>

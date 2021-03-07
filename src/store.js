@@ -140,7 +140,7 @@ export default new Vuex.Store({
         description: "",
         specifications: `<li>עסקה איטלקית במחיר משתלם במיוחד!</li>`,
         addCart: false,
-        price: 2150,
+        price: 2050,
         previousPrice: 2350,
         amount: 0,
         ifSize: false,

@@ -1,5 +1,5 @@
 <template>
-  <div class="row row-sticky">
+  <nav class="row row-sticky">
     <div class="col">
       <div class="wrap-all-el d-flex">
         <div class="center-all icon-cart">
@@ -33,7 +33,7 @@
         </router-link>
       </div>
     </div>
-  </div>
+  </nav>
 </template>
 
 <script>
