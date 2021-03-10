@@ -49,8 +49,13 @@
   padding: 30px;
   /* border: 1px solid #888; */
   width:40%;
-  border: 3px dashed rgb(82, 82, 82);
+  /* border: 3px dashed rgb(82, 82, 82); */
   border-radius: 20px;
+  background-image: url('../assets/ass28.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50%;
+  color: #fff
 }
 
 

@@ -3,39 +3,22 @@
     <div class="w-100 right-all">
       <span class="h3 c-p" @click="closeModal">x</span>
     </div>
-    <div class="w-100 center-all">
-      <img src="../assets/ass32.jpg" alt="">
-    </div>
-    <!-- <h3 class="text-center mt-3">הוא הגיע!!!</h3> -->
-    <!-- <h3 class="text-center">מלאי חדש של תנורי נאפולי הגיע סוף-סוף לארץ!</h3> -->
-    <!-- <h3 class="text-center font-weight-bold">עכשיו במבצע השקה לשבוע בלבד!</h3> -->
-    <div>
-      <h3 class="text-center mt-3 font-weight-bolder">חיכינו וחיכינו, והנה זה הגיע!!!</h3>
-      <h3 class="text-center mt-3 ">מלאי חדש של תנורי ברטלו הגיע סוף-סוף לארץ!</h3>
-      <h3 class="text-center mt-3">עכשיו במבצע השקה לשבוע בלבד!</h3>
-      <h3 class="text-center mt-3">מהרו לרכוש לפני שהמלאי שוב יתחסל... 🙂</h3>
-    </div>
+    <router-link class="w-100 c-p" @click.native="closeModal" tag="div" to="/store">
+      <div class="w-100 f-center-top">
+        <div class="text mt-md-0 mt-3">
+          <h2>פסח בברטלו ישראל</h2>
+          <h1>כל המוצרים במבצע משוגע!</h1>
+          <h6>*עד ערב פסח או עד גמר המלאי</h6>
+        </div>
+        <div class="p-img">
+          <img class="w-100" src="@/assets/ass29.jpg" alt="">
+        </div>
+      </div>
+      <div class="w-100 f-center mt-4">
+        <h1 class="underline text-center">הזמינו בחנות האתר>></h1>
+      </div>
+    </router-link>
 
-    <!-- <h3 class="text-center font-weight-bold">אז אל תפספסו את המבצע שלנו, כי הוא תכף נגמר.</h3> -->
-    <router-link class="font-weight-bold c-p link-store text-center" tag="h2" to="/store" @click.native="closeModal">רכשו עכשיו >></router-link>
-    <!-- <div class="w-100 f-center">
-    <ButtonLink class="h5" @customEvent="closeModal" text="לחנות" link="/store" />
-
-    </div> -->
-    <div class="w-100 center-all">
-      <!-- <h3 class="text-center">דברו איתנו - נשמח לענות על כל שאלה</h3> -->
-      <!-- <div class="wrap-w center-all w m-3">
-        <a href="https://api.whatsapp.com/send?phone=972537234223" target="_blanc">
-          <i class="fab fa-whatsapp"></i>
-        </a>
-      </div> -->
-      <!-- <div class="wrap-w center-all f m-3">
-        <a href="https://m.me/napoli.oven.il">
-          <i class="fab fa-facebook-messenger"></i>
-        </a>
-      </div> -->
-      <!-- <h3 class="text-center mt-3 font-weight-bolder">שימו לב: נותרו טאבונים אחרונים במלאי. כרגע להפעלה עם עצים בלבד (שזה גם מצוין!)... עד שיתחדש מלאי המבערים</h3> -->
-    </div>
   </Modal>
 </template>
 
@@ -60,47 +43,37 @@
 </script>
 
 <style scoped>
-  img {
-    width: 50%;
+  .text {
+    width: 66%;
   }
 
-  i {
-    font-size: 50px;
-    color: #ffffff;
+  .p-img {
+    width: 33%;
+    border: solid 4px #dd6c37;
+    padding: 5px
   }
 
-  .wrap-w {
-    width: 70px;
-    height: 70px;
-    border-radius: 100px;
-    box-shadow: 0 0 14px #000000bd;
-  }
-
-  .f {
-    background-color: #4267b2;
-  }
-
-  .w {
-    background-color: #2cb742;
-  }
-
-  .link-store {
-    color: #0068f7;
-    text-decoration: underline;
+  h1 {
+    font-size: 3.2vw;
   }
 
   @media (max-width: 767.98px) {
-    img {
+    .text {
+      width: 100%;
+      order: 2;
+    }
+
+    .p-img {
+      order: 1;
       width: 100%;
     }
 
     h2 {
-      font-size: 21px;
-      width: 100%;
+      font-size: 25px;
     }
 
-    h3 {
-      font-size: 18px;
+    h1 {
+      font-size: 40px;
     }
   }
 </style>
