@@ -18,6 +18,9 @@
         <h1 class="underline text-center">הזמינו בחנות האתר>></h1>
       </div>
     </router-link>
+    <div class="w-100 center-all">
+      <firework />
+    </div>
   </ModalSale>
 </template>
 
