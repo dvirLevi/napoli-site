@@ -30,7 +30,7 @@ export default new Vuex.Store({
     ],
     products: [
       {
-        name: "עסקה איטלקית מלאה: תנור + מבער + מגירה + מרדה + כיסוי",
+        name: "עסקת ברטלו מלאה",
         img: require("@/assets/ass26.jpg"),
         description: "",
         specifications: `<li>עסקה איטלקית במחיר משתלם במיוחד!</li>`,
