@@ -27,11 +27,13 @@
 <script>
   // @ is an alias to /src
   import ModalSale from '@/components/ModalSale.vue'
+  import firework from '@/components/firework.vue'
 
   export default {
     name: 'autoModal',
     components: {
-      ModalSale
+      ModalSale,
+      firework
     },
     props: {
 
