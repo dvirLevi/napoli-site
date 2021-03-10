@@ -28,7 +28,22 @@ export default new Vuex.Store({
         id: 4
       },
     ],
-    products: [{
+    products: [
+      {
+        name: "עסקה איטלקית מלאה: תנור + מבער + מגירה + מרדה + כיסוי",
+        img: require("@/assets/ass26.jpg"),
+        description: "",
+        specifications: `<li>עסקה איטלקית במחיר משתלם במיוחד!</li>`,
+        addCart: false,
+        price: 2050,
+        previousPrice: 2350,
+        amount: 0,
+        ifSize: false,
+        label: "מבצע חידוש מלאי",
+        labelColor: "red",
+        id: 8
+      },
+      {
         // name: `תנור פיצה ברטלו <br><span style="font-weight: normal">(אבן אפייה כלולה)</span>`,
         name: `תנור פיצה ברטלו`,
         img: require("@/assets/ass6.png"),
@@ -41,7 +56,7 @@ export default new Vuex.Store({
         רוחב: 35.5 ס"מ<br>
         אורך: 54.5 ס"מ<br>
         גובה: 31.5 ס"מ<br>
-        </li><li><span class="border-bottom border-dark">משקל:</span><br> 13.5 ק"ג</li><li><span class="border-bottom border-dark">שטח אבן האפייה:</span><br>רוחב: 31.75 ס"מ <br>עומק: 34.29 ס"מ </li>`,
+        </li><li><span class="border-bottom border-dark">משקל:</span><br> 14.5 ק"ג</li><li><span class="border-bottom border-dark">שטח אבן האפייה:</span><br>רוחב: 31.75 ס"מ <br>עומק: 34.29 ס"מ </li>`,
         addCart: false,
         price: 1490,
         previousPrice: 1590,
@@ -134,20 +149,20 @@ export default new Vuex.Store({
         labelColor: "red",
         id: 5
       },
-      {
-        name: "עסקה איטלקית מלאה: תנור + מבער + מגירה + מרדה + כיסוי",
-        img: require("@/assets/ass26.jpg"),
-        description: "",
-        specifications: `<li>עסקה איטלקית במחיר משתלם במיוחד!</li>`,
-        addCart: false,
-        price: 2050,
-        previousPrice: 2350,
-        amount: 0,
-        ifSize: false,
-        label: "מבצע חידוש מלאי",
-        labelColor: "red",
-        id: 8
-      },
+      // {
+      //   name: "עסקה איטלקית מלאה: תנור + מבער + מגירה + מרדה + כיסוי",
+      //   img: require("@/assets/ass26.jpg"),
+      //   description: "",
+      //   specifications: `<li>עסקה איטלקית במחיר משתלם במיוחד!</li>`,
+      //   addCart: false,
+      //   price: 2050,
+      //   previousPrice: 2350,
+      //   amount: 0,
+      //   ifSize: false,
+      //   label: "מבצע חידוש מלאי",
+      //   labelColor: "red",
+      //   id: 8
+      // },
     ],
     ifCart: false,
     clientDatdlis: {
