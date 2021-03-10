@@ -30,7 +30,7 @@ export default new Vuex.Store({
     ],
     products: [
       {
-        name: "עסקה איטלקית מלאה: תנור + מבער + מגירה + מרדה + כיסוי",
+        name: "עסקת ברטלו מלאה",
         img: require("@/assets/ass26.jpg"),
         description: "",
         specifications: `<li>עסקה איטלקית במחיר משתלם במיוחד!</li>`,
@@ -39,7 +39,7 @@ export default new Vuex.Store({
         previousPrice: 2350,
         amount: 0,
         ifSize: false,
-        label: "מבצע חידוש מלאי",
+        label: "מבצע פסח",
         labelColor: "red",
         id: 8
       },
@@ -62,7 +62,7 @@ export default new Vuex.Store({
         previousPrice: 1590,
         amount: 0,
         ifSize: true,
-        label: "מבצע חידוש מלאי",
+        label: "מבצע פסח",
         labelColor: "#716868",
         id: 1
       },
@@ -76,7 +76,7 @@ export default new Vuex.Store({
         previousPrice: 590,
         amount: 0,
         ifSize: true,
-        label: "מבצע חידוש מלאי",
+        label: "מבצע פסח",
         labelColor: "red",
         id: 2
       },
@@ -90,7 +90,7 @@ export default new Vuex.Store({
         previousPrice: 90,
         amount: 0,
         ifSize: false,
-        label: "מבצע חידוש מלאי",
+        label: "מבצע פסח",
         labelColor: "#716868",
         id: 3
       },
@@ -104,7 +104,7 @@ export default new Vuex.Store({
         previousPrice: 190,
         amount: 0,
         ifSize: false,
-        label: "מבצע חידוש מלאי",
+        label: "מבצע פסח",
         labelColor: "#716868",
         id: 4
       },
@@ -118,7 +118,7 @@ export default new Vuex.Store({
         previousPrice: 190,
         amount: 0,
         ifSize: false,
-        label: "מבצע חידוש מלאי",
+        label: "מבצע פסח",
         labelColor: "#716868",
         id: 6
       },
@@ -145,7 +145,7 @@ export default new Vuex.Store({
         previousPrice: 2090,
         amount: 0,
         ifSize: false,
-        label: "מבצע חידוש מלאי",
+        label: "מבצע פסח",
         labelColor: "red",
         id: 5
       },
@@ -159,7 +159,7 @@ export default new Vuex.Store({
       //   previousPrice: 2350,
       //   amount: 0,
       //   ifSize: false,
-      //   label: "מבצע חידוש מלאי",
+      //   label: "מבצע פסח",
       //   labelColor: "red",
       //   id: 8
       // },
