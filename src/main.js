@@ -2,10 +2,10 @@ import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
 import store from './store'
-import "../style/global.css"
+import "./style/global.css"
 import AOS from 'aos'
 import 'aos/dist/aos.css'
-import "../style/fontawesome/css/all.css"
+import "./style/fontawesome/css/all.css"
 import ButtonLink from '@/components/ButtonLink.vue'
 import Modal from '@/components/Modal.vue'
 import TitleAndBorderR from '@/components/TitleAndBorderR.vue'
