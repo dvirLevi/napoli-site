@@ -32,9 +32,23 @@
         return this.$store.state.ifAutoModel;
       },
     },
+    mounted() {
+      this.preloadImages()
+    },
     methods: {
       closeCart() {
         this.$store.commit('allTimeCloseCart')
+      },
+      preloadImages() {
+        let arrLoad = [
+          require('@/assets/ass29.jpg'),
+          require('@/assets/ass28.jpg')
+        ]
+        var images = [];
+        for (let i in arrLoad) {
+          images[i] = new Image();
+          images[i].src = arrLoad[i];
+        }
       }
     }
 
@@ -42,5 +56,5 @@
 </script>
 
 <style>
-  
+
 </style>

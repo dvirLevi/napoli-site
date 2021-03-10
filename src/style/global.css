@@ -9,17 +9,6 @@ body {
   text-align: right;
 }
 
-
-/* preload */
-
-body:after {
-  display: none;
-  /* width: 0;
-  height: 0; */
-  background: url('../assets/ass29.jpg'),
-    url('../assets/ass28.jpg');
-}
-
 .f-center {
   display: flex;
   align-items: center;
