@@ -1,5 +1,5 @@
 <template>
-  <Modal>
+  <ModalSale>
     <div class="w-100 right-all">
       <span class="h3 c-p" @click="closeModal">x</span>
     </div>
@@ -18,18 +18,17 @@
         <h1 class="underline text-center">הזמינו בחנות האתר>></h1>
       </div>
     </router-link>
-
-  </Modal>
+  </ModalSale>
 </template>
 
 <script>
   // @ is an alias to /src
-
+  import ModalSale from '@/components/ModalSale.vue'
 
   export default {
     name: 'autoModal',
     components: {
-
+      ModalSale
     },
     props: {
 
