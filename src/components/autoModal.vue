@@ -1,4 +1,4 @@
-<template>
+We<template>
   <ModalSale>
     <div class="w-100 right-all">
       <span class="h3 c-p" @click="closeModal">x</span>
@@ -8,7 +8,7 @@
         <div class="text mt-md-0 mt-3">
           <h2>פסח בברטלו ישראל</h2>
           <h1>כל המוצרים במבצע משוגע!</h1>
-          <h6>*עד ערב פסח או עד גמר המלאי</h6>
+          <h6>*עד סוף פסח או עד גמר המלאי</h6>
         </div>
         <div class="p-img">
           <img class="w-100" src="@/assets/ass29.jpg" alt="">
