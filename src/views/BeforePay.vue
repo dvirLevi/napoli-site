@@ -63,7 +63,14 @@
               <input type="email" placeholder='*דוא"ל' v-model="clientDatdlis.mail" required>
             </div>
             <div class="w-100 center-all">
-              <input type="text" placeholder="*עיר" v-model="clientDatdlis.city" required>
+              <!-- <input type="text" placeholder="*עיר" v-model="clientDatdlis.city" required> -->
+              <!-- {{clientDatdlis}} -->
+              <v-select class="v-select" placeholder="*עיר" :options="cities" :reduce="cities => cities.label" dir="rtl"
+                v-model="clientDatdlis.city">
+                <template #search="{attributes, events}">
+                  <input class="vs__search" :required="!clientDatdlis.city" v-bind="attributes" v-on="events" />
+                </template>
+              </v-select>
             </div>
             <div class="w-100 center-all">
               <input type="text" placeholder="*רחוב" v-model="clientDatdlis.address" required>
@@ -101,13 +108,16 @@
   // @ is an alias to /src
   import Regulations from '@/components/Regulations.vue'
   import Swal from 'sweetalert2'
+  import cities from '../helpers/cities.json'
+  import vSelect from 'vue-select'
 
 
 
   export default {
     name: 'BeforPay',
     components: {
-      Regulations
+      Regulations,
+      vSelect
     },
     data() {
       return {
@@ -180,17 +190,37 @@
       integerOfDiscount() {
         return this.$store.state.integerOfDiscount
       },
+      cities() {
+        // let arr = [];
+        // for(let i in cities) {
+        //   arr.push(cities[i].label);
+        // }
+        return cities
+      }
     },
 
   }
 </script>
 
 <style scoped>
-  input {
+  input{
     width: 80%;
     margin: 8px;
     padding: 5px;
     border: solid black 2px;
+  }
+
+   
+  .v-select {
+    width: 80%;
+    border: solid black 2px;
+  }
+
+  .v-select input {
+    width: 0px;
+    margin: 4px 2px 0;
+    padding: 0 .25em;
+    border: none;
   }
 
   textarea {
@@ -261,7 +291,9 @@
   }
 
   @media (max-width: 767.98px) {
-    input {
+
+    input,
+    .v-select {
       width: 90%;
     }
 
