@@ -135,6 +135,7 @@
           this.$store.commit('nextPayment');
           this.$router.push('pay');
           fbq('track', 'AddPaymentInfo');
+          twq('track', 'add payment info E');
           this.$gtag.event('add_payment_info', {
             'event_category': 'ecommerce',
             'event_label': 'add_payment_info'

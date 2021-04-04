@@ -68,6 +68,7 @@
         product.amount++;
         this.$store.commit('allTimeShowCart');
         fbq('track', 'AddToCart');
+        twq('track', 'Add to cart E');
         // gtag('event', 'add_to_cart', {
         //   'event_category': 'add_to_cart',
         //   'event_label': 'add_to_cart'

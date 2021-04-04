@@ -139,6 +139,12 @@
               value: this.allPayable,
               currency: 'ILS'
             });
+            twq('track', 'Purchase E', {
+              //required parameters
+              value: this.allPayable,
+              currency: 'ILS',
+              num_items: this.products.length,
+            });
             // setTimeout(() => {
             this.$gtag.purchase({
               "transaction_id": this.tranid,

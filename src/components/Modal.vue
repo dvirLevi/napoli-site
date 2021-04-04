@@ -32,7 +32,6 @@
   justify-content: center;
   position: fixed; /* Stay in place */
   z-index: 1001; /* Sit on top */
-  /* padding-top: 100px; Location of the box */
   left: 0;
   top: 0;
   width: 100%; /* Full width */
@@ -46,10 +45,9 @@
 .modal-con {
   background-color: #fefefe;
   margin: auto;
-  padding: 30px;
-  /* border: 1px solid #888; */
+  /* padding: 30px; */
   width:40%;
-  border: 3px dashed rgb(82, 82, 82);
+  /* border: 3px dashed rgb(82, 82, 82); */
   border-radius: 20px;
 }
 
