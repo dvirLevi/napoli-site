@@ -2,7 +2,6 @@
   <Modal :myStyle="{backgroundImage: `url(${require('@/assets/ass28.jpg')})`}">
     <div class="w-100 p-4">
       <div class="w-100 right-all">
-        <!-- <span class="h3 c-p" @click="closeModal">x</span> -->
         <i class="las la-times h3 c-p text-white" @click="closeModal"></i>
       </div>
       <a class="w-100 c-p" href="https://api.whatsapp.com/send?phone=972537234223" target="_blanc">
