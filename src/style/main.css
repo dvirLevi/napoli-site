@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css?family=Rubik:300,300i,400,400i,500,500i,700,700i,900,900i&display=swap&subset=hebrew');
+/* @import url('https://fonts.googleapis.com/css?family=Assistant:300,400,600,700,800&display=swap&subset=hebrew'); */
+
+html,
+body {
+  direction: rtl;
+  font-family: 'Rubik', sans-serif;
+  color: rgb(0, 0, 0);
+  text-align: right;
+}
+
+.center-all {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.right-all {
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  flex-wrap: wrap;
+}
+
+.center-all-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.center-top {
+  display: flex;
+  /* align-items: inherit; */
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.h-100 {
+  height: 100%;
+}
+
+.router-link-exact-active {
+  color: #a5a5a5;
+  font-weight: bold;
+}
+
+.part-shulders {
+  padding: 0 16% !important;
+}
+
+.desktop {
+  display: block;
+}
+
+.mobile {
+  display: none;
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+p {
+  font-size: 22px !important;
+}
+
+p span {
+  font-size: 23px !important;
+  font-weight: bold;
+}
+
+ul {
+  font-size: 22px !important;
+}
+
+ul span {
+  font-size: 23px !important;
+  font-weight: bold;
+}
+
+.v-select ul {
+  font-size: 18px !important;
+}
+
+a {
+  color: #000000;
+  text-decoration: none;
+  background-color: transparent;
+}
+
+a:hover {
+  color: none;
+  text-decoration: none;
+  background-color: transparent;
+}
+
+.link {
+  color: #007bff;
+}
+
+.c-p {
+  cursor: pointer;
+}
+
+.min-height-screen {
+  min-height: 60vh;
+}
+
+.fa-whatsapp {
+  color: #2cb742;
+}
+
+@media (max-width: 767.98px) {
+  .desktop {
+    display: none;
+  }
+
+  .mobile {
+    display: block;
+  }
+
+  .part-shulders {
+    padding: 0 15px !important;
+  }
+
+  p {
+    font-size: 20px !important;
+  }
+
+  p span {
+    font-size: 21px !important;
+  }
+
+  ul {
+    font-size: 20px !important;
+  }
+
+  ul span {
+    font-size: 21px !important;
+  }
+
+}

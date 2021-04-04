@@ -1,26 +1,30 @@
 <template>
-  <Modal>
-    <div class="w-100 right-all">
-      <span class="h3 c-p" @click="closeModal">x</span>
+  <Modal :myStyle="{backgroundImage: `url(${require('@/assets/ass28.jpg')})`}">
+    <div class="w-100 p-4">
+      <div class="w-100 right-all">
+        <!-- <span class="h3 c-p" @click="closeModal">x</span> -->
+        <i class="las la-times h3 c-p" @click="closeModal"></i>
+      </div>
+      <a class="w-100 c-p" href="https://api.whatsapp.com/send?phone=972537234223" target="_blanc">
+        <div class="w-100 f-center-top">
+          <div class="text mt-md-0 mt-3">
+            <h1 class="color">אחחח איזה ריח!</h1>
+            <h2>גם אתם רוצים לאפות פיצות איטלקיות לוהטות בתנור המהמם שלנו?</h2>
+            <!-- <h6>*עד סוף פסח או עד גמר המלאי</h6> -->
+          </div>
+          <div class="p-img">
+            <img class="w-100" src="@/assets/ass29.jpg" alt="">
+          </div>
+        </div>
+        <div class="w-100 f-center mt-4">
+          <h2 class="text-center">שלחו לנו וואטספ עם המילים <span class="color">קופון הנחה</span> ונפנק אתכם</h2>
+          <span class="wrap-w f-center">
+          <i class="fab fa-whatsapp"></i>
+          </span>
+          <!-- <h1 class="underline text-center">הזמינו בחנות האתר>></h1> -->
+        </div>
+      </a>
     </div>
-    <router-link class="w-100 c-p" @click.native="closeModal" tag="div" to="/store">
-      <div class="w-100 f-center-top">
-        <div class="text mt-md-0 mt-3">
-          <h2>פסח בברטלו ישראל</h2>
-          <h1>כל המוצרים במבצע משוגע!</h1>
-          <h6>*עד סוף פסח או עד גמר המלאי</h6>
-        </div>
-        <div class="p-img">
-          <img class="w-100" src="@/assets/ass29.jpg" alt="">
-        </div>
-      </div>
-      <div class="w-100 f-center mt-4">
-        <h1 class="underline text-center">הזמינו בחנות האתר>></h1>
-      </div>
-    </router-link>
-    <!-- <div class="w-100 center-all">
-      <firework />
-    </div> -->
   </Modal>
 </template>
 
@@ -51,14 +55,35 @@
     width: 66%;
   }
 
+  .color {
+    color: #60d66a;
+  }
+
   .p-img {
     width: 33%;
-    border: solid 4px #dd6c37;
+    border: solid 5px #60d66a;
     padding: 5px
   }
 
   h1 {
     font-size: 3.2vw;
+    font-weight: bold;
+  }
+
+  h2 {
+    font-weight: bold;
+  }
+
+    .wrap-w {
+    width: 70px;
+    height: 70px;
+    border-radius: 100px;
+    box-shadow: 0 0 14px #000000bd;
+    background-color: #2cb742;
+  }
+   .wrap-w i {
+    font-size: 50px;
+    color: #ffffff;
   }
 
   @media (max-width: 767.98px) {
@@ -77,19 +102,7 @@
     }
 
     h1 {
-      font-size: 40px;
+      font-size: 30px;
     }
   }
 </style>
-
-
-
-
-
-
-
-
-
-
-
-

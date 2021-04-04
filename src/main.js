@@ -3,6 +3,7 @@ import App from './App.vue'
 import router from './router'
 import store from './store'
 import "./style/global.css"
+import "./style/main.css"
 import AOS from 'aos'
 import 'aos/dist/aos.css'
 import ButtonLink from '@/components/ButtonLink.vue'

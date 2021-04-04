@@ -16,7 +16,7 @@
   import ToolBar from '@/components/ToolBar.vue'
   import Footer from '@/components/Footer.vue'
   import whatsAppFix from '@/components/whatsAppFix.vue'
-  import autoModal from '@/components/autoModal.vue'
+  import autoModal from '@/components/autoModalNew.vue'
 
 
   export default {
