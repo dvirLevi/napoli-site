@@ -6,7 +6,7 @@
     <router-view />
     <Footer />
     <whatsAppFix />
-    <autoModal v-if="ifAutoModel" />
+    <autoModal v-if="ifAutoModel && this.$route.name !== 'store'"  />
     <!-- </div> -->
   </div>
 </template>
@@ -16,7 +16,7 @@
   import ToolBar from '@/components/ToolBar.vue'
   import Footer from '@/components/Footer.vue'
   import whatsAppFix from '@/components/whatsAppFix.vue'
-  import autoModal from '@/components/autoModalNew.vue'
+  import autoModal from '@/components/popups/autoModalNew.vue'
 
 
   export default {

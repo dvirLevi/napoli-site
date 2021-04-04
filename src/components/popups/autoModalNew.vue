@@ -3,14 +3,13 @@
     <div class="w-100 p-4">
       <div class="w-100 right-all">
         <!-- <span class="h3 c-p" @click="closeModal">x</span> -->
-        <i class="las la-times h3 c-p" @click="closeModal"></i>
+        <i class="las la-times h3 c-p text-white" @click="closeModal"></i>
       </div>
       <a class="w-100 c-p" href="https://api.whatsapp.com/send?phone=972537234223" target="_blanc">
         <div class="w-100 f-center-top">
           <div class="text mt-md-0 mt-3">
             <h1 class="color">אחחח איזה ריח!</h1>
             <h2>גם אתם רוצים לאפות פיצות איטלקיות לוהטות בתנור המהמם שלנו?</h2>
-            <!-- <h6>*עד סוף פסח או עד גמר המלאי</h6> -->
           </div>
           <div class="p-img">
             <img class="w-100" src="@/assets/ass29.jpg" alt="">
@@ -21,7 +20,6 @@
           <span class="wrap-w f-center">
           <i class="fab fa-whatsapp"></i>
           </span>
-          <!-- <h1 class="underline text-center">הזמינו בחנות האתר>></h1> -->
         </div>
       </a>
     </div>
