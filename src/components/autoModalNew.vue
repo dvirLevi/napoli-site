@@ -68,10 +68,12 @@
   h1 {
     font-size: 3.2vw;
     font-weight: bold;
+    color: #fff;
   }
 
   h2 {
     font-weight: bold;
+    color: #fff;
   }
 
     .wrap-w {
