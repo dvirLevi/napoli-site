@@ -60,7 +60,8 @@
                 v-model="clientDatdlis.tel" required>
             </div>
             <div class="w-100 center-all">
-              <input type="email" placeholder='*דוא"ל' v-model="clientDatdlis.mail" required>
+              <input type="email" placeholder='*דוא"ל' @blur="getEmailOfLeavesCart(clientDatdlis.mail, products)"
+                v-model="clientDatdlis.mail" required>
             </div>
             <div class="w-100 center-all">
               <!-- <input type="text" placeholder="*עיר" v-model="clientDatdlis.city" required> -->
@@ -109,6 +110,7 @@
   import Regulations from '@/components/Regulations.vue'
   import Swal from 'sweetalert2'
   import cities from '../helpers/cities.json'
+  import validateEmail from '../helpers/validateEmail.js'
   import vSelect from 'vue-select'
 
 
@@ -155,6 +157,22 @@
       },
       ifMessenger() {
         this.$store.commit('ifMessenger');
+      },
+      async getEmailOfLeavesCart(clientMail, products) {
+        if (validateEmail(clientMail) && products.length) {
+          const response = await fetch('http://localhost:3000/bertello/get-email-of-leaves-cart', {
+            method: 'post',
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+              clientMail,
+              products
+            })
+          });
+          const json = await response.json();
+          console.log(json)
+        }
       }
     },
     computed: {
@@ -204,14 +222,14 @@
 </script>
 
 <style scoped>
-  input{
+  input {
     width: 80%;
     margin: 8px;
     padding: 5px;
     border: solid black 2px;
   }
 
-   
+
   .v-select {
     width: 80%;
     border: solid black 2px;
