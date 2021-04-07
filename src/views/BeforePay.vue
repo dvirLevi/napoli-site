@@ -175,10 +175,10 @@
         }
       },
       getParametersFromUrl() {
+        fetch(`${mainVar.server}/bertello/send-email-to-leaves-cart`);
         let urlString = window.location.href;
         let url = new URL(urlString);
         let products = JSON.parse(url.searchParams.get("products"));
-        fetch(`${mainVar.server}/bertello/send-email-to-leaves-cart`);
         if (products) {
           for(let i in this.allProducts) {
             for(let i2 in products) {
