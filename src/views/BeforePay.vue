@@ -110,6 +110,7 @@
   import Regulations from '@/components/Regulations.vue'
   import Swal from 'sweetalert2'
   import cities from '../helpers/cities.json'
+  import mainVar from '../helpers/mainVar.js'
   import validateEmail from '../helpers/validateEmail.js'
   import vSelect from 'vue-select'
 
@@ -130,6 +131,7 @@
       fbq('track', 'ViewContent', {
         content_name: this.$route.name,
       });
+      this.getParametersFromUrl();
     },
     methods: {
       nextToPay() {
@@ -158,9 +160,9 @@
       ifMessenger() {
         this.$store.commit('ifMessenger');
       },
-      async getEmailOfLeavesCart(clientMail, products) {
+      getEmailOfLeavesCart(clientMail, products) {
         if (validateEmail(clientMail) && products.length) {
-          const response = await fetch('http://localhost:3000/bertello/get-email-of-leaves-cart', {
+          fetch(`${mainVar.server}/bertello/get-email-of-leaves-cart`, {
             method: 'post',
             headers: {
               "Content-Type": "application/json",
@@ -170,14 +172,31 @@
               products
             })
           });
-          const json = await response.json();
-          console.log(json)
+        }
+      },
+      getParametersFromUrl() {
+        let urlString = window.location.href;
+        let url = new URL(urlString);
+        let products = JSON.parse(url.searchParams.get("products"));
+        fetch(`${mainVar.server}/bertello/send-email-to-leaves-cart`);
+        if (products) {
+          for(let i in this.allProducts) {
+            for(let i2 in products) {
+              if(this.allProducts[i].id === products[i2].id) {
+                this.allProducts[i].amount = products[i2].amount;
+              }
+            }
+          }
+          // console.log(JSON.parse(products));
         }
       }
     },
     computed: {
       products() {
         return this.$store.getters.inCart
+      },
+      allProducts() {
+        return this.$store.state.products
       },
       priceMessenger() {
         return this.$store.getters.priceMessenger
