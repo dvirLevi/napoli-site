@@ -21,12 +21,12 @@
     display: inline-block;
     position: relative;
     padding: 13px 0px 13px 13px;
-    /* border: solid #000000 2px;
+    /* border: solid var(--main-color) 2px;
         border-top: 0px; */
   }
   /* h2::before {
     content: '';
-    border-top: 2px solid #000000;
+    border-top: 2px solid var(--main-color);
     right: 0;
     top: 0;
     width: 35%;
@@ -37,7 +37,7 @@
 
     h2::after {
     content: '';
-    border-top: 2px solid #000000;
+    border-top: 2px solid var(--main-color);
     right: 0;
     bottom: 0;
     width: 100px;

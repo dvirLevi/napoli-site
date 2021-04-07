@@ -16,10 +16,12 @@
             <div class="mobile w-100">
               <div class="w-100 center-all h2 mt-3 ">
                 <div class="w-50 text-center">
-                  <a href="https://www.instagram.com/napoli_pizza_oven_israel/" target="_blanc"><i class="fab fa-instagram"></i></a>
+                  <a href="https://www.instagram.com/napoli_pizza_oven_israel/" target="_blanc"><i
+                      class="fab fa-instagram"></i></a>
                 </div>
                 <div class="w-50 text-center">
-                 <a href="https://www.facebook.com/Bertello.oven.il" target="_blanc"><i class="fab fa-facebook-f"></i></a>
+                  <a href="https://www.facebook.com/Bertello.oven.il" target="_blanc"><i
+                      class="fab fa-facebook-f"></i></a>
                 </div>
               </div>
             </div>
@@ -28,6 +30,7 @@
         </div>
 
         <Hamburger :ifMenu="ifMenu" @openClose="ifMenu = !ifMenu" />
+        <img class="independence-img" src="@/assets/ass34.jpg" alt="">
         <router-link class="" tag="div" to="/">
           <img src="@/assets/napoli_logo.jpg" alt="">
         </router-link>
@@ -107,6 +110,13 @@
     cursor: pointer;
   }
 
+  .independence-img {
+    position: absolute;
+    width: 75px;
+    left: 120px;
+    bottom: 0;
+  }
+
   .wrap-items {
     /* width: -webkit-fill-available; */
     font-size: 20px;
@@ -135,7 +145,7 @@
   .fa-shopping-cart {
     font-size: 25px;
     margin: 5px;
-    color: rgb(0, 0, 0);
+    color: var(--main-color);
 
 
   }
@@ -191,7 +201,7 @@
       margin: 0;
       padding: 19px 25px;
       width: 100%;
-      border-bottom: solid rgb(0, 0, 0) 1px;
+      border-bottom: solid var(--main-color) 1px;
       font-size: 21px;
     }
 
@@ -208,6 +218,11 @@
       border-radius: 100px;
       background-color: #ff9743;
     }
-    
+
+    .independence-img {
+    width: 54px;
+    left: 120px;
+  }
+
   }
 </style>

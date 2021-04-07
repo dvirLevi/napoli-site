@@ -58,8 +58,8 @@
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
   .border-row-top {
-    border-top: solid black 2px;
-    border-bottom: solid black 2px;
+    border-top: solid var(--main-color) 2px;
+    border-bottom: solid var(--main-color) 2px;
   }
 
   img {

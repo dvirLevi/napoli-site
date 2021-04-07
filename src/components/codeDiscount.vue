@@ -105,12 +105,12 @@
     width: 55%;
     margin: 8px;
     padding: 5px;
-    border: solid black 2px;
+    border: solid var(--main-color) 2px;
   }
 
   button {
     border: none;
-    background-color: black;
+    background-color: var(--main-color);
     color: #ffffff;
     padding: 10px;
     outline: none;

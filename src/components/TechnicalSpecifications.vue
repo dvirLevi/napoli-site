@@ -77,7 +77,7 @@
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
   .border-strong {
-    border: solid rgb(0, 0, 0) 3px;
+    border: solid var(--main-color) 3px;
   }
 
   .col-md-5 {

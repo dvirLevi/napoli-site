@@ -208,13 +208,13 @@
     width: 80%;
     margin: 8px;
     padding: 5px;
-    border: solid black 2px;
+    border: solid var(--main-color) 2px;
   }
 
    
   .v-select {
     width: 80%;
-    border: solid black 2px;
+    border: solid var(--main-color) 2px;
   }
 
   .v-select input {
@@ -228,14 +228,14 @@
     width: 80%;
     margin: 8px;
     padding: 5px;
-    border: solid black 2px;
+    border: solid var(--main-color) 2px;
   }
 
   input[type="checkbox"] {
     width: 20px;
     margin: 5px;
     padding: 5px;
-    border: solid black 2px;
+    border: solid var(--main-color) 2px;
   }
 
   .pay input {
@@ -250,7 +250,7 @@
 
   button {
     border: none;
-    background-color: black;
+    background-color: var(--main-color);
     color: #ffffff;
     padding: 10px;
     outline: none;

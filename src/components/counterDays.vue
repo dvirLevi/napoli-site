@@ -89,7 +89,7 @@
 
 <style scoped>
   .el-time {
-    border: solid rgb(0, 0, 0) 2px;
+    border: solid var(--main-color) 2px;
     margin: 3px;
     width: 120px;
     text-align: center;
@@ -105,7 +105,7 @@
 
   @media (max-width: 767.98px) {
     .el-time {
-      border: solid rgb(0, 0, 0) 2px;
+      border: solid var(--main-color) 2px;
       margin: 0.9%;
       width: 23%;
     }

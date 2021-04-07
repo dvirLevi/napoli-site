@@ -63,7 +63,7 @@
 
 <style scoped>
   .row-icons {
-    background-color: black;
+    background-color: var(--main-color);
   }
 
   .row-icons img {

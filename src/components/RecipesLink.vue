@@ -42,7 +42,7 @@
     font-size: 43px;
     color: white;
     font-weight: bold;
-    text-shadow: 1px 1px 7px black;
+    text-shadow: 1px 1px 7px var(--main-color);
   }
 
   @media (max-width: 767.98px) {

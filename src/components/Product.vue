@@ -41,6 +41,7 @@
           </div>
         </div>
       </div>
+      <img class="independence-img m-3" src="@/assets/ass34.jpg" alt="">
     </div>
   </div>
 </template>
@@ -115,7 +116,7 @@
 
   button {
     border: none;
-    background-color: black;
+    background-color: var(--main-color);
     color: #ffffff;
     padding: 10px;
     outline: none;
@@ -167,6 +168,13 @@
     }
   } */
 
+  .independence-img {
+    position: absolute;
+    width: 75px;
+    left: 0;
+    top: -29px;
+  }
+
   @media (max-width: 767.98px) {
     .row-all {
       padding: 0% 0%;
@@ -194,5 +202,11 @@
       width: 130px;
       height: 130px;
     }
+
+    .independence-img {
+    width: 75px;
+    left: 0;
+    top: 0;
+  }
   }
 </style>

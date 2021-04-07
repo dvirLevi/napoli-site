@@ -48,7 +48,7 @@
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
   .row {
-    background-color: black;
+    background-color: var(--main-color);
     /* height: 300px; */
     color: #ffffff
   }

@@ -66,7 +66,7 @@
 
   button {
     border: none;
-    background-color: black;
+    background-color: var(--main-color);
     color: #ffffff;
     padding: 10px;
     outline: none;

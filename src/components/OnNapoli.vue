@@ -65,12 +65,12 @@
     display: inline-block;
     position: relative;
     padding: 20px;
-    border: solid #000000 2px;
+    border: solid var(--main-color) 2px;
         border-top: 0px;
   }
   h2::before {
     content: '';
-    border-top: 2px solid #000000;
+    border-top: 2px solid var(--main-color);
     right: 0;
     top: 0;
     width: 35%;
@@ -81,7 +81,7 @@
 
     h2::after {
     content: '';
-    border-top: 2px solid #000000;
+    border-top: 2px solid var(--main-color);
     left: 0;
     top: 0;
     width: 35%;

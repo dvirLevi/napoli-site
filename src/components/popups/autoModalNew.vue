@@ -77,7 +77,7 @@
     width: 70px;
     height: 70px;
     border-radius: 100px;
-    box-shadow: 0 0 14px #000000bd;
+    box-shadow: 0 0 14px var(--main-color)bd;
     background-color: #2cb742;
   }
    .wrap-w i {
