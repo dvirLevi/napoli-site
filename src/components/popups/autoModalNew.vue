@@ -2,12 +2,11 @@
   <Modal>
     <div class="w-100 p-4 bg-white position-relative">
       <div class="bg flag img-cover"></div>
-
       <div class="w-100 content">
         <div class="w-100 right-all">
           <i class="las la-times h3 c-p" @click="closeModal"></i>
         </div>
-        <a class="w-100 c-p" href="https://api.whatsapp.com/send?phone=972537234223" target="_blanc">
+        <router-link class="w-100 c-p" @click.native="closeModal" tag="div" to="/store">
           <div class="w-100 f-center-top">
             <div class="text mt-md-0 mt-3">
               <h1 class="color">חוגגים עצמאות בברטלו ישראל!</h1>
@@ -20,11 +19,10 @@
           <div class="w-100 f-center mt-4">
             <h1 class="text-center">לרכישה >></h1>
           </div>
-        </a>
-    <firework />
-
+        </router-link>
       </div>
     </div>
+    <firework />
   </Modal>
 </template>
 
@@ -55,6 +53,14 @@
     position: relative;
     z-index: 2;
   }
+
+    .bg-white {
+    position: relative;
+    z-index: 2;
+    border-radius: 20px;
+    overflow: hidden;
+  }
+
 
   .text {
     width: 66%;
