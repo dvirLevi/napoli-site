@@ -20,11 +20,12 @@
     <div class="box-product center-all p-3">
       <div class="label f-center" v-if="product.label">
         <!-- star lable -->
-        <img class="w-100" src="@/assets/ass31.svg" alt="">
-        <h4 class="m-0">{{product.label}}</h4>
-        <!-- <div class="circle f-center" :style="{backgroundColor: product.labelColor}">
-          <h5 class="m-0">{{product.label}}</h5>
-        </div> -->
+        <!-- <img class="w-100" src="@/assets/ass31.svg" alt="">
+        <h4 class="m-0">{{product.label}}</h4> -->
+        <div class="circle f-center">
+          <div class="w-50">{{product.label}}</div>
+          <img src="@/assets/ass34.jpg" class="w-50" />
+        </div>
       </div>
       <div class="row mt-3">
         <div class="col-md-6 center-all-top">
@@ -41,7 +42,7 @@
           </div>
         </div>
       </div>
-      <img class="independence-img m-3" src="@/assets/ass34.jpg" alt="">
+      <!-- <img class="independence-img m-3" src="@/assets/ass34.jpg" alt=""> -->
     </div>
   </div>
 </template>
@@ -138,15 +139,19 @@
 
   .label {
     position: absolute;
-    top: -84px;
-    right: -66px;
-    color: #fff;
-    width: 206px;
-    -webkit-transform: rotate(20deg);
-    transform: rotate(20deg);
+       top: -7px;
+    right: -7px;
+    color: rgb(3, 3, 3);
+    /* width: 206px; */
+    /* -webkit-transform: rotate(20deg); */
+    /* transform: rotate(20deg); */
     font-size: 14px;
     text-align: center;
     z-index: 1;
+     border: #0460a9 2px solid;
+    padding: 3px;
+      background-color: #fff;
+
   }
 
   .label h4 {
@@ -158,8 +163,11 @@
 
   .circle {
     width: 150px;
-    height: 150px;
-    border-radius: 100%;
+    /* height: 47px; */
+      font-weight: 700;
+     
+
+    /* border-radius: 100%; */
   }
 
   /* @media (max-width: 1410px) {
@@ -190,8 +198,8 @@
     }
 
     .label {
-      top: -46px;
-      right: -49px;
+         top: -5px;
+    right: -5px;
     }
 
     .label h5 {
@@ -200,7 +208,8 @@
 
     .circle {
       width: 130px;
-      height: 130px;
+      /* height: 50px; */
+
     }
 
     .independence-img {
