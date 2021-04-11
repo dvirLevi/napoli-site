@@ -111,11 +111,12 @@
   }
 
   .independence-img {
-        position: absolute;
-    width: 4vw;
-    /* left: 120px; */
-    bottom: 0;
-    margin-left: 9.4vw;
+    position: absolute;
+    /* width: 4vw; */
+    left: 5px;
+    top: 8px;
+    z-index: 1;
+    width: 50px;
   }
 
   .wrap-items {
@@ -221,9 +222,11 @@
     }
 
     .independence-img {
-    width: 54px;
-    left: 120px;
-  }
+      width: 59px;
+      left: 45%;
+      bottom: -4px;
+      top: auto;
+    }
 
   }
 </style>
