@@ -73,7 +73,7 @@
               </v-select>
             </div>
             <div class="w-100 center-all">
-              <input type="text" placeholder="*רחוב" v-model="clientDatdlis.address" required>
+              <input type="text" placeholder="*רחוב" pattern="[^0-9]*" v-model="clientDatdlis.address" required>
             </div>
             <div class="w-100 center-all">
               <input type="text" placeholder="*מספר בית" v-model="clientDatdlis.namHome" required>
