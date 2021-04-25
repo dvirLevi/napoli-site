@@ -1,5 +1,5 @@
 <template>
-  <Modal :myStyle="{backgroundImage: `url(${require('@/assets/ass28.jpg')})`}">
+  <Modal :myStyle="{backgroundImage: `url(${require('@/assets/ass32.jpg')})`}">
     <div class="w-100 p-4">
       <div class="w-100 right-all">
         <i class="las la-times h3 c-p text-white" @click="closeModal"></i>
