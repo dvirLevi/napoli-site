@@ -51,7 +51,7 @@
     /* padding: 30px; */
     width: 40%;
     /* border: 3px dashed rgb(82, 82, 82); */
-    border-radius: 20px;
+    /* border-radius: 20px; */
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 50%;

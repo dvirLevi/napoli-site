@@ -1,11 +1,12 @@
 <template>
-  <Modal :myStyle="{backgroundImage: `url(${require('@/assets/ass32.jpg')})`}">
-    <div class="w-100 p-4">
-      <div class="w-100 right-all">
+  <Modal>
+    <div class="w-100">
+      <!-- <div class="w-100 right-all">
         <i class="las la-times h3 c-p text-white" @click="closeModal"></i>
-      </div>
-      <a class="w-100 c-p" href="https://api.whatsapp.com/send?phone=972537234223" target="_blanc">
-        <div class="w-100 f-center-top">
+      </div> -->
+      <router-link class="w-100 c-p" @click.native="closeModal" tag="div" to="/store">
+        <img class="w-100" src="@/assets/ass34.png" alt="">
+        <!-- <div class="w-100 f-center-top">
           <div class="text mt-md-0 mt-3">
             <h1 class="color">אחחח איזה ריח!</h1>
             <h2>גם אתם רוצים לאפות פיצות איטלקיות לוהטות בתנור המהמם שלנו?</h2>
@@ -19,8 +20,8 @@
           <span class="wrap-w f-center">
           <i class="fab fa-whatsapp"></i>
           </span>
-        </div>
-      </a>
+        </div> -->
+      </router-link>
     </div>
   </Modal>
 </template>
@@ -48,40 +49,8 @@
 </script>
 
 <style scoped>
-  .text {
-    width: 66%;
-  }
-
-  .color {
-    color: #60d66a;
-  }
-
-  .p-img {
-    width: 33%;
-    border: solid 5px #60d66a;
-    padding: 5px
-  }
-
-  h1 {
-    font-size: 3.2vw;
-    font-weight: bold;
-    color: #fff;
-  }
-
-  h2 {
-    font-weight: bold;
-    color: #fff;
-  }
-
-    .wrap-w {
-    width: 70px;
-    height: 70px;
-    border-radius: 100px;
-    box-shadow: 0 0 14px #000000bd;
-    background-color: #2cb742;
-  }
-   .wrap-w i {
-    font-size: 50px;
+  h3 {
+    background-color: #ffa03d;
     color: #ffffff;
   }
 
