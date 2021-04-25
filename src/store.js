@@ -148,21 +148,7 @@ export default new Vuex.Store({
         label: "",
         labelColor: "red",
         id: 5
-      },
-      // {
-      //   name: "עסקה איטלקית מלאה: תנור + מבער + מגירה + מרדה + כיסוי",
-      //   img: require("@/assets/ass26.jpg"),
-      //   description: "",
-      //   specifications: `<li>עסקה איטלקית במחיר משתלם במיוחד!</li>`,
-      //   addCart: false,
-      //   price: 2050,
-      //   previousPrice: 2350,
-      //   amount: 0,
-      //   ifSize: false,
-      //   label: "מבצע חידוש מלאי",
-      //   labelColor: "red",
-      //   id: 8
-      // },
+      }
     ],
     ifCart: false,
     clientDatdlis: {
