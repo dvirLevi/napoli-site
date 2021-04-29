@@ -60,7 +60,7 @@
                 v-model="clientDatdlis.tel" required>
             </div>
             <div class="w-100 center-all">
-              <input type="email" placeholder='*דוא"ל' @blur="getEmailOfLeavesCart(clientDatdlis.mail, products)"
+              <input type="email" placeholder='*דוא"ל' @blur="getEmailOfLeavesCart(clientDatdlis, products)"
                 v-model="clientDatdlis.mail" required>
             </div>
             <div class="w-100 center-all">
@@ -160,15 +160,16 @@
       ifMessenger() {
         this.$store.commit('ifMessenger');
       },
-      getEmailOfLeavesCart(clientMail, products) {
-        if (validateEmail(clientMail) && products.length) {
+      getEmailOfLeavesCart(clientDatdlis, products) {
+        if (validateEmail(clientDatdlis.mail) && products.length) {
           fetch(`${mainVar.server}/bertello/get-email-of-leaves-cart`, {
             method: 'post',
             headers: {
               "Content-Type": "application/json",
             },
             body: JSON.stringify({
-              clientMail,
+              clientMail: clientDatdlis.mail,
+              clientName: clientDatdlis.name,
               products
             })
           });
