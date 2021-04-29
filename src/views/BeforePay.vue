@@ -60,7 +60,8 @@
                 v-model="clientDatdlis.tel" required>
             </div>
             <div class="w-100 center-all">
-              <input type="email" placeholder='*דוא"ל' v-model="clientDatdlis.mail" required>
+              <input type="email" placeholder='*דוא"ל' @blur="getEmailOfLeavesCart(clientDatdlis, products)"
+                v-model="clientDatdlis.mail" required>
             </div>
             <div class="w-100 center-all">
               <!-- <input type="text" placeholder="*עיר" v-model="clientDatdlis.city" required> -->
@@ -109,6 +110,8 @@
   import Regulations from '@/components/Regulations.vue'
   import Swal from 'sweetalert2'
   import cities from '../helpers/cities.json'
+  import mainVar from '../helpers/mainVar.js'
+  import validateEmail from '../helpers/validateEmail.js'
   import vSelect from 'vue-select'
 
 
@@ -128,6 +131,7 @@
       fbq('track', 'ViewContent', {
         content_name: this.$route.name,
       });
+      this.getParametersFromUrl();
     },
     methods: {
       nextToPay() {
@@ -155,11 +159,45 @@
       },
       ifMessenger() {
         this.$store.commit('ifMessenger');
+      },
+      getEmailOfLeavesCart(clientDatdlis, products) {
+        if (validateEmail(clientDatdlis.mail) && products.length) {
+          fetch(`${mainVar.server}/bertello/get-email-of-leaves-cart`, {
+            method: 'post',
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+              clientMail: clientDatdlis.mail,
+              clientName: clientDatdlis.name,
+              products
+            })
+          });
+        }
+      },
+      getParametersFromUrl() {
+        // fetch(`${mainVar.server}/bertello/send-email-to-leaves-cart`);
+        let urlString = window.location.href;
+        let url = new URL(urlString);
+        let products = JSON.parse(url.searchParams.get("products"));
+        if (products) {
+          for(let i in this.allProducts) {
+            for(let i2 in products) {
+              if(this.allProducts[i].id === products[i2].id) {
+                this.allProducts[i].amount = products[i2].amount;
+              }
+            }
+          }
+          // console.log(JSON.parse(products));
+        }
       }
     },
     computed: {
       products() {
         return this.$store.getters.inCart
+      },
+      allProducts() {
+        return this.$store.state.products
       },
       priceMessenger() {
         return this.$store.getters.priceMessenger
@@ -204,14 +242,14 @@
 </script>
 
 <style scoped>
-  input{
+  input {
     width: 80%;
     margin: 8px;
     padding: 5px;
     border: solid black 2px;
   }
 
-   
+
   .v-select {
     width: 80%;
     border: solid black 2px;

@@ -91,6 +91,7 @@
   // @ is an alias to /src
 
   import shortid from 'shortid'
+  import mainVar from '../helpers/mainVar.js'
 
 
   export default {
@@ -105,7 +106,7 @@
       }
     },
     created() {
-      fetch('https://free-services.herokuapp.com/wake-server');
+      fetch(`${mainVar.server}/wake-server`);
       if (!this.$store.state.nextPayment) {
         this.$router.push('before-pay')
       }
@@ -196,7 +197,7 @@
       },
       async checkPay() {
         try {
-          const response = await fetch('https://free-services.herokuapp.com/bertello/check-pay', {
+          const response = await fetch(`${mainVar.server}/bertello/check-pay`, {
             method: 'post',
             headers: {
               "Content-Type": "application/json",
