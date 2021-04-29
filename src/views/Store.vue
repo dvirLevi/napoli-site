@@ -16,7 +16,7 @@
   // @ is an alias to /src
   import counterDays from '@/components/counterDays.vue'
   import Product from '@/components/Product.vue'
-  
+  import mainVar from '../helpers/mainVar.js'
   import videoTop from '@/components/videoTop.vue'
 
 
@@ -36,6 +36,7 @@
       fbq('track', 'ViewContent', {
         content_name: this.$route.name,
       });
+      fetch(`${mainVar.server}/bertello/send-email-to-leaves-cart`);
       // this.$store.commit('upAutoModel', this.$route.name)
     },
     computed: {
