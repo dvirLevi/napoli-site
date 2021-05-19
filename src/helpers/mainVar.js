@@ -1,5 +1,5 @@
 const mainVar = {
-  server: 'https://free-services.herokuapp.com'
+  server: 'https://bertello.herokuapp.com'
   // server: 'http://localhost:3000'
 }
 
