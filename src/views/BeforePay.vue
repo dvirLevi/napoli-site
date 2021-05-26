@@ -132,6 +132,7 @@
         content_name: this.$route.name,
       });
       this.getParametersFromUrl();
+      fetch(`${mainVar.server}/bertello/send-email-to-leaves-cart`);
     },
     methods: {
       nextToPay() {
