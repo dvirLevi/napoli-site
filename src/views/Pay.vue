@@ -114,9 +114,11 @@
     },
     mounted() {
       this.$refs.myForm.submit();
-      fbq('track', 'ViewContent', {
-        content_name: this.$route.name,
-      });
+      this.$store.dispatch('fbApi', {
+        event_name: "ViewContent",
+        event_time: Math.floor(new Date() / 1000),
+        value: 0,
+      })
       this.endPay();
     },
     methods: {
@@ -136,10 +138,11 @@
           if (ifPay) {
             clearInterval(this.interval);
             this.$router.push("/thanks");
-            fbq('track', 'Purchase', {
+            this.$store.dispatch('fbApi', {
+              event_name: "Purchase",
+              event_time: Math.floor(new Date() / 1000),
               value: this.allPayable,
-              currency: 'ILS'
-            });
+            })
             twq('track', 'Purchase E', {
               //required parameters
               value: this.allPayable,
