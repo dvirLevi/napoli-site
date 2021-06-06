@@ -320,17 +320,6 @@ export default new Vuex.Store({
     // },
   },
   actions: {
-    // async sendToMail(store, contentMail) {
-    //   return new Promise(async (resolve, reject) => {
-    //     try {
-    //       let res = await postService.sendMail(contentMail);
-    //       resolve(res)
-    //     } catch (err) {
-    //       reject(err)
-    //       console.log(err)
-    //     }
-    //   })
-    // },
     async fbApi(store, obj) {
       obj.event_id = shortid.generate();
       obj.event_source_url = window.location.href;
