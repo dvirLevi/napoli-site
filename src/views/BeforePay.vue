@@ -128,9 +128,11 @@
       }
     },
     mounted() {
-      fbq('track', 'ViewContent', {
-        content_name: this.$route.name,
-      });
+      this.$store.dispatch('fbApi', {
+        event_name: "ViewContent",
+        event_time: Math.floor(new Date() / 1000),
+        value: 0,
+      })
       this.getParametersFromUrl();
       fetch(`${mainVar.server}/bertello/send-email-to-leaves-cart`);
     },
@@ -139,7 +141,11 @@
         if (this.products.length) {
           this.$store.commit('nextPayment');
           this.$router.push('pay');
-          fbq('track', 'AddPaymentInfo');
+          this.$store.dispatch('fbApi', {
+            event_name: "AddPaymentInfo",
+            event_time: Math.floor(new Date() / 1000),
+            value: 0,
+          })
           twq('track', 'add payment info E');
           this.$gtag.event('add_payment_info', {
             'event_category': 'ecommerce',
@@ -182,9 +188,9 @@
         let url = new URL(urlString);
         let products = JSON.parse(url.searchParams.get("products"));
         if (products) {
-          for(let i in this.allProducts) {
-            for(let i2 in products) {
-              if(this.allProducts[i].id === products[i2].id) {
+          for (let i in this.allProducts) {
+            for (let i2 in products) {
+              if (this.allProducts[i].id === products[i2].id) {
                 this.allProducts[i].amount = products[i2].amount;
               }
             }

@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
 import postService from '@/Services/postService.js'
+import shortid from 'shortid'
 
 
 Vue.use(Vuex)
@@ -304,16 +305,26 @@ export default new Vuex.Store({
     // },
   },
   actions: {
-    async sendToMail(store, contentMail) {
-      return new Promise(async (resolve, reject) => {
-        try {
-          let res = await postService.sendMail(contentMail);
-          resolve(res)
-        } catch (err) {
-          reject(err)
-          console.log(err)
-        }
-      })
+    // async sendToMail(store, contentMail) {
+    //   return new Promise(async (resolve, reject) => {
+    //     try {
+    //       let res = await postService.sendMail(contentMail);
+    //       resolve(res)
+    //     } catch (err) {
+    //       reject(err)
+    //       console.log(err)
+    //     }
+    //   })
+    // },
+    async fbApi(store, obj) {
+      obj.event_id = shortid.generate();
+      obj.event_source_url = window.location.href;
+      fbq('track', obj.event_name, {
+        content_name: obj.event_source_url,
+      }, {eventID: obj.event_id});
+      let res = await postService.post('/bertello/fb-conversions-api', obj);
+      console.log(res)
+      return res
     }
   }
 })

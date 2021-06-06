@@ -32,10 +32,11 @@
       }
     },
     mounted() {
-      fbq('track', 'ViewContent', {
-        content_name: this.$route.name,
-      });
-      
+       this.$store.dispatch('fbApi', {
+        event_name: "ViewContent",
+        event_time: Math.floor(new Date() / 1000),
+        value: 0,
+      })
       // this.$store.commit('upAutoModel', this.$route.name)
     },
     computed: {
