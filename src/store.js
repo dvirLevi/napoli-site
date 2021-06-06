@@ -320,11 +320,20 @@ export default new Vuex.Store({
       obj.event_id = shortid.generate();
       obj.event_source_url = window.location.href;
       let prametersForBowser = () => {
-        if(obj.event_name === "Purchase") return {content_name: obj.event_source_url, value: obj.value, currency: 'ILS'}
-        return {content_name: obj.event_source_url}
+        if (obj.value) return {
+          value: obj.value,
+          currency: 'ILS'
+        }
+        return 
       }
-      console.log(prametersForBowser())
-      fbq('track', obj.event_name, prametersForBowser(), {
+      console.log({
+        content_name: obj.event_source_url,
+        ...prametersForBowser()
+      })
+      fbq('track', obj.event_name, {
+        content_name: obj.event_source_url,
+        ...prametersForBowser()
+      }, {
         eventID: obj.event_id
       });
       let res = await postService.post('/bertello/fb-conversions-api', obj);
