@@ -33,6 +33,11 @@
       },
     },
     mounted() {
+      //  this.$store.dispatch('fbApi', {
+      //         event_name: "Purchase",
+      //         event_time: Math.floor(new Date() / 1000),
+      //         value: 555,
+      //       })
       this.preloadImages();
     },
     methods: {
