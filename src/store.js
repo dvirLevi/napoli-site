@@ -319,11 +319,15 @@ export default new Vuex.Store({
     async fbApi(store, obj) {
       obj.event_id = shortid.generate();
       obj.event_source_url = window.location.href;
-      fbq('track', obj.event_name, {
-        content_name: obj.event_source_url,
-      }, {eventID: obj.event_id});
+      let prametersForBowser = () => {
+        if(obj.event_name === "Purchase") return {content_name: obj.event_source_url, value: obj.value, currency: 'ILS'}
+        return {content_name: obj.event_source_url}
+      }
+      console.log(prametersForBowser())
+      fbq('track', obj.event_name, prametersForBowser(), {
+        eventID: obj.event_id
+      });
       let res = await postService.post('/bertello/fb-conversions-api', obj);
-      console.log(res)
       return res
     }
   }
