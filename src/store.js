@@ -326,10 +326,6 @@ export default new Vuex.Store({
         }
         return 
       }
-      console.log({
-        content_name: obj.event_source_url,
-        ...prametersForBowser()
-      })
       fbq('track', obj.event_name, {
         content_name: obj.event_source_url,
         ...prametersForBowser()
