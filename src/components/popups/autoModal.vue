@@ -6,7 +6,7 @@
           <span class="h3 c-p" @click="closeModal">x</span>
         </div>
         <div class="w-100 center-all">
-          <img src="@/assets/ass32.jpg" alt="">
+          <img src="@/assets/ass23.jpg" alt="">
         </div>
         <div>
           <h3 class="text-center mt-3 font-weight-bolder">נגמר לנו המלאי 😞</h3>
