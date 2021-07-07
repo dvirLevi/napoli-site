@@ -40,7 +40,7 @@ export default new Vuex.Store({
         amount: 0,
         ifSize: false,
         label: "אזל מהמלאי",
-        labelColor: "red",
+        labelColor: "#716868",
         id: 8
       },
       {
@@ -77,7 +77,7 @@ export default new Vuex.Store({
         amount: 0,
         ifSize: true,
         label: "אזל מהמלאי",
-        labelColor: "red",
+        labelColor: "#716868",
         id: 2
       },
       {
@@ -146,7 +146,7 @@ export default new Vuex.Store({
         amount: 0,
         ifSize: false,
         label: "אזל מהמלאי",
-        labelColor: "red",
+        labelColor: "#716868",
         id: 5
       },
     ],
