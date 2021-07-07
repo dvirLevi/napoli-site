@@ -41,7 +41,7 @@
       },
       preloadImages() {
         let arrLoad = [
-          require('@/assets/ass23.jpg')
+          require('@/assets/ass34.png')
         ]
         var images = [];
         for (let i in arrLoad) {

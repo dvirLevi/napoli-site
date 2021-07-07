@@ -60,6 +60,7 @@
     justify-content: center;
     align-content: center;
     flex-wrap: wrap;
+    border-radius: 8px;
   }
 
 
