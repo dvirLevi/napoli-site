@@ -39,7 +39,7 @@ export default new Vuex.Store({
         previousPrice: 2350,
         amount: 0,
         ifSize: false,
-        label: "מבצע קיץ",
+        label: "אזל מהמלאי",
         labelColor: "red",
         id: 8
       },
@@ -62,7 +62,7 @@ export default new Vuex.Store({
         previousPrice: 1590,
         amount: 0,
         ifSize: true,
-        label: "מבצע קיץ",
+        label: "אזל מהמלאי",
         labelColor: "#716868",
         id: 1
       },
@@ -76,7 +76,7 @@ export default new Vuex.Store({
         previousPrice: 590,
         amount: 0,
         ifSize: true,
-        label: "מבצע קיץ",
+        label: "אזל מהמלאי",
         labelColor: "red",
         id: 2
       },
@@ -90,7 +90,7 @@ export default new Vuex.Store({
         previousPrice: 90,
         amount: 0,
         ifSize: false,
-        label: "מבצע קיץ",
+        label: "אזל מהמלאי",
         labelColor: "#716868",
         id: 3
       },
@@ -104,7 +104,7 @@ export default new Vuex.Store({
         previousPrice: 190,
         amount: 0,
         ifSize: false,
-        label: "מבצע קיץ",
+        label: "אזל מהמלאי",
         labelColor: "#716868",
         id: 4
       },
@@ -118,7 +118,7 @@ export default new Vuex.Store({
         previousPrice: 190,
         amount: 0,
         ifSize: false,
-        label: "מבצע קיץ",
+        label: "אזל מהמלאי",
         labelColor: "#716868",
         id: 6
       },
@@ -145,7 +145,7 @@ export default new Vuex.Store({
         previousPrice: 2090,
         amount: 0,
         ifSize: false,
-        label: "מבצע קיץ",
+        label: "אזל מהמלאי",
         labelColor: "red",
         id: 5
       },

@@ -65,6 +65,7 @@
     },
     methods: {
       addToCart(product) {
+        return
         product.amount++;
         this.$store.commit('allTimeShowCart');
         this.$store.dispatch('fbApi', {
