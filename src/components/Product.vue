@@ -65,7 +65,7 @@
     },
     methods: {
       addToCart(product) {
-        return
+        if(product.name !== "מרדה לתנור ברטלו") return
         product.amount++;
         this.$store.commit('allTimeShowCart');
         this.$store.dispatch('fbApi', {

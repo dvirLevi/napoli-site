@@ -104,7 +104,7 @@ export default new Vuex.Store({
         previousPrice: 190,
         amount: 0,
         ifSize: false,
-        label: "אזל מהמלאי",
+        label: "במלאי",
         labelColor: "#716868",
         id: 4
       },
