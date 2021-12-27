@@ -12,14 +12,15 @@
       </div>
     </div>
     <OnNapoli />
-    <RecipesLink />
+    <videoTop src="https://cdn.shopify.com/s/files/1/0011/6195/3290/files/Untitled_Project_7.mp4?v=1627671691" />
     <ReelPizza />
     <iconsBanner />
     <GasBurner />
-    <videoTop />
+    <videoTop src="https://cdn.shopify.com/s/files/1/0011/6195/3290/files/napoli_wood_flame2.mp4?6785760937562698444" />
     <FoodImages />
     <SoWhy />
     <questions class="mobile" />
+    <RecipesLink />
     <videoBottom width="width-video-50"
       srcVideo="videos/v1.mp4" />
   </div>

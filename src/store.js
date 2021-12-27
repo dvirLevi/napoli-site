@@ -44,7 +44,20 @@ export default new Vuex.Store({
         id: 8
       },
       {
-        // name: `תנור פיצה ברטלו <br><span style="font-weight: normal">(אבן אפייה כלולה)</span>`,
+        name: "עסקת ברטלו מורחבת",
+        img: require("@/assets/ass35.jpg"),
+        description: "",
+        specifications: `<li>עסקה איטלקית במחיר משתלם במיוחד!</li>`,
+        addCart: false,
+        price: 2250,
+        previousPrice: 2500,
+        amount: 0,
+        ifSize: false,
+        label: "אזל מהמלאי",
+        labelColor: "#716868",
+        id: 9
+      },
+      {
         name: `תנור פיצה ברטלו`,
         img: require("@/assets/ass6.png"),
         description: `מושלם לאפיית פיצות גורמה, פוקצ'ות, בשרים, ירקות ודגים.
@@ -109,6 +122,20 @@ export default new Vuex.Store({
         id: 4
       },
       {
+        name: "מד טמפרטורה ברטלו",
+        img: require("@/assets/ass36.jpg"),
+        description: "",
+        specifications: `<li>מותאמת במיוחד למידות התנור</li><li>כוללת חרירים ייעודיים לעודפי הקמח ולאוורור תחתית הפיצה</li>`,
+        addCart: false,
+        price: 140,
+        previousPrice: 190,
+        amount: 0,
+        ifSize: false,
+        label: "במלאי",
+        labelColor: "#716868",
+        id: 10
+      },
+      {
         name: "מגירה משולבת עצים + גז לתנור ברטלו",
         img: require("@/assets/ass24.jpg"),
         description: "",
@@ -122,19 +149,19 @@ export default new Vuex.Store({
         labelColor: "#716868",
         id: 6
       },
-      // {
-      //   name: "אבן אפייה לתנור ברטלו",
-      //   img: require("@/assets/ass25.jpg"),
-      //   description: "",
-      //   specifications: `<li>אבן קורדיאריט מינרלית ייחודית ואיכותית במיוחד (מכונה גם אבן שמוט) </li><li>אוגרת את החום בתנור ומפזרת אותו באופן אחיד</li><li>מעניקה תחתית פריכה למאפים</li>`,
-      //   addCart: false,
-      //   price: 175,
-      //   previousPrice: 0,
-      //   amount: 0,
-      //   ifSize: false,
-      //   label: "",
-      //   id: 7
-      // },
+      {
+        name: "אבן אפייה לתנור ברטלו <h6>כל טאבון כולל כבר אבן אפייה!</h6>",
+        img: require("@/assets/ass5.png"),
+        description: "",
+        specifications: `<li>אבן קורדיאריט מינרלית ייחודית ואיכותית במיוחד (מכונה גם אבן שמוט) </li><li>אוגרת את החום בתנור ומפזרת אותו באופן אחיד</li><li>מעניקה תחתית פריכה למאפים</li>`,
+        addCart: false,
+        price: 140,
+        previousPrice: 190,
+        amount: 0,
+        ifSize: false,
+        label: "",
+        id: 7
+      },
       {
         name: "עסקה נאפוליטנית: תנור + מבער + מגירה משולבת",
         img: require("@/assets/ass27.png"),
