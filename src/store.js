@@ -39,7 +39,7 @@ export default new Vuex.Store({
         previousPrice: 2350,
         amount: 0,
         ifSize: false,
-        label: "אזל מהמלאי",
+        label: "מבצע סוף שנה",
         labelColor: "#716868",
         id: 8
       },
@@ -53,7 +53,7 @@ export default new Vuex.Store({
         previousPrice: 2500,
         amount: 0,
         ifSize: false,
-        label: "אזל מהמלאי",
+        label: "מבצע סוף שנה",
         labelColor: "#716868",
         id: 9
       },
@@ -75,7 +75,7 @@ export default new Vuex.Store({
         previousPrice: 1590,
         amount: 0,
         ifSize: true,
-        label: "אזל מהמלאי",
+        label: "מבצע סוף שנה",
         labelColor: "#716868",
         id: 1
       },
@@ -89,7 +89,7 @@ export default new Vuex.Store({
         previousPrice: 590,
         amount: 0,
         ifSize: true,
-        label: "אזל מהמלאי",
+        label: "מבצע סוף שנה",
         labelColor: "#716868",
         id: 2
       },
@@ -103,7 +103,7 @@ export default new Vuex.Store({
         previousPrice: 90,
         amount: 0,
         ifSize: false,
-        label: "אזל מהמלאי",
+        label: "מבצע סוף שנה",
         labelColor: "#716868",
         id: 3
       },
@@ -117,7 +117,7 @@ export default new Vuex.Store({
         previousPrice: 190,
         amount: 0,
         ifSize: false,
-        label: "במלאי",
+        label: "מבצע סוף שנה",
         labelColor: "#716868",
         id: 4
       },
@@ -131,7 +131,7 @@ export default new Vuex.Store({
         previousPrice: 190,
         amount: 0,
         ifSize: false,
-        label: "במלאי",
+        label: "מבצע סוף שנה",
         labelColor: "#716868",
         id: 10
       },
@@ -145,7 +145,7 @@ export default new Vuex.Store({
         previousPrice: 190,
         amount: 0,
         ifSize: false,
-        label: "אזל מהמלאי",
+        label: "מבצע סוף שנה",
         labelColor: "#716868",
         id: 6
       },
@@ -159,7 +159,7 @@ export default new Vuex.Store({
         previousPrice: 190,
         amount: 0,
         ifSize: false,
-        label: "",
+        label: "מבצע סוף שנה",
         id: 7
       },
       {
@@ -172,7 +172,7 @@ export default new Vuex.Store({
         previousPrice: 2090,
         amount: 0,
         ifSize: false,
-        label: "אזל מהמלאי",
+        label: "מבצע סוף שנה",
         labelColor: "#716868",
         id: 5
       },

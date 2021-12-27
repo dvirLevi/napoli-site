@@ -168,7 +168,7 @@
         this.$store.commit('ifMessenger');
       },
       getEmailOfLeavesCart(clientDatdlis, products) {
-        return
+        // return
         if (validateEmail(clientDatdlis.mail) && products.length) {
           fetch(`${mainVar.server}/bertello/get-email-of-leaves-cart`, {
             method: 'post',

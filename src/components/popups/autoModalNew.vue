@@ -43,6 +43,7 @@
     },
     methods: {
       closeModal() {
+        this.$router.push('/store')
         this.$store.commit('closeAutoModel')
       }
     }

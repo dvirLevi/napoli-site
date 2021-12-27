@@ -23,7 +23,10 @@
     name: 'videoTop',
     props: {
       place: String,
-      src: String
+      src: {
+        type: String,
+        default: "https://cdn.shopify.com/s/files/1/0011/6195/3290/files/napoli_wood_flame2.mp4?6785760937562698444"
+      }
     },
     components: {
      
