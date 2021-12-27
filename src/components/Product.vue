@@ -2,7 +2,7 @@
   <div class="col-md-6 pb-3 pt-3">
     <Modal v-if="showModal" @customEvent="showModal = !showModal">
       <div class="">
-        <h3 class="w-100 text-center">{{product.name}}</h3>
+        <h3 class="w-100 text-center" v-html="product.name"></h3>
 
         <div class="row mt-3">
           <div class="col-md-12 center-all">

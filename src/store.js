@@ -111,7 +111,7 @@ export default new Vuex.Store({
         name: "מרדה לתנור ברטלו",
         img: require("@/assets/ass15.jpg"),
         description: "",
-        specifications: `<li>אקדח טמפרטורה מדויק באמצעות לייזר, למדידת עוצמת החום בטאבון.</li>`,
+        specifications: `<li>מותאמת במיוחד למידות התנור</li><li>כוללת חרירים ייעודיים לעודפי הקמח ולאוורור תחתית הפיצה</li>`,
         addCart: false,
         price: 140,
         previousPrice: 190,
@@ -125,7 +125,7 @@ export default new Vuex.Store({
         name: "מד טמפרטורה ברטלו",
         img: require("@/assets/ass36.jpg"),
         description: "",
-        specifications: `<li>מותאמת במיוחד למידות התנור</li><li>כוללת חרירים ייעודיים לעודפי הקמח ולאוורור תחתית הפיצה</li>`,
+        specifications: `<li>אקדח טמפרטורה מדויק באמצעות לייזר, למדידת עוצמת החום בטאבון.</li>`,
         addCart: false,
         price: 140,
         previousPrice: 190,
@@ -288,7 +288,7 @@ export default new Vuex.Store({
           state.ifAutoModel = true;
           state.blockAutoModel = true;
           state.aleadyUp.push(routeName)
-        }, 5000)
+        }, 4000)
       }
     },
     closeAutoModel(state) {
