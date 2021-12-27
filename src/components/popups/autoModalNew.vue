@@ -23,19 +23,20 @@
         </div> -->
       </div>
     </div>
+    <firework />
   </Modal>
 </template>
 
 <script>
   // @ is an alias to /src
   import Modal from '@/components/Modal.vue'
-  // import firework from '@/components/firework.vue'
+  import firework from '@/components/firework.vue'
 
   export default {
     name: 'autoModalNew',
     components: {
-      Modal
-      // firework
+      Modal,
+      firework
     },
     props: {
 
