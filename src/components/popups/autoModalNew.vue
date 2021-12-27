@@ -1,11 +1,12 @@
 <template>
   <Modal>
     <div class="w-100">
-      <!-- <div class="w-100 right-all">
-        <i class="las la-times h3 c-p text-white" @click="closeModal"></i>
-      </div> -->
-      <div class="w-100 c-p" @click="closeModal" >
-        <img class="w-100" src="@/assets/ass34.png" alt="">
+
+      <div class="w-100 c-p position-relative">
+        <div class="w-100 right-all position-absolute">
+          <i class="las la-times h3 c-p" @click="closeModal"></i>
+        </div>
+        <img class="w-100" src="@/assets/ass34.png" alt="" @click="$router.push('/store')">
         <!-- <div class="w-100 f-center-top">
           <div class="text mt-md-0 mt-3">
             <h1 class="color">אחחח איזה ריח!</h1>
@@ -43,7 +44,6 @@
     },
     methods: {
       closeModal() {
-        this.$router.push('/store')
         this.$store.commit('closeAutoModel')
       }
     }

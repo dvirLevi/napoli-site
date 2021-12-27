@@ -30,6 +30,20 @@ export default new Vuex.Store({
       },
     ],
     products: [{
+        name: "עסקת ברטלו מורחבת",
+        img: require("@/assets/ass35.jpg"),
+        description: "",
+        specifications: `<li>עסקה מורחבת. כל הפריטים של ברטלו כלולים: טאבון, אבן, מבער גז, מגירה משולבת, כיסוי, מרדה ומד לייזר.</li>`,
+        addCart: false,
+        price: 2250,
+        previousPrice: 2500,
+        amount: 0,
+        ifSize: false,
+        label: "מבצע סוף שנה",
+        labelColor: "#716868",
+        id: 9
+      }, 
+      {
         name: "עסקת ברטלו מלאה",
         img: require("@/assets/ass26.jpg"),
         description: "",
@@ -42,20 +56,6 @@ export default new Vuex.Store({
         label: "מבצע סוף שנה",
         labelColor: "#716868",
         id: 8
-      },
-      {
-        name: "עסקת ברטלו מורחבת",
-        img: require("@/assets/ass35.jpg"),
-        description: "",
-        specifications: `<li>עסקה איטלקית במחיר משתלם במיוחד!</li>`,
-        addCart: false,
-        price: 2250,
-        previousPrice: 2500,
-        amount: 0,
-        ifSize: false,
-        label: "מבצע סוף שנה",
-        labelColor: "#716868",
-        id: 9
       },
       {
         name: `תנור פיצה ברטלו`,
@@ -111,7 +111,7 @@ export default new Vuex.Store({
         name: "מרדה לתנור ברטלו",
         img: require("@/assets/ass15.jpg"),
         description: "",
-        specifications: `<li>מותאמת במיוחד למידות התנור</li><li>כוללת חרירים ייעודיים לעודפי הקמח ולאוורור תחתית הפיצה</li>`,
+        specifications: `<li>אקדח טמפרטורה מדויק באמצעות לייזר, למדידת עוצמת החום בטאבון.</li>`,
         addCart: false,
         price: 140,
         previousPrice: 190,
@@ -150,7 +150,7 @@ export default new Vuex.Store({
         id: 6
       },
       {
-        name: "אבן אפייה לתנור ברטלו <h6>כל טאבון כולל כבר אבן אפייה!</h6>",
+        name: "אבן אפייה לתנור ברטלו <h6>*בהזמנת טאבון, אבן האפייה כלולה כבר במארז.</h6>",
         img: require("@/assets/ass5.png"),
         description: "",
         specifications: `<li>אבן קורדיאריט מינרלית ייחודית ואיכותית במיוחד (מכונה גם אבן שמוט) </li><li>אוגרת את החום בתנור ומפזרת אותו באופן אחיד</li><li>מעניקה תחתית פריכה למאפים</li>`,
@@ -351,7 +351,7 @@ export default new Vuex.Store({
           value: obj.value,
           currency: 'ILS'
         }
-        return 
+        return
       }
       fbq('track', obj.event_name, {
         content_name: obj.event_source_url,
