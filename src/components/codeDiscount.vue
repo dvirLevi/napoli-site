@@ -19,7 +19,7 @@
 <script>
   // @ is an alias to /src
   // import Swal from 'sweetalert2'
-  import getSheets from "../helpers/getSheets"
+  import getSheet from "../helpers/getSheets"
 
 
   export default {
@@ -86,15 +86,8 @@
         // }
       },
       async getCodes() {
-        this.codes = await getSheets.get(
-          'https://spreadsheets.google.com/feeds/list/1yWnG47qzf_ZmXLofrQGvaXsPJpMPrvqXzjU2g2vSZ-c/od6/public/values?alt=json',
-          [
-            'code',
-            'discount',
-            'minprice',
-            'type'
-          ]);
-        // console.log(this.codes)
+        this.codes = await getSheet('1yWnG47qzf_ZmXLofrQGvaXsPJpMPrvqXzjU2g2vSZ-c');
+        console.log(this.codes)
       }
     }
   }
