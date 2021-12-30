@@ -12,7 +12,7 @@
                     <img class="w-25" :src="product.img" alt="">
                   </div>
                   <div class="col-md-6 ">
-                    <h5>{{product.name}}</h5>
+                    <h5 v-html="product.name"></h5>
                     <p>{{product.price}} ₪</p>
                     <p>כמות: {{product.amount}}</p>
                   </div>

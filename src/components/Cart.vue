@@ -15,7 +15,8 @@
                 <img class="w-100" :src="product.img" alt="">
               </div>
               <div class="col-9 text-center ">
-                <p>{{product.name}}</p>
+                <!-- <p>{{product.name}}</p> -->
+                <p v-html="product.name"></p>
                 <div class="w-100 center-all">
                   <p>{{product.price}} ₪</p>
                   <div @click.stop="product.amount++" class=" border-left butt-oper">
