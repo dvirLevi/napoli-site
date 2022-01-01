@@ -80,7 +80,7 @@
           </div>
         </div>
         <div class="center-all w-100">
-          <iframe name="iframe" class="mt-5" height="650" :width="ifWidth" @load="endPay"></iframe>
+          <iframe name="iframe" class="mt-5" height="650" :width="ifWidth"></iframe>
         </div>
       </div>
     </div>
@@ -101,7 +101,7 @@
       return {
         numPay: 1,
         // numOfLoadIframe: 0,
-        // interval: null,
+        interval: null,
         tranid: ""
       }
     },
@@ -119,7 +119,7 @@
         event_time: Math.floor(new Date() / 1000),
         value: 0,
       })
-      // this.endPay();
+      this.endPay();
     },
     methods: {
       nextToPay() {
@@ -129,11 +129,11 @@
         let vat = num / 1.17;
         return vat.toFixed(2);
       },
-      async endPay() {
+      endPay() {
         // this.numOfLoadIframe = this.numOfLoadIframe + 1;
         // let interval = false;
         // if (this.numOfLoadIframe > 1 && !interval) {
-        // this.interval = setInterval(async () => {
+        this.interval = setInterval(async () => {
           let ifPay = await this.checkPay();
           if (ifPay) {
             clearInterval(this.interval);
@@ -195,7 +195,7 @@
             // });
             // localStorage.removeItem("ifPay");
           }
-        // }, 2000)
+        }, 2000)
         // }
       },
       async checkPay() {
@@ -305,9 +305,9 @@
         return this.$store.getters.discountCompute
       },
     },
-    // destroyed() {
-    //   clearInterval(this.interval);
-    // },
+    destroyed() {
+      clearInterval(this.interval);
+    },
     watch: {
       numPay: function () {
         setTimeout(() => {
