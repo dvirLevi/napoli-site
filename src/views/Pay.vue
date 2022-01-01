@@ -7,10 +7,10 @@
             <div class="w-100 center-all">
               <h4>פרטי ההזמנה</h4>
               <div class="w-100" v-for="product in products" :key="product.id">
-                <P class="font-weight-bold">{{product.name}}</P>
-                <P>מחיר: {{product.price}} ₪</P>
-                <P>כמות: {{product.amount}}</P>
-                <P>סה"כ למוצר: {{product.amount * product.price}}</P>
+                <p class="font-weight-bold">{{product.name}}</p>
+                <p>מחיר: {{product.price}} ₪</p>
+                <p>כמות: {{product.amount}}</p>
+                <p>סה"כ למוצר: {{product.amount * product.price}}</p>
               </div>
               <div class="w-100">
                 <p class="w-100" v-if="discount">הנחת קופון: ₪{{discount}}- </p>
@@ -24,14 +24,14 @@
             <div class="w-100 center-all">
               <h4>פרטי הלקוח</h4>
               <div class="w-100">
-                <P>שם: {{clientDatdlis.name}}</P>
-                <P>טלפון: {{clientDatdlis.tel}}</P>
-                <P>מייל: {{clientDatdlis.mail}}</P>
-                <P>עיר: {{clientDatdlis.city}}</P>
-                <P>רחוב: {{clientDatdlis.address}}</P>
-                <P>מס' בית: {{clientDatdlis.namHome}}</P>
+                <p>שם: {{clientDatdlis.name}}</p>
+                <p>טלפון: {{clientDatdlis.tel}}</p>
+                <p>מייל: {{clientDatdlis.mail}}</p>
+                <p>עיר: {{clientDatdlis.city}}</p>
+                <p>רחוב: {{clientDatdlis.address}}</p>
+                <p>מס' בית: {{clientDatdlis.namHome}}</p>
                 <!-- <P>מיקוד: {{clientDatdlis.mikod}}</P> -->
-                <P>הערות: {{clientDatdlis.note}}</P>
+                <p>הערות: {{clientDatdlis.note}}</p>
               </div>
             </div>
           </div>
@@ -80,7 +80,7 @@
           </div>
         </div>
         <div class="center-all w-100">
-          <iframe name="iframe" class="mt-5" height="650" :width="ifWidth"></iframe>
+          <iframe name="iframe" class="mt-5" height="650" :width="ifWidth" @load="endPay"></iframe>
         </div>
       </div>
     </div>
@@ -101,7 +101,7 @@
       return {
         numPay: 1,
         // numOfLoadIframe: 0,
-        interval: null,
+        // interval: null,
         tranid: ""
       }
     },
@@ -119,7 +119,7 @@
         event_time: Math.floor(new Date() / 1000),
         value: 0,
       })
-      this.endPay();
+      // this.endPay();
     },
     methods: {
       nextToPay() {
@@ -129,11 +129,11 @@
         let vat = num / 1.17;
         return vat.toFixed(2);
       },
-      endPay() {
+      async endPay() {
         // this.numOfLoadIframe = this.numOfLoadIframe + 1;
         // let interval = false;
         // if (this.numOfLoadIframe > 1 && !interval) {
-        this.interval = setInterval(async () => {
+        // this.interval = setInterval(async () => {
           let ifPay = await this.checkPay();
           if (ifPay) {
             clearInterval(this.interval);
@@ -195,7 +195,7 @@
             // });
             // localStorage.removeItem("ifPay");
           }
-        }, 2000)
+        // }, 2000)
         // }
       },
       async checkPay() {
@@ -305,9 +305,9 @@
         return this.$store.getters.discountCompute
       },
     },
-    destroyed() {
-      clearInterval(this.interval);
-    },
+    // destroyed() {
+    //   clearInterval(this.interval);
+    // },
     watch: {
       numPay: function () {
         setTimeout(() => {

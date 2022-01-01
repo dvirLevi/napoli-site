@@ -87,7 +87,6 @@
       },
       async getCodes() {
         this.codes = await getSheet('1yWnG47qzf_ZmXLofrQGvaXsPJpMPrvqXzjU2g2vSZ-c');
-        console.log(this.codes)
       }
     }
   }
