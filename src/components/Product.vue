@@ -22,7 +22,7 @@
         <!-- star lable -->
         <!-- <img class="w-100" src="@/assets/ass31.svg" alt="">
         <h4 class="m-0">{{product.label}}</h4> -->
-        <div class="circle f-center" :style="{backgroundColor: product.labelColor}">
+        <div class="circle f-center p-1" :style="{backgroundColor: product.labelColor}">
           <h5 class="m-0">{{product.label}}</h5>
         </div>
       </div>
@@ -161,8 +161,8 @@
   }
 
   .circle {
-    width: 150px;
-    height: 150px;
+    width: 110px;
+    height: 110px;
     border-radius: 100%;
   }
 
@@ -196,8 +196,8 @@
     }
 
     .circle {
-      width: 130px;
-      height: 130px;
+      width: 100px;
+      height: 100px;
     }
   }
 </style>

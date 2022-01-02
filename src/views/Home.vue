@@ -70,7 +70,7 @@
       //       'event_category': 'ecommerce',
       //       'event_label': 'add_to_wishlist'
       //     })
-      this.$store.commit('upAutoModel', this.$route.name)
+      this.$store.commit('upAutoModel', {routeName: this.$route.name})
     }
 
   }

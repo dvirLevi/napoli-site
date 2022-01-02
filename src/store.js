@@ -276,7 +276,7 @@ export default new Vuex.Store({
     // pushNameCode(state, nameCode) {
     //   state.codeCoupon = nameCode
     // },
-    upAutoModel(state, routeName) {
+    upAutoModel(state, {routeName, seconds = 4000}) {
       let ifRoute = ""
       state.aleadyUp.map((val) => {
         if (val === routeName) {
@@ -290,7 +290,7 @@ export default new Vuex.Store({
           state.ifAutoModel = true;
           state.blockAutoModel = true;
           state.aleadyUp.push(routeName)
-        }, 4000)
+        }, seconds)
       }
     },
     closeAutoModel(state) {

@@ -38,7 +38,7 @@
         value: 0,
       })
       console.log("upAutoModel")
-      this.$store.commit('upAutoModel', this.$route.name)
+      this.$store.commit('upAutoModel', {routeName: this.$route.name, seconds: 5000})
     },
     computed: {
       products() {
