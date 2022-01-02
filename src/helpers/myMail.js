@@ -38,7 +38,7 @@ const myMail = {
         let contentMail = {
           from: "napoli@napoli.com",
           // to: "dvirlevi2@gmail.com",
-          to: "boazlevy100@gmail.com",
+          to: "office@sabres-il.com",
           subject: subject,
           html: `<p>${htmlString}</p>`,
         }
