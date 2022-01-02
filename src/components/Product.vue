@@ -20,11 +20,11 @@
     <div class="box-product center-all p-3">
       <div class="label f-center" v-if="product.label">
         <!-- star lable -->
-        <img class="w-100" src="@/assets/ass31.svg" alt="">
-        <h4 class="m-0">{{product.label}}</h4>
-        <!-- <div class="circle f-center" :style="{backgroundColor: product.labelColor}">
+        <!-- <img class="w-100" src="@/assets/ass31.svg" alt="">
+        <h4 class="m-0">{{product.label}}</h4> -->
+        <div class="circle f-center" :style="{backgroundColor: product.labelColor}">
           <h5 class="m-0">{{product.label}}</h5>
-        </div> -->
+        </div>
       </div>
       <div class="row mt-3">
         <div class="col-md-6 center-all-top">

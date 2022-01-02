@@ -1,9 +1,9 @@
 <template>
-  <div class="row" v-if="products.length">
+  <div class="row" v-if="products.length" @click.stop>
     <div class="col">
       <div class="center-all w-100">
         <template v-if="!discountCompute">
-          <input type="text" @click.stop="" v-model="myCode" placeholder="הכנס קוד קופון">
+          <input type="text" v-model="myCode" placeholder="הכנס קוד קופון">
           <ButtonLink @click.native="ifCodeCorrect" type="button" text="הפעל" />
           <!-- <button @click.stop="ifCodeCorrect">הפעל</button> -->
         </template>

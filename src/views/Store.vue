@@ -37,7 +37,8 @@
         event_time: Math.floor(new Date() / 1000),
         value: 0,
       })
-      // this.$store.commit('upAutoModel', this.$route.name)
+      console.log("upAutoModel")
+      this.$store.commit('upAutoModel', this.$route.name)
     },
     computed: {
       products() {

@@ -22,7 +22,7 @@
   .all-fix {
     position: fixed;
     bottom: 0;
-    z-index: 1000;
+    z-index: 2;
     padding: 20px;
   }
 

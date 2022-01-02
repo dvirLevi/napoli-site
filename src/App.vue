@@ -6,7 +6,7 @@
     <router-view />
     <Footer />
     <whatsAppFix />
-    <autoModal v-if="ifAutoModel && this.$route.name !== 'store'"  />
+    <autoModal v-if="ifAutoModel" />
     <!-- </div> -->
   </div>
 </template>
