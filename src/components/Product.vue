@@ -69,10 +69,10 @@
         product.amount++;
         this.$store.commit('allTimeShowCart');
         this.$store.dispatch('fbApi', {
-        event_name: "AddToCart",
-        event_time: Math.floor(new Date() / 1000),
-        value: 0,
-      })
+          event_name: "AddToCart",
+          event_time: Math.floor(new Date() / 1000),
+          value: 0,
+        })
         twq('track', 'Add to cart E');
         // gtag('event', 'add_to_cart', {
         //   'event_category': 'add_to_cart',
