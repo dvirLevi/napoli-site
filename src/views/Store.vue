@@ -4,7 +4,7 @@
       <div class="col">
         <counterDays />
         <videoTop plase="store" />
-        <div class="row pb-2">
+        <div class="row pb-2 mt-4">
           <div class="col">
             <TitleAndBorderR class="h1">עסקאות חבילה</TitleAndBorderR>
           </div>
