@@ -4,20 +4,20 @@
       <div class="col">
         <counterDays />
         <videoTop plase="store" />
-        <div class="row pb-5">
+        <div class="row pb-2">
           <div class="col">
             <TitleAndBorderR class="h1">עסקאות חבילה</TitleAndBorderR>
           </div>
         </div>
-        <div class="row mt-md-4 mt-0">
+        <div class="row">
           <Product v-for="product in productsCategory(1)" :product="product" :key="product.id" />
         </div>
-        <div class="row pb-5">
+        <div class="row pb-2">
           <div class="col">
             <TitleAndBorderR class="h1">מוצרים</TitleAndBorderR>
           </div>
         </div>
-         <div class="row mt-md-4 mt-0">
+         <div class="row">
           <Product v-for="product in productsCategory(2)" :product="product" :key="product.id" />
         </div>
       </div>

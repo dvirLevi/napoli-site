@@ -142,7 +142,7 @@
 
   .label {
     position: absolute;
-    top: -84px;
+    top: -27px;
     right: -66px;
     color: #fff;
     width: 206px;
@@ -187,8 +187,8 @@
     }
 
     .label {
-      top: -46px;
-      right: -49px;
+      top: -25px;
+      right: -66px;
     }
 
     .label h5 {
