@@ -4,8 +4,21 @@
       <div class="col">
         <counterDays />
         <videoTop plase="store" />
-        <div class="row">
-          <Product v-for="product in products" :product="product" :key="product.id" />
+        <div class="row pb-5">
+          <div class="col">
+            <TitleAndBorderR class="h1">עסקאות חבילה</TitleAndBorderR>
+          </div>
+        </div>
+        <div class="row mt-4">
+          <Product v-for="product in productsCategory(1)" :product="product" :key="product.id" />
+        </div>
+        <div class="row pb-5">
+          <div class="col">
+            <TitleAndBorderR class="h1">מוצרים</TitleAndBorderR>
+          </div>
+        </div>
+         <div class="row mt-4">
+          <Product v-for="product in productsCategory(2)" :product="product" :key="product.id" />
         </div>
       </div>
     </div>
@@ -17,6 +30,7 @@
   import counterDays from '@/components/counterDays.vue'
   import Product from '@/components/Product.vue'
   import videoTop from '@/components/videoTop.vue'
+  import TitleAndBorderR from '@/components/TitleAndBorderR.vue'
 
 
   export default {
@@ -24,7 +38,8 @@
     components: {
       Product,
       counterDays,
-      videoTop
+      videoTop,
+      TitleAndBorderR
     },
     data() {
       return {
@@ -38,6 +53,13 @@
         value: 0,
       })
       this.$store.commit('upAutoModel', {routeName: this.$route.name, seconds: 5000})
+    },
+    methods: {
+      productsCategory(categoryId) {
+        return this.$store.state.products.filter((el)=> {
+          return el.category === categoryId  
+        })
+      }
     },
     computed: {
       products() {

@@ -1,7 +1,7 @@
 <template>
   <div class="col-md-6 pb-3 pt-3">
     <Modal v-if="showModal" @customEvent="showModal = !showModal">
-      <div class="">
+      <div class="p-1">
         <h3 class="w-100 text-center" v-html="product.name"></h3>
 
         <div class="row mt-3">

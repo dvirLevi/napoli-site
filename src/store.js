@@ -42,6 +42,7 @@ export default new Vuex.Store({
         ifSize: false,
         label: "משתתף במבצע חורף",
         labelColor: "#e02b07",
+        category: 1,
         id: 8
       },
       {
@@ -64,6 +65,7 @@ export default new Vuex.Store({
         ifSize: true,
         label: "משתתף במבצע חורף",
         labelColor: "#e02b07",
+        category: 2,
         id: 1
       },
       {
@@ -78,6 +80,7 @@ export default new Vuex.Store({
         ifSize: true,
         label: "משתתף במבצע חורף",
         labelColor: "#e02b07",
+        category: 2,
         id: 2
       },
       {
@@ -92,6 +95,7 @@ export default new Vuex.Store({
         ifSize: false,
         label: "משתתף במבצע חורף",
         labelColor: "#e02b07",
+        category: 2,
         id: 3
       },
       {
@@ -106,6 +110,7 @@ export default new Vuex.Store({
         ifSize: false,
         label: "משתתף במבצע חורף",
         labelColor: "#e02b07",
+        category: 2,
         id: 4
       },
       {
@@ -120,6 +125,7 @@ export default new Vuex.Store({
         ifSize: false,
         label: "משתתף במבצע חורף",
         labelColor: "#e02b07",
+        category: 2,
         id: 10
       },
       {
@@ -134,6 +140,7 @@ export default new Vuex.Store({
         ifSize: false,
         label: "משתתף במבצע חורף",
         labelColor: "#e02b07",
+        category: 2,
         id: 6
       },
       {
@@ -148,6 +155,7 @@ export default new Vuex.Store({
         ifSize: false,
         label: "משתתף במבצע חורף",
         labelColor: "#e02b07",
+        category: 2,
         id: 7
       },
       // {
@@ -176,6 +184,7 @@ export default new Vuex.Store({
         ifSize: false,
         label: "משתתף במבצע חורף",
         labelColor: "#e02b07",
+        category: 1,
         id: 9
       },
     ],
