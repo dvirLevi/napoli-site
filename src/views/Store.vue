@@ -9,7 +9,7 @@
             <TitleAndBorderR class="h1">עסקאות חבילה</TitleAndBorderR>
           </div>
         </div>
-        <div class="row mt-4">
+        <div class="row mt-md-4 mt-0">
           <Product v-for="product in productsCategory(1)" :product="product" :key="product.id" />
         </div>
         <div class="row pb-5">
@@ -17,7 +17,7 @@
             <TitleAndBorderR class="h1">מוצרים</TitleAndBorderR>
           </div>
         </div>
-         <div class="row mt-4">
+         <div class="row mt-md-4 mt-0">
           <Product v-for="product in productsCategory(2)" :product="product" :key="product.id" />
         </div>
       </div>
