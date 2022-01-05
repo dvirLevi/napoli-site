@@ -6,7 +6,7 @@
           <i class="las la-times h3 c-p" ></i>
         </div>
         <img v-if="$route.name !== 'store'" class="w-100" src="@/assets/ass34.png" alt="" @click="$router.push('/store')">
-        <img v-else class="w-100" src="@/assets/ass37.png" alt="">
+        <!-- <img v-else class="w-100" src="@/assets/ass37.png" alt=""> -->
       </div>
     </div>
     <!-- <firework /> -->

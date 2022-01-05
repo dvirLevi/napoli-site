@@ -52,7 +52,7 @@
         event_time: Math.floor(new Date() / 1000),
         value: 0,
       })
-      this.$store.commit('upAutoModel', {routeName: this.$route.name, seconds: 5000})
+      // this.$store.commit('upAutoModel', {routeName: this.$route.name, seconds: 5000})
     },
     methods: {
       productsCategory(categoryId) {

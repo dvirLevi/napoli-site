@@ -40,7 +40,7 @@ export default new Vuex.Store({
         previousPrice: 0,
         amount: 0,
         ifSize: false,
-        label: "משתתף במבצע חורף",
+        label: "מבצע חורף",
         labelColor: "#e02b07",
         category: 1,
         id: 8
@@ -63,7 +63,7 @@ export default new Vuex.Store({
         previousPrice: 0,
         amount: 0,
         ifSize: true,
-        label: "משתתף במבצע חורף",
+        label: "מבצע חורף",
         labelColor: "#e02b07",
         category: 2,
         id: 1
@@ -78,7 +78,7 @@ export default new Vuex.Store({
         previousPrice: 0,
         amount: 0,
         ifSize: true,
-        label: "משתתף במבצע חורף",
+        label: "מבצע חורף",
         labelColor: "#e02b07",
         category: 2,
         id: 2
@@ -93,7 +93,7 @@ export default new Vuex.Store({
         previousPrice: 0,
         amount: 0,
         ifSize: false,
-        label: "משתתף במבצע חורף",
+        label: "מבצע חורף",
         labelColor: "#e02b07",
         category: 2,
         id: 3
@@ -108,7 +108,7 @@ export default new Vuex.Store({
         previousPrice: 0,
         amount: 0,
         ifSize: false,
-        label: "משתתף במבצע חורף",
+        label: "מבצע חורף",
         labelColor: "#e02b07",
         category: 2,
         id: 4
@@ -123,7 +123,7 @@ export default new Vuex.Store({
         previousPrice: 0,
         amount: 0,
         ifSize: false,
-        label: "משתתף במבצע חורף",
+        label: "מבצע חורף",
         labelColor: "#e02b07",
         category: 2,
         id: 10
@@ -138,7 +138,7 @@ export default new Vuex.Store({
         previousPrice: 0,
         amount: 0,
         ifSize: false,
-        label: "משתתף במבצע חורף",
+        label: "מבצע חורף",
         labelColor: "#e02b07",
         category: 2,
         id: 6
@@ -153,7 +153,7 @@ export default new Vuex.Store({
         previousPrice: 0,
         amount: 0,
         ifSize: false,
-        label: "משתתף במבצע חורף",
+        label: "מבצע חורף",
         labelColor: "#e02b07",
         category: 2,
         id: 7
@@ -168,7 +168,7 @@ export default new Vuex.Store({
       //   previousPrice: 2090,
       //   amount: 0,
       //   ifSize: false,
-      //   label: "משתתף במבצע חורף",
+      //   label: "מבצע חורף",
       //   labelColor: "#e02b07",
       //   id: 5
       // },
@@ -182,7 +182,7 @@ export default new Vuex.Store({
         previousPrice: 0,
         amount: 0,
         ifSize: false,
-        label: "משתתף במבצע חורף",
+        label: "מבצע חורף",
         labelColor: "#e02b07",
         category: 1,
         id: 9
