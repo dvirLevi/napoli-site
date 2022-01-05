@@ -3,7 +3,7 @@
     <div class="w-100" @click="closeModal">
       <div class="w-100 c-p position-relative">
         <div class="w-100 right-all position-absolute">
-          <i class="las la-times h3 c-p" ></i>
+          <i class="las la-times h1 c-p text-white" ></i>
         </div>
         <img v-if="$route.name !== 'store'" class="w-100" src="@/assets/ass34.png" alt="" @click="$router.push('/store')">
         <!-- <img v-else class="w-100" src="@/assets/ass37.png" alt=""> -->
