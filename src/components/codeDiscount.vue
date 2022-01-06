@@ -72,21 +72,20 @@
         // if (this.products.length) {
         await this.getCodes();
         for (let x in this.codes) {
-          if (this.myCode.toLowerCase() === this.codes[x].code.toLowerCase() && this.Payable >= this.codes[x]
+          if (this.myCode.length && this.myCode.toLowerCase() === this.codes[x].code.toLowerCase() && this.Payable >=
+            this.codes[x]
             .minprice) {
+
+            if (!this.$store.state.codeCoupon) {
+              console.log('add_coupon')
+              this.$gtag.event('add_coupon', {
+                'event_category': 'ecommerce',
+                'event_label': this.codes[x].code.toLowerCase()
+              })
+            }
+
             this.$store.commit('pushDiscount', this.codes[x]);
 
-            // this.$store.dispatch('fbApi', {
-            //   event_name: "AddToCart",
-            //   event_time: Math.floor(new Date() / 1000),
-            //   value: 0,
-            // })
-            // twq('track', 'Add to cart E');
-            this.$gtag.event('add_coupon', {
-              'event_category': 'ecommerce',
-              'event_label': this.codes[x].code.toLowerCase()
-            })
-            // this.$store.commit('pushNameCode', this.myCode.toLowerCase());
             break;
           } else {
             this.$store.commit('IfCodeFalse')
